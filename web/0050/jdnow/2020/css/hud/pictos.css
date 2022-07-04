@@ -1,0 +1,84 @@
+html:not(.ipad) .hud.beat > #pictos > #beat {
+  animation-name: BeatCoach !important;
+  -webkit-animation-name: BeatCoach !important;
+}
+
+#beat {
+  background: red;
+  border-bottom: solid 0px white;
+  height: 10% !important;
+  left: -28%;
+  opacity: 1 !important;
+  top: 94%;
+  -webkit-mask: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F%23beat.png)top left/cover;
+  width: 23% !important;
+}
+
+.particle-system {
+  opacity: 0;
+}
+
+/** Pictos **/
+.picto shadow {
+  filter: drop-shadow(4px -2px 2px gray);
+  left: -1%;
+}
+
+#pictos {
+  left: 78.5%;
+  width: 40% !important;
+}
+
+#pictos.multi-coach {
+  left: 70%;
+  width: 40% !important;
+}
+
+.picto {
+  left: -32% !important;
+}
+
+.multi-coach .picto {
+  left: -37.8% !important;
+}
+
+
+/* Beat-Before */
+
+/* Been used before */
+/* Work incorrectly */
+/*
+#beat {
+  width: 35%;
+  height: 70%;
+  border-bottom: solid 2px #fff;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  background-size: 100% 100%;
+  opacity: 0;
+  will-change: opacity;
+  transform: translate3d(0, 0, 0);
+  @include css-positioning(absolute, "", "", "", -2px, 0);
+
+  .weak-platform &,
+  html.androidApp & {
+    display: none;
+}
+}
+
+.hud.beat > #pictos > #beat {
+  animation: fadeBeatScreen;
+}
+*/
+
+/* Animation */
+/*
+@keyframes fadeBeatScreen {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+*/

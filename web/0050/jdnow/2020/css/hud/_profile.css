@@ -1,0 +1,122 @@
+/********** Player Profile **********/
+.state-dance .dancercard .player-name {
+  background: rgba(255, 255, 255, 0);
+  bottom: 89% !important;
+  left: -9% !important;
+  -webkit-mask: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(255, 255, 255, 0) 90%
+  ) !important;
+}
+.state-dance .controller .dancercard .player-name em {
+  max-width: 2.1rem;
+}
+#players .player:not(.ghost).visible,
+.player.visible.controller.idling-1,
+.player.visible.controller.idling-2,
+.player.visible.controller.idling-3 {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.state-dance .dancercard .player-name em {
+  font-family: JDMediumCondensed !important;
+  overflow: visible !important;
+  text-align: center !important;
+  text-shadow: 2px 0px 1px black !important;
+}
+.state-dance #players {
+  left: 14%;
+  top: 1.5%;
+  width: 78%;
+}
+.state-dance .dancercard .player-color {
+  animation: none !important;
+  border-radius: 15px 15px 15px 15px;
+  height: 25%;
+  width: 90% !important;
+}
+.state-dance .dancercard .player-color::after {
+  border-radius: 5px 5px 5px 5px;
+  transform: none;
+}
+.player-color::after {
+  box-shadow: none;
+  width: 100%;
+}
+#players .player-special {
+  left: -22%;
+  top: 0;
+}
+
+
+/******** Avatar Wraper ********/
+
+/* Player border or skin */
+.state-songselection .player.controller .dancercard .avatar-wrapper,
+.state-afterdance .player.controller .dancercard .avatar-wrapper {
+  background: url(//dl.dropbox.com/s/yf78xrejg0ovtp4/90s_jd2020_skin.png?dl=0)no-repeat center/cover;
+}
+/* Admin Content */
+#admin-menu .player .avatar-wrapper {
+  margin-left: 0 !important;
+  margin-top: 20%;
+  padding: 0 !important;
+  width: 1rem !important;
+}
+
+/* Avatar Lock */
+.reward__wrapper .reward__content::before {
+  animation: none;
+  background: url(//i.imgur.com/HIfjkQX.png)no-repeat center/cover;
+  height: 70%;
+  left: 0;
+  top: 0;
+  width: 70%;
+  content: "аватар: ⨉";
+  font-family: "Just Dance Regular";
+  font-size: 14px;
+  color: rgb(255, 212, 234);
+}
+
+/* Avatar Unlock */
+.reward__unlocked .reward__content::before {
+  animation: none;
+  background: url(//i.imgur.com/ckXUzwy.png)no-repeat center/cover;
+  height: 70%;
+  left: 0;
+  top: 0;
+  width: 70%;
+  content: "аватар: ✔";
+  font-family: "Just Dance Regular";
+  font-size: 14px;
+  color: rgb(255, 212, 234);
+}
+
+/* The General */
+.reward__wrapper {
+  height: 135%;
+  left: 105%;
+  top: -6%;
+}
+
+/* Avatar Lock Texte */ /* Disable */
+.reward__wrapper .reward__content::before {
+  content: ""; /* аватар: ⨉ */
+  font-family: "Just Dance Regular";
+  font-size: 14px;
+  color: rgb(255, 212, 234);
+}
+
+/* Avatar Unlock Texte */ /* Disable */
+.reward__unlocked .reward__content::before {
+  content: ""; /* аватар: ✔ */
+  font-family: "Just Dance Regular";
+  font-size: 14px;
+  color: rgb(255, 212, 234);
+}

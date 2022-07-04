@@ -1,0 +1,3726 @@
+/*---------------------------------------------*/
+/*             STYLE-SHEET-2020                */
+/*---------------------------------------------*/
+
+/* Full old .css code */
+
+/********** FONT IMPORT **********/
+ @font-face {
+     font-family: "JDMediumCondensed";
+     font-style: normal;
+     font-weight: normal;
+     src: url("//dl.dropbox.com/s/f859drrqu3xojcj/HelveticaNeueLTW1G-BdCn.woff?dl=0");
+}
+ @font-face {
+     font-family: "JDMDCondensed";
+     font-style: normal;
+     font-weight: normal;
+     src: url("//dl.dropbox.com/s/m64a6neaxoz1psl/HelveticaNeueLTW1G-Md.woff?dl=0");
+}
+ @font-face {
+     font-family: "Just Dance";
+     font-style: normal;
+     font-weight: normal;
+     src: url("//dl.dropbox.com/s/f859drrqu3xojcj/HelveticaNeueLTW1G-BdCn.woff?dl=0");
+}
+ @font-face {
+     font-family: "Just Dance Regular";
+     font-style: normal;
+     font-weight: normal;
+     src: url("//dl.dropbox.com/s/m64a6neaxoz1psl/HelveticaNeueLTW1G-Md.woff?dl=0");
+}
+
+
+/*********** Last News ****************/
+ .cookie-wrapper::after {
+     content: "В связи с обстановкой в мире мы приняли определённые меры, чтобы поберечь здоровье нашей любимой команды. Ребята вовсю стараются, чтобы в переод самоизоляции сервера работали в стандартном режиме, поэтому нам придётся повременить с гала-шоу Power. Слудующий контент откладывается на неопределённый срок: Новый плейлист, Новые песни, Контент World Dance Floor -Турниры, -Особые счастливые часы. Мы сообщим новую дату выхода второго сезона, как только она станет известна. Спасибо за понимание. Продолжайте танцевать! Команда JUST DANCE";
+    /* News Tab Content */
+     z-index: 9999999999999999999999999999999999999999;
+}
+ .site-message.show::before {
+     content: "Второй сезон: гала-шоу Power - обновление";
+    /* News Tab Title */
+}
+ .cookie-content {
+     font-size: 0;
+}
+ .cookie-wrapper {
+     background: url(//i.imgur.com/xu2IbWO.png) no-repeat center / cover;
+    /* News Tab Image */
+     border-radius: 8px;
+     color: transparent;
+     display: block;
+     font-size: 30%!important;
+     height: 50%;
+     margin: 0;
+     margin-left: 2%;
+     margin-top: 14%;
+     padding: 0 5px;
+     text-align: left;
+     width: 40%;
+}
+ .site-message.show::after {
+     animation: DEGRADEPLAYERCOLOR 10s ease infinite!important;
+     background-image: linear-gradient(49deg, rgba(248, 102, 18, 1) 38%, rgba(255, 182, 37, 1) 50%, rgba(244, 108, 20, 1) 80%);
+     background-size: 200% 300%;
+     border-radius: 10px 10px 0 0;
+     content: "";
+     display: block;
+     filter: brightness(1.1);
+     height: 15%;
+     position: absolute;
+     top: 0;
+     width: 100%;
+}
+ .cookie-wrapper::after {
+     background: white;
+     border: 0px solid #C1C1C1;
+     color: gray;
+     display: block;
+     font-family: JDMDCondensed;
+     font-size: 3em;
+     height: 300px;
+     left: 43%;
+     overflow: auto;
+     overflow-y: scroll;
+     position: absolute;
+     text-align: left;
+     top: 20%;
+     width: 56%;
+}
+ .cookie-close {
+     background-image: url(//i.imgur.com/UrQ2lqy.png), linear-gradient(49deg, rgba(248, 102, 18, 1) 38%, rgba(255, 182, 37, 1) 50%, rgba(244, 108, 20, 1) 80%);
+     background-position: 5% 50%, 50%;
+     background-repeat: no-repeat, repeat;
+     background-size: 18%, 500%;
+     border-radius: 25px;
+     display: block;
+     height: 10%!important;
+     left: 70%;
+     position: absolute;
+     top: 87%;
+     width: 25%;
+}
+ .cookie-close .cookie-close-btn:hover, .cookie-close .cookie-close-btn:focus {
+     background: transparent;
+     opacity: 1;
+}
+ .cookie-close .cookie-close-btn {
+     background: none;
+     color: white;
+     height: 100%;
+     margin-left: 0;
+     margin-top: 0;
+     width: 100%;
+}
+/* Banner */
+ .banner .banner-img img{
+     max-width: 100%;
+     max-height: 100%;
+     background-image:white;
+}
+ .banner .banner-txt{
+     font-size: 0.40rem;
+}
+ // MISTAKES .{
+}
+ #just-dance-now.connection-lost .connectionLost-wrapper {
+     background-color: #ff9600;
+     background-image: white;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100%;
+     left: 0;
+     margin-right: 17px;
+     position: absolute;
+     top: 0;
+     width: calc(100vw + 17px);
+     z-index: 999999999;
+}
+ #just-dance-now.connection-lost .connectionLost-wrapper .main {
+     background-color: transparent;
+     background-image: none;
+     color: gray;
+     height: 100%;
+     padding-left: 40vw;
+     padding-right: 5vw;
+     padding-top: 15vh;
+     position: relative;
+}
+ #just-dance-now.connection-lost .connectionLost-wrapper .main::before {
+     background-color: white;
+     content: "";
+     display: block !important;
+     height: 101%;
+     left: 0;
+     -ms-transform: skewX(12deg);
+     -ms-transform-origin: bottom left;
+     position: absolute;
+     top: 0;
+     transform: skewX(12deg);
+     transform-origin: bottom left;
+     -webkit-transform: skewX(12deg);
+     -webkit-transform-origin: bottom left;
+     width: 115%;
+     z-index: -99999;
+}
+ // Navigation text // Disable html, body{
+     background:white;
+}
+ .empty-test {
+}
+ .state-songselection #just-dance-now::after {
+     content: "";
+     top: 92.7%!important;
+}
+ // maintenance clearfix // Primarily (off) .empty-test {
+}
+ .character {
+     animation: plusminusCarrot 3s ease-in-out infinite;
+}
+ .wrapper {
+     background-color: white !important;
+     background-image: none !important;
+}
+ .timer_container {
+     color: gray;
+     font-family: JDMediumCondensed !important;
+     margin: 9rem 0 0 0 !important;
+}
+ .main__text, .main .main__text a, .main a, .main a:hover, .main a:visited, .main .main__text a:hover {
+     color: gray !important;
+     font-family: JDMDCondensed !important;
+}
+ .main::after {
+     opacity: 0;
+}
+ .main .main__text a {
+     color: rgba(255, 0, 72, 1) !important;
+}
+ "] {
+     margin-top: -40.5%!important;
+}
+ .main[class="main main-cookieShow"] {
+     margin-top: -24%!important;
+}
+ // Timer .{
+}
+ .maintenance__text, #timer {
+     display: contents;
+}
+ .maintenance.expand::before {
+     background: white;
+     content: '';
+     height: 100%;
+     left: 0.6rem;
+     position: absolute;
+     top: 1;
+     transform-origin: bottom right;
+     width: 92%;
+}
+ // PATH&STROKE .empty-test {
+}
+ .sprite--tape .color-mid {
+     stroke: rgba(249, 182, 217, 1);
+}
+ .sprite {
+     color: rgba(123, 124, 122, 1);
+}
+ .sprite--tape .color-light {
+     stroke: rgba(235, 85, 166, 1)!important;
+}
+ path, .sprite--stars svg, .sprite--tape .color-dark {
+     stroke: rgba(241, 76, 162, 1)!important;
+}
+ // Player Profile .{
+}
+ .state-dance .dancercard .player-name {
+     background: rgba(255, 255, 255, 0);
+     bottom: 89%!important;
+     left: -9%!important;
+     -webkit-mask: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 80%, rgba(255, 255, 255, 0) 90%)!important;
+}
+ .state-dance .controller .dancercard .player-name em {
+     max-width: 2.1rem;
+}
+ #players .player:not(.ghost).visible, .player.visible.controller.idling-1, .player.visible.controller.idling-2, .player.visible.controller.idling-3 {
+     animation: none!important;
+     transform: none!important;
+     transition: none!important;
+}
+ .state-songselection .player.controller .dancercard .avatar-wrapper, .state-afterdance .player.controller .dancercard .avatar-wrapper {
+     background: url(//dl.dropbox.com/s/yf78xrejg0ovtp4/90s_jd2020_skin.png?dl=0) no-repeat center / cover;
+    /* Player border or skin */
+}
+ #afterdance .blue .stars::after, .toast__color.blue::before, #afterdance .blue .color::before, .player-solo #afterdance .blue .color::before {
+     background-image: linear-gradient(to right, rgba(72, 139, 252, 1) 0%, rgba(93, 27, 239, 1) 100%);
+}
+ #afterdance .purple .stars::after, .toast__color.purple::before {
+     background-image: linear-gradient(40deg, rgba(131, 5, 179, 1) 30%, rgba(122, 57, 242, 1) 50%, rgba(131, 5, 179, 1) 66%);
+}
+ #afterdance .green .stars::after, .toast__color.green::before, #afterdance .green .color::before, .player-solo #afterdance .green .color::before {
+     background-image: linear-gradient(40deg, rgba(103, 190, 43, 1) 0%, rgba(101, 255, 11, 1) 50%, rgba(103, 190, 43, 1) 100%);
+}
+ #afterdance .aqua .stars::after, .toast__color.aqua::before {
+     background-image: linear-gradient(40deg, rgba(66, 184, 180, 1) 30%, rgba(80, 250, 181, 1) 50%, rgba(66, 184, 180, 1) 66%);
+}
+ #afterdance .pink .stars::after, .toast__color.pink::before {
+     background-image: linear-gradient(40deg, rgba(204, 23, 224, 1) 30%, rgba(253, 3, 164, 1) 50%, rgba(204, 23, 224, 1) 66%);
+}
+ #afterdance .red .stars::after, .toast__color.red::before, #afterdance .red .color::before, .player-solo #afterdance .red .color::before {
+     background-image: linear-gradient(40deg, rgba(237, 33, 25, 1) 0%, rgba(255, 126, 22, 1) 50%, rgba(237, 33, 25, 1) 100%);
+}
+ #afterdance .pink .color::before, #afterdance .pink .flag::after {
+     background: linear-gradient(49deg, rgba(208, 24, 229, 1) 0%, rgba(254, 1, 167, 1) 30%, rgba(235, 11, 193, 1) 60%, rgba(254, 1, 167, 1) 100%);
+}
+ #afterdance .results .player .score.superstar::after, #afterdance .results .player .score.megastar::after {
+     height: 35%;
+     right: 14%;
+     top: 16%;
+     width: 55%;
+}
+ .state-dance .dancercard .player-name em {
+     font-family: JDMediumCondensed!important;
+     overflow: visible!important;
+     text-align: center !important;
+     text-shadow: 2px 0px 1px black !important;
+}
+ .state-dance #players {
+     left: 14%;
+     top: 1.5%;
+     width: 78%;
+}
+ .state-dance .dancercard .player-color {
+     animation: none!important;
+     border-radius: 15px 15px 15px 15px;
+     height: 25%;
+     width: 90%!important;
+}
+ .state-dance .dancercard .player-color::after {
+     border-radius: 5px 5px 5px 5px;
+     transform: none;
+}
+ .player-color::after {
+     box-shadow: none;
+     width: 100%;
+}
+ #players .player-special {
+     left: -22%;
+     top: 0;
+}
+ // ADMIN SCREEN .{
+}
+ .dialog .toggle-settings, .toggle-settings:hover, .toggle-settings:focus {
+     fill: white;
+}
+ .dialog #admin-menu {
+     opacity: 1;
+     transform: scaleX(1)!important;
+     transition: width 2s linear, opacity .5s ease 0!important;
+}
+ #admin-menu .menu__head {
+     display: none;
+}
+ #admin-menu {
+     height: 39em;
+     opacity: 1!important;
+     top: 0;
+     transition: transform .2s ease-out 0s, opacity .1s ease 0!important;
+     width: 322%;
+}
+ #admin-menu:after {
+     animation: DEGRADEAFTERDANCE 10s both infinite;
+     background-image: none, linear-gradient(49deg, rgba(193, 190, 255, 1) 0%, rgba(145, 138, 252, 1) 50%, rgba(193, 190, 255, 1) 100%);
+     background-position: center;
+     background-repeat: no-repeat, repeat;
+     background-size: 16%, 200%;
+     box-shadow: 0 0 25px -5px rgba(149, 142, 252, 1);
+     content: '';
+     display: block;
+     height: 9.5%;
+     left: .6%;
+     position: absolute;
+     top: 10.8%;
+     width: 12.2%;
+}
+ #admin-menu .player-btn svg {
+     opacity: 0;
+}
+ #admin-menu .player-btn {
+     fill: #9990;
+     margin-left: 0;
+     margin-top: 1%;
+}
+ #admin-menu .player.player--controller {
+     animation: DEGRADEPLAYERCOLOR 15s ease infinite;
+     background-image: linear-gradient(50deg, rgba(133, 17, 189, 1) 0%, rgba(248, 148, 205, 1) 50%, rgba(248, 148, 93, 1) 100%);
+     background-size: 50em;
+     border: 1.2px solid rgba(119, 125, 252, 1);
+     border-radius: 12px;
+     box-shadow: 0 0 25px -5px rgba(149, 142, 252, 1);
+     color: white;
+     margin-top: 1% !important;
+     padding: 0;
+}
+ #admin-menu .menu__body {
+     animation: DEGRADEAFTERDANCE 20s ease infinite;
+     background-image: url(//dl.dropbox.com/s/xshs1aul4ppf8hl/aft_BKG.png?dl=0);
+     background-repeat: no-repeat, repeat;
+     background-size: 100% 100%, 200%;
+     height: 98.5%!important;
+     left: 8.5em;
+     position: absolute!important;
+     width: 59.88em;
+}
+ #admin-menu .menu__legal {
+     background-color: transparent;
+     overflow: visible;
+}
+ #admin-menu .menu-section {
+     margin-bottom: 11em;
+     width: 100%;
+}
+ ul.language__dropdown {
+     right: 15em!important;
+     top: 5em!important;
+}
+ ul.video-quality__dropdown {
+     height: 50em;
+     right: 34em!important;
+     top: 5em!important;
+}
+ #admin-menu .video-quality__dropdown::after, #admin-menu .language__dropdown::after, #admin-menu .content__title {
+     display: none;
+}
+ #admin-menu .video-quality__item, #admin-menu .language__item {
+     background-color: transparent;
+     font-family: JDMDCondensed;
+     padding: 0;
+}
+ #admin-menu .video-quality__item:first-of-type, #admin-menu .video-quality__item:hover, #admin-menu .video-quality__item:focus, #admin-menu .language__item:first-of-type, #admin-menu .language__item:hover, #admin-menu .language__item:focus, #admin-menu .languagePicker__content .languagePicker__value {
+     background-color: transparent;
+     color: #a48bfd;
+     font-family: JDMediumCondensed;
+     padding: 0;
+}
+ #admin-menu .languagePicker__content .languagePicker__value, #admin-menu .languagePicker__content {
+     right: 25%;
+     top: 13.1%;
+}
+ #admin-menu .languagePicker__value::after {
+     border-top: 0.09rem solid rgb(164, 139, 253);
+}
+ .language__dropdown::-webkit-scrollbar-thumb {
+     background-color: transparent;
+     border: 0 solid transparent;
+}
+ #admin-menu .video-quality__dropdown, #admin-menu .language__dropdown, #admin-menu .languagePicker__content {
+     border: 2.5px solid #8f84ef;
+     border-radius: 11px;
+     flex: none;
+     max-height: 1.2rem;
+     min-width: 18%;
+     overflow: hidden;
+     position: absolute;
+     text-align: center;
+}
+ #admin-menu .menu-section__content {
+     margin-left: -2.5em;
+     text-align: center!important;
+}
+ #admin-menu .menu-section__title {
+     border-bottom: 0;
+     color: rgba(117, 123, 248, 1);
+     font-family: JDMediumCondensed;
+     font-size: .2rem;
+     line-height: 1.5;
+     margin-bottom: 0;
+     text-align: center;
+     width: 100%;
+}
+ // OTHER DETAIL .{
+}
+ .spinner {
+     fill: rgba(131, 252, 195, 1);
+}
+ .pop-up__content {
+     box-shadow: none;
+     font-family: "JDMDCondensed" !important;
+     font-size: 18px;
+     text-align: center;
+}
+ .pop-up button {
+     animation: DegradeSong ease 20s infinite!important;
+     background-image: linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-size: 500%;
+     border-radius: 25px;
+     color: white !important;
+     font-family: "JDMDCondensed" !important;
+     font-size: 18px;
+     height: 180%;
+     width: 25%;
+}
+ .pop-up__title::before {
+     animation: DegradeSong ease 20s infinite!important;
+     background-image: linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-size: 500%;
+     height: 55%;
+     top: 0%;
+     transform: none;
+     width: 100%;
+     z-index: -1;
+}
+ .pop-up__wrapper .pop-up__title {
+     box-shadow: none;
+     color: #c1c1c1 !important;
+     font-family: "JDMediumCondensed" !important;
+     font-size: 28px;
+     line-height: 5 !important;
+     padding-bottom: 0%;
+     text-transform: uppercase;
+}
+ .pop-up__title {
+     position: relative;
+     padding-right: 40px;
+     padding-left: 205px;
+     height: 21px;
+}
+ .pop-up__wrapper .pop-up {
+     border-radius: 25px;
+     box-shadow: 0 0 42px -5px rgba(235, 52, 149, 1);
+}
+ html:fullscreen .toggle-fullscreen {
+     fill: rgba(178, 255, 231, 1);
+}
+ .main {
+     background: none;
+}
+ .section {
+     margin-bottom: 0;
+}
+ .site-message.show {
+     background: white;
+     border-radius: 10px;
+     box-shadow: 0 0 40px 5px rgba(189, 240, 243, 1);
+     display: block;
+     height: 60%;
+     left: 25%;
+     opacity: 1;
+     padding: 0;
+     position: fixed;
+     top: 15%;
+     transition: opacity 0.50s;
+     width: 50%;
+}
+ .site-message.show::before {
+     color: white;
+     display: block;
+     font-family: JDMediumCondensed;
+     font-size: 1.8em;
+     left: 0;
+     letter-spacing: 2px;
+     margin-top: 2%;
+     position: fixed;
+     text-align: center;
+     width: 100%;
+     z-index: 99999;
+}
+ #admin-menu .player {
+     align-items: end !important;
+     animation: DEGRADEPLAYERCOLOR 15s ease infinite;
+     background-image: linear-gradient(50deg, rgba(113, 123, 252, 1) 0%, rgba(213, 155, 254, 1) 50%, rgba(113, 123, 252, 1) 100%);
+     background-size: 50em;
+     border: 1.2px solid rgba(119, 125, 252, 1);
+     border-radius: 12px;
+     box-shadow: 0 0 25px -5px #958efc;
+     display: inline-block;
+     height: 2rem;
+     margin-left: 5% !important;
+     margin-top: 1%;
+     position: relative !important;
+     transition: all .2s ease-in-out;
+     width: 22%;
+}
+ #admin-menu .player .avatar-wrapper {
+     margin-left: 0 !important;
+     margin-top: 20%;
+     padding: 0 !important;
+     width: 1rem !important;
+}
+ #admin-menu .player--controller::before {
+     background-image: url(//dl.dropbox.com/s/uhlyvkh7ev1hkjc/QueenRoom.png?dl=0);
+     left: 42%;
+     top: 5%;
+}
+ .item-container {
+     -ms-transform: none;
+     transform: none;
+     -webkit-transform: none;
+}
+ .song--focused .song__decoration {
+     transition: none;
+}
+ .song__decoration {
+     transition: none;
+}
+ .toggle-settings svg {
+     opacity: 0;
+}
+ .state-songselection button.toggle.toggle-settings:hover, .connect-phone-info.connect-phone-info--clickable:hover {
+     transform: scale(1.2) !important;
+}
+ #admin-menu .player:hover {
+     transform: scale(1.06);
+}
+ #admin-menu .player__name {
+     color: white;
+     font-family: JDMediumCondensed;
+     font-size: 22px;
+     margin-top: -2%;
+}
+ // GAME // HUD .{
+}
+ .hud::before {
+     background: url(//i.imgur.com/nxkt12Z.png) no-repeat center / 25%, rgba(218, 243, 240, 1);
+     height: 10%!important;
+     left: .49%;
+     opacity: 1!important;
+     top: 20.77%;
+     -webkit-mask: url(//i.imgur.com/DEAZdZ2.png) no-repeat 0 50% / 100%;
+     width: 11.8%!important;
+}
+
+ // Gold Move .{
+}
+ #goldmove .layer.layer-1 {
+     background-image: url(//i.imgur.com/6C45q1V.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 95%;
+     opacity: 1;
+     animation: goldmoveAmbient 16s linear infinite;
+}
+ #goldmove .layer.layer-3 {
+     background-image: url(//i.imgur.com/qFgos9t.png) !important;
+     opacity: 1;
+}
+ // Feedback Label #players[data-stars="1"] .feedback-label, #players[data-stars="2"] .feedback-label, #players[data-stars="3"] .feedback-label, #players[data-stars="4"] .feedback-label, #players[data-stars="5"] .feedback-label {
+     top: 30%!important;
+}
+ html:not(.weak-platform) #players .star::before {
+     background-image: url(1//dl.dropbox.com/s/3jpmg65bxil3b19/light.png?dl=0);
+     background-repeat: no-repeat;
+     background-size: 98%;
+     transform: rotateZ(0deg)!important;
+     -webkit-mask: url(1//dl.dropbox.com/s/q1bm6etjotb7mtt/Starmask.png?dl=0) no-repeat center/ 85%;
+}
+ .star.star-1, .star.star-3, .star.star-5 {
+     animation: csBeatSelect 2.1s linear infinite!important;
+}
+ .star.star-2, .star.star-4 {
+     animation: csBeatSelect 2.2s linear infinite!important;
+}
+ #players .player-stars {
+     bottom: 41%;
+     left: -2%;
+     width:100%;
+}
+ #players .star.star-1, #players .star.star-2, #players .star.star-3, #players .star.star-4, #players .star.star-5 {
+     animation: csBeatSelect 2s linear infinite!important;
+     height: .4rem;
+     margin: 0 -.1rem;
+     width: .4rem;
+}
+ html:not(.weak-platform) #players .star::before {
+     background-image: url(//i.imgur.com/vL4zw8l.png);
+}
+ html:not(.weak-platform) #players .star::after {
+     background-image: url(//i.imgur.com/bdVobZS.png);
+}
+ #players .player.megastar .star {
+     background-image: url(//dl.dropbox.com/s/lm0gio45hww4ij7/Star_glow_plus_more_jd2019.png?dl=0);
+     background-size: 80%;
+}
+ #players .player.superstar .star {
+     background-image: url(//dl.dropbox.com/s/4g9ch4n9pmyjwor/Star_glow_plus_jd2019.png?dl=0);
+     background-size: 80%;
+}
+ #players .star {
+     background-image: url(//dl.dropbox.com/s/wnzpa3pea22lf2h/Star_glow_jd2019.png?dl=0);
+     background-size: 80%;
+     transform: rotateZ(20deg);
+}
+ #afterdance .results .player .score.superstar .star, .highscore-display.superstar .score__stars .star {
+     background-image: url(//dl.dropbox.com/s/4g9ch4n9pmyjwor/Star_glow_plus_jd2019.png?dl=0);
+}
+ #afterdance .results .player .score.megastar .star, .highscore-display.megastar .score__stars .star {
+     background-image: url(//dl.dropbox.com/s/lm0gio45hww4ij7/Star_glow_plus_more_jd2019.png?dl=0);
+}
+ .highscore-display .score__stars .star {
+     background-image: url(//dl.dropbox.com/s/wnzpa3pea22lf2h/Star_glow_jd2019.png?dl=0);
+}
+ #players .star {
+     transform: rotateZ(5deg)!important;
+}
+ .hud.beat #players .feedback-label {
+     animation: feedlabel 0.7s infinite!important;
+     background-image: url(//dl.dropbox.com/s/mqjgmscx0f8iayl/label.png?dl=0);
+     background-repeat: no-repeat;
+}
+ .picto sdow1 {
+     filter: drop-shadow(4px -2px 2px gray);
+     left: -1%;
+}
+ html:not(.ipad) .hud.beat > #pictos > #beat {
+     animation-name: BeatCoach!important;
+     -webkit-animation-name: BeatCoach!important;
+}
+ #beat {
+     background: yellow;
+     border-bottom: solid 0px white;
+     height: 10%!important;
+     left: -28.0%;
+     opacity: 1 !important;
+     top: 94%;
+     -webkit-mask: url(//dl.dropboxusercontent.com/s/syw93qskeduginy/%23beat.png) top left / cover;
+     width: 23%!important;
+}
+ .particle-system {
+     opacity: 0;
+}
+ #pictos {
+     left: 78.5%;
+     width: 40%!important;
+}
+ #pictos.multi-coach {
+     left: 70%;
+     width: 40%!important;
+}
+ .picto {
+     left: -32%!important;
+}
+ .multi-coach .picto {
+     left: -37.8%!important;
+}
+ html:not(.ipad) .hud.beat > #players .crown.leader {
+     animation: crownload 1.2s both;
+}
+ #crown-container {
+     background: url(//i.imgur.com/mqknMMW.png)no-repeat center/ 120%;
+     height: 10%;
+     left: 9.6%!important;
+     position: absolute;
+     top: 17%;
+     transform: rotateZ(0deg);
+     width: 4.5%;
+     z-index: 20;
+}
+ #players .crown {
+     left: -30%!important;
+     top: 20%!important;
+}
+ #players .crown::before {
+     background: url(//i.imgur.com/mqknMMW.png) no-repeat center / cover !important;
+     border: 0;
+     transform: rotate(12deg);
+     width: 110%;
+}
+ .empty-test {
+}
+ .steps__image {
+     opacity: 0;
+}
+ #just-dance-now .tutorial p {
+     color: gray;
+     font-family: JDMDCondensed;
+     font-size: 17%!important;
+}
+ #just-dance-now .tutorial .tutorial__spinner {
+     color: rgba(102, 252, 181, 1);
+     font-family: JDMediumCondensed;
+     font-size: 20%;
+     font-weight: 800;
+     opacity: 1!important;
+     top: 12%!important;
+}
+ .state-tutorial #just-dance-now {
+     animation: SKG02 600s linear infinite;
+     background: white;
+     background-image: url(//dl.dropbox.com/s/7lrve5w3h8fg2zi/I_SKG_03.png);
+     background-repeat: repeat, no-repeat;
+     background-size: 99%, cover;
+}
+ #just-dance-now .tutorial {
+     animation: BootLoading 5s both infinite !important;
+     background: url(//i.imgur.com/j1sNpDD.png) no-repeat center;
+     opacity: 1;
+}
+ .concept__steps--2, .concept__steps--3 {
+     margin-left: 0;
+}
+ .concept__title {
+     font-family: JDMediumCondensed!important;
+     font-size: 85%;
+     padding-top: 15%;
+     text-transform: uppercase;
+}
+ .steps__number {
+     background: white;
+     border: 3px solid #38d6b5;
+     border-radius: 15%;
+     color: #38d6b5;
+}
+ .concept {
+     color: gray;
+     left: 23.5%;
+     position: absolute;
+     top: 0;
+     width: 50%;
+}
+ .steps__connect {
+     color: gray;
+     font-family: "JDMDCondensed"!important;
+     font-size: 55%!important;
+     width: 60%;
+     padding-top: 1%;
+     padding-left: 7%;
+     line-height: 0.2rem;
+     vertical-align: baseline;
+}
+ .concept_ftue {
+     width: 100%;
+}
+/* Fade. */
+.flash-overlay {
+    @include css-positioning(fixed, 11, 0, 0, 0, 0);
+    -webkit-animation: fadeOpenModalScreen 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+    animation: fadeOpenModalScreen 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+}
+ .modal::before {
+     background-color: transparent;
+     content: '';
+}
+ .modal__container::before {
+     background-color: #fff;
+     left: 12.3%;
+     position: absolute;
+     transform: none!important;
+     transform: none;
+     width: 90%;
+     z-index: -1;
+}
+ .modal__close {
+     animation: DEGRADEBUTTON03 20s both infinite;
+     background-image: linear-gradient(49deg, rgba(32, 209, 49, 1) 10%, rgba(163, 228, 29, 1) 50%, rgba(32, 209, 49, 1) 90%);
+     background-size: 300%;
+     box-shadow: 0 0 16px -5px rgba(32, 209, 49, 1);
+     font-weight: 900;
+     height: 9.5%;
+     line-height: 250%;
+     padding: 0;
+     right: 87.8%;
+     text-align: center;
+     top: .70%;
+     -webkit-mask: url(//i.imgur.com/DEAZdZ2.png) no-repeat 0 50% / 100%;
+     width: 11.6%;
+     z-index: 9999999!important;
+}
+ .modal__container::after {
+     background: url(//dl.dropbox.com/s/rybm5n63kgz7j8q/Playlist2.png) no-repeat center/ 25%, rgba(218, 243, 240, 1);
+     height: 10%;
+     left: .5%!important;
+     top: 20.8%!important;
+     transform: none;
+     -webkit-mask: url(//i.imgur.com/DEAZdZ2.png) no-repeat 0 50% / 100%;
+     width: 11.8%!important;
+}
+ .connect-phone-info.connect-phone-info--clickable {
+     animation: none!important;
+     background: #38d6b5;
+     height: 6%;
+     left: 4.6%!important;
+     top: 2.5%!important;
+     transform: none!important;
+     -webkit-mask: url(//i.imgur.com/AZyq5wt.png) no-repeat center / 100%;
+     width: 3%;
+}
+ span.connect-phone-info__text, .connect-phone-info--clickable .connect-phone-info__text::before {
+     color: transparent;
+}
+ .empty-test {
+}
+ #room-info:hover {
+     color: gray;
+}
+ .danceroom__number {
+     color: #38d6b5;
+     font-family: JDMediumCondensed;
+     font-size: 25%;
+     margin-left: 25%;
+     margin-top: -2.5%;
+     padding: 0;
+     text-shadow: 0 0 0px rgba(154, 231, 218, 1);
+     width: 35%;
+}
+ .danceroom {
+     padding: 0;
+}
+ .vip:not(.state-dance) #room-info, .vip:not(.state-tutorial) #room-info {
+     height: 5%;
+     padding-top: 0;
+     top: 33%;
+     width: 10%;
+}
+ #room-info {
+     color: rgba(57, 214, 182, 1);
+     font-size: 95%;
+     left: 1%;
+     padding: 0;
+     text-align: center;
+     top: 31.5%;
+     width: 10%;
+     z-index: 0;
+}
+ .danceroom__caption {
+     margin-left: 15%;
+     margin-left: 28%;
+     margin-top: -2%;
+     width: 0%;
+}
+ // ALBUMCOACH SLIDE SCREEN 
+ /* Last Update to 24 May */
+ .state-coachselection .song-cover--hi-res::before {
+     background-size: cover !important;
+     transform: scale(.38);
+     top: -44.8%;
+     opacity:0;
+     transform:all .3s;
+     left: -2%;
+     animation: albumcoachSlide 2.5s ease !important;
+     height: 210%;
+}
+ @keyframes albumcoachSlide  {
+     0% {
+         left: -5%;
+    }
+     30% {
+         opacity:1; 
+    }
+     50% {
+         left: 0%;
+    }
+     85% {
+         opacity:1; 
+    }
+     100% {
+         opacity:0; 
+    }
+}
+ .state-songselection .song-cover--hi-res::before {
+     background-size: cover !important;
+     top: -44.8%;
+     left: -2%;
+     animation: albumcoachSlide 2.5s ease;
+     height: 210%;
+     transform:all .3s;
+     opacity:1;
+}
+ .state-coachselection .song-cover::before {
+     content: "";
+    /* albumcoach image */
+     color:black;
+     position: fixed;
+     display: block;
+     left: 0%;
+     width: 100%;
+     background-position: center !important 
+}
+ .state-coachselection .song-action__button, .state-coachselection .song-details__empty, .coach-selection__list, .state-coachselection #players.animate, .state-coachselection #preview .song-details, .coach-selection__title, .state-coachselection .song-cover.song-cover--hi-res::after, .state-coachselection .song-cover.song-cover--low-res {
+     animation: coachSelectionDelay 2.6s !important 
+}
+/* This animation keyframe is workin */
+ @keyframes coachSelectionDelay {
+     0% {
+         opacity:0 
+    }
+     85% {
+         opacity:0 
+    }
+     100% {
+         opacity:1 
+    }
+}
+ // BUTTONS .{
+}
+ html:fullscreen .toggle-fullscreen {
+     opacity: 0;
+}
+ .exit-btn--play-again::before {
+     background: url(//dl.dropbox.com/s/q6pen15574lvozc/Again.png?dl=0), linear-gradient(49deg, rgba(86, 110, 130, 1) 0%, rgba(136, 164, 190, 1) 100%);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 50%, cover;
+     border-radius: 50%;
+     height: 390%;
+     left: -27%;
+     top: -85%;
+     width: 23%;
+}
+ .exit-btn--play-again {
+     color: rgba(101, 100, 101, 1);
+     font-size: 15%;
+     font-weight: 600;
+     left: 10.5%;
+     text-align: left;
+     top: 92%;
+}
+ .exit-btn--continue::before {
+     animation: DEGRADEBUTTON02 ease 6s infinite!important;
+     background-image: url(//i.imgur.com/UrQ2lqy.png), linear-gradient(40deg, rgba(43, 227, 162, 1) 35%, rgba(33, 205, 208, 1) 50%, rgba(36, 208, 188, 1) 75%);
+     background-repeat: no-repeat, repeat;
+     background-size: 15%, 200%;
+     border-radius: 50px;
+     height: 350%;
+     margin-left: -70%!important;
+     margin-top: 47%;
+     width: 190%;
+     z-index: -1;
+}
+ .exit-btn--continue {
+     font-size: 22%;
+     right: 12.5%;
+     top: 91%;
+}
+ .landing-button:hover .landing-button__play {
+     color: white !important;
+}
+ .landing-button:hover .landing-button__play::after {
+}
+ .landing-button:hover .landing-button__play::before {
+     background-image: url(//i.imgur.com/UrQ2lqy.png)!important;
+     background-position: 22%;
+     background-size: 35%;
+     top: -22%;
+}
+ .landing-button__play::before {
+     background-image: url(//i.imgur.com/UrQ2lqy.png)!important;
+     background-position: 22%;
+     background-size: 35%;
+     top: -22%;
+}
+ .landing-button {
+     background: rgba(255, 157, 0, 1);
+     border: none!important;
+     border-radius: 15px;
+     box-shadow: 0 0 10px 1px rgba(255, 102, 0, 1);
+     font-size: 100%;
+     height: 10%;
+     margin-top: 0;
+     max-width: 100%;
+     padding: 0;
+     position: relative;
+     top: 30%;
+     z-index: 99999;
+}
+ .landing-button__play {
+     font-family: JDMediumCondensed;
+     font-weight: 700;
+}
+ h3.landing-button__play {
+     font-size: 125%;
+}
+ .landing-button__play {
+     text-shadow: none!important;
+}
+ button.player-btn.player-btn--kick {
+     background: url(//dl.dropbox.com/s/g9acm725wu0csof/ico_cross.png?dl=0) no-repeat center / 90%;
+}
+ button.player-btn.player-btn--make-controller {
+     background: url(//dl.dropbox.com/s/n7kb4xrtcbumsj8/ico_checkmark.png?dl=0) no-repeat center / 90%;
+}
+ // DISABLED // If you enable these elements, the game will break .{
+}
+ .state-songselection #just-dance-now .danceroom__label, .danceroom__qr-code-wrapper, .vip:not(.state-dance) .account, .vip:not(.state-tutorial) .account, .account, .vip:not(.state-dance) #room-info::after, .vip:not(.state-tutorial) #room-info::after, #room-info::before, #racetrack .platform, .state-dance #settings, .state-dance .dancercard .player-exp.player-exp-normal, .state-dance .dancercard .player-logo--vip, .state-dance .dancercard .player-flag, .state-dance .dancercard .avatar-wrapper, .state-dance #room-info, .state-dance #room-info, .reward__img, .reward__wrapper.reward__unlocked .reward__img, .reward__content::after, .score__number::before, .controller .dancercard .player-master, .toggle::after, .toggle::before, .song-action__price-tag::before, .song-detail::before, .dr-landing__icon-wrapper, .footer, .section.availability, .section#how-it-works, .section#features, .section.catalog, .section#explore, .side-nav, .logo, .landing-button::before, .landing-text__subtitle, .landing-text__title, .landing-arrow, .main::before, .landing__video, .song-action__price::before, .preview--bg::before, .dr-landing__label, .title-container .artist, .state-dance .connect-phone-info.connect-phone-info--clickable, .state-coachselection #settings, #afterdance .song-info, .state-afterdance .connect-phone-info.connect-phone-info--clickable, .state-coachselection .connect-phone-info.connect-phone-info--clickable, .state-coachselection .song-action__price, .state-coachselection .song-action__price-tag, .coach::before, .state-coachselection #song-selection, .state-coachselection .song__reward, .state-coachselection .video-preview, .state-coachselection .highscore-display, .state-coachselection #room-info, .state-tutorial .connect-phone-info.connect-phone-info--clickable, .state-tutorial #settings, .state-tutorial #room-info, .state-tutorial #players, img.tutorial__image, .state-afterdance #players .dancercard .player-flag, .state-afterdance #players .dancercard .player-logo, .state-afterdance #players .player .player-color, .state-afterdance #players .controller .dancercard .player-name, .state-afterdance #settings, .state-afterdance #room-info, .state-songselection .player.controller .dancercard .player-color, .state-songselection .player.controller .dancercard .player-name em, .coach__histogram::before, .state-songselection .player.controller .controller-coins {
+     display: none!important;
+}
+ //↓ ↓ Need to move!!! .state-songselection #players .player {
+}
+ .state-songselection .player.controller .dancercard .player-color, .score__owner .owner-name {
+}
+ .sprites-container{
+     display:block!important;
+     opacity:0;
+     position: relative;
+     width: 100%;
+     height: 95%;
+     left: 20%;
+     top: 18%;
+     transform: scale(0.9);
+}
+ .score__owner {
+     top: -17%;
+}
+ .empty-test {
+}
+ .toast__color::before {
+     animation: DEGRADETOAST 20s ease infinite;
+     background-image: linear-gradient(40deg, rgba(66, 184, 180, 1) 30%, rgba(80, 250, 181, 1) 50%, rgba(66, 184, 180, 1) 66%);
+     background-size: 400% 400%;
+     border-radius: 6px 6px 0 0;
+     filter: brightness(1.2);
+     height: 30%;
+     transform: none;
+     width: 100%;
+     z-index: -1;
+}
+ .toast__image {
+     animation: bounceAvatarUnlock 3s linear infinite;
+     left: 0;
+     top: 20%;
+}
+ #toast {
+     background: white;
+     border-radius: 6px;
+     bottom: 74.5%;
+     box-shadow: 0 0 40px 5px rgba(189, 240, 243, 1);
+     color: rgba(112, 109, 111, 1);
+     font-family: JDMediumCondensed;
+     left: 66.5%;
+     max-width: 29%;
+     min-height: 22%;
+     text-align: center;
+     transform: none!important;
+}
+
+/* */
+ .dr-landing__room-number {
+     font-size: 42%;
+     position: fixed;
+     right: 89.8%;
+     text-align: center;
+     text-shadow: none;
+     top: 5%;
+     width: 8%;
+}
+ .dr-landing__caption {
+     color: rgba(69, 224, 185, 1);
+     font-size: 15vh;
+}
+ .dr-landing::before {
+     background: url(//dl.dropbox.com/s/ykhx8eegheueeja/RoomNuber-Cover.png?dl=0) no-repeat 55% / 105%;
+     bottom: 5%;
+     height: 83%;
+     right: 65.9%;
+     transform: none;
+     width: 30%;
+}
+ .landing-button:hover {
+     animation: DEGRADEPLAYERCOLOR ease 6s infinite!important;
+     background-image: linear-gradient(40deg, rgba(255, 157, 0, 1) 0%, rgba(255, 57, 0, 1) 100%)!important;
+     background-repeat: repeat!important;
+     background-size: 500%!important;
+     border-radius: 15px;
+     overflow: visible;
+}
+ .main-header::after {
+     animation: COACHLEFTRotateL 15s ease-in-out infinite;
+     background: url(//i.imgur.com/Yc5otTn.png)no-repeat center / 100%;
+     background-size: 90%;
+     left: -1%;
+     overflow: visible;
+     content: "";
+     display: block;
+     height: 40em;
+     position: absolute;
+     top: -20px;
+     width: 100%;
+}
+ .main::after {
+     animation: plusminus 5s both infinite, Beat01 3s linear infinite;
+     background: url(//i.imgur.com/uNNdXID.png) no-repeat center / 95%;
+     content: "";
+     height: 53%;
+     left: 30%;
+     overflow: visible;
+     position: absolute;
+     top: 20%;
+     width: 34%;
+}
+ .main-header::before {
+     animation: COACHLEFTRotateR 20s ease-in-out infinite;
+     background:url(//i.imgur.com/3QrGl7V.png)no-repeat center / 100%;
+     background-size: 90%;
+     left: -1%;
+     content: "";
+     height: 40em;
+     position: absolute;
+     top: -20px;
+     width: 100%;
+}
+ .landing-text::before {
+     animation: Beat05 10s linear infinite;
+     background: url(//i.imgur.com/vbq2BJt.png)no-repeat center / 100%;
+     background-size: 50%;
+     left: -1%;
+     content: "";
+     height: 40em;
+     position: absolute;
+     top: -150px;
+     width: 100%;
+}
+ .landing__content::before {
+     animation: COACHLEFT 15s linear infinite, Beat01 3s linear infinite;
+     background: url(//i.imgur.com/rZbfBwd.png) no-repeat center / 100%;
+     content: "";
+     height: 100%;
+     left: 19%;
+     position: absolute;
+     top: -10%;
+     width: 60%;
+     z-index: 999;
+}
+ .landing__content::after {
+     animation: COACHLEFT 15s linear infinite, Beat01 3s linear infinite;
+     background: url(//i.imgur.com/o04ekUk.png) no-repeat center / 100%;
+     content: "";
+     height: 100%;
+     left: 19%;
+     position: absolute;
+     top: -10%;
+     width: 60%;
+     z-index: 999;
+}
+ .dialog #admin-menu {
+     transition: none;
+}
+.modal--active .modal__wrapper{
+    transition : all 0.3s;
+    transform: none;
+    animation: fadeOpenModalScreen 0.8s ease,
+}
+ .section--full-height {
+     background: white!important;
+}
+ // COACH SELECTION SCREEN .{
+}
+ .coach__img {
+     animation: coachselectAnimation 10s both infinite, coachWhBeat 3s both infinite;
+}
+ .coach__histogram {
+     left:-15px;
+}
+ #preview .coach-selection {
+     width: 102%;
+}
+ .state-coachselection #just-dance-now {
+     background: url(//i.imgur.com/ZupE6fo.png), url(//vignette.wikia.nocookie.net/justdance/images/0/06/Bang2019_map_bkg.png/revision/latest?cb=20200203194634)no-repeat 50% / 100%;
+     background-blend-mode: luminosity;
+     background-repeat: no-repeat, repeat;
+     background-size: 100%, 100%;
+     background-size: cover;
+}
+ ul.coach-selection__list.coach-selection__list--1 .coach-selection__item[data-id="1"] {
+     bottom: 97%;
+     height: 2.9rem;
+     right: 85%;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach-selection__list--2::after {
+     animation: BeatSelectBack 4s both infinite;
+     background: url(//dl.dropbox.com/s/2db7ur69lcopvo8/blue-select.png?dl=0), url(//dl.dropbox.com/s/6ith504k60k1bhv/red-select.png?dl=0), url(//dl.dropbox.com/s/bz6fjjqy2c5h31o/aqua-select.png?dl=0), url(//dl.dropbox.com/s/cwja1dd5g7b62xw/pink-select.png?dl=0), url(//dl.dropbox.com/s/vvabxq35viywijz/green-select.png?dl=0), url(//dl.dropbox.com/s/dmtafgd65691tit/purple-select.png?dl=0);
+     background-position: 0% 0%, 15% 0%, 30% 0%, 70% 0%, 85% 0%, 100% 0%;
+     background-repeat: no-repeat;
+     background-size: 12.5% 99%;
+     content: "";
+     display: block;
+     height: 283%;
+     left: -22.4%;
+     position: absolute;
+     top: -113%;
+     width: 127%;
+}
+ .blue .player-color::after {
+     background-image: linear-gradient(to right, rgba(72, 139, 252, 1) 0%, rgba(93, 27, 239, 1) 100%)!important;
+}
+ .red .player-color::after {
+     background-image: linear-gradient(to right, rgba(255, 129, 43, 1) 0%, rgba(232, 22, 19, 1) 100%);
+}
+ .pink .player-color::after {
+     background-image: linear-gradient(to right, rgba(255, 4, 163, 1) 0%, rgba(210, 34, 218, 1) 100%);
+}
+ .aqua .player-color::after {
+     background-image: linear-gradient(to right, rgba(75, 218, 154, 1) 0%, rgba(59, 182, 188, 1) 100%);
+}
+ .purple .player-color::after {
+     background-image: linear-gradient(to right, rgba(134, 0, 197, 1) 0%, rgba(92, 73, 199, 1) 100%);
+}
+ .green .player-color::after {
+     background-image: linear-gradient(to right, rgba(96, 219, 14, 1) 0%, rgba(103, 174, 42, 1) 100%);
+}
+ .coach__player-list.blue::before {
+     background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0), linear-gradient(to right, rgba(72, 139, 252, 1) 0%, rgba(93, 27, 239, 1) 55%)!important;
+}
+ .coach__player-list.red::before {
+     background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0), linear-gradient(to right, rgba(255, 129, 43, 1) 0%, rgba(232, 22, 19, 1) 55%);
+}
+ .coach__player-list.pink::before {
+     background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0), linear-gradient(to right, rgba(255, 4, 163, 1) 0%, rgba(210, 34, 218, 1) 55%);
+}
+ .coach__player-list.aqua::before {
+     background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0), linear-gradient(to right, rgba(75, 218, 154, 1) 0%, rgba(59, 182, 188, 1) 55%);
+}
+ .coach__player-list.purple:before {
+     background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0), linear-gradient(to right, rgba(134, 0, 197, 1) 0%, rgba(92, 73, 199, 1) 55%);
+}
+ .coach__player-list.green::before {
+     background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0), linear-gradient(to right, rgba(96, 219, 14, 1) 0%, rgba(103, 174, 42, 1) 55%);
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.blue::before {
+     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(72, 139, 252, 1) 100%)!important;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.red::before {
+     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 129, 43, 1) 100%);
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.pink::before {
+     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 4, 163, 1) 100%);
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.aqua::before {
+     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(75, 218, 154, 1) 100%);
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.purple:before {
+     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(134, 0, 197, 1) 100%);
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.green::before {
+     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(96, 219, 14, 1) 100%);
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.red::before, .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.purple::before, .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.pink::before, .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.green::before, .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.aqua::before, .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.blue::before {
+     background-color: transparent;
+}
+ .state-coachselection #players[n-ghosts="1"]::after, .state-coachselection #players[n-ghosts="2"]::after, .state-coachselection #players[n-ghosts="0"]::after, .state-coachselection #players[n-ghosts="3"]::after {
+     text-transform: uppercase;
+     background: linear-gradient(145deg, rgba(255, 145, 0, 1) 0%, rgba(255, 60, 97, 1) 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     content: "КОМАНДА ВКЛ.";
+     display: block;
+     animation:none;
+     transform:none;
+     font-family: JDMediumCondensed;
+     font-size: 17px;
+     left: 51%;
+     position: absolute;
+     text-align: left;
+     top: 633.5%;
+}
+ .state-coachselection #players[n-ghosts="0"]::after {
+     content: "КОМАНДА ВЫКЛ." !important;
+     color: gray;
+}
+ .state-coachselection #players[n-ghosts="0"]::before {
+     background: url(//dl.dropbox.com/s/c584lmxbqoro07x/ico_cp.png?dl=0) no-repeat 5% 50% / 11% !important;
+}
+ .state-coachselection #players[n-ghosts="0"]::before, .state-coachselection #players[n-ghosts="1"]::before, .state-coachselection #players[n-ghosts="2"]::before, .state-coachselection #players[n-ghosts="3"]::before {
+     background: url(//dl.dropbox.com/s/sztaq2cyzcsi8wg/ico_coopmodeON.png?dl=0) no-repeat 5% 50% / 11%;
+     border: solid 2.2px rgba(186, 186, 186, 1);
+     border-radius: 10px;
+     border-right: none;
+     content: "";
+     display: block;
+     height: 37%;
+     left: 44.9%;
+     position: absolute;
+     top: 619.5%;
+     -webkit-mask: url(//dl.dropbox.com/s/g2kpe033z5dj1fg/Mask_square.png?dl=0) no-repeat 0% / 94%;
+     width: 30%;
+     z-index: -99999999999999999;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list::before {
+     animation: BeatSelectScreen 4s linear infinite;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     border-radius: 0px;
+     height: 75.2%;
+     left: -5%;
+     opacity: 1;
+     overflow: visible;
+     top: -5%;
+     transform: none;
+     width: 100%;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__names-list {
+     bottom: 3em;
+     font-family: JDMediumCondensed;
+     height: 15em;
+     left: 1.57rem;
+     overflow: visible;
+     width: 191%;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__names-list .player__name {
+     animation: none !important;
+     color: rgba(76, 76, 76, 1);
+     display: block !important;
+     font-family: JDMediumCondensed;
+     font-size: 140%;
+     font-weight: bold;
+     left: 0;
+     margin: 0;
+     margin-top: 270%;
+     max-width: 100%;
+     overflow: visible;
+     position: absolute;
+     text-shadow: none;
+     top: 10%;
+     transition: none !important;
+     width: 50% !important;
+}
+ .state-coachselection #preview .song-details h2 span, .state-coachselection #preview .song-details h3 span {
+     transform: none !important;
+}
+ .state-coachselection .song-detail {
+     max-width: 85%;
+}
+ .state-coachselection .song-cover.song-cover--hi-res {
+     animation: Beat01 3s both infinite!important;
+     background-size: 0;
+     border-radius: 11px;
+     height: 216%;
+     left: -219%;
+     top: -2.4em;
+     width: 458%;
+     z-index: -99999999!important;
+}
+ .coach-selection__item {
+     margin-left: 1.5rem;
+     margin-right: 1.05rem;
+     position: relative;
+}
+ .coach-selection__title {
+     color: white;
+     font-family: JDMDCondensed;
+     right: 35%;
+     text-align: center;
+     text-shadow: 2px 1px 0px rgba(105, 105, 105, 0.86);
+     top: -90%;
+}
+ .coach-selection__list[class="coach-selection__list coach-selection__list--2"] .coach__names-list, .coach-selection__list[class="coach-selection__list coach-selection__list--3"] .coach__names-list, .coach-selection__list[class="coach-selection__list coach-selection__list--4"] .coach__names-list {
+     bottom: -2em;
+     left: 42%;
+     margin-left: 12.5em;
+}
+ .coach-selection__list[class="coach-selection__list coach-selection__list--4"] .coach-selection__item {
+     width: 25rem;
+}
+ .coach-selection__list[class="coach-selection__list coach-selection__list--4"] .coach-selection__item .coach__img {
+     height: 90%;
+     left: 0.4em;
+     top: .5em;
+}
+ .coach__player-list.purple {
+     margin-left: 30%;
+     top: 0%;
+}
+ .coach__player-list.aqua {
+     margin-left: 30%;
+     top: 25%;
+}
+ .coach__player-list.pink {
+     margin-left: 31%;
+     top: -25%;
+}
+ .coach__player-list.green {
+     margin-left: 30%;
+     top: 0%;
+}
+ .coach__player-list.red {
+     margin-left: 30%;
+     top: 25%;
+}
+ .coach__player-list.blue {
+     margin-left: 30%;
+     top: 50%;
+}
+ .coach__player-list::before {
+     background-position: bottom;
+     background-repeat: no-repeat;
+     background-size: 111% 42%, 100%;
+     border-radius: 10px;
+     height: 90%;
+     opacity: 1;
+     transform: none;
+     width: 1.4rem;
+}
+ .coach__names-list .player__name {
+     font-size: 140%;
+     left: 4%;
+     overflow: visible;
+     text-shadow: none;
+     top: 10%;
+}
+ .coach__player-list {
+     display: block;
+     height: 23%;
+     margin-bottom: 1em;
+     margin-left: 0;
+     padding: 0;
+     position: absolute;
+}
+ .coach__names-list {
+     bottom: 3em;
+     font-family: JDMediumCondensed;
+     height: 15em;
+     left: 1.57rem;
+     overflow: visible;
+     width: 175%;
+}
+ .coach-selection__item[data-id="4"], .coach-selection__item[data-id="2"], .coach-selection__item[data-id="3"], .coach-selection__item[data-id="1"] {
+     bottom: 87%;
+     height: 3rem;
+     right: 58%;
+}
+ .state-coachselection .song-action p.song-action__label {
+     font-size: 17%;
+     right: 20%;
+     top: 12%;
+}
+ .state-songselection #players[n-real-players="1"] {
+     background: none;
+     height: 20%!important;
+     left: 25.5%!important;
+     top: 0!important;
+     width: 67%!important;
+}
+ .state-songselection #players {
+     background: url(//dl.dropbox.com/s/zgovvq258nc3vos/banner_offline_avatarResultado.png?dl=0) no-repeat center / cover;
+     height: 1em;
+     left: 1.5%;
+     top: 3.5em;
+     width: 1em;
+}
+ .state-coachselection .song-action {
+     bottom: -.125rem;
+     left: 230%;
+     top: 114%;
+     transition: width 200ms;
+}
+ .state-coachselection .song-action__button {
+     animation: DEGRADEBUTTON02 1s ease infinite;
+     background: url(//i.imgur.com/UrQ2lqy.png) no-repeat 5% / cover, linear-gradient(40deg, rgba(43, 227, 162, 1) 35%, rgba(33, 205, 208, 1) 50%, rgba(36, 208, 188, 1) 75%);
+     background-repeat: no-repeat, repeat;
+     background-size: 15%, 600%;
+     border-radius: 50px;
+     height: 35%;
+     width: 166%;
+}
+ .state-coachselection .song-cover {
+     border: none;
+     border-radius: 5px;
+     bottom: 177%;
+     height: 25%;
+     opacity: 1;
+     right: 286.5%;
+     width: 25%;
+     z-index: 999999999;
+}
+ .state-coachselection #preview .song-details h2, .state-coachselection #preview .song-details h3 {
+     color: rgba(94, 92, 95, 1)!important;
+}
+ .state-coachselection .song__infos {
+     color: grey;
+     font-size: 80%;
+     left: 20%;
+     top: 10%;
+}
+ .state-coachselection .song-cover.song-cover--low-res {
+     background-size: cover;
+     border-radius:10px;
+}
+ .state-coachselection .song-cover.song-cover--hi-res::after {
+     background: #fff!important;
+     border-radius: 8px 8px 8px 8px;
+     content: "";
+     display: block;
+     height: 14%;
+     left: 1.1%;
+     position: absolute;
+     top: 1.5%;
+     width: 28%;
+}
+ .state-coachselection #players {
+     opacity: 1;
+     top: -2em;
+}
+ .state-coachselection #preview .song-details {
+     background: none!important;
+     box-shadow: none;
+     right: 70%!important;
+     top: -170%;
+     -webkit-mask: none!important;
+     width: 48%;
+     z-index: 1;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list {
+     margin: 0 !important;
+     top: 70.5% !important;
+     -webkit-mask: none;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list {
+     margin: 0 !important;
+     top: -25.5% !important;
+     -webkit-mask: url(//dl.dropbox.com/s/0ajeqzrhffsor8p/name.png?dl=0) 0% 0% / 86% 80% no-repeat;
+}
+ .coach-selection__list--2 {
+     left: -25%;
+}
+ .coach-selection__list--3 {
+     left: -20%;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.purple {
+     left: 244.5% !important;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.pink {
+     left: 157.4% !important 
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.green {
+     left: 201% !important;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.red {
+     left: 70.7% !important 
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.blue {
+     left: 27% !important;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list.aqua {
+     left: 114% !important;
+}
+ .coach-selection__item[data-id="1"]::after {
+     animation: Beat01 3s both infinite;
+     background: url(//dl.dropbox.com/s/2db7ur69lcopvo8/blue-select.png?dl=0), url(//dl.dropbox.com/s/6ith504k60k1bhv/red-select.png?dl=0), url(//dl.dropbox.com/s/bz6fjjqy2c5h31o/aqua-select.png?dl=0), url(//dl.dropbox.com/s/cwja1dd5g7b62xw/pink-select.png?dl=0), url(//dl.dropbox.com/s/vvabxq35viywijz/green-select.png?dl=0), url(//dl.dropbox.com/s/dmtafgd65691tit/purple-select.png?dl=0);
+     background-position: 0% 0%, 20% 0%, 40% 0%, 60% 0%, 80% 0%, 100% 0%;
+     background-repeat: no-repeat;
+     background-size: 16.5% 99%;
+     content: "";
+     display: block;
+     height: 122%;
+     left: 172%;
+     position: absolute;
+     top: -5.5%;
+     width: 497%;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list.purple {
+     left: 240.5% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list.pink {
+     left: 154% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list.green {
+     left: 197% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list.red {
+     left: 66% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list.blue {
+     left: 3em !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="1"] .coach__player-list.aqua {
+     left: 108% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="2"] .coach__player-list.purple {
+     left: 240.5% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="2"] .coach__player-list.pink {
+     left: 154% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="2"] .coach__player-list.green {
+     left: 197% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="2"] .coach__player-list.red {
+     left: 66% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="2"] .coach__player-list.blue {
+     left: 23% !important;
+}
+ .coach-selection__list--2 .coach-selection__item[data-id="2"] .coach__player-list.aqua {
+     left: 108% !important;
+}
+ .coach-selection__list--1 .coach-selection__item[data-id="1"] .coach__player-list {
+     display: block !important;
+     height: 203% !important;
+     overflow: visible !important;
+     padding: 0 !important;
+     position: absolute !important;
+     text-align: center !important;
+     width: 45% !important;
+}
+ // SONG SELECTION SCREEN .{
+}
+ #song-selection:before {
+     background: #5e5c5d;
+     box-shadow: none;
+     content: "Цена песни - 100 mojo";
+     font-family: JDMDCondensed;
+     font-size: 11%;
+     height: 10%;
+     left: 79.7%;
+     letter-spacing: 1px;
+     opacity: 1;
+     text-align: left;
+     top: 10%;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     width: 20%;
+     word-spacing: 1.3px;
+}
+ .song-cover--hi-res {
+     height: 500%;
+     width: 100%;
+}
+ .state-songselection .song-cover {
+     height: 182%;
+     left: -75.2%;
+     opacity: 1;
+     top: -16.4%;
+     transition: none;
+     -webkit-mask: url(//dl.dropbox.com/s/ai05t0s6tu759m5/VideoSong-MaskingBanner.png?dl=0) no-repeat 20% 25%/ 100%;
+     width: 175%;
+}
+ .menu-section__content::-webkit-scrollbar {
+     background-color: white;
+     width: 1em;
+}
+ .menu-section__content::-webkit-scrollbar-thumb {
+     background-color: rgba(102, 102, 102, 1);
+     border: 0.3em solid white;
+     border-radius: 0.5em;
+     width: 0.4em;
+}
+ .song__reward {
+     animation: none!important;
+     display: block!important;
+     left: 55%!important;
+     overflow: visible!important;
+     position: absolute!important;
+     top: 7%!important;
+}
+ .song-detail {
+     left: .7%;
+     max-width: 55%;
+     overflow: visible;
+     top: 5%;
+}
+ #in-game-video {
+     opacity: 1;
+}
+ .reward__wrapper .reward__content::before {
+     animation: none;
+     background: url(//i.imgur.com/HIfjkQX.png) no-repeat center / cover;
+     height: 70%;
+     left: 0;
+     top: 0;
+     width: 70%;
+}
+ .reward__wrapper {
+     height: 135%;
+     left: 105%;
+     top: -6%;
+}
+ .reward__unlocked .reward__content::before {
+     animation: none;
+     background: url(//i.imgur.com/ckXUzwy.png) no-repeat center / cover;
+     height: 70%;
+     left: 0;
+     top: 0;
+     width: 70%;
+}
+ #song-selection {
+     background: none;
+     bottom: 40%;
+     left: -1%;
+     -webkit-mask: url(//dl.dropbox.com/s/1vjdilxn28s2fat/SongListMask.png?dl=0) no-repeat 254% 85% / 99% 130%;
+}
+ .state-songselection #players .player.controller {
+     opacity: 1;
+}
+ .state-songselection .player.controller .dancercard .player-logo--vip {
+     animation: DEGRADEAFTERDANCE 1s both infinite;
+     background: linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     clip-path: circle(10% at center);
+     height: 33%!important;
+     left: 1.2em;
+     top: -4.7em;
+     width: 33%;
+}
+ .state-songselection .player.controller .dancercard .player-exp span {
+     font-family: JDMediumCondensed;
+     font-size: 80%;
+     margin-top: 112%!important;
+}
+ .state-songselection .player.controller .dancercard .player-exp.player-exp-normal {
+     background: none;
+}
+ .state-songselection .dialog .toggle-settings, .toggle-settings:hover, .toggle-settings:focus {
+     fill: white;
+}
+ .state-songselection button.toggle.toggle-settings {
+     background: #38d6b5;
+     margin: 0;
+     padding: 0;
+     right: 294.3%;
+     top: 215%;
+     -webkit-mask: url(//i.imgur.com/tMWaOk1.png) no-repeat 0% 12%/ 100%;
+     width: 10%;
+}
+ .state-songselection #settings {
+     left: 70%;
+     position: absolute!important;
+}
+ .state-songselection .toggles {
+     left: 30%!important;
+     overflow: visible;
+}
+ .state-songselection .player.controller .dancercard .player-flag__image {
+     background-position: 65% 50%!important;
+     background-size: 60%!important;
+}
+ .state-songselection .player.controller .dancercard .player-flag {
+     clip-path: circle(20% at center);
+     height: 129%!important;
+     right: 28.1%!important;
+     top: 332%!important;
+}
+ .state-songselection .player.controller .dancercard .player-name {
+     animation: csBeatSelect 2s linear infinite;
+     background: url(//dl.dropbox.com/s/v7zpif6umssv4c9/PlayerLevel.png?dl=0) no-repeat center/ 100%!important;
+     height: 5em;
+     left: 37%;
+     top: 165.5%;
+     width: 32%;
+}
+ .state-songselection #players .player.controller {
+     z-index: 9999999999999 !important;
+}
+ .state-songselection .player.controller {
+     height: 100%!important;
+     left: -40%!important;
+     top: 297%!important;
+     width: 1.5rem!important;
+}
+ #just-dance-now {
+     background: url(//i.imgur.com/n6DH5IK.png) no-repeat center / cover;
+}
+ .state-songselection #just-dance-now::before {
+     animation: DEGRADEAFTERDANCE 60s both infinite;
+     background-image: url(//i.imgur.com/mQ3ggV7.png), linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-position: center;
+     background-repeat: no-repeat, repeat;
+     background-size: 25%, 400%;
+     content: '';
+     display: block;
+     height: 9.9%;
+     left: .5%;
+     position: absolute;
+     top: 20.8%;
+     -webkit-mask: url(//i.imgur.com/DEAZdZ2.png) no-repeat 0 50% / 100%;
+     width: 11.7%;
+}
+ #admin-menu:after {
+     -webkit-mask: url(//i.imgur.com/DEAZdZ2.png) no-repeat 0 50% / 100%;
+}
+ .state-songselection #just-dance-now::after {
+     color: gray;
+     display: block;
+     font-family: JDMDCondensed;
+     font-size: 12%;
+     height: 5%;
+     left: 19%;
+     position: absolute;
+     text-align: left;
+     top: 92.5%;
+     width: 50%;
+     word-spacing: 60px;
+}
+ .list--x {
+     width: 136%;
+}
+ .song--focused .title-container {
+     display: block;
+     left: 65%;
+}
+ .song--focused img.song__cover {
+     1background: url(https://i.imgur.com/rJlMLoX.png);
+     top: 1px;
+     -webkit-mask: url(//dl.dropbox.com/s/g2kpe033z5dj1fg/Mask_square.png?dl=0) no-repeat center / 99%;
+}
+ #admin-menu h2, #admin-menu h3 {
+     font-family: JDMDCondensed;
+     margin-left: 5%;
+}
+ .song--focused .song__tag--ppp::after {
+     animation: Beat01 5s both infinite, DegradeGlow 5s linear infinite!important;
+     background-image: url(//dl.dropboxusercontent.com/s/3jpmg65bxil3b19/light.png?dl=0), url(//i.imgur.com/rlKImdM.png);
+     background-repeat: no-repeat;
+     background-size: 99%, 95%;
+     height: 81%;
+     left: 7.5%;
+     top: 19%;
+     -webkit-mask: url(//i.imgur.com/fSflFE2.png) no-repeat center/ 95%;
+     width: 85%;
+     z-index: 9999;
+}
+ .song.song--focused {
+     margin: 0!important;
+     width: 65%;
+}
+ .song {
+     left: -20%;
+     width: 58%;
+}
+ .item-container {
+     width: 97%!important;
+}
+ .song:hover .caption, .title-container .title {
+     color: #5e5c5d;
+     font-family: JDMDCondensed;
+     font-size: 80%;
+}
+ .song__infos {
+     padding-left: 0.1rem;
+     transition : none;
+}
+ .song__infos--hide {
+     width: 0;
+     transition : none;
+     padding: 10em;
+}
+ .song-detail::before{
+     transition: none;
+}
+ .title-container {
+     font-size: 15%;
+     left: 43%;
+     padding-right: 0;
+     top: 90%;
+     width: 140%;
+}
+ .song--focused .song__tag--ppp {
+     left: 65%;
+     top: -12%;
+     width: 130%;
+}
+ .song__tag--ppp {
+     left: 40%;
+     top: 0;
+     width: 139%;
+}
+ .song__cover {
+     border-radius: 8px;
+     box-shadow: 0px 0px 0px 2px rgba(142, 142, 142, 0.29);
+     -webkit-mask: no-repeat 20% 80%/ 100%;
+}
+ .category.list.list--x.category {
+     opacity: 0;
+}
+ .category.list.list--x.category--focused {
+     left: 3%;
+     opacity: 1!important;
+     top: 10%;
+}
+ .category.list.list--x.category--focused::before {
+     color: rgba(241, 19, 140, 1);
+     font-family: JDMDCondensed;
+     font-size: 15.5%;
+     left: 19%;
+     letter-spacing: 2px;
+     opacity: 1;
+     top: -11%;
+     word-spacing: -1px;
+}
+ .category::before {
+     opacity: 0;
+}
+ .toggle {
+     fill: #00e2c9;
+}
+ .dr-landing .init-spinner__spinner {
+     fill:#fff0;
+     margin-left: -34%;
+     margin-top: -3%;
+     width: 7%;
+}
+ .song-action__price {
+     color: rgba(252, 138, 199, 1);
+     font-family: "JDMDCondensed"!important;
+     font-size: 25%;
+     font-weight: 700;
+     left: 20%;
+     position: absolute;
+     top: 20%;
+}
+ .song-action__price-tag {
+     opacity: 0;
+}
+ p.song-action__label {
+     font-family: "JDMDCondensed"!important;
+     font-size: 20%;
+     right: 40%;
+     top: 15.5%;
+     word-spacing: -1.5px;
+     z-index: 999;
+}
+ .exit-btn--continue {
+     font-family: "JDMDCondensed"!important;
+}
+ .pre-beat .song-action__button:not(.transitioning) {
+     animation: none;
+}
+ .song-action {
+     bottom: -.125rem;
+     right: -3.8rem;
+     top: 86%;
+     transition: width 200ms;
+}
+ .song-action__button {
+     animation: DEGRADEBUTTON02 ease 6s infinite!important;
+     background: url(//i.imgur.com/UrQ2lqy.png), linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-repeat: no-repeat, repeat;
+     background-size: 15%, 200%;
+     border-radius: 50px;
+     height: 42%;
+     right: -2%;
+     top: 3%;
+     width: 197%;
+}
+ .song-action__label {
+     display: block!important;
+}
+ #preview .song-details h3 {
+     font-family: JDMDCondensed;
+     font-size: 15%;
+     margin-top: 0.5%!important;
+     opacity: .7;
+     padding-left: 0;
+     width: 142;
+     word-spacing: -1.5px;
+}
+ #preview .song-details h2 {
+     font-family: JDMediumCondensed;
+     font-size: 21%;
+     font-weight: 100;
+     height: 47%;
+     letter-spacing: .2px;
+     margin-top: 2%!important;
+     width: 100%;
+     word-spacing: 2px;
+}
+ .state-songselection #preview .song-details h2 {
+     width: 158%;
+}
+ #preview .song-details {
+     animation: DegradeSong ease 20s infinite!important;
+     background-image: linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-size: 200%;
+     border-radius: 10px;
+     bottom: 75%!important;
+     box-shadow: 0 0 35px -5px rgba(235, 52, 149, 0.6);
+     max-height: 23.6%!important;
+     overflow: visible;
+     right: 47.3%!important;
+     width: 60%;
+}
+ .video-preview {
+     border: none;
+}
+ .video-preview--visible {
+     height: 104%;
+     opacity: 1!important;
+     transition: visibility 5s 5s, opacity 5s, width 3s;
+     -webkit-mask: url(//dl.dropbox.com/s/ai05t0s6tu759m5/VideoSong-MaskingBanner.png?dl=0) no-repeat 20% 80%/ 100%;
+     width: 175%;
+}
+ .video-preview__video {
+     height: 100%;
+     margin-left: 0;
+     margin-right: 0;
+     width: 100%;
+}
+ .video-preview--visible {
+     opacity: 1;
+     transition: visibility 1s 0s, opacity 2s;
+}
+ .song-cover {
+     border: 0;
+}
+ .song-preview.transitioning {
+     transform: none!important;
+     transform-origin: 100%!important;
+     transition: opacity .15s ease 0s, height ease!important;
+     -webkit-transform: none!important;
+     -will-change: opacity!important;
+}
+ .song-preview {
+     bottom: -1%;
+     left: 133.5%;
+     transform: none!important;
+     transform-origin: 100%!important;
+     transition: opacity .15s ease 0s, height ease!important;
+     -webkit-transform: none!important;
+     -will-change: opacity!important;
+}
+ #preview {
+     margin-top: 0;
+     top: 42%;
+}
+ .state-songselection #admin-menu .player--controller {
+     opacity: 1 !important;
+}
+ .song--focused .song__decoration::after {
+     -ms-transform: scale(1.25, 1.25);
+     transform: scale(1.25, 1.25);
+     -webkit-transform: scale(1.25, 1.25);
+}
+ .song {
+     transition: none;
+}
+ // AFTER DANCE SCEEN // or SCORE SCREEN .{
+}
+ #afterdance:after {
+     content: "ПОЗДРАВЛЯЕМ!";
+}
+ #afterdance .results .highScore.show {
+     font-family: JDMDCondensed;
+}
+ #afterdance .score .highScore {
+     color: gray;
+     font-size: 15px;
+     right: -48%;
+     top: 89%;
+}
+ .state-afterdance .modal__container::after, .state-dance .modal__container::after, .state-afterdance .hud::before, .state-dance .hud::before {
+     opacity: 0 !important;
+}
+ .state-afterdance #just-dance-now {
+     animation: DEGRADEAFTERDANCE 15s ease infinite;
+     background-image: url(//dl.dropbox.com/s/xshs1aul4ppf8hl/aft_BKG.png?dl=0), linear-gradient(49deg, rgba(44, 217, 254, 1) 28%, rgba(61, 251, 254, 1) 50%, rgba(44, 217, 254, 1) 74%);
+     background-repeat: no-repeat, repeat;
+     background-size: 100%, 100%;
+}
+ .state-afterdance #players[n-real-players="1"][n-ghosts="0"] {
+     display: block!important;
+     left: 4.3em;
+     top: 1.7em;
+}
+ .state-afterdance #players[n-real-players="1"][n-ghosts="0"] .dancercard .avatar-wrapper {
+     animation: BounceIN .6s linear 0 1 normal;
+     width: 90%;
+}
+ #afterdance .player-solo .player .score .stars .star {
+     height: .8em!important;
+     width: .8em!important;
+}
+ #afterdance .player-solo .player .score .stars {
+     right: 68%!important;
+     top: -30%;
+}
+ #afterdance .player-solo .stars::after {
+     height: 45%;
+     left: 39%;
+     max-width: 86%;
+     top: 87%;
+}
+ #afterdance .player-solo .player .score .score-text {
+     font-size: 60%;
+     left: -77.3%;
+     margin-top: 3.5%;
+     text-align: left;
+}
+ #afterdance .results .player-solo .player .score.superstar::after, #afterdance .results .player-solo .player .score.megastar::after {
+     right: 52.5%;
+     top: -15%;
+     width: 15%;
+}
+ #afterdance .players.player-solo .player::before {
+     opacity: 0!important;
+}
+ #afterdance .player-solo .player .color::after {
+     background: white!important;
+     border-radius: 0 0 8px 8px;
+     content: '';
+     display: block;
+     height: 170%;
+     left: 3%;
+     position: absolute;
+     top: 426%;
+     width: 336%;
+}
+ #afterdance .results .highScore.solo {
+     color: gray;
+     font-family: JDMDCondensed;
+     font-size: 15%;
+     left: 26.5%;
+     right: 40%;
+     text-align: center;
+     top: 65%;
+     width: 40%;
+}
+ #afterdance .player-solo .player .color::before {
+     height: 602%;
+     width: 342%;
+}
+ #afterdance .players.player-solo {
+     height: 100%;
+     left: 8%;
+     overflow: visible;
+     top: 42%;
+}
+ #afterdance .player-solo .player .color {
+     left: 13%;
+     overflow: visible;
+     top: -5.4em;
+     z-index: -9;
+}
+ #afterdance .player-solo .player .score {
+     overflow: visible;
+     right: 19%;
+     top: 163%;
+}
+ #afterdance .player-solo .player .name {
+     font-size: 24%;
+     margin-left: 9.5%;
+     margin-top: -1.5%;
+     text-align: center;
+}
+ #afterdance::after {
+     animation: AfterDanceName 2s ease, DEGRADEPLAYERCOLOR 20s ease infinite;
+     background-image: linear-gradient(49deg, rgba(44, 217, 254, 1) 28%, rgba(61, 251, 254, 1) 50%, rgba(44, 217, 254, 1) 74%);
+     background-size: 500% 500%;
+     border-radius: 10px;
+     display: block;
+     font-family: JDMediumCondensed;
+     font-size: 50%;
+     height: 10%;
+     left: -4%;
+     letter-spacing: 5px;
+     line-height: 1.2;
+     position: absolute;
+     text-align: right;
+     top: 3%;
+     transition: opacity 3s linear;
+     width: 53%;
+}
+ .score__stars {
+     left: 198%;
+     text-align: left;
+     top: -123%;
+     width: .85rem;
+}
+ .score__stars .star {
+     height: .24rem;
+     width: .24rem;
+}
+ .score__stars[data-stars="5"] .star-1, .score__stars[data-stars="5"] .star-3, .score__stars[data-stars="5"] .star-5 {
+     animation: csBeatSelect both 2s infinite;
+}
+ .score__stars[data-stars="5"] .star-2, .score__stars[data-stars="5"] .star-4 {
+     animation: csBeatSelect both 1s infinite;
+}
+ .score__stars .star {
+     transform: rotateZ(12deg);
+}
+ .score__number {
+     font-family: JDMDCondensed;
+     font-size: 80%;
+     font-weight: 300;
+     left: 26%;
+     text-align: left;
+     top: 30%;
+}
+ .score__display::after {
+     border-bottom: 2px rgba(248, 219, 249, 1) solid;
+     border-left: none;
+     font-family: JDMDCondensed;
+     height: 75%;
+     left: 13%;
+     top: -50%;
+     transform: none;
+     width: 130%;
+     text-align:center;
+}
+ .state-songselection .player.controller .dancercard .player-color, .state-songselection .player.controller .controller-coins, .score__owner .owner-name {
+     font-family: JDMDCondensed;
+     font-size: 95%;
+     left: -1.2%;
+}
+ .score__display {
+     animation: none!important;
+     color: rgba(88, 88, 88, 1);
+     left: 173%;
+     top: -181%;
+     transition: none!important;
+}
+ .highscore-display {
+     animation: none!important;
+     display: block!important;
+     overflow: visible!important;
+     position: absolute!important;
+     transition: none!important;
+     transform:none;
+}
+ [data-stars="1"] .red .score .score-text:after {
+     background: purple;
+}
+ #afterdance .results .player .score.superstar .star.star-4::after, #afterdance .results .player .score.megastar .star.star-4::after, #afterdance .results .player .score.superstar .star.star-2::after, #afterdance .results .player .score.megastar .star.star-2::after {
+     background-size: 0!important;
+}
+ .highscore-display.megastar .score__stars .star::after, .highscore-display.superstar .score__stars .star::after, #afterdance .results .player .score.superstar .star::after, #afterdance .results .player .score.megastar .star::after {
+     animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .5s steps(2, end) infinite, csBeatSelect 1s both infinite!important;
+     background: url(//dl.dropbox.com/s/mtj58srur4zdwbd/L0w.png?dl=0) no-repeat center / cover;
+     content: "";
+     display: block;
+     height: 50%;
+     margin-top: -10%;
+     position: absolute;
+     width: 50%;
+}
+ .toast__content {
+     display: block;
+     margin-top: 20%;
+     text-align: left;
+}
+ #afterdance .player > div {
+     overflow: visible;
+}
+ .state-afterdance #just-dance-now::before {
+     animation: afterdancefx 7s linear;
+     content: "";
+     display: block;
+     height: 40%;
+     left: .5%;
+     position: absolute;
+     transform: none;
+     -webkit-mask: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+     width: 99%;
+     z-index: -9999;
+}
+ #afterdance .player::before {
+     background: black;
+     height: 3%;
+     left: 18.7%;
+     opacity: .25;
+     top: 106%;
+     width: 99%;
+}
+ #afterdance .stars::after {
+     animation: DEGRADEPLAYERCOLOR 12s ease infinite;
+     background-size: 400% 400%;
+     border-radius: 20px;
+     content: "";
+     display: block;
+     height: 35%;
+     left: -19%;
+     position: absolute;
+     top: 60%;
+     transition: width 2s;
+     width: 134%;
+}
+ #afterdance .winner .score {
+     right: 5%;
+}
+ #afterdance .score {
+     bottom: 8%;
+     right: 7.5%;
+}
+ #afterdance .results .score[data-stars="5"] .score-text {
+     margin-left: 113%!important;
+}
+ #afterdance .results .score[data-stars="4"] .score-text {
+     margin-left: 83%!important;
+}
+ #afterdance .results .score[data-stars="3"] .score-text {
+     margin-left: 66%!important;
+}
+ #afterdance .results .score[data-stars="2"] .score-text {
+     margin-left: 56%!important;
+}
+ #afterdance .results .score[data-stars="1"] .score-text {
+     margin-left: 105%!important;
+}
+ #afterdance .results .score[data-stars="0"] .score-text {
+     margin-left: 30%!important;
+}
+ #afterdance .score[data-stars="5"] .stars::after {
+     animation: ScoreEffect5 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 130%;
+}
+ #afterdance .score[data-stars="4"] .stars::after {
+     animation: ScoreEffect4 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 93%;
+}
+ #afterdance .score[data-stars="3"] .stars::after {
+     animation: ScoreEffect3 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 63%;
+}
+ #afterdance .score[data-stars="2"] .stars::after {
+     animation: ScoreEffect2 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 43%;
+}
+ #afterdance .score[data-stars="1"] .stars::after {
+     animation: ScoreEffect1 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 13%;
+}
+ #afterdance .score[data-stars="0"] .stars::after {
+     width: 5%;
+}
+ #afterdance .results .stars .star {
+     margin: 0 -.05rem;
+}
+ #afterdance .results .stars {
+     margin-left: -18%!important;
+}
+ #afterdance .winner .name {
+     margin-left: 2.5%;
+     margin-top: -3%;
+}
+ #afterdance .results .score-text {
+     font-family: JDMediumCondensed;
+     font-size: 90%;
+     margin-left: 116%!important;
+     margin-top: -5%;
+     text-align: left;
+}
+ #afterdance .score {
+     font-family: "Just Dance", "Impact", "Arial Bold", Gadget, sans-serif;
+}
+ #afterdance .name {
+     font-family: JDMediumCondensed;
+     font-size: 25%;
+     font-weight: 600;
+     margin-left: 4.3%;
+     margin-top: -3%;
+}
+ #afterdance .pink .name, #afterdance .pink .score-text {
+     color: rgba(208, 24, 229, 1);
+}
+ #afterdance .blue .name, #afterdance .blue .score-text {
+     color: rgba(93, 29, 240, 1);
+}
+ #afterdance .red .name, #afterdance .red .score-text {
+     color: rgba(232, 22, 19, 1);
+}
+ #afterdance .aqua .name, #afterdance .aqua .score-text {
+     color: rgba(66, 184, 180, 1);
+}
+ #afterdance .purple .name, #afterdance .purple .score-text {
+     color: rgba(210, 34, 218, 1);
+}
+ #afterdance .green .name, #afterdance .green .score-text {
+     color: rgba(103, 190, 43, 1);
+}
+ #afterdance .name {
+     font-family: JDMediumCondensed;
+}
+ #afterdance .position {
+     font-family: JDMediumCondensed;
+     font-size: 60%;
+     left: 19%;
+     top: 23%;
+}
+ #afterdance .winner .position {
+     font-size: 75%;
+     left: 15%;
+}
+ #afterdance .winner .color::before {
+     height: 98%;
+     width: 45%;
+}
+ #afterdance .player:nth-child(2) .color::before {
+     height: 80%;
+     left: 4%;
+     top: 8%;
+     width: 42%;
+}
+ #afterdance .player:nth-child(3) .color::before {
+     height: 71%;
+     left: 5%;
+     top: 10%;
+     width: 40%;
+}
+ #afterdance .player:nth-child(4) .color::before {
+     height: 65%;
+     left: 9%;
+     top: 12%;
+     width: 33%;
+}
+ #afterdance .players {
+     left: -21.5%;
+     max-height: 60.3%;
+     top: 16%;
+     width: 136%;
+}
+ #afterdance .player {
+     height: .6em;
+}
+ #afterdance .color::before {
+     box-shadow: none!important;
+     transform-origin: center;
+}
+ #afterdance.transition-in #crown-container {
+     animation: BeatCrown 1s linear infinite!important;
+}
+ #crown-container .crown, #afterdance .flag, .state-afterdance #players, .img--afterDance .coach, .img--afterDance::before, #afterdance::before {
+     display: none;
+}
+ #afterdance .results {
+     margin: -3.5% 6% 0 22%;
+}
+ #afterdance .color::before {
+     animation: Beat01 1s ease infinite, DEGRADETOAST 2s ease infinite;
+     background-size: 200% 120%!important;
+     border-radius: 11px;
+     height: .4rem;
+     transform: none;
+     width: .4rem;
+}
+ #afterdance .results .stars .star {
+     background-image: url(//dl.dropbox.com/s/wnzpa3pea22lf2h/Star_glow_jd2019.png);
+}
+ // TRANSITION-(scale) . {
+}
+ #dance-transition.in::before {
+     animation: INTransitionBG 2.5s!important;
+     background-color: white !important;
+     background-size: 100%!important;
+     background-size: cover!important;
+     content: '';
+     height: 100%!important;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%!important;
+     z-index: -1!important;
+}
+ #dance-transition.out::before {
+     animation: OUTTransitionBG 1.5s!important;
+     background-color: white !important;
+     background-size: 100%!important;
+     background-size: cover!important;
+     content: '';
+     height: 100%!important;
+     left: 0!important;
+     position: absolute;
+     top: 0!important;
+     width: 100%!important;
+     z-index: -1!important;
+}
+ #dance-transition.in::before {
+     opacity: 1!important;
+}
+ #dance-transition.out::before {
+     opacity: 1!important;
+}
+ #dance-transition .dt-row {
+     background-image: none!important;
+     height: 100%!important;
+     margin-bottom: 9.7%!important;
+     margin-left: 0%!important;
+     opacity: 0;
+     transform: none!important;
+     width: 100%!important;
+}
+ @keyframes LogoScale {
+     0% {
+         opacity: 0;
+         transform: translatex(-2.05rem) scale(0.4);
+    }
+     100% {
+         opacity: 1;
+         transform: scale(1);
+    }
+}
+ @keyframes LogoOut {
+     0% {
+         opacity: 1;
+    }
+     50% {
+         opacity: 0;
+    }
+     100% {
+         opacity: 0;
+    }
+}
+ #dance-transition.in .dt1 {
+     animation: LogoScale 0.7s!important;
+     background: url(//i.imgur.com/aYlpJJA.png)!important;
+     background-position: 0% 0!important;
+     background-repeat: no-repeat!important;
+     background-size: 32%!important;
+     border-radius: 0.1rem!important;
+     height: 60%!important;
+     margin-bottom: 9.7%!important;
+     margin-left: 34%!important;
+     margin-top: 13%!important;
+     opacity: 0!important;
+}
+ #dance-transition.out .dt1 {
+     animation: LogoOut 1.5s!important;
+     background: url(//i.imgur.com/aYlpJJA.png)!important;
+     background-position: 0% 0!important;
+     background-repeat: no-repeat!important;
+     background-size: 32%!important;
+     border-radius: 0.1rem!important;
+     height: 60%!important;
+     margin-bottom: 9.7%!important;
+     margin-left: 34%!important;
+     margin-top: 13%!important;
+     opacity: 0!important;
+}
+ #dance-transition .dt2, #dance-transition .dt3, #dance-transition .dt4, #dance-transition .dt5, #dance-transition .dt6, #dance-transition .dt7, #dance-transition .dt8 {
+     display: none!important;
+}
+ #dance-transition.animate::before {
+     transition: none!important;
+}
+ #dance-transition.animate .dt-row {
+     transition-property: opacity!important;
+}
+ #dance-transition.animate .dt1 {
+     background-position: 0% 0!important;
+}
+ #dance-transition.animate.in::before, #dance-transition.animate.in .dt-row {
+     opacity: 1!important;
+     transition-timing-function: ease-in-out!important;
+}
+ #dance-transition.animate.in .dt1 {
+     transition-duration: 0s!important;
+}
+ #dance-transition.animate.out::before, #dance-transition.animate.out .dt-row {
+     opacity: 1!important;
+     transition-timing-function: ease-in!important;
+}
+ #dance-transition.animate.out .dt1 {
+     transition-duration: 0s!important;
+}
+ .empty-test {
+}
+ #players .feedback {
+     overflow: visible!important;
+}
+ .hud.beat #players.animate .feedback {
+     animation: NewFeedbackScale 1.1s cubic-bezier(.39, .575, .565, 1.000) both infinite!important;
+     -webkit-animation: NewFeedbackScale 1.1s cubic-bezier(.39, .575, .565, 1.000) both infinite!important;
+}
+ #players .feedback-label {
+     top: 30%;
+}
+ #players .feedlabel-bad {
+     margin-top: -15%;
+     left:-2%;
+}
+ .feedlabel-bad {
+     top: 40% !important;
+}
+ #players .feedback-bad {
+     background: none;
+}
+ #players .feedback-badgold {
+     background: none;
+}
+ #players .feedlabel-badgold {
+     left:-2%;
+}
+ #players .feedback-ok {
+     background: url(//dl.dropbox.com/s/obu0ssmyk7j2b4d/O01.png?dl=0) no-repeat top/ 50% 95%;
+     left: 2.5% !important;
+     top: -8%;
+}
+ #players .feedlabel-ok {
+     top: 40% !important;
+     left:3.5%;
+}
+ .feedlabel-ok {
+     margin-left: -8% !important;
+}
+ #players .feedlabel-good {
+     left: -3%;
+     top: 31%;
+     width: 100%;
+     overflow: visible!important;
+}
+ #players .feedlabel-good::before {
+     animation: NewFeedbackScale03 .9s linear infinite!important;
+     background: url(//i.imgur.com/rMLWHS1.png) no-repeat center/ 100%;
+     content: "";
+     display: block;
+     height: 150%;
+     left:-2%;
+     margin-top: -10%;
+     position: absolute;
+     width: 110%!important;
+     z-index: -999999999!important;
+     overflow: visible!important;
+}
+ #players .feedlabel-good::after {
+     animation: NewFeedbackScale03 .6s linear infinite!important;
+     background: url(//i.imgur.com/HaKJl0L.png) no-repeat center/ 100%;
+     content: "";
+     display: block;
+     height: 150%;
+     left:-2%;
+     margin-top: 0%;
+     position: absolute;
+     width: 110%!important;
+     z-index: -999999999!important;
+     overflow: visible!important;
+}
+ #players .feedback-good::before {
+     -webkit-animation-name: NewFeedbackScale03;
+     animation-name: NewFeedbackScale03 1s;
+     animation-fill-mode: both;
+     background: url(//i.imgur.com/FmYfT6g.png) no-repeat center/ 100%;
+     content: "";
+     height: 120%;
+     left: -10%;
+     position: absolute;
+     top: 15%;
+     width: 120%;
+     overflow: visible!important;
+}
+ #players .feedback-good {
+     background: url(//dl.dropbox.com/s/kgqn9yp2dt63gts/G01.png?dl=0) no-repeat top/ 60% 95%;
+     left: 3%;
+     top: -9%;
+}
+ #players .feedback-perfect::after {
+     animation: MoveBeat 1.1s steps(3, end) infinite, OpacityBeat .6s steps(2, end) infinite, csBeatSelect 1s both infinite!important;
+     background: url(//i.imgur.com/jgUU7ul.png) no-repeat center/ 100%;
+     content: "";
+     height: 50%;
+     margin-top: -12%;
+     position: absolute;
+     width: 55%;
+}
+ #players .feedback-perfect {
+     background: url(//dl.dropbox.com/s/zoviniqggo17622/P01.png?dl=0) no-repeat top/ 55% 70%;
+     height: 140%;
+     left: -21%;
+     top: -8%;
+     width: 140%;
+}
+ #players .feedlabel-perfect::before {
+     animation: MoveBeat2 .8s steps(3, end) infinite, OpacityBeat .7s steps(2, end) infinite, csBeatSelect 1s both infinite!important;
+     background: url(//i.imgur.com/89xtsnR.png) no-repeat center/ 90%;
+     content: "";
+     display: block;
+     height: 90%;
+     margin-top: -5%;
+     position: absolute;
+     width: 51%!important;
+     z-index: -999999999!important;
+}
+ #players .feedlabel-perfect {
+     overflow: visible!important;
+     z-index: 999999999!important;
+     left:-1%;
+}
+ #players .feedlabel-perfect::after {
+     animation: NewFeedbackScale03 .5s linear infinite!important;
+     background: url(//i.imgur.com/bqOEH4x.png) no-repeat center/ 100%;
+     content: "";
+     display: block;
+     height: 303%;
+     left: -38%;
+     margin-top: 0;
+     position: absolute;
+     top: -78%;
+     width: 180%!important;
+     z-index: -999999999!important;
+}
+ #players .feedback-perfect::before {
+     animation: NewFeedbackScale02 .8s linear infinite!important;
+     background: url(//i.imgur.com/TZ78z76.png) no-repeat center/ 90%;
+     content: "";
+     height: 150%;
+     left: -25%;
+     position: absolute;
+     top: -25%;
+     width: 150%;
+}
+ #players .feedback-yeah {
+     background: url(//dl.dropbox.com/s/2guqfeqojep648x/YH01.png?dl=0) no-repeat top/ 100% 75%;
+     height: 200%;
+     left: 2%;
+     top: -8%;
+     width: 90%;
+}
+ #players .feedback-yeah::after {
+     animation: NewFeedbackScale02 1s linear infinite!important;
+     background: url(//dl.dropbox.com/s/j5eycxxlcmygolb/YH02.png?dl=0) no-repeat center/ 90% !important;
+     content: "" !important;
+     height: 300% !important;
+     left: -100% !important;
+     overflow: visible !important;
+     position: absolute !important;
+     top: -100% !important;
+     width: 300% !important;
+}
+ #players .feedlabel-yeah {
+     background-position: 0 98% !important;
+     background-size: 84% !important;
+     margin-left: -20% !important;
+     top: 50%;
+     width: 170% !important;
+}
+ // This is the old ANIMATE-CUSTOM.CSS file // Did I accidentally remove something? Copy-paste it from the old file. 
+ @keyframes fadeOpenModalScreen{
+     0% {
+         opacity:0;
+    }
+     100% {
+         opacity:1;
+    }
+}
+@keyframes profileAvatarSelect{
+     0% {
+         transform: translate(0px,0px) ;
+    }
+     15% {
+         transform: translate(0px,-25px) ;
+    }
+     30% {
+         transform: translate(0px,0px) ;
+    }
+     45% {
+         transform: translate(0px,-15px) ;
+    }
+     60% {
+         transform: translate(0px,0px) ;
+    }
+     75% {
+         transform: translate(0px,-5px) ;
+    }
+     100% {
+         transform: translate(0px,0px) ;
+    }
+}
+ @keyframes avatarWraperFroze{
+     0% {
+         transform: translate(0px,0px) ;
+    }
+     10% {
+         transform: translate(-10px,0px) ;
+    }
+     20% {
+         transform: translate(10px,0px) ;
+    }
+     30% {
+         transform: translate(-10px,0px) ;
+    }
+     40% {
+         transform: translate(10px,0px) ;
+    }
+     50% {
+         transform: translate(-10px,0px) ;
+    }
+     60% {
+         transform: translate(10px,0px) ;
+    }
+     70% {
+         transform: translate(-10px,0px) ;
+    }
+     80% {
+         transform: translate(10px,0px) ;
+    }
+     90% {
+         transform: translate(-10px,0px) ;
+    }
+     100% {
+         transform: translate(0px,0px) ;
+    }
+}
+ @keyframes avatarWraperShake{
+     0% {
+         transform: rotate(0deg) scaleX(1.00) scaleY(1.00) ;
+    }
+     10% {
+         transform: rotate(-3deg) scaleX(0.80) scaleY(0.80) ;
+    }
+     20% {
+         transform: rotate(-3deg) scaleX(0.80) scaleY(0.80) ;
+    }
+     30% {
+         transform: rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     40% {
+         transform: rotate(-3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     50% {
+         transform: rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     60% {
+         transform: rotate(-3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     70% {
+         transform: rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     80% {
+         transform: rotate(-3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     90% {
+         transform: rotate(3deg) scaleX(1.20) scaleY(1.20) ;
+    }
+     100% {
+         transform: rotate(0deg) scaleX(1.20) scaleY(1.20) ;
+    }
+}
+ @keyframes btnDisable{
+     0% {
+         opacity:1;
+         transform: scaleX(1.00) scaleY(1.00) ;
+    }
+     25% {
+         opacity:1;
+         transform: scaleX(0.95) scaleY(0.95) ;
+    }
+     50% {
+         opacity:1;
+         transform: scaleX(1.10) scaleY(1.10) ;
+    }
+     100% {
+         opacity:0;
+         transform: scaleX(0.30) scaleY(0.30) ;
+    }
+}
+ @keyframes slideRightToLeftQuit{
+    /* suitable for new transition animation */
+     0% {
+         opacity:1;
+         transform: translate(0px,0px) ;
+    }
+     20% {
+         opacity:1;
+         transform: translate(20px,0px) ;
+    }
+     100% {
+         opacity:0;
+         transform: translate(-1000px,0px) ;
+    }
+}
+ @keyframes slideLeftToRight{
+    /* suitable for new transition animation */
+     0% {
+         opacity:0;
+         transform: translate(-1500px,0px) ;
+    }
+     60% {
+         opacity:1;
+         transform: translate(30px,0px) ;
+    }
+     80% {
+         transform: translate(-10px,0px) ;
+    }
+     100% {
+         opacity:1;
+         transform: translate(0px,0px) ;
+    }
+}
+ @keyframes slideInDown{
+     0% {
+         opacity:0;
+         transform: translate(0px,-25px) ;
+    }
+     100% {
+         opacity:1;
+         transform: translate(0px,0px) ;
+    }
+}
+ @keyframes spinner01 {
+     0% {
+         -moz-transform: rotateY(0deg);
+         -ms-transform: rotateY(0deg);
+         transform: rotateY(0deg);
+    }
+     50% {
+         -moz-transform: rotateY(-30deg);
+         -ms-transform: rotateY(-30deg);
+         transform: rotateY(-30deg);
+    }
+     80% {
+         -moz-transform: rotateY(0deg);
+         -ms-transform: rotateY(0deg);
+         transform: rotateY(0deg);
+    }
+     100% {
+         -moz-transform: rotateY(30deg);
+         -ms-transform: rotateY(30deg);
+         transform: rotateY(30deg);
+    }
+}
+ @keyframes BounceIN {
+     0% {
+         opacity: 0;
+         transform: scale(.3);
+    }
+     50% {
+         opacity: 1;
+         transform: scale(1.0);
+    }
+     70% {
+         transform: scale(0.9);
+    }
+     100% {
+         transform: scale(1);
+    }
+}
+ @keyframes AfterDanceName {
+     0%, 50% {
+         opacity: 0;
+         width: 0;
+    }
+     100% {
+         width: 1;
+         width: 53%;
+    }
+}
+ @keyframes ScoreEffect5 {
+     0% {
+         width: 0;
+    }
+     100% {
+         width: 130%;
+    }
+}
+ @keyframes ScoreEffect4 {
+     0% {
+         width: 0;
+    }
+     100% {
+         width: 93%;
+    }
+}
+ @keyframes ScoreEffect3 {
+     0% {
+         width: 0;
+    }
+     100% {
+         width: 63%;
+    }
+}
+ @keyframes ScoreEffect2 {
+     0% {
+         width: 0;
+    }
+     100% {
+         width: 43%;
+    }
+}
+ @keyframes ScoreEffect1 {
+     0% {
+         width: 0;
+    }
+     100% {
+         width: 30%;
+    }
+}
+ @keyframes DegradeSong {
+     0% {
+         background-position: 0 90%;
+    }
+     50% {
+         background-position: 100% 11%;
+    }
+     100% {
+         background-position: 0 90%;
+    }
+}
+ @keyframes DegradeGlow {
+     0% {
+         background-position: -1.5em 0em, center;
+    }
+     10% {
+         background-position: 1.5em 0em, center;
+    }
+     20%, 100% {
+         background-position: 1.5em 0em, center;
+    }
+}
+ @keyframes NewFeedbackScale03 {
+     0% {
+         filter: brightness(160%);
+         opacity: 1;
+         transform: scale(0.5);
+         -webkit-filter: brightness(160%);
+         -webkit-transform: scale(0.5);
+    }
+     100% {
+         filter: brightness(100%);
+         opacity: 0;
+         transform: scale(1.5);
+         -webkit-filter: brightness(100%);
+         -webkit-transform: scale(1.5);
+    }
+}
+ @-webkit-keyframes NewFeedbackZoom {
+     0% {
+         opacity: 0;
+         transform: scale3d(.3, .3, .3);
+         -webkit-transform: scale3d(.3, .3, .3);
+    }
+     50% {
+         opacity: 1;
+    }
+}
+ @keyframes NewFeedbackZoom {
+     0% {
+         opacity: 0;
+         transform: scale3d(.3, .3, .3);
+         -webkit-transform: scale3d(.3, .3, .3);
+    }
+     50% {
+         opacity: 1;
+    }
+}
+ @keyframes NewFeedbackScale02 {
+     0% {
+         filter: brightness(160%);
+         opacity: 1;
+         transform: scale(0.5);
+         -webkit-filter: brightness(160%);
+         -webkit-transform: scale(0.5);
+    }
+     95% {
+         filter: brightness(100%);
+         opacity: 1;
+         transform: scale(1.5);
+         -webkit-filter: brightness(100%);
+         -webkit-transform: scale(1.5);
+    }
+     100% {
+         filter: brightness(100%);
+         opacity: 0;
+         transform: scale(1.5);
+         -webkit-filter: brightness(100%);
+         -webkit-transform: scale(1.5);
+    }
+}
+ @keyframes NewFeedbackScale {
+     0% {
+         filter: brightness(135%);
+         opacity: 1;
+         transform: scaleX(1);
+         -webkit-filter: brightness(136%);
+         -webkit-transform: scaleX(1);
+    }
+     100% {
+         filter: brightness(100%);
+         opacity: 0;
+         transform: scaleX(0.8);
+         -webkit-filter: brightness(100%);
+         -webkit-transform: scaleX(0.8);
+    }
+}
+ @keyframes DEGRADEBUTTON03 {
+     0% {
+         background-position: 0 50%;
+    }
+     50% {
+         background-position: 100% 50%;
+    }
+     100% {
+         background-position: 0 50%;
+    }
+}
+ @keyframes DEGRADEBUTTON02 {
+     0% {
+         background-position: 5% 50%, 0 75%;
+    }
+     50% {
+         background-position: 5% 50%, 100% 26%;
+    }
+     100% {
+         background-position: 5% 50%, 0 75%;
+    }
+}
+ @keyframes DEGRADEAFTERDANCE {
+     0% {
+         background-position: center, 0 4%;
+    }
+     50% {
+         background-position: center, 100% 97%;
+    }
+     100% {
+         background-position: center, 0 4%;
+    }
+}
+ @keyframes DEGRADEPLAYERCOLOR {
+     0% {
+         background-position: 0 4%;
+    }
+     50% {
+         background-position: 100% 97%;
+    }
+     100% {
+         background-position: 0 4%;
+    }
+}
+ @keyframes DEGRADETOAST {
+     0% {
+         background-position: 0 50%;
+    }
+     50% {
+         background-position: 100% 50%;
+    }
+     100% {
+         background-position: 0 50%;
+    }
+}
+ @keyframes COACHRIGHT {
+     0% {
+         transform: translateX(0);
+    }
+     50% {
+         transform: translateX(1%);
+    }
+     100% {
+         transform: translateX(0);
+    }
+}
+ @keyframes COACHLEFT {
+     0% {
+         transform: translateX(0);
+    }
+     50% {
+         transform: translateX(-1%);
+    }
+     100% {
+         transform: translateX(0);
+    }
+}
+ @keyframes COACHLEFTRotateR {
+     0% {
+         transform: translateX(0) rotateZ(0deg);
+    }
+     50% {
+         transform: translateX(2%) rotateZ(1deg);
+    }
+     100% {
+         transform: translateX(0) rotateZ(0deg);
+    }
+}
+ @keyframes COACHLEFTRotateL {
+     0% {
+         transform: translateX(0) rotateZ(0deg);
+    }
+     50% {
+         transform: translateX(-2%) rotateZ(-1deg);
+    }
+     100% {
+         transform: translateX(0) rotateZ(0deg);
+    }
+}
+ @keyframes coachselectAnimation {
+     0% {
+         transform: translateY(0);
+         -webkit-filter: brightness(100%);
+    }
+     50% {
+         transform: translateY(-4%);
+         -webkit-filter: brightness(100%);
+    }
+     100% {
+         transform: translateY(0);
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes coachWhBeat {
+     0% {
+         -webkit-filter: brightness(100%);
+    }
+     1% {
+         -webkit-filter: brightness(150%);
+    }
+     30% {
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes BeatCoach {
+     100% {
+         opacity: 1;
+         transform: scale(1.0, 1.0);
+    }
+     20% {
+         opacity: 1;
+         transform: scale(1.2, 0.96);
+    }
+     0% {
+         opacity: 1;
+         transform: scale(1.0, 1.0);
+    }
+}
+ @keyframes goldlayer3AnimationFX {
+     100% {
+         opacity: 1;
+         transform: scale(1.0);
+    }
+     50% {
+         opacity: 1;
+         transform: scale(1.2);
+    }
+     0% {
+         opacity: 1;
+         transform: scale(1.0);
+    }
+}
+ @keyframes SKGJD2020 {
+     100% {
+         top: 20%;
+    }
+     50% {
+         top: 23%;
+    }
+     25% {
+         top: 16%;
+    }
+     0% {
+         top: 20%;
+    }
+}
+ @keyframes multipictofadeinnew {
+     0% {
+         opacity: 0;
+         transform: translate3d(3.5em, 0, 0);
+    }
+     90% {
+         opacity: 1;
+         transform: translate3d(0, 0, 0);
+    }
+     96% {
+         opacity: 0;
+         transform: scale3d(1.10, 1.10, 1);
+    }
+     100% {
+         opacity: 0;
+         transform: scale3d(1.10, 1.10, 1);
+    }
+}
+ @keyframes toptodown {
+     100% {
+         top: 0%;
+    }
+     50% {
+         top: 10%;
+    }
+     0% {
+         top: 0%;
+    }
+}
+ @keyframes SKG02 {
+     100% {
+         background-position: 100em 0%, center;
+    }
+     0% {
+         background-position: 0 0%, center;
+    }
+}
+ @keyframes SKG01 {
+     100% {
+         background-position: 76em 20%, 50em 0;
+    }
+     0% {
+         background-position: 0 20%, 0 0;
+    }
+}
+ @keyframes INTransitionBG {
+     0% {
+         opacity: 0;
+    }
+     30% {
+         opacity: 1;
+    }
+     100% {
+         opacity: 1;
+    }
+}
+ @keyframes OUTTransitionBG {
+     0% {
+         opacity: 1;
+    }
+     30% {
+         opacity: 1;
+    }
+     100% {
+         opacity: 0;
+    }
+}
+ @keyframes csBeatSelect {
+     0% {
+         -webkit-filter: brightness(150%);
+    }
+     100% {
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes BeatSelectScreen {
+     0% {
+         -webkit-filter: brightness(100%);
+    }
+     20% {
+         -webkit-filter: brightness(100%);
+    }
+     25% {
+         -webkit-filter: brightness(100%);
+    }
+     50% {
+         -webkit-filter: brightness(100%);
+    }
+     74% {
+         -webkit-filter: brightness(100%);
+    }
+     75% {
+         -webkit-filter: brightness(150%);
+    }
+     100% {
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes Beat01 {
+     0% {
+         -webkit-filter: brightness(120%);
+    }
+     100% {
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes Beat05 {
+     0% {
+         -webkit-filter: brightness(150%);
+    }
+     50% {
+         -webkit-filter: brightness(100%);
+    }
+     100% {
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes BeatSelectBack {
+     0% {
+         -webkit-filter: brightness(100%);
+    }
+     20% {
+         -webkit-filter: brightness(100%);
+    }
+     25% {
+         -webkit-filter: brightness(200%);
+    }
+     50% {
+         -webkit-filter: brightness(100%);
+    }
+     100% {
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes OpacityBeat {
+     0%, 100% {
+         opacity: 1;
+    }
+     50% {
+         opacity: 0;
+    }
+}
+ @keyframes FadeInDeffaut {
+     0% {
+         opacity: 0;
+    }
+     50% {
+         opacity: 1;
+    }
+}
+ @keyframes MoveBeat3 {
+     0% {
+         left: 65%;
+         top: 20%;
+    }
+     50% {
+         left: -2%;
+         top: 66%;
+    }
+     100% {
+         left: 45%;
+         top: 74%;
+    }
+}
+ @keyframes MoveBeat2 {
+     0% {
+         left: -30%;
+         top: 31%;
+    }
+     10% {
+         left: 60%;
+         top: 76%;
+    }
+     20% {
+         left: 16%;
+         top: 50%;
+    }
+     30% {
+         left: 40%;
+         top: 38%;
+    }
+     50% {
+         left: 6%;
+         top: 34%;
+    }
+}
+ @keyframes crownShrink {
+     0% {
+         transform: scale3d(0.95, 0.95, 0.95) rotateZ(-12deg);
+    }
+     20% {
+         transform: scale3d(0.95, 0.95, 0.95) rotateZ(-12deg);
+    }
+}
+ @keyframes MoveBeat {
+     0% {
+         left: -30%;
+         top: 31%;
+    }
+     10% {
+         left: 60%;
+         top: 76%;
+    }
+     20% {
+         left: 16%;
+         top: 50%;
+    }
+     30% {
+         left: 40%;
+         top: 38%;
+    }
+     50% {
+         left: 6%;
+         top: 34%;
+    }
+     80% {
+         left: 56%;
+         top: 23%;
+    }
+     100% {
+         left: 31%;
+         top: 38%;
+    }
+}
+ @keyframes 1afterdancefx {
+     0% {
+         background: url(//dl.dropbox.com/s/uesvmkiopvig3cf/fx.gif?dl=0);
+         opacity: 1!important;
+         top: 0;
+    }
+     99% {
+         opacity: 0!important;
+         top: 59%;
+    }
+     100% {
+         background: none;
+         opacity: 0!important;
+         top: 59%;
+    }
+}
+ @keyframes spin1 {
+     from {
+         transform: rotate(0deg) scale(1);
+    }
+     to {
+         transform: rotate(360deg) scale(1.5);
+    }
+}
+ @keyframes crownload {
+     0% {
+         transform: rotate(-12deg) scale(1);
+    }
+     20% {
+         transform: rotate(-12deg) scale(0.9);
+    }
+}
+ @keyframes float_version {
+     0% {
+         opacity: 0;
+    }
+     50% {
+         opacity: 1;
+    }
+     100% {
+         opacity: 1;
+    }
+}
+ @keyframes plusminusCarrot {
+     0% {
+         transform: scale(1);
+         -webkit-filter: brightness(100%);
+    }
+     2% {
+         transform: scale(0.98);
+         -webkit-filter: brightness(130%);
+    }
+     40% {
+         transform: scale(1);
+         -webkit-filter: brightness(100%);
+    }
+     100% {
+         transform: scale(1);
+         -webkit-filter: brightness(100%);
+    }
+}
+ @keyframes plusminus {
+     0% {
+         transform: scale(1, 0.0, 0);
+    }
+     50% {
+         transform: scale(1.1);
+    }
+     100% {
+         transform: scale(1, 0.0, 0);
+    }
+}
+ @keyframes BeatCrown {
+     0% {
+         transform: scale(1);
+    }
+     10% {
+         transform: scale(0.9);
+    }
+     70% {
+         transform: scale(1);
+    }
+     100% {
+         transform: scale(1);
+    }
+}
+ @keyframes startload {
+     0% {
+         opacity: 0;
+    }
+     50% {
+         opacity: 1;
+    }
+     100% {
+         opacity: 1;
+    }
+}
+ @keyframes beatcrownnew {
+     0% {
+         background-position: 0 50%;
+    }
+     50% {
+         background-position: 100% 50%;
+    }
+     100% {
+         background-position: 0 50%;
+    }
+}
+ @keyframes multipictofadein {
+     0% {
+         opacity: 0;
+    }
+     40% {
+         opacity: 1;
+    }
+     50% {
+         opacity: 1;
+    }
+     90% {
+         opacity: 1;
+    }
+     100% {
+         opacity: 0;
+    }
+}
+ @keyframes racetrack-star-beat {
+     0% {
+         transform: scale3d(1.1, 1.1, 1) rotate(5deg);
+    }
+     50% {
+         transform: scale3d(1, 1, 1) rotate(5deg);
+    }
+     100% {
+         transform: scale3d(1, 1, 1) rotate(5deg);
+    }
+}
+ @keyframes newUpdateStarAnimation2020 {
+     0% {
+         opacity: 0;
+         transform: scale(3) rotate(45deg);
+    }
+     35% {
+         opacity: 1;
+         transform: scale(2) rotate(110deg);
+    }
+     50% {
+         opacity: 1;
+         transform: scale(1.85) rotate(110deg);
+    }
+     73% {
+         opacity: 1;
+         transform: scale(1.6) rotate(5deg);
+    }
+     92% {
+         opacity: 1;
+         transform: scale(0.85) rotate(5deg);
+    }
+     100% {
+         opacity: 1;
+         transform: scale(1) rotate(5deg);
+    }
+}
+ @keyframes nextLineIn {
+     0%, 20% {
+         opacity: 0;
+         transform: perspective(0px) translateY(3em) rotateX(0deg);
+    }
+     100% {
+         opacity: 1;
+         transform: translateY(1em);
+    }
+}
+ @keyframes BootLoading {
+     0%, 6% {
+         background-image: url(//imgur.com/j1sNpDD.png);
+         opacity: 1 !important;
+    }
+     7%, 13% {
+         background-image: url(//imgur.com/yPEo6mW.png);
+         opacity: 1 !important;
+    }
+     14%, 20% {
+         background-image: url(//imgur.com/iJjMYuT.png);
+    }
+     21%, 27% {
+         background-image: url(//imgur.com/3HRo64Z.png);
+    }
+     28%, 34% {
+         background-image: url(//imgur.com/ovK3Veu.png);
+    }
+     35%, 41% {
+         background-image: url(//imgur.com/qxYpWMJ.png);
+    }
+     42%, 48% {
+         background-image: url(//imgur.com/KDm1IoB.png);
+    }
+     49%, 55% {
+         background-image: url(//imgur.com/pJX5Lk3.png);
+    }
+     56%, 62% {
+         background-image: url(//imgur.com/lzH0v9S.png);
+    }
+     63%, 69% {
+         background-image: url(//imgur.com/8SRVAzq.png);
+    }
+     70%, 76% {
+         background-image: url(//imgur.com/6EJKxGS.png);
+    }
+     77%, 83% {
+         background-image: url(//imgur.com/fbgSIew.png);
+    }
+     84%, 90%, {
+         background-image: url(//imgur.com/lERAdtZ.png);
+    }
+     91%, 100% {
+         background-image: url(//imgur.com/Z0De0KU.png);
+    }
+}

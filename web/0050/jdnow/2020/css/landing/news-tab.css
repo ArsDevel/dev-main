@@ -1,0 +1,101 @@
+/* Home Screen Message */
+/* News TAB */
+
+.cookie-wrapper::after {
+   /* News Tab Content */
+  content: "";
+ /* News content */
+  z-index: 9999999999999999999999999999999999999999;
+}
+
+.site-message.show::before {
+/* News Tab Title */
+  content: "";
+ /* Title */;
+}
+
+.cookie-content {
+  font-size: 0;
+}
+
+.cookie-wrapper {
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Flullaby-telaviv.png)no-repeat center/cover;
+  /* News Tab Image */
+  border-radius: 8px;
+  color: transparent;
+  display: block;
+  font-size: 30% !important;
+  height: 50%;
+  margin: 0;
+  margin-left: 2%;
+  margin-top: 14%;
+  padding: 0 5px;
+  text-align: left;
+  width: 40%;
+}
+
+.site-message.show::after {
+  animation: DEGRADEPLAYERCOLOR 10s ease infinite !important;
+  background-image: linear-gradient(
+    49deg,
+    rgba(248, 102, 18, 1) 38%,
+    rgba(255, 182, 37, 1) 50%,
+    rgba(244, 108, 20, 1) 80%
+  );
+  background-size: 200% 300%;
+  border-radius: 10px 10px 0 0;
+  content: "";
+  display: block;
+  filter: brightness(1.1);
+  height: 15%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cookie-wrapper::after {
+  background: white;
+  border: 0px solid #C1C1C1;
+  color: gray;
+  display: block;
+  font-family: JDMDCondensed;
+  font-size: 3em;
+  height: 300px;
+  left: 43%;
+  overflow: auto;
+  overflow-y: scroll;
+  position: absolute;
+  text-align: left;
+  top: 20%;
+  width: 56%;
+}
+
+.cookie-close {
+  background-image: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fenter-btn.png),
+    linear-gradient( 49deg, rgba(248, 102, 18, 1) 38%, rgba(255, 182, 37, 1) 50%, rgba(244, 108, 20, 1) 80%);
+  background-position: 5% 50%, 50%;
+  background-repeat: no-repeat, repeat;
+  background-size: 18%, 500%;
+  border-radius: 25px;
+  display: block;
+  height: 10% !important;
+  left: 70%;
+  position: absolute;
+  top: 87%;
+  width: 25%;
+}
+
+.cookie-close .cookie-close-btn:hover,
+.cookie-close .cookie-close-btn:focus {
+  background: transparent;
+  opacity: 1;
+}
+
+.cookie-close .cookie-close-btn {
+  background: none;
+  color: white;
+  height: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  width: 100%;
+}

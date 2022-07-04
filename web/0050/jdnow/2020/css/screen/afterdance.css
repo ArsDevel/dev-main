@@ -1,0 +1,437 @@
+/************* AfterDance Screen *************/
+
+/* Happy Title */
+ #afterdance:after {
+     content: "ПОЗДРАВЛЯЕМ!";
+}
+
+/* hi-score title */
+ #afterdance .results .highScore.show {
+     font-family: JDMDCondensed;
+}
+ #afterdance .score .highScore {
+     color: gray;
+     font-size: 15px;
+     right: -48%;
+     top: 89%;
+}
+
+/* modal */
+ .state-afterdance .modal__container::after, .state-dance .modal__container::after, .state-afterdance .hud::before, .state-dance .hud::before {
+     opacity: 0 !important;
+}
+
+/* AfterDance BG */
+ .state-afterdance #just-dance-now {
+     animation: DEGRADEAFTERDANCE 15s ease infinite;
+     background-image: url(//dl.dropbox.com/s/xshs1aul4ppf8hl/aft_BKG.png?dl=0), linear-gradient(49deg, rgba(44, 217, 254, 1) 28%, rgba(61, 251, 254, 1) 50%, rgba(44, 217, 254, 1) 74%);
+     background-repeat: no-repeat, repeat;
+     background-size: 100%, 100%;
+}
+
+ .state-afterdance #players[n-real-players="1"][n-ghosts="0"] {
+     display: block!important;
+     left: 4.3em;
+     top: 1.7em;
+}
+ .state-afterdance #players[n-real-players="1"][n-ghosts="0"] .dancercard .avatar-wrapper {
+     animation: BounceIN .6s linear 0 1 normal;
+     width: 90%;
+}
+ #afterdance .player-solo .player .score .stars .star {
+     height: .8em!important;
+     width: .8em!important;
+}
+ #afterdance .player-solo .player .score .stars {
+     right: 68%!important;
+     top: -30%;
+}
+ #afterdance .player-solo .stars::after {
+     height: 45%;
+     left: 39%;
+     max-width: 86%;
+     top: 87%;
+}
+ #afterdance .player-solo .player .score .score-text {
+     font-size: 60%;
+     left: -77.3%;
+     margin-top: 3.5%;
+     text-align: left;
+}
+ #afterdance .results .player-solo .player .score.superstar::after, #afterdance .results .player-solo .player .score.megastar::after {
+     right: 52.5%;
+     top: -15%;
+     width: 15%;
+}
+ #afterdance .players.player-solo .player::before {
+     opacity: 0!important;
+}
+ #afterdance .player-solo .player .color::after {
+     background: white!important;
+     border-radius: 0 0 8px 8px;
+     content: '';
+     display: block;
+     height: 170%;
+     left: 3%;
+     position: absolute;
+     top: 426%;
+     width: 336%;
+}
+ #afterdance .results .highScore.solo {
+     color: gray;
+     font-family: JDMDCondensed;
+     font-size: 15%;
+     left: 26.5%;
+     right: 40%;
+     text-align: center;
+     top: 65%;
+     width: 40%;
+}
+ #afterdance .player-solo .player .color::before {
+     height: 602%;
+     width: 342%;
+}
+ #afterdance .players.player-solo {
+     height: 100%;
+     left: 8%;
+     overflow: visible;
+     top: 42%;
+}
+ #afterdance .player-solo .player .color {
+     left: 13%;
+     overflow: visible;
+     top: -5.4em;
+     z-index: -9;
+}
+ #afterdance .player-solo .player .score {
+     overflow: visible;
+     right: 19%;
+     top: 163%;
+}
+ #afterdance .player-solo .player .name {
+     font-size: 24%;
+     margin-left: 9.5%;
+     margin-top: -1.5%;
+     text-align: center;
+}
+ #afterdance::after {
+     animation: AfterDanceName 2s ease, DEGRADEPLAYERCOLOR 20s ease infinite;
+     background-image: linear-gradient(49deg, rgba(44, 217, 254, 1) 28%, rgba(61, 251, 254, 1) 50%, rgba(44, 217, 254, 1) 74%);
+     background-size: 500% 500%;
+     border-radius: 10px;
+     display: block;
+     font-family: JDMediumCondensed;
+     font-size: 50%;
+     height: 10%;
+     left: -4%;
+     letter-spacing: 5px;
+     line-height: 1.2;
+     position: absolute;
+     text-align: right;
+     top: 3%;
+     transition: opacity 3s linear;
+     width: 53%;
+}
+ .score__stars {
+     left: 198%;
+     text-align: left;
+     top: -123%;
+     width: .85rem;
+}
+ .score__stars .star {
+     height: .24rem;
+     width: .24rem;
+}
+ .score__stars[data-stars="5"] .star-1, .score__stars[data-stars="5"] .star-3, .score__stars[data-stars="5"] .star-5 {
+     animation: csBeatSelect both 2s infinite;
+}
+ .score__stars[data-stars="5"] .star-2, .score__stars[data-stars="5"] .star-4 {
+     animation: csBeatSelect both 1s infinite;
+}
+ .score__stars .star {
+     transform: rotateZ(12deg);
+}
+ .score__number {
+     font-family: JDMDCondensed;
+     font-size: 80%;
+     font-weight: 300;
+     left: 26%;
+     text-align: left;
+     top: 30%;
+}
+ .score__display::after {
+     border-bottom: 2px rgba(248, 219, 249, 1) solid;
+     border-left: none;
+     font-family: JDMDCondensed;
+     height: 75%;
+     left: 13%;
+     top: -50%;
+     transform: none;
+     width: 130%;
+     text-align:center;
+}
+ .state-songselection .player.controller .dancercard .player-color, .state-songselection .player.controller .controller-coins, .score__owner .owner-name {
+     font-family: JDMDCondensed;
+     font-size: 95%;
+     left: -1.2%;
+}
+ .score__display {
+     animation: none!important;
+     color: rgba(88, 88, 88, 1);
+     left: 173%;
+     top: -181%;
+     transition: none!important;
+}
+ .highscore-display {
+     animation: none!important;
+     display: block!important;
+     overflow: visible!important;
+     position: absolute!important;
+     transition: none!important;
+     transform:none;
+}
+ [data-stars="1"] .red .score .score-text:after {
+     background: purple;
+}
+ #afterdance .results .player .score.superstar .star.star-4::after, #afterdance .results .player .score.megastar .star.star-4::after, #afterdance .results .player .score.superstar .star.star-2::after, #afterdance .results .player .score.megastar .star.star-2::after {
+     background-size: 0!important;
+}
+ .highscore-display.megastar .score__stars .star::after, .highscore-display.superstar .score__stars .star::after, #afterdance .results .player .score.superstar .star::after, #afterdance .results .player .score.megastar .star::after {
+     animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .5s steps(2, end) infinite, csBeatSelect 1s both infinite!important;
+     background: url(//dl.dropbox.com/s/mtj58srur4zdwbd/L0w.png?dl=0) no-repeat center / cover;
+     content: "";
+     display: block;
+     height: 50%;
+     margin-top: -10%;
+     position: absolute;
+     width: 50%;
+}
+ .toast__content {
+     display: block;
+     margin-top: 20%;
+     text-align: left;
+}
+ #afterdance .player > div {
+     overflow: visible;
+}
+ .state-afterdance #just-dance-now::before {
+     animation: afterdancefx 20s linear;
+     content: "";
+     height: 100%;
+     left:0.5%;
+     position: absolute;
+     transform: scale(-15px);
+     width: 100%;
+     z-index: -9999;
+}
+ #afterdance .player::before {
+     background: black;
+     height: 3%;
+     left: 18.7%;
+     opacity: .25;
+     top: 106%;
+     width: 99%;
+}
+ #afterdance .stars::after {
+     animation: DEGRADEPLAYERCOLOR 12s ease infinite;
+     background-size: 400% 400%;
+     border-radius: 20px;
+     content: "";
+     display: block;
+     height: 35%;
+     left: -19%;
+     position: absolute;
+     top: 60%;
+     transition: width 2s;
+     width: 134%;
+}
+ #afterdance .winner .score {
+     right: 5%;
+}
+ #afterdance .score {
+     bottom: 8%;
+     right: 7.5%;
+}
+ #afterdance .results .score[data-stars="5"] .score-text {
+     margin-left: 113%!important;
+}
+ #afterdance .results .score[data-stars="4"] .score-text {
+     margin-left: 83%!important;
+}
+ #afterdance .results .score[data-stars="3"] .score-text {
+     margin-left: 66%!important;
+}
+ #afterdance .results .score[data-stars="2"] .score-text {
+     margin-left: 56%!important;
+}
+ #afterdance .results .score[data-stars="1"] .score-text {
+     margin-left: 105%!important;
+}
+ #afterdance .results .score[data-stars="0"] .score-text {
+     margin-left: 30%!important;
+}
+ #afterdance .score[data-stars="5"] .stars::after {
+     animation: ScoreEffect5 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 130%;
+}
+ #afterdance .score[data-stars="4"] .stars::after {
+     animation: ScoreEffect4 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 93%;
+}
+ #afterdance .score[data-stars="3"] .stars::after {
+     animation: ScoreEffect3 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 63%;
+}
+ #afterdance .score[data-stars="2"] .stars::after {
+     animation: ScoreEffect2 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 43%;
+}
+ #afterdance .score[data-stars="1"] .stars::after {
+     animation: ScoreEffect1 5s linear, DEGRADEPLAYERCOLOR 12s ease infinite;
+     width: 13%;
+}
+ #afterdance .score[data-stars="0"] .stars::after {
+     width: 5%;
+}
+ #afterdance .results .stars .star {
+     margin: 0 -.05rem;
+}
+ #afterdance .results .stars {
+     margin-left: -18%!important;
+}
+ #afterdance .winner .name {
+     margin-left: 2.5%;
+     margin-top: -3%;
+}
+ #afterdance .results .score-text {
+     font-family: JDMediumCondensed;
+     font-size: 90%;
+     margin-left: 116%!important;
+     margin-top: -5%;
+     text-align: left;
+}
+ #afterdance .score {
+     font-family: "Just Dance", "Impact", "Arial Bold", Gadget, sans-serif;
+}
+ #afterdance .name {
+     font-family: JDMediumCondensed;
+     font-size: 25%;
+     font-weight: 600;
+     margin-left: 4.3%;
+     margin-top: -3%;
+}
+ #afterdance .pink .name, #afterdance .pink .score-text {
+     color: rgba(208, 24, 229, 1);
+}
+ #afterdance .blue .name, #afterdance .blue .score-text {
+     color: rgba(93, 29, 240, 1);
+}
+ #afterdance .red .name, #afterdance .red .score-text {
+     color: rgba(232, 22, 19, 1);
+}
+ #afterdance .aqua .name, #afterdance .aqua .score-text {
+     color: rgba(66, 184, 180, 1);
+}
+ #afterdance .purple .name, #afterdance .purple .score-text {
+     color: rgba(210, 34, 218, 1);
+}
+ #afterdance .green .name, #afterdance .green .score-text {
+     color: rgba(103, 190, 43, 1);
+}
+ #afterdance .name {
+     font-family: JDMediumCondensed;
+}
+ #afterdance .position {
+     font-family: JDMediumCondensed;
+     font-size: 60%;
+     left: 19%;
+     top: 23%;
+}
+ #afterdance .winner .position {
+     font-size: 75%;
+     left: 15%;
+}
+ #afterdance .winner .color::before {
+     height: 98%;
+     width: 45%;
+}
+ #afterdance .player:nth-child(2) .color::before {
+     height: 80%;
+     left: 4%;
+     top: 8%;
+     width: 42%;
+}
+ #afterdance .player:nth-child(3) .color::before {
+     height: 71%;
+     left: 5%;
+     top: 10%;
+     width: 40%;
+}
+ #afterdance .player:nth-child(4) .color::before {
+     height: 65%;
+     left: 9%;
+     top: 12%;
+     width: 33%;
+}
+ #afterdance .players {
+     left: -21.5%;
+     max-height: 60.3%;
+     top: 16%;
+     width: 136%;
+}
+ #afterdance .player {
+     height: .6em;
+}
+ #afterdance .color::before {
+     box-shadow: none!important;
+     transform-origin: center;
+}
+ #afterdance.transition-in #crown-container {
+     animation: BeatCrown 1s linear infinite!important;
+}
+ #crown-container .crown, #afterdance .flag, .state-afterdance #players, .img--afterDance .coach, .img--afterDance::before, #afterdance::before {
+     display: none;
+}
+ #afterdance .results {
+     margin: -3.5% 6% 0 22%;
+}
+ #afterdance .color::before {
+     animation: Beat01 1s ease infinite, DEGRADETOAST 2s ease infinite;
+     background-size: 200% 120%!important;
+     border-radius: 11px;
+     height: .4rem;
+     transform: none;
+     width: .4rem;
+}
+ #afterdance .results .stars .star {
+     background-image: url(//dl.dropbox.com/s/wnzpa3pea22lf2h/Star_glow_jd2019.png);
+}
+
+/* Player Color */
+#afterdance .blue .stars::after, .toast__color.blue::before, #afterdance .blue .color::before, .player-solo #afterdance .blue .color::before {
+     background-image: linear-gradient(to right, rgba(72, 139, 252, 1) 0%, rgba(93, 27, 239, 1) 100%);
+}
+ #afterdance .purple .stars::after, .toast__color.purple::before {
+     background-image: linear-gradient(40deg, rgba(131, 5, 179, 1) 30%, rgba(122, 57, 242, 1) 50%, rgba(131, 5, 179, 1) 66%);
+}
+ #afterdance .green .stars::after, .toast__color.green::before, #afterdance .green .color::before, .player-solo #afterdance .green .color::before {
+     background-image: linear-gradient(40deg, rgba(103, 190, 43, 1) 0%, rgba(101, 255, 11, 1) 50%, rgba(103, 190, 43, 1) 100%);
+}
+ #afterdance .aqua .stars::after, .toast__color.aqua::before {
+     background-image: linear-gradient(40deg, rgba(66, 184, 180, 1) 30%, rgba(80, 250, 181, 1) 50%, rgba(66, 184, 180, 1) 66%);
+}
+ #afterdance .pink .stars::after, .toast__color.pink::before {
+     background-image: linear-gradient(40deg, rgba(204, 23, 224, 1) 30%, rgba(253, 3, 164, 1) 50%, rgba(204, 23, 224, 1) 66%);
+}
+ #afterdance .red .stars::after, .toast__color.red::before, #afterdance .red .color::before, .player-solo #afterdance .red .color::before {
+     background-image: linear-gradient(40deg, rgba(237, 33, 25, 1) 0%, rgba(255, 126, 22, 1) 50%, rgba(237, 33, 25, 1) 100%);
+}
+ #afterdance .pink .color::before, #afterdance .pink .flag::after {
+     background: linear-gradient(49deg, rgba(208, 24, 229, 1) 0%, rgba(254, 1, 167, 1) 30%, rgba(235, 11, 193, 1) 60%, rgba(254, 1, 167, 1) 100%);
+}
+ #afterdance .results .player .score.superstar::after, #afterdance .results .player .score.megastar::after {
+     height: 35%;
+     right: 14%;
+     top: 16%;
+     width: 55%;
+}

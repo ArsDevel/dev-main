@@ -1,0 +1,486 @@
+/*
+*	ireDemo: visible=[false],
+*	ireProd: visible=[false]
+*/
+
+.song-cover--hi-res.EyeOfTheTiger::after,
+.song-cover--hi-res.Acceptable::after,
+.song-cover--hi-res.Cotton::after,
+.song-cover--hi-res.GetAround::after,
+.song-cover--hi-res.DogsOut::after,
+.song-cover--hi-res.HeartOfGlass::after,
+.song-cover--hi-res.HotNCold::after {
+	content: 'Just Dance 1';
+}
+
+.song-cover--hi-res.TakeMeOut::after,
+.song-cover--hi-res.BabyGirl::after,
+.song-cover--hi-res.HotStep::after,
+.song-cover--hi-res.ProudMary::after,
+.song-cover--hi-res.Rasputin::after,
+.song-cover--hi-res.Mambo5::after,
+.song-cover--hi-res.ItsRainingMen::after,
+.song-cover--hi-res.IWantYouBack::after,
+.song-cover--hi-res.Xmas::after,
+.song-cover--hi-res.KungFu::after,
+.song-cover--hi-res.BarbieGirl::after,
+.song-cover--hi-res.MonsterMash::after,
+.song-cover--hi-res.WalkLike::after,
+.song-cover--hi-res.KattiKalandal::after,
+.song-cover--hi-res.Girlfriend::after {
+	content: 'Just Dance 2';
+}
+
+.song-cover--hi-res.Satellite::after,
+.song-cover--hi-res.CrazyLittle::after,
+.song-cover--hi-res.DynamiteQUAT::after,
+.song-cover--hi-res.Airplanes::after,
+.song-cover--hi-res.Apache::after,
+.song-cover--hi-res.BabyOneMoreQUAT::after,
+.song-cover--hi-res.CaliforniaGurls::after,
+.song-cover--hi-res.NoLimit::after,
+.song-cover--hi-res.SpectronizerQUAT::after,
+.song-cover--hi-res.BabyZouk::after,
+.song-cover--hi-res.TakeOnMe::after,
+.song-cover--hi-res.ET::after,
+.song-cover--hi-res.VenusB::after {
+	content: 'Just Dance 3';
+}
+
+.song-cover--hi-res.IstanbulQUAT::after,
+.song-cover--hi-res.JailHouse::after,
+.song-cover--hi-res.GangnamStyleDLC::after,
+.song-cover--hi-res.TheFinalCountdown::after,
+.song-cover--hi-res.KetchupSong::after,
+.song-cover--hi-res.CantTakeMyEyes::after,
+.song-cover--hi-res.GoodFeeling::after,
+.song-cover--hi-res.LoveYouLike::after,
+.song-cover--hi-res.MovesLikeDLC::after,
+.song-cover--hi-res.MrSaxobeat::after,
+.song-cover--hi-res.RockNRoll::after,
+.song-cover--hi-res.Americano::after,
+.song-cover--hi-res.YouReTheFirst::after,
+.song-cover--hi-res.CrucifiedQUAT::after,
+.song-cover--hi-res.TimeWarpQUAT::after,
+.song-cover--hi-res.Amore::after,
+.song-cover--hi-res.Superstition::after,
+.song-cover--hi-res.MasQueNada::after,
+.song-cover--hi-res.NeverGonna::after,
+.song-cover--hi-res.BeautyAndABeatDLC::after {
+	content: 'Just Dance 4';
+}
+
+.song-cover--hi-res.GoodFeelingALT::after {
+	content: 'Just Dance 4 Extreme Version';
+}
+
+.song-cover--hi-res.ThatPower::after,
+.song-cover--hi-res.Starships::after,
+.song-cover--hi-res.LimaGolf1::after,
+.song-cover--hi-res.IKissed::after,
+.song-cover--hi-res.Luftballons::after,
+.song-cover--hi-res.AmericanGirlDLC::after,
+.song-cover--hi-res.Aquarius::after,
+.song-cover--hi-res.Cmon::after,
+.song-cover--hi-res.CantGetEnoughDLC::after,
+.song-cover--hi-res.SexyAndIKnowItDLC::after,
+.song-cover--hi-res.TurnUpTheLove::after,
+.song-cover--hi-res.Gentleman::after,
+.song-cover--hi-res.FineChina::after,
+.song-cover--hi-res.JustDance::after,
+.song-cover--hi-res.RobotRock::after,
+.song-cover--hi-res.PoundTheAlarm::after,
+.song-cover--hi-res.YMCA::after,
+.song-cover--hi-res.IWillSurvive::after,
+.song-cover--hi-res.Ghostbusters::after,
+.song-cover--hi-res.PrinceAli::after,
+.song-cover--hi-res.WhatAFeeling::after {
+	content: 'Just Dance 2014';
+}
+
+.song-cover--hi-res.IKissedOSC::after,
+.song-cover--hi-res.IWillSurviveOSC::after,
+.song-cover--hi-res.ThatPowerOSCDLC::after {
+	content: 'Just Dance 2014 On Stage Version';
+}
+
+.song-cover--hi-res.ThatPowerALT::after,
+.song-cover--hi-res.FineChinaALT::after,
+.song-cover--hi-res.BlurredLinesALTDLC::after,
+.song-cover--hi-res.PoundTheAlarmALTDLC::after {
+	content: 'Just Dance 2014 Extreme Version';
+}
+
+.song-cover--hi-res.GhostbustersSWT::after,
+.song-cover--hi-res.JustDanceSWTDLC::after,
+.song-cover--hi-res.GentlemanSWT::after,
+.song-cover--hi-res.IKissedSWT::after,
+.song-cover--hi-res.ItsYouSWT::after {
+	content: 'Just Dance 2014 Sweat Version';
+}
+
+.song-cover--hi-res.Summer::after,
+.song-cover--hi-res.Happy::after,
+.song-cover--hi-res.WalkThisWay::after,
+.song-cover--hi-res.LetItGo::after,
+.song-cover--hi-res.Birthday::after,
+.song-cover--hi-res.Macarena::after,
+.song-cover--hi-res.BrokenHeart::after,
+.song-cover--hi-res.BreakFreeDLC::after,
+.song-cover--hi-res.BuiltForThis::after,
+.song-cover--hi-res.HoldingOut::after,
+.song-cover--hi-res.LoveIsAll::after,
+.song-cover--hi-res.BadRomance::after,
+.song-cover--hi-res.BadRomanceALT::after,
+.song-cover--hi-res.DancingQueen::after,
+.song-cover--hi-res.FindYourMove::after,
+.song-cover--hi-res.OnMyMind::after {
+	content: 'Just Dance 2015';
+}
+
+.song-cover--hi-res.WalkThisWayALT::after {
+	content: 'Just Dance 2015 Extreme Version';
+}
+
+.song-cover--hi-res.SummerALT::after {
+	content: 'Just Dance 2015 Sweat Version';
+}
+
+.song-cover--hi-res.LetItGoDLC::after {
+	content: 'Just Dance 2015 Sing-Along';
+}
+
+.song-cover--hi-res.ShutUp::after,
+.song-cover--hi-res.JuntoATi::after,
+.song-cover--hi-res.LetsGroove::after,
+.song-cover--hi-res.Animals::after,
+.song-cover--hi-res.AnimalsALTCMU::after,
+.song-cover--hi-res.IGotAFeeling::after,
+.song-cover--hi-res.AboutThatBass::after,
+.song-cover--hi-res.AmIWrong::after,
+.song-cover--hi-res.AngryBirds::after,
+.song-cover--hi-res.HeyMama::after,
+.song-cover--hi-res.Chiwawa::after,
+.song-cover--hi-res.Fancy::after,
+.song-cover--hi-res.GetUgly::after,
+.song-cover--hi-res.LevanPolkka::after,
+.song-cover--hi-res.NoControl::after,
+.song-cover--hi-res.WilliamTell::after,
+.song-cover--hi-res.YouNeverCan::after,
+.song-cover--hi-res.BetterWhen::after,
+.song-cover--hi-res.Blame::after,
+.song-cover--hi-res.BornThisWay::after,
+.song-cover--hi-res.Circus::after,
+.song-cover--hi-res.ElectroMambo::after,
+.song-cover--hi-res.KaboomPow::after,
+.song-cover--hi-res.KungFunk::after,
+.song-cover--hi-res.WhenTheRain::after,
+.song-cover--hi-res.Albatraoz::after,
+.song-cover--hi-res.AlbatraozCMU::after,
+.song-cover--hi-res.HitTheRoad::after,
+.song-cover--hi-res.CopaCabana::after,
+.song-cover--hi-res.UnderTheSea::after,
+.song-cover--hi-res.YoureTheOne::after,
+.song-cover--hi-res.TheseBoots::after {
+	content: 'Just Dance 2016';
+}
+
+.song-cover--hi-res.AboutThatBassALT::after {
+	content: 'Just Dance 2016 Flower & Bee Version';
+}
+
+.song-cover--hi-res.AnimalsALT::after {
+	content: 'Just Dance 2016 Extreme Version';
+}
+
+.song-cover--hi-res.RabiosaALT::after {
+	content: 'Just Dance 2016 Latin Fitness Version';
+  width: 40%;
+}
+
+.song-cover--hi-res.ILoveRock::after,
+.song-cover--hi-res.DontStopMe::after,
+.song-cover--hi-res.NaeNae::after,
+.song-cover--hi-res.ScreamNShout::after, 
+.song-cover--hi-res.AintMy::after,
+.song-cover--hi-res.AllAboutUs::after,
+.song-cover--hi-res.Bailar::after,
+.song-cover--hi-res.CakeByTheOcean::after,
+.song-cover--hi-res.CheapThrills::after,
+.song-cover--hi-res.DragosteaDinTei::after,
+.song-cover--hi-res.DontWorryMadcon::after,
+.song-cover--hi-res.LeanOn::after,
+.song-cover--hi-res.MeToo::after,
+.song-cover--hi-res.PoPiPo::after,
+.song-cover--hi-res.WorthIt::after,
+.song-cover--hi-res.Titanium::after,
+.song-cover--hi-res.WhatIsLove::after,
+.song-cover--hi-res.WhatIsLoveALT::after,
+.song-cover--hi-res.Barbie::after,
+.song-cover--hi-res.LastChristmas::after,
+.song-cover--hi-res.Oishii::after,
+.song-cover--hi-res.SingleLadies::after,
+.song-cover--hi-res.September::after,
+.song-cover--hi-res.Bicicleta::after,
+.song-cover--hi-res.LegSongCHN::after,
+.song-cover--hi-res.KaraokeForeverCHN::after,
+.song-cover--hi-res.Hips::after {
+	content: 'Just Dance 2017';
+}
+
+.song-cover--hi-res.ScreamNShoutALT::after {
+	content: 'Just Dance 2017';
+}
+
+.song-cover--hi-res.WhatIsLoveALT::after {
+	content: 'Just Dance 2017 Car Version';
+}
+
+.song-cover--hi-res.AnotherOne::after,
+.song-cover--hi-res.Diggy::after,
+.song-cover--hi-res.Despacito::after,
+.song-cover--hi-res.DaddyCool::after,
+.song-cover--hi-res.MakeItJingle::after,
+.song-cover--hi-res.Blue::after,
+.song-cover--hi-res.AllYouGotta::after,
+.song-cover--hi-res.Automaton::after,
+.song-cover--hi-res.\32 4K::after,
+.song-cover--hi-res.KissingStrangers::after,
+.song-cover--hi-res.TumBum::after,
+.song-cover--hi-res.WakaWaka::after,
+.song-cover--hi-res.BubblePop::after,
+.song-cover--hi-res.Cottonmouth::after,
+.song-cover--hi-res.Instruction::after,
+.song-cover--hi-res.Dharma::after,
+.song-cover--hi-res.SugarDance::after,
+.song-cover--hi-res.FeelIt::after,
+.song-cover--hi-res.BeepBeep::after,
+.song-cover--hi-res.NaughtyGirl::after,
+.song-cover--hi-res.Sax::after,
+.song-cover--hi-res.SwishSwish::after,
+.song-cover--hi-res.Copperhead::after,
+.song-cover--hi-res.MiGente::after,
+.song-cover--hi-res.Footloose::after,
+.song-cover--hi-res.HowFar::after,
+.song-cover--hi-res.Rockabye::after {
+	content: 'Just Dance 2018';
+}
+
+.song-cover--hi-res.AutomatonALT::after {
+	content: 'Just Dance 2018 Tomato Version';
+}
+
+.song-cover--hi-res.DespacitoALT::after,
+.song-cover--hi-res.AnotherOneALT::after,
+.song-cover--hi-res.\32 4KALT::after {
+	content: 'Just Dance 2018 Extreme Version';
+}
+
+.song-cover--hi-res.MissAmazingKids::after,
+.song-cover--hi-res.PixieLandKids::after,
+.song-cover--hi-res.WakaWakaKids::after {
+	content: 'Just Dance 2018 Kids Version';
+}
+
+.song-cover--hi-res.ChantajeALT::after {
+	content: 'Just Dance 2018 Metro Version';
+}
+
+.song-cover--hi-res.KissingStrangersALT::after {
+	content: 'Just Dance 2018 Charleston Version';
+  width: 38% !important;
+}
+
+.song-cover--hi-res.ABBAGimmeGimme::after,
+.song-cover--hi-res.ABBATheWinner::after,
+.song-cover--hi-res.ABBAMoneyMoney::after,
+.song-cover--hi-res.ABBAGimmeGimme::after,
+.song-cover--hi-res.ABBADancingQueen::after,
+.song-cover--hi-res.ABBASOS::after,
+.song-cover--hi-res.ABBAMammaMia::after {
+	content: 'Just Dance ABBA: You Can Dance';
+  width: 38% !important;
+}
+
+.song-cover--hi-res.DDUDU::after,
+.song-cover--hi-res.LittleParty::after,
+.song-cover--hi-res.DameTu::after,
+.song-cover--hi-res.Bang2019::after,
+.song-cover--hi-res.MiMiMi::after,
+.song-cover--hi-res.Adeyyo::after,
+.song-cover--hi-res.RaveIn::after,
+.song-cover--hi-res.Boys::after,
+.song-cover--hi-res.MamaMia::after,
+.song-cover--hi-res.NoTearsLeft::after,
+.song-cover--hi-res.SangriaWine::after,
+.song-cover--hi-res.IFeelItComing::after,
+.song-cover--hi-res.WaterMe::after,
+.song-cover--hi-res.Rhythm::after,
+.song-cover--hi-res.TOY::after,
+.song-cover--hi-res.SweetSensation::after,
+.song-cover--hi-res.Lush::after,
+.song-cover--hi-res.WhereAreYou::after,
+.song-cover--hi-res.Sugar::after,
+.song-cover--hi-res.NewRules::after,
+.song-cover--hi-res.OMG::after,
+.song-cover--hi-res.MadLove::after,
+.song-cover--hi-res.Havana::after,
+.song-cover--hi-res.Shaky::after,
+.song-cover--hi-res.Calypso::after,
+.song-cover--hi-res.Medicina::after,
+.song-cover--hi-res.PocoLoco::after,
+.song-cover--hi-res.CaPlane::after,
+.song-cover--hi-res.BumBumTamTam::after {
+	content: 'Just Dance 2019';
+}
+
+.song-cover--hi-res.LittlePartyALT::after {
+	content: 'Just Dance 2019 Twenties Version';
+}
+
+.song-cover--hi-res.MiMiMiALT::after {
+	content: 'Just Dance 2019 Sassy Version';
+}
+
+.song-cover--hi-res.HavanaALT::after {
+	content: 'Just Dance 2019 Tango Version';
+}
+
+.song-cover--hi-res.MerryChristmasKids::after,
+.song-cover--hi-res.NinjaKids::after,
+.song-cover--hi-res.JurassicKids::after {
+	content: 'Just Dance 2019 Kids Version';
+}
+
+.song-cover--hi-res.Bang2019ALT::after,
+.song-cover--hi-res.NewRulesALT::after,
+.song-cover--hi-res.FinesseALT::after,
+.song-cover--hi-res.OMGALT::after,
+.song-cover--hi-res.WorkWorkALT::after {
+	content: 'Just Dance 2019 Extreme Version';
+}
+
+.song-cover--hi-res.WhereAreYouALT::after {
+	content: 'Just Dance 2019 Hide-and-seek version';
+  width: 42.8%;
+}
+
+.song-cover--hi-res.DoCarnaval::after,
+.song-cover--hi-res.Swag::after,
+.song-cover--hi-res.IAmTheBest::after,
+.song-cover--hi-res.HighHopes::after,
+.song-cover--hi-res.GetBusy::after,
+.song-cover--hi-res.KillThisLove::after,
+.song-cover--hi-res.OldTownRoad::after,
+.song-cover--hi-res.ConCalma::after,
+.song-cover--hi-res.BabyShark::after,
+.song-cover--hi-res.SoyYo::after,
+.song-cover--hi-res.Bangarang::after,
+.song-cover--hi-res.BassaSababa::after,
+.song-cover--hi-res.\33 65::after,
+.song-cover--hi-res.IDontCare::after,
+.song-cover--hi-res.BadBoy::after,
+.song-cover--hi-res.Talk::after,
+.song-cover--hi-res.Sushii::after,
+.song-cover--hi-res.FitButYouKnow::after,
+.song-cover--hi-res.AlwaysLookOn::after,
+.song-cover--hi-res.BadGuy::after,
+.song-cover--hi-res.\37 Rings::after,
+.song-cover--hi-res.ILikeIt::after,
+.song-cover--hi-res.DjaDja::after,
+.song-cover--hi-res.CanCan::after,
+.song-cover--hi-res.GodIsAWoman::after,
+.song-cover--hi-res.TakiTaki::after,
+.song-cover--hi-res.TelAviv::after,
+.song-cover--hi-res.FancyTwice::after,
+.song-cover--hi-res.BalMasque::after,
+.song-cover--hi-res.UglyBeauty::after,
+.song-cover--hi-res.MaItu::after,
+.song-cover--hi-res.Policeman::after,
+.song-cover--hi-res.Vodovorot::after,
+.song-cover--hi-res.Lullaby::after,
+.song-cover--hi-res.AdventurerKids::after,
+.song-cover--hi-res.Everybody::after,
+.song-cover--hi-res.TheTime::after,
+.song-cover--hi-res.RainOverMe::after,
+.song-cover--hi-res.ConAltura::after,
+.song-cover--hi-res.Skibidi::after {
+	content: 'Just Dance 2020';
+}
+
+.song-cover--hi-res.RainOverMeALT::after,
+.song-cover--hi-res.TheTimeALT::after,
+.song-cover--hi-res.KillThisLoveALT::after {
+	content: 'Just Dance 2020 Extreme Version';
+}
+
+.song-cover--hi-res.GodIsAWomanALT::after {
+	content: 'Just Dance 2020 Goddess Version';
+}
+
+.song-cover--hi-res.SoyYoALT::after {
+	content: 'Just Dance 2020 Snake Version';
+}
+
+.song-cover--hi-res.WaterMeALT::after {
+	content: 'Just Dance 2020 Tennis Version';
+}
+
+.song-cover--hi-res.OldTownRoadALT::after {
+	content: 'Just Dance 2020 Line Dance Version';
+  width: 39%; !important;
+}
+
+.song-cover--hi-res.TalkALT::after,
+.song-cover--hi-res.IAmTheBestALT::after,
+.song-cover--hi-res.BangarangALT::after,
+.song-cover--hi-res.SushiiALT::after,
+.song-cover--hi-res.\37 RingsALT::after {
+	content: 'Just Dance 2020 Extreme Version';
+}
+
+.song-cover--hi-res.TakiTakiALT::after {
+	content: 'Just Dance 2020 Caveman Version';
+}
+
+.song-cover--hi-res.BirthdayKids::after,
+.song-cover--hi-res.FreezeKids::after,
+.song-cover--hi-res.MedievalKids::after,
+.song-cover--hi-res.ChefKids::after {
+	content: 'Just Dance 2020 Kids Version';
+}
+
+.song-cover--hi-res.Sorbet::after,
+.song-cover--hi-res.Kuliki::after,
+.song-cover--hi-res.WithoutMe::after,
+.song-cover--hi-res.QueTirePaLante::after,
+.song-cover--hi-res.Magenta::after,
+.song-cover--hi-res.DanceMonkey::after,
+.song-cover--hi-res.Senorita::after,
+.song-cover--hi-res.BadAssPrincessKids::after,
+.song-cover--hi-res.PacaDance::after,
+.song-cover--hi-res.SaySo::after,
+.song-cover--hi-res.ThatGirl::after,
+.song-cover--hi-res.BlindingLights::after,
+.song-cover--hi-res.AdoreYou::after,
+.song-cover--hi-res.BoyYouCan::after,
+.song-cover--hi-res.DontStart::after,
+.song-cover--hi-res.Alexandrie::after,
+.song-cover--hi-res.FeelSpecial::after,
+.song-cover--hi-res.AllTheGoodGirls::after{
+content: 'Just Dance 2021';
+}
+
+.song-cover--hi-res.AmericanoFAN::after {
+	content: 'Just Dance Now';
+}
+
+.song-cover--hi-res.KIDSPirateYouShallBe::after,
+.song-cover--hi-res.KIDSABC::after,
+.song-cover--hi-res.KIDSHickoryDickoryDock::after,
+.song-cover--hi-res.KIDSILikeToMoveIt::after,
+.song-cover--hi-res.KIDSJingleBells::after,
+.song-cover--hi-res.KIDSMaryHadALittleLamb::after,
+.song-cover--hi-res.KIDSTheLionSleepsTonight::after {
+	content: 'Just Dance Kids';
+}

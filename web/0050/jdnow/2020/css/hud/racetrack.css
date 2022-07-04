@@ -1,0 +1,76 @@
+/******* Racetrack *******/
+html:not(.weak-platform) #racetrack .star[data-visible="true"]::after {
+  background-image: url(//i.imgur.com/bdVobZS.png) !important;
+  transform: rotate(5deg) !important;
+}
+
+html:not(.weak-platform) #racetrack .star[data-visible="true"]::before {
+  background-image: url(//i.imgur.com/vL4zw8l.png) !important;
+  transform: rotate(5deg) !important;
+}
+
+.hud.beat > #racetrack.animate .star:not(.no-beat) {
+  animation: racetrack-star-beat 1s ease-in-out;
+}
+
+#racetrack .star[data-visible="true"] {
+  background-image: url(//dl.dropbox.com/s/wnzpa3pea22lf2h/Star_glow_jd2019.png?dl=0);
+  background-size: 90%;
+}
+
+#racetrack .star {
+  background: url(//i.imgur.com/YqZ9ii4.png)50%50%no-repeat;
+  background-size: 90%;
+  height: 0.6rem;
+  left: 8%;
+  margin-bottom: -22% !important;
+  transform: rotate(15deg);
+  transform: rotateZ(5deg) !important;
+  width: 0.6rem;
+  z-index: 100;
+}
+
+#racetrack {
+  left: 1.2%;
+  top: 22.6%;
+  width: 7.9%;
+}
+
+html:not(.weak-platform) #racetrack .star[data-visible="false"]::before {
+  background-image: url(//dl.dropbox.com/s/3jpmg65bxil3b19/light.png?dl=0) !important;
+  background-repeat: no-repeat;
+  background-size: 99%;
+  opacity: 1;
+  transform: rotateZ(0deg) !important;
+}
+
+#racetrack-fill,
+.racetrack-fill-players {
+  bottom: -0.001rem !important;
+  position: absolute !important;
+  transition: all 2s !important;
+  -will-change: transform !important;
+}
+
+#racetrack.animate .star {
+  -webkit-animation: newUpdateStarAnimation2020 1.1s ease-in-out;
+}
+
+#racetrack.megastar .star[data-visible="true"] {
+  background-image: url(//dl.dropbox.com/s/lm0gio45hww4ij7/Star_glow_plus_more_jd2019.png?dl=0);
+  background-size: 90%;
+}
+
+#racetrack.superstar .star[data-visible="true"] {
+  background-image: url(//dl.dropbox.com/s/4g9ch4n9pmyjwor/Star_glow_plus_jd2019.png?dl=0);
+  background-size: 90%;
+}
+
+.racetrack-fill-players {
+  border-radius: 4px;
+}
+
+#racetrack .progress-bar {
+  border-bottom: 2px solid #daf3f08c;
+  border-radius: 0 0 8px 8px;
+}

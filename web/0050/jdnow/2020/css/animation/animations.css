@@ -1,0 +1,1206 @@
+/* This is the old ANIMATE-CUSTOM.CSS file */ 
+/* Did I accidentally remove something? Copy-paste it from the old file. */
+@keyframes fadeOpenModalScreen {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes player-crown-beat {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1) rotateZ(-10deg);
+    transform: scale3d(1, 1, 1) rotateZ(-10deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1.1, 1.1, 1) rotateZ(-10deg);
+    transform: scale3d(1.1, 1.1, 1) rotateZ(-10deg);
+  }
+}
+
+@keyframes profileAvatarSelect {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  15% {
+    transform: translate(0px,-25px);
+  }
+
+  30% {
+    transform: translate(0px,0px);
+  }
+
+  45% {
+    transform: translate(0px,-15px);
+  }
+
+  60% {
+    transform: translate(0px,0px);
+  }
+
+  75% {
+    transform: translate(0px,-5px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes avatarWraperFroze {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  10% {
+    transform: translate(-10px,0px);
+  }
+
+  20% {
+    transform: translate(10px,0px);
+  }
+
+  30% {
+    transform: translate(-10px,0px);
+  }
+
+  40% {
+    transform: translate(10px,0px);
+  }
+
+  50% {
+    transform: translate(-10px,0px);
+  }
+
+  60% {
+    transform: translate(10px,0px);
+  }
+
+  70% {
+    transform: translate(-10px,0px);
+  }
+
+  80% {
+    transform: translate(10px,0px);
+  }
+
+  90% {
+    transform: translate(-10px,0px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes avatarWraperShake {
+  0% {
+    transform: rotate(0deg) scaleX(1.00) scaleY(1.00);
+  }
+
+  10% {
+    transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+  }
+
+  20% {
+    transform: rotate(-3deg) scaleX(0.80) scaleY(0.80);
+  }
+
+  30% {
+    transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  40% {
+    transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  50% {
+    transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  60% {
+    transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  70% {
+    transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  80% {
+    transform: rotate(-3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  90% {
+    transform: rotate(3deg) scaleX(1.20) scaleY(1.20);
+  }
+
+  100% {
+    transform: rotate(0deg) scaleX(1.20) scaleY(1.20);
+  }
+}
+
+@keyframes btnDisable {
+  0% {
+    opacity: 1;
+    transform: scaleX(1.00) scaleY(1.00);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scaleX(0.95) scaleY(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1.10) scaleY(1.10);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(0.30) scaleY(0.30);
+  }
+}
+
+@keyframes slideRightToLeftQuit {
+    /* suitable for new transition animation */
+  0% {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(20px,0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-1000px,0px);
+  }
+}
+
+@keyframes slideLeftToRight {
+    /* suitable for new transition animation */
+  0% {
+    opacity: 0;
+    transform: translate(-1500px,0px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(30px,0px);
+  }
+
+  80% {
+    transform: translate(-10px,0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translate(0px,-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes spinner01 {
+  0% {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    -moz-transform: rotateY(-30deg);
+    -ms-transform: rotateY(-30deg);
+    transform: rotateY(-30deg);
+  }
+
+  80% {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    -moz-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    transform: rotateY(30deg);
+  }
+}
+
+@keyframes BounceIN {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes AfterDanceName {
+  0%, 50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    width: 1;
+    width: 53%;
+  }
+}
+
+@keyframes ScoreEffect5 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 130%;
+  }
+}
+
+@keyframes ScoreEffect4 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 93%;
+  }
+}
+
+@keyframes ScoreEffect3 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 63%;
+  }
+}
+
+@keyframes ScoreEffect2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 43%;
+  }
+}
+
+@keyframes ScoreEffect1 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes DegradeSong {
+  0% {
+    background-position: 0 90%;
+  }
+
+  50% {
+    background-position: 100% 11%;
+  }
+
+  100% {
+    background-position: 0 90%;
+  }
+}
+
+@keyframes DegradeGlow {
+  0% {
+    background-position: -1.5em 0em, center;
+  }
+
+  10% {
+    background-position: 1.5em 0em, center;
+  }
+
+  20%, 100% {
+    background-position: 1.5em 0em, center;
+  }
+}
+
+@keyframes NewFeedbackScale03 {
+  0% {
+    filter: brightness(160%);
+    opacity: 1;
+    transform: scale(0.5);
+    -webkit-filter: brightness(160%);
+    -webkit-transform: scale(0.5);
+  }
+
+  100% {
+    filter: brightness(100%);
+    opacity: 0;
+    transform: scale(1.5);
+    -webkit-filter: brightness(100%);
+    -webkit-transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes NewFeedbackZoom {
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+    -webkit-transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes NewFeedbackZoom {
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+    -webkit-transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes NewFeedbackScale02 {
+  0% {
+    filter: brightness(160%);
+    opacity: 1;
+    transform: scale(0.5);
+    -webkit-filter: brightness(160%);
+    -webkit-transform: scale(0.5);
+  }
+
+  95% {
+    filter: brightness(100%);
+    opacity: 1;
+    transform: scale(1.5);
+    -webkit-filter: brightness(100%);
+    -webkit-transform: scale(1.5);
+  }
+
+  100% {
+    filter: brightness(100%);
+    opacity: 0;
+    transform: scale(1.5);
+    -webkit-filter: brightness(100%);
+    -webkit-transform: scale(1.5);
+  }
+}
+
+@keyframes NewFeedbackScale {
+  0% {
+    filter: brightness(135%);
+    opacity: 1;
+    transform: scaleX(1);
+    -webkit-filter: brightness(136%);
+    -webkit-transform: scaleX(1);
+  }
+
+  100% {
+    filter: brightness(100%);
+    opacity: 0;
+    transform: scaleX(0.8);
+    -webkit-filter: brightness(100%);
+    -webkit-transform: scaleX(0.8);
+  }
+}
+
+@keyframes DEGRADEBUTTON03 {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes DEGRADEBUTTON02 {
+  0% {
+    background-position: 5% 50%, 0 75%;
+  }
+
+  50% {
+    background-position: 5% 50%, 100% 26%;
+  }
+
+  100% {
+    background-position: 5% 50%, 0 75%;
+  }
+}
+
+@keyframes DEGRADEAFTERDANCE {
+  0% {
+    background-position: center, 0 4%;
+  }
+
+  50% {
+    background-position: center, 100% 97%;
+  }
+
+  100% {
+    background-position: center, 0 4%;
+  }
+}
+
+@keyframes DEGRADEPLAYERCOLOR {
+  0% {
+    background-position: 0 4%;
+  }
+
+  50% {
+    background-position: 100% 97%;
+  }
+
+  100% {
+    background-position: 0 4%;
+  }
+}
+
+@keyframes DEGRADETOAST {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes COACHRIGHT {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes COACHLEFT {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-1%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes COACHLEFTRotateR {
+  0% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateX(2%) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
+
+@keyframes COACHLEFTRotateL {
+  0% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateX(-2%) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
+
+@keyframes coachselectAnimation {
+  0% {
+    transform: translateY(0);
+    -webkit-filter: brightness(100%);
+  }
+
+  50% {
+    transform: translateY(-4%);
+    -webkit-filter: brightness(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes coachWhBeat {
+  0% {
+    -webkit-filter: brightness(100%);
+  }
+
+  1% {
+    -webkit-filter: brightness(150%);
+  }
+
+  30% {
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes BeatCoach {
+  100% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.2, 0.96);
+  }
+
+  0% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes goldlayer3AnimationFX {
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  0% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes SKGJD2020 {
+  100% {
+    top: 20%;
+  }
+
+  50% {
+    top: 23%;
+  }
+
+  25% {
+    top: 16%;
+  }
+
+  0% {
+    top: 20%;
+  }
+}
+
+@keyframes multipictofadeinnew {
+  0% {
+    opacity: 0;
+    transform: translate3d(3.5em, 0, 0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  96% {
+    opacity: 0;
+    transform: scale3d(1.10, 1.10, 1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale3d(1.10, 1.10, 1);
+  }
+}
+
+@keyframes toptodown {
+  100% {
+    top: 0%;
+  }
+
+  50% {
+    top: 10%;
+  }
+
+  0% {
+    top: 0%;
+  }
+}
+
+@keyframes SKG02 {
+  100% {
+    background-position: 100em 0%, center;
+  }
+
+  0% {
+    background-position: 0 0%, center;
+  }
+}
+
+@keyframes SKG01 {
+  100% {
+    background-position: 76em 20%, 50em 0;
+  }
+
+  0% {
+    background-position: 0 20%, 0 0;
+  }
+}
+
+@keyframes INTransitionBG {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes OUTTransitionBG {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes csBeatSelect {
+  0% {
+    -webkit-filter: brightness(150%);
+  }
+
+  100% {
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes BeatSelectScreen {
+  0% {
+    -webkit-filter: brightness(100%);
+  }
+
+  20% {
+    -webkit-filter: brightness(100%);
+  }
+
+  25% {
+    -webkit-filter: brightness(100%);
+  }
+
+  50% {
+    -webkit-filter: brightness(100%);
+  }
+
+  74% {
+    -webkit-filter: brightness(100%);
+  }
+
+  75% {
+    -webkit-filter: brightness(150%);
+  }
+
+  100% {
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes Beat01 {
+  0% {
+    -webkit-filter: brightness(120%);
+  }
+
+  100% {
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes Beat05 {
+  0% {
+    -webkit-filter: brightness(150%);
+  }
+
+  50% {
+    -webkit-filter: brightness(100%);
+  }
+
+  100% {
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes BeatSelectBack {
+  0% {
+    -webkit-filter: brightness(100%);
+  }
+
+  20% {
+    -webkit-filter: brightness(100%);
+  }
+
+  25% {
+    -webkit-filter: brightness(200%);
+  }
+
+  50% {
+    -webkit-filter: brightness(100%);
+  }
+
+  100% {
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes OpacityBeat {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes FadeInDeffaut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes MoveBeat3 {
+  0% {
+    left: 65%;
+    top: 20%;
+  }
+
+  50% {
+    left: -2%;
+    top: 66%;
+  }
+
+  100% {
+    left: 45%;
+    top: 74%;
+  }
+}
+
+@keyframes MoveBeat2 {
+  0% {
+    left: -30%;
+    top: 31%;
+  }
+
+  10% {
+    left: 60%;
+    top: 76%;
+  }
+
+  20% {
+    left: 16%;
+    top: 50%;
+  }
+
+  30% {
+    left: 40%;
+    top: 38%;
+  }
+
+  50% {
+    left: 6%;
+    top: 34%;
+  }
+}
+
+@keyframes crownShrink {
+  0% {
+    transform: scale3d(0.95, 0.95, 0.95) rotateZ(-12deg);
+  }
+
+  20% {
+    transform: scale3d(0.95, 0.95, 0.95) rotateZ(-12deg);
+  }
+}
+
+@keyframes MoveBeat {
+  0% {
+    left: -30%;
+    top: 31%;
+  }
+
+  10% {
+    left: 60%;
+    top: 76%;
+  }
+
+  20% {
+    left: 16%;
+    top: 50%;
+  }
+
+  30% {
+    left: 40%;
+    top: 38%;
+  }
+
+  50% {
+    left: 6%;
+    top: 34%;
+  }
+
+  80% {
+    left: 56%;
+    top: 23%;
+  }
+
+  100% {
+    left: 31%;
+    top: 38%;
+  }
+}
+
+@keyframes 1afterdancefx {
+  0% {
+    background: url(//dl.dropbox.com/s/uesvmkiopvig3cf/fx.gif?dl=0);
+    opacity: 1!important;
+    top: 0;
+  }
+
+  99% {
+    opacity: 0!important;
+    top: 59%;
+  }
+
+  100% {
+    background: none;
+    opacity: 0!important;
+    top: 59%;
+  }
+}
+
+@keyframes spin1 {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+
+@keyframes crownload {
+  0% {
+    transform: rotate(-12deg) scale(1);
+  }
+
+  20% {
+    transform: rotate(-12deg) scale(0.9);
+  }
+}
+
+@keyframes float_version {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes plusminusCarrot {
+  0% {
+    transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+
+  2% {
+    transform: scale(0.98);
+    -webkit-filter: brightness(130%);
+  }
+
+  40% {
+    transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+
+  100% {
+    transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+}
+
+@keyframes plusminus {
+  0% {
+    transform: scale(1, 0.0, 0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1, 0.0, 0);
+  }
+}
+
+@keyframes BeatCrown {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes startload {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes beatcrownnew {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes multipictofadein {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes racetrack-star-beat {
+  0% {
+    transform: scale3d(1.1, 1.1, 1) rotate(5deg);
+  }
+
+  50% {
+    transform: scale3d(1, 1, 1) rotate(5deg);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1) rotate(5deg);
+  }
+}
+
+@keyframes newUpdateStarAnimation2020 {
+  0% {
+    opacity: 0;
+    transform: scale(3) rotate(45deg);
+  }
+
+  35% {
+    opacity: 1;
+    transform: scale(2) rotate(110deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.85) rotate(110deg);
+  }
+
+  73% {
+    opacity: 1;
+    transform: scale(1.6) rotate(5deg);
+  }
+
+  92% {
+    opacity: 1;
+    transform: scale(0.85) rotate(5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(5deg);
+  }
+}
+
+@keyframes nextLineIn {
+  0%, 20% {
+    opacity: 0;
+    transform: perspective(0px) translateY(3em) rotateX(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(1em);
+  }
+}
+
+@keyframes BootLoading {
+  0%, 6% {
+    background-image: url(//imgur.com/j1sNpDD.png);
+    opacity: 1 !important;
+  }
+
+  7%, 13% {
+    background-image: url(//imgur.com/yPEo6mW.png);
+    opacity: 1 !important;
+  }
+
+  14%, 20% {
+    background-image: url(//imgur.com/iJjMYuT.png);
+  }
+
+  21%, 27% {
+    background-image: url(//imgur.com/3HRo64Z.png);
+  }
+
+  28%, 34% {
+    background-image: url(//imgur.com/ovK3Veu.png);
+  }
+
+  35%, 41% {
+    background-image: url(//imgur.com/qxYpWMJ.png);
+  }
+
+  42%, 48% {
+    background-image: url(//imgur.com/KDm1IoB.png);
+  }
+
+  49%, 55% {
+    background-image: url(//imgur.com/pJX5Lk3.png);
+  }
+
+  56%, 62% {
+    background-image: url(//imgur.com/lzH0v9S.png);
+  }
+
+  63%, 69% {
+    background-image: url(//imgur.com/8SRVAzq.png);
+  }
+
+  70%, 76% {
+    background-image: url(//imgur.com/6EJKxGS.png);
+  }
+
+  77%, 83% {
+    background-image: url(//imgur.com/fbgSIew.png);
+  }
+
+  84%, 90%, {
+    background-image: url(//imgur.com/lERAdtZ.png);
+  }
+
+  91%, 99% {
+    background-image: url(//imgur.com/Z0De0KU.png);
+  }
+}

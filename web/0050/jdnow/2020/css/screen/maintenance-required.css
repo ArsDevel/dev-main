@@ -1,0 +1,47 @@
+/************* Maintenance Required *************/
+
+/* Timer */
+.maintenance__text,
+#timer {
+  display: contents;
+}
+.maintenance.expand::before {
+  background: white;
+  content: "";
+  height: 100%;
+  left: 0.6rem;
+  position: absolute;
+  top: 1;
+  transform-origin: bottom right;
+  width: 92%;
+}
+.character {
+  animation: plusminusCarrot 3s ease-in-out infinite;
+}
+.wrapper {
+  background-color: white !important;
+  background-image: none !important;
+}
+.timer_container {
+  color: gray;
+  font-family: JDMediumCondensed !important;
+  margin: 9rem 0 0 0 !important;
+}
+.main__text,
+.main .main__text a,
+.main a,
+.main a:hover,
+.main a:visited,
+.main .main__text a:hover {
+  color: gray !important;
+  font-family: JDMDCondensed !important;
+}
+.main::after {
+  opacity: 0;
+}
+.main .main__text a {
+  color: rgba(255, 0, 72, 1) !important;
+}
+.main[class="main main-cookieShow"] {
+  margin-top: -24% !important;
+}

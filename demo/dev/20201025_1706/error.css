@@ -1,0 +1,109 @@
+/*========== Error messege ==========*/
+
+/* Background */
+#just-dance-now.connection- .connectionLost-wrapper, .wrapper {
+  background: white;
+  z-index: -2;
+}
+.wrapper::before {
+  content: '';
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    background: url(https://www.u91171.test-handyhost.ru/demo/dev/20201008_1822/web/img/hud/transition/dr.row_3.png);
+    background-size: 16%;
+    background-repeat: repeat !important;
+    top: 0rem;
+    left: 0rem;
+    overflow: visible !important;
+    animation: slideSquares404Row_3 200s linear infinite;
+    z-index: -1;
+    opacity: 0.5;
+}
+.wrapper::after {
+    content: '';
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    background: url(https://www.u91171.test-handyhost.ru/demo/dev/20201008_1822/web/img/hud/transition/dr.row_4.png);
+    background-size: 23%;
+    background-repeat: repeat !important;
+    top: 0rem;
+    left: 0rem;
+    overflow: visible !important;
+    animation: slideSquares404Row_4 300s linear infinite;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Wraper Coach */
+.character {
+	display: none;
+}
+
+/* Text */
+h1.main__title {
+    margin-left: -31.8rem !important;
+    text-align: center;
+}
+
+.main__title, p.main__text {
+    color: gray;
+    margin-left: -25.5rem;
+    text-align: center;
+}
+
+.main__title {
+  font-family: OpenSans Bold;
+  font-size: 3rem;
+}
+
+.main__text {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  padding-right: 7vw;
+  font-family: OpenSans SemiBold;
+}
+
+.main .main__text a {
+  color: gray;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.main .main__text a:hover {
+  transition: all .2s;
+}
+
+path.st_logo1 {
+  fill: #ff00d4;
+}
+.st_logo {
+  fill: #2edbf7;
+}
+
+.logo {
+    margin-left: -3.4rem;
+}
+
+/*========== Keyframes ==========*/
+
+@keyframes slideSquares404Row_3 {
+	0% {
+  	transform: translateX(0rem);
+    }
+    
+  100% {
+  	transform: translateX(-368rem);
+    }
+}
+
+@keyframes slideSquares404Row_4 {
+	0% {
+  	transform: translateX(0rem);
+    }
+    
+  100% {
+  	transform: translateX(-368rem);
+    }
+}

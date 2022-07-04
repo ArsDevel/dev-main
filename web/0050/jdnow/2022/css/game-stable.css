@@ -1,0 +1,6312 @@
+/***********************************************************/
+/*		INPUT 
+
+.state-songselection #players {
+	top:3.5em;
+	left:1.5%;
+	background:url(//dl.dropbox.com/s/zgovvq258nc3vos/banner_offline_avatarResultado.png) no-repeat center / cover;
+	width:1em;
+	height:1em
+}
+
+*/
+/***********************************************************/
+
+/* Main JDNOW fonts */
+@font-face {
+    font-family:"Just Dance Regular";src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff)
+}
+
+@font-face {
+    font-family:"Just Dance";src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Bold.woff)
+}
+
+@font-face {
+    font-family:"Just Dancer";src:url(https://dl.dropboxusercontent.com/s/52o5ya9rkpwpwed/FreeSans.woff)format("woff")
+}
+
+@font-face {
+    font-family:"Just Dance New Bold";font-weight:400;font-style:normal;src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Bold.woff)
+}
+
+@font-face {
+    font-family:"OpenSans Bold";font-weight:400;font-style:normal;src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Bold.woff)
+}
+
+@font-face {
+    font-family:"Just Dance New Regular";font-weight:400;font-style:normal;src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff)
+}
+
+@font-face {
+    font-family:"OpenSans SemiBold";font-weight:400;font-style:normal;src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff)
+}
+
+@font-face {
+    font-family:"OpenSans Regular";font-weight:400;font-style:normal;src:url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff)
+}
+
+:root {
+    --color1: #373a9f;
+    --accent1: #000538;
+    --general-2021: #f600a0;
+    --generalD: #ff00a5;
+    --general2: #f81250;
+	--general1: #f81250;
+	--accentBlueWhite: #dfeff8;
+    --aqua1: #3abe63;
+    --gray1: #8e8d8d;
+    --gray2: #464646;
+    --gray3: #5a5a5a
+}
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+html, body {
+	letter-spacing: 0px !important;
+}
+
+.pop-up-ui-notification {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    background: #ff0000c4;
+    z-index: 99999;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem
+}
+
+.room-info__content,.ui-notification-skip {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.ui-notification-skip {
+    position: absolute;
+    right: 2rem;
+    background: #ffff;
+    color: red;
+    width: 3%;
+    cursor: pointer;
+    user-select: none
+}
+
+#admin-menu .menu__head::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 100%;
+    border-right: 0!important;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    bottom: 0
+}
+
+.landing-arrow {
+	display: none;
+}
+
+html.dialog #preview,html.dialog #section-playlist,html.dialog #section-songlist {
+    opacity: 0
+}
+
+.room-info__content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    flex-direction: column
+}
+
+#preview .song-details h2.song-detail__title {
+    -webkit-mask: linear-gradient(90deg,#fff 95%,transparent 100%);
+    text-overflow: clip
+}
+
+#dance-transition.animate.in,.state-dance #dance-transition.animate.in,.state-tutorial #dance-transition.animate.in,.state-tutorial #dance-transition.animate.out {
+    opacity: 1;
+    animation: .8s FadeTrIn1!important;
+    display: block!important;
+    z-index: 99999!important
+}
+
+.state-tutorial #dance-transition {
+    opacity: 1;
+    animation: .8s FadeTrIn1!important;
+    z-index: 99999!important
+}
+
+.state-afterdance #dance-transition.animate.out,.state-dance #dance-transition.animate.out {
+    opacity: 0;
+    animation: 1s FadeTrOut2!important;
+    display: block!important;
+    z-index: 9999999999999999!important
+}
+
+.state-tutorial .animate.out .dt-row.dt3,.state-tutorial .animate.out .dt-row.dt4,.state-tutorial .animate.out .dt-row.dt5,.state-tutorial .animate.out .dt-row.dt6 {
+    opacity: 1!important
+}
+
+#dance-transition {
+    overflow: visible!important;
+    pointer-events: none!important
+}
+
+.state-afterdance #dance-transition,.state-dance #dance-transition,.state-tutorial #dance-transition {
+    display: block!important;
+    background: #cb000000!important;
+    color: #fff;
+    left: -2.8%;
+    transform: scale(.8);
+    top: -1%
+}
+
+.state-afterdance #dance-transition,.state-dance #dance-transition {
+    opacity: 0;
+    animation: 1s FadetrOut2!important;
+    z-index: 99999999999999!important
+}
+
+.state-afterdance #dance-transition {
+    z-index: 999999!important
+}
+
+.dt-row {
+    z-index: 1!important;
+    transform: rotate(0deg)!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0!important;
+    background-image: none!important
+}
+
+#dance-transition:before {
+    content: ""!important;
+    width: 100%!important;
+    height: 100%!important;
+    display: block!important;
+    position: absolute!important;
+    background: #fff;
+    transform: scale(1.5)!important
+}
+
+.dt1 {
+    width: 75%!important;
+    height: 33%!important;
+    top: 35%;
+    left: 16%;
+    background-image: url(https://imgur.com/qTBL0GK.png)!important;
+    background-repeat: no-repeat;
+    background-position: center!important;
+    background-size: contain!important;
+    transform: scale(.8)!important;
+    opacity: 1!important
+}
+
+.dt1:after,.dt1:before {
+    content: "";
+    width: 180%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-size: cover;
+    left: -40%
+}
+
+.dt1:after {
+    background-image: url(https://imgur.com/jGbvJZC.png);
+    transform: scale(.5);
+    animation: StarsBKG2 600s infinite
+}
+
+.dt1:before {
+    background-image: url(https://imgur.com/EXsN0kn.png);
+    transform: scale(.5) rotate(0deg);
+    animation: StarsBKG3 150s infinite
+}
+
+.dt2 {
+    left: 16%;
+    top: 60%;
+    background-image: url(https://imgur.com/OQKFKSm.png)!important;
+    animation: 1.1s TransitionRectangle1 infinite;
+    transition: all 1s;
+    animation-delay: .2s
+}
+
+.dt2,.dt3,.dt4,.dt5,.dt6 {
+    width: 18%!important;
+    height: 18%!important;
+    position: absolute!important;
+    background-position: center!important;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.dt3 {
+    left: 32%;
+    top: 25%;
+    background-image: url(https://imgur.com/HAs1oSQ.png)!important;
+    animation: 1.1s TransitionRectangle2 infinite;
+    animation-delay: .3s
+}
+
+.dt4,.dt5,.dt6 {
+    top: 40%
+}
+
+.dt4 {
+    left: 43%;
+    background-image: url(https://imgur.com/kvXV9ih.png)!important;
+    animation: 1.1s TransitionRectangle3 infinite;
+    animation-delay: .2s
+}
+
+.dt5,.dt6 {
+    left: 47%;
+    background-image: url(https://imgur.com/3Qz15K3.png)!important;
+    animation: .6s TransitionRectangle4 infinite
+}
+
+.dt6 {
+    left: 65%;
+    background-image: url(https://imgur.com/5p2WkGU.png)!important;
+    animation: 1.1s TransitionRectangle5 infinite
+}
+
+.toggle,.toggles {
+    width: .25rem;
+    height: .25rem
+}
+
+.toggles {
+    position: absolute!important;
+    justify-content: flex-start;
+    left: 39%;
+    top: 27%
+}
+
+.toggle {
+    background: 0 0;
+    cursor: pointer;
+    transition: all .2s;
+    padding: 0;
+    overflow: visible;
+    position: relative;
+    z-index: 10000
+}
+
+#admin-menu .player--controller::before,.toggle-settings--icon {
+    width: .25rem;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.toggle-settings--icon {
+    height: .25rem;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/icon_options_blue.svg);
+    background-position: center
+}
+
+.toggle::after {
+    display: none
+}
+
+.state-songselection #settings {
+    transition: background .3s ease
+}
+
+.state-songselection #settings:hover {
+    background: #3165f4
+}
+
+.dialog .toggle-settings .toggle-settings--icon,.state-songselection #settings:hover .toggle-settings--icon,.toggle-settings:hover .toggle-settings--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/icon_options_white.svg)!important
+}
+
+#catalog,#download,#explore,#features,#how-it-works,#players.finding-dancers,#players.removing-dancers,.caption.artist,.coach-selection__button:after,.coach-selection__button:before,.connect-phone-info,.connect-phone-info.connect-phone-info--clickable.connect-phone-info--visible,.controller-coins,.danceroom__label,.danceroom__qr-code-wrapper,.footer,.item .song__difficulty,.item.song__difficulty,.landing-text__title,.platform,.player-master,.playlist--description,.playlist-img-container,.reward__content:after,.room-info__patch,.score__owner,.section-grid-trainer,.side-nav,.site-message,.song-action__button:after,.song-action__button:before,.song-grid--close,.song-grid--description,.song-grid--duration, .state-coachselection #settings,.state-coachselection .coach:before,.state-coachselection .highscore-display,.state-coachselection .song-cover:after,.state-coachselection .song-details,.state-coachselection .song-grid,.state-dance .avatar,.state-dance .player-exp,.state-dance .player-flag,.state-dance .song-grid,.state-songselection .player-color,.state-songselection .song-cover--low-res,.tabs--connect,.tabs--text,.toggle-fullscreen,.toggle-fullscreen:after,.toggles:before,.tutorial,.tutorial__caption,.tutorial__image,.tutorial__spinner {
+    display: none!important
+}
+
+.item:after {
+	display: none;
+}
+
+.hud:before {
+    background: #fff0;
+    opacity: 1!important
+}
+
+div#admin-menu {
+    position: absolute;
+    left: 1.54rem;
+    top: -1.7rem;
+    width: 8.21rem;
+    height: 5.711rem;
+    transition: none!important
+}
+
+html.dialog div#admin-menu {
+    animation: fadeIn .3s ease
+}
+
+html.dialog #just-dance-now:before {
+    opacity: 0;
+    animation: fadeOut .3s ease
+}
+
+#admin-menu .player {
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid #f3f3f3;
+    border-radius: 20px;
+    color: #66318a;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    padding-left: 0;
+    font-size: 105%;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap
+}
+
+#admin-menu .player__name,#admin-menu .players {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+#admin-menu .players {
+    min-height: .25rem;
+    max-height: 3.9rem;
+    padding-top: .06rem;
+    overflow-x: visible;
+    overflow-y: auto;
+    grid-template-columns: 16.3% 16.3% 16.3%;
+    grid-gap: 20.36%;
+    display: grid;
+    row-gap: 3.36%
+}
+
+#admin-menu .player .avatar-wrapper {
+    width: 1rem;
+    height: auto;
+    padding-bottom: 0;
+    margin-left: 0;
+    position: absolute
+}
+
+#admin-menu .player__name {
+    width: 96%;
+    height: .3rem;
+    background: #fff;
+    position: absolute;
+    bottom: .04rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 13px 13px
+}
+
+button.player-btn.player-btn--kick {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    margin-right: 0!important
+}
+
+#admin-menu .player--controller::before {
+    content: "";
+    height: .3rem;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    position: absolute
+}
+
+#settings {
+    background: var(--accentBlueWhite);
+    position: absolute!important;
+    left: .4%;
+    width: 11.55%;
+    border-radius: .06em;
+    height: 9%!important;
+    min-height: 0%!important;
+    top: 30.4%;
+    opacity: 0
+}
+
+.state-dance #players,.state-songselection #players,.state-songselection #settings {
+    opacity: 1
+}
+
+.icon.fullscreen,.toggle-fullscreen:hover .icon {
+    background-image: url(https://imgur.com/yIgIKhg.png);
+    background-size: contain;
+    background-position: center
+}
+
+html:-webkit-full-screen .toggle-fullscreen .exit {
+    background-image: url(https://imgur.com/LyMtQlo.png);
+    background-size: contain;
+    background-position: center
+}
+
+.item:before {display: none}
+
+.item.FollowTheWhiteRabbit:before,.item.Louie:before,.item.Good4U:before,.item.HappierThanEver:before {
+    content: "NEW";
+	display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    background: red!important;
+    color: #fff;
+    font-family: Just Dance Regular;
+    font-size: 75%!important;
+    width: auto;
+    height: 15%;
+    border-radius: 1em;
+    text-align: center;
+    left: -6%;
+    top: -6.4%;
+	padding: 0 0.1rem;
+}
+
+.item.SongID:after {
+    text-align: right;
+    content: "FREE";
+    position: absolute;
+    z-index: 1;
+    background: #06aef7!important;
+    color: #fff;
+    font-family: Just Dance Regular;
+    font-size: 75%!important;
+    width: auto;
+    height: 15%;
+    border-radius: 1em;
+    left: 62%;
+    top: 109.6%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 0.1rem;
+}
+
+html[lang=ru] .item:after {
+    content: "Бесплатно";
+    left: 36%;
+    top: 109.6%;
+}
+
+#coverflow {
+    background: 0 0
+}
+
+.state-songselection .song-cover::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 60%;
+    height: 200%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.05);
+    left: 50em
+}
+
+.info-panel {
+    width: 60%;
+    top: -20%;
+    left: 60%
+}
+
+.info-panel:before {
+    content: 'SOCIAL STATS';
+    color: var(--general1);
+    font-size: 0.15rem;
+    font-family: 'Just Dance';
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.sprites-container {
+    left: 3%;
+    top: -9%;
+    width: 100%;
+    height: 100%
+}
+
+.sprite-description,.sprite__svg-container {
+    width: 182%!important;
+    left: -73%!important;
+    padding: 0!important;
+    position: absolute
+}
+
+.sprite--stars .sprite__svg-container {
+    transform: scale(.8) rotate(-14deg);
+}
+
+.sprite--tape .sprite__svg-container {
+    transform: scale(.9) rotate(10deg);
+}
+
+.sprite--stars svg path,.sprite--tape .color-dark,.sprite--tape .color-light,.sprite--tape .color-mid {
+    stroke: var(--general1)!important
+}
+
+.sprite-description {
+    background: -webkit-linear-gradient(var(--general1),var(--general1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Just Dance Regular;
+    font-size: 13%;
+    text-align: center
+}
+
+.sprite-val {
+    font-size: 190%;
+    font-family: Just Dance!important
+}
+
+.state-songselection .song-cover--hi-res {
+    pointer-events: none!important;
+    border: 0!important;
+    z-index: 99!important;
+    left: -4em
+}
+
+.song-cover:after {
+    font-family: Just Dance Regular;
+    font-size: 10%;
+    top: -3%!important;
+    position: absolute!important;
+    left: 4.11rem!important;
+    color: #9a9a9a;
+    width: 71%
+}
+
+.highscore-display {
+    left: -100%;
+    top: 22%
+}
+
+.score__stars {
+    height: 50%;
+    top: 50%;
+    left: 0
+}
+
+.score__stars .star {
+    display: none;
+    vertical-align: middle;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    width: .25rem;
+    height: .25rem;
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0
+}
+
+.highscore-display.megastar .score__stars .star::before {
+    animation: MoveBeat 4s steps(3,end) infinite,OpacityBeat .5s infinite,csBeatSelect 2s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png)!important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: 200%;
+    margin-top: -79%;
+    margin-left: -80%;
+    position: absolute;
+    width: 200%
+}
+
+.highscore-display.megastar .score__stars .star::after {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png)!important
+}
+
+.highscore-display.megastar .score__stars .star::after,.highscore-display.superstar .score__stars .star::after,.highscore-display.superstar .score__stars .star::before {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: 200%;
+    margin-top: -79%;
+    margin-left: -80%;
+    position: absolute;
+    width: 200%
+}
+
+.highscore-display.superstar .score__stars .star::before {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png)!important
+}
+
+.highscore-display.superstar .score__stars .star::after {
+    animation: MoveBeat 3s steps(3,end) infinite,OpacityBeat .2s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_2.png)!important
+}
+
+.pre-beat.even .score__stars .star-2,.pre-beat.even .score__stars .star-4,.pre-beat.odd .score__stars .star-1,.pre-beat.odd .score__stars .star-3,.pre-beat.odd .score__stars .star-5 {
+    animation: starglow 1s ease infinite
+}
+
+.score__display,.score__number {
+    text-align: left!important;
+    width: 160%!important
+}
+
+.score__number {
+    width: 100%!important;
+    font-family: Just Dance Regular;
+    font-size: 65%;
+    top: 18%;
+    padding: 0 0 0 8%!important
+}
+
+.right-pane {
+    top: -90%!important;
+    left: 40%!important
+}
+
+.left-pane {
+    pointer-events: none!important
+}
+
+.song-action,.song-action__button {
+    font-family: Just Dance Regular!important
+}
+
+.song-action {
+    top: 90%!important;
+    left: 10%!important;
+    position: absolute!important;
+    width: 53%;
+    height: 28%;
+    border-radius: 10em!important;
+    overflow: hidden!important
+}
+
+.song-action__button {
+    letter-spacing: .01em!important;
+    text-transform: uppercase!important;
+    border-radius: 0!important;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    height: 100%!important;
+    font-size: 19%;
+    background: var(--general1)
+}
+
+::-webkit-scrollbar {
+    width: .35em;
+    height: 0!important;
+    background-color: #e4e4e4;
+    border-radius: 55em!important;
+    pointer-events: none!important;
+    position: absolute!important
+}
+
+.song--details::-webkit-scrollbar {
+    position: absolute!important;
+    height: 10%!important;
+    margin-bottom: 99999em!important
+}
+
+::-webkit-scrollbar-thumb {
+    width: .1em!important;
+    height: 3em!important;
+    background: #575757;
+    border-radius: 55em!important;
+    padding-left: 0!important;
+    pointer-events: none!important
+}
+
+.song-grid--details {
+    position: absolute!important;
+    left: 16.6%!important;
+    z-index: 1;
+    background: #fffffff2!important;
+    width: 76.5%!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    border-bottom: solid #c4c4c4 .025em!important;
+    pointer-events: none!important;
+    height: 9.5%!important;
+    top: -1%
+}
+
+.song-grid--title,.song-grid--titleDetails {
+    font-family: Just Dance Regular!important;
+    text-transform: capitalize!important
+}
+
+.song-grid--titleDetails {
+    padding: 0!important;
+    margin: 0!important;
+    border: 0!important
+}
+
+.song-grid--title:before {
+    content: "Сортировать По: ";
+    color: #232323
+}
+
+#section-playlist .song-grid--title:before {
+    content: "Плейлист: ";
+    color: #232323
+}
+
+.song-grid--title {
+    color: var(--general1)!important;
+    top: 60%!important;
+    position: absolute!important;
+    letter-spacing: .01em!important;
+    font-size: 60%!important;
+    text-align: right;
+    width: 100%!important
+}
+
+.song-detail {
+    padding-left: 2.4%
+}
+
+.song__infos {
+    width: 100%!important;
+    margin: 0!important
+}
+
+.song-detail__artist,.song-detail__title {
+    color: #fff!important;
+    position: absolute!important
+}
+
+.song-detail__title {
+    font-family: Just Dance!important;
+    font-size: 19.3%!important;
+    letter-spacing: 0!important;
+    height: 50%!important;
+    top: 16%!important
+}
+
+.song-detail__artist {
+    font-family: Just Dancer!important;
+    font-size: 12%!important;
+    letter-spacing: .02em!important;
+    padding-top: 0;
+    top: 52%;
+    opacity: .7!important
+}
+
+.state-songselection .song-cover.song-cover--low-res {
+    display: block!important;
+    visibility: visible!important;
+    width: 365%!important;
+    height: 105%!important;
+    z-index: 1!important;
+    position: absolute!important;
+    top: -30%!important;
+    left: -2%!important;
+    border: solid var(--general1) .03em;
+    background: #fff!important;
+    border-radius: .15em
+}
+
+#preview {
+    left: 14%!important;
+    width: 86%!important;
+    height: 44%!important;
+    top: 41%;
+    transform-origin: top;
+    animation: previewTabFadeIn .3s ease,fadeIn .5s ease
+}
+
+.state-songselection #players .player.controller,.video-preview {
+    opacity: 1!important;
+    visibility: visible!important;
+    display: block!important
+}
+
+.video-preview {
+    width: 171%!important;
+    top: -22%!important;
+    left: 76.5%!important;
+    height: 88%!important;
+    overflow: visible!important;
+    background: var(--accentBlueWhite)!important;
+    outline: 2px #f812505c solid
+}
+
+.video-preview:before {
+    content: "";
+    position: absolute!important;
+    width: 102.3%;
+    height: 28%;
+    background: var(--general1);
+    top: -14.5%;
+    left: -48.7%;
+    z-index: 1;
+    border-radius: .1em
+}
+
+.video-preview__video {
+    height: 100%!important;
+    overflow: hidden!important;
+    border-radius: .1em!important;
+    background: var(--accentBlueWhite)!important
+}
+
+video.video-preview__video {
+    width: 100%!important;
+    object-fit: cover
+}
+
+.song__difficulty--level {
+    background: #ffffff82!important;
+    top: -170.5%!important;
+    left: -28%!important;
+    width: 8.2%!important;
+    height: 40%!important;
+    margin-right: -.245em!important;
+    border-radius: .01rem!important
+}
+
+.song__difficulty[data-difficulty="1"] .level-1,.song__difficulty[data-difficulty="2"] .level-1,.song__difficulty[data-difficulty="2"] .level-2,.song__difficulty[data-difficulty="3"] .level-1,.song__difficulty[data-difficulty="3"] .level-2,.song__difficulty[data-difficulty="3"] .level-3,.song__difficulty[data-difficulty="4"] .level-1,.song__difficulty[data-difficulty="4"] .level-2,.song__difficulty[data-difficulty="4"] .level-3,.song__difficulty[data-difficulty="4"] .level-4 {
+    background: #fff!important
+}
+
+.song__difficulty {
+    top: -11%!important;
+    position: absolute!important;
+    left: 35.5%;
+    height: 21%!important;
+    border-radius: .06em!important;
+    border: solid #fff .02em!important;
+    opacity: 1!important;
+    background: 0 0;
+    width: 16%!important
+}
+
+.song__difficulty:after {
+    width: 100%!important;
+    left: 0!important;
+    font-family: Just Dance Regular!important;
+    font-size: 10%!important;
+    letter-spacing: .06em!important
+}
+
+.song-details {
+    z-index: 1;
+    left: -5.5%!important;
+    top: 1%!important;
+    width: 84%!important;
+    height: 20%!important;
+    position: absolute;
+    border-radius: .08em!important;
+    background: #f8125000!important;
+    overflow: visible!important
+}
+
+.song__reward {
+    left: 9%!important;
+    top: 2.03em!important;
+    padding: 0;
+    width: 30%;
+    height: 200%;
+    transition: none!important;
+    display: block!important;
+    overflow: visible
+}
+
+.reward__wrapper,.song-preview,.song__reward {
+    pointer-events: none!important
+}
+
+.song__reward:before {
+    content: "Song Reward";
+    position: absolute;
+    font-family: Just Dance Regular;
+    font-size: 9%;
+    top: -20%;
+    border-top: solid #f8125047 .2em;
+    padding-top: 5%;
+    color: var(--general1);
+    width: 80%
+}
+
+.reward__content {
+    width: 32%!important;
+    height: 32%!important;
+    transition: none!important;
+    transform: translateX(0)!important
+}
+
+.reward__unlocked .reward__content:before {
+    background-position-x: 101%!important
+}
+
+.reward__content:before {
+    background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22/rewardAvatar_statusSprite1.png)!important;
+    background-size: 200%!important;
+    background-position-x: 0!important;
+    animation: none!important;
+    width: .3584rem!important;
+    height: 100%!important;
+    top: 0!important;
+    left: 0!important
+}
+
+.reward__img {
+    display: none!important
+}
+
+.reward__wrapper {
+    margin-top: -.05rem;
+    opacity: 1!important;
+    visibility: visible!important
+}
+
+#section-tabs {
+    position: absolute!important;
+    top: 19%
+}
+
+.state-songselection #players .player.controller {
+    z-index: 99999999999999999999
+}
+
+#players,.state-songselection #players .player {
+    opacity: 0
+}
+
+#players {
+    width: 100%;
+    height: .965rem;
+    left: 7%;
+    top: -8px
+}
+
+.state-songselection #room-info {
+    opacity: 1;
+    z-index: -99999999999999999999!important
+}
+
+#room-info {
+    background: var(--accentBlueWhite);
+    left: .4%;
+    width: 11.55%;
+    border-radius: .08em;
+    height: 9%!important;
+    min-height: 0%!important;
+    top: .7%;
+    opacity: 0;
+    transition: none!important;
+    z-index: -1!important
+}
+
+.danceroom__number {
+    text-shadow: none;
+    color: #3165f4;
+    font-size: 30%;
+    text-align: center!important
+}
+
+[lang=ru] .danceroom__number {
+    font-size: 30%!important
+}
+
+.account::before,.state-songselection .dancercard .player-name {
+    display: none
+}
+
+.account__name {
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    height: .17rem;
+    width: 122%;
+    padding-left: 0;
+    margin: 0;
+    line-height: 1.1;
+    padding-right: 0;
+    text-overflow: ellipsis;
+    background: #3165f4;
+    color: #fff;
+    margin-left: -.1rem;
+    border-radius: 0 0 .06rem .06rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row
+}
+
+@font-face {
+    font-family:"JD Regular";src:url(https://dl.dropboxusercontent.com/s/94t0xj3f8dol172/HelveticaNeueLTW1G-65Md.woff?dl=0)format("woff")
+}
+
+@font-face {
+    font-family:"Just Dance";src:url(https://dl.dropboxusercontent.com/s/tcjvag8iy02to2w/HelveticaNeueLTW1G-BdCn.woff?dl=0)format("woff");src:url(https://dl.dropboxusercontent.com/s/63qqnyfy9s1cl60/HelveticaNeueLTW1G-BdCn.woff2?dl=0)format("woff2")
+}
+
+@font-face {
+    font-family:"helveticaneue-medium";src:url(https://dl.dropboxusercontent.com/s/sfkrh4w30jsznzl/HelveticaNeueMedium.woff?dl=0)format("woff")
+}
+
+.state-songselection #just-dance-now:before {
+    content: ""!important;
+    display: block;
+    position: absolute!important;
+    width: 78.5%!important;
+    height: 8%!important;
+    top: 92%!important;
+    left: 15.6%!important;
+    background: #ffffffed!important;
+    z-index: 99999!important;
+    border-top: solid #c4c4c4 .015em!important;
+    pointer-events: none!important;
+    background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22/BottomElements.png)!important;
+    background-size: 80%!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important
+}
+
+.state-songselection .song-grid--title:after {
+    content: "JUST DANCE 2022"!important;
+    text-align: left!important;
+    position: absolute;
+    left: 0;
+    font-size: 150%;
+    top: 0
+}
+
+.state-songselection #players {
+    background: var(--accentBlueWhite);
+    top: 40.4%;
+    left: .4%;
+    width: 11.5%;
+    height: 59%;
+    border-radius: .07em
+}
+
+.state-songselection #players:before {
+    content: "";
+    display: none!important;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%
+}
+
+.state-songselection #players:after {
+    content: "";
+    display: block!important;
+    background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22/ico_tab_user.png);
+    background-size: cover;
+    top: 5%;
+    left: 37%;
+    width: .3rem;
+    height: .3rem;
+    position: absolute
+}
+
+.state-songselection .dancercard {
+    top: 38%;
+    left: -7%
+}
+
+.state-songselection .dancercard .avatar-wrapper {
+    transform: scale(1.3);
+    animation: none!important;
+    background-size: contain
+}
+
+#afterdance .players.player-solo .avatar-wrapper {
+    animation: none!important;
+    background-size: contain
+}
+
+.state-songselection .player-exp {
+    bottom: -245%!important;
+    left: 36.5%;
+    border-radius: 100em;
+    font-family: Just Dance;
+    background: var(--general1)!important;
+    transform: scale(1.1);
+    padding-top: .5%;
+    text-align: center;
+    letter-spacing: .01em
+}
+
+.player-exp:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: solid #3165f4 .011rem;
+    left: 0;
+    top: 0;
+    transform: scale(1.3);
+    border-radius: 100em
+}
+
+.player-flag:before {
+    width: 10%;
+    height: 105%;
+    content: "";
+    top: -110%;
+    left: 45%;
+    background: #3165f4;
+    position: absolute!important
+}
+
+.state-songselection .player-flag {
+    top: 1.41rem!important;
+    left: 34.999%;
+    border: 2px #3165f4 solid;
+    border-radius: 100em;
+    background-size: contain!important;
+    overflow: visible;
+    z-index: 2!important;
+}
+
+.player-flag__inner {
+    border: 0!important;
+    width: 100%!important
+}
+
+.player-flag__image {
+    border: 0!important
+}
+
+.tabs--connect {
+    width: 169%;
+    background-size: 20%!important;
+    left: 5%;
+    height: 11%;
+    top: 14.3%;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    background-repeat: no-repeat;
+    background-position: center!important;
+    opacity: 1
+}
+
+.tabs--connect,.tabs--connect:hover {
+    background-image: url(https://imgur.com/Hy1YDzI.png)
+}
+
+.tabs {
+    width: 156%;
+    box-shadow: none!important;
+    border-radius: 0;
+    transform: translatex(3%) translatey(-45%);
+    opacity: 1
+}
+
+ul.tabs li[section-id=songlist] {
+    transform: translatey(5%)
+}
+
+ul.tabs li.selected::before {
+    content: "";
+    width: 100%;
+    height: 100%
+}
+
+ul.tabs li,ul.tabs li.selected {
+    border-radius: .45em;
+    width: 108.23%!important
+}
+
+ul.tabs li {
+    background: var(--accentBlueWhite);
+    height: .54rem!important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+ul.tabs li.selected {
+    background: var(--accentBlueWhite)!important
+}
+
+ul.tabs li:hover .tabs--icon {
+    -webkit-transform: scale(1)!important;
+    -ms-transform: scale(1)!important;
+    transform: scale(1)!important
+}
+
+.selected::before,ul.tabs li[section-id=playlist].selected::before {
+    box-shadow: none!important;
+    border-radius: .45em;
+    background-size: cover!important
+}
+
+.selected::before {
+    background: linear-gradient(315deg,#f81250 0,#f81250 100%)!important
+}
+
+ul.tabs li[section-id=playlist].selected::before {
+    background: linear-gradient(90deg,#20d12c 0,#20d12c 100%)!important
+}
+
+ul.tabs li[section-id=playlist] .tabs--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/playlist_icon_normal.png)
+}
+
+ul.tabs li[section-id=playlist].selected .tabs--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/playlist_icon_selected.png)
+}
+
+ul.tabs li[section-id=songlist] .tabs--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/songs_icon_normal.png);
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-position: center;
+    height: .25rem;
+    width: .25rem;
+    transform: scale(.8)!important
+}
+
+ul.tabs li[section-id=songlist].selected .tabs--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/songs_icon_selected.png)
+}
+
+html.ftue ul.tabs::after {
+    content: "";
+    width: 101%;
+    height: 0%!important;
+    background: #fff0;
+    opacity: .3;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+ul.tabs li.selected .tabs--icon {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(.8)!important
+}
+
+ul.tabs li[section-id=playlist] .tabs--icon,ul.tabs li[section-id=playlist].selected .tabs--icon {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(.7)
+}
+
+ul.tabs li[section-id=playlist] .tabs--icon {
+    transform: scale(.7)!important
+}
+
+.item-container,.song--details {
+    scroll-snap-type: y mandatory!important;
+    scroll-padding: 3.5em!important
+}
+
+.item-selected {
+    scroll-snap-align: start!important
+}
+
+.coverflow--container,.state-coachselection #coverflow,.state-songselection #coverflow {
+    background: #fff;
+    display: block!important;
+    border-radius: 0!important;
+    margin: 0!important;
+    padding: 0!important;
+    width: 100%!important;
+    height: 100%;
+    box-shadow: none!important;
+    background-size: contain!important
+}
+
+.song--details {
+    width: 83%;
+    height: 100%!important;
+    top: 1%!important;
+    left: 14.5%
+}
+
+.item-container,.playlist-grid-container {
+    width: 100%!important;
+    display: grid;
+    grid-gap: 3.36%
+}
+
+.item-container {
+    height: 100%!important;
+    position: absolute!important;
+    grid-template-columns: 16.3% 16.3% 16.3% 16.3% 16.3%;
+    padding-left: 2.6%;
+    row-gap: 2%
+}
+
+.playlist-grid-container {
+    grid-template-columns: 30% 30% 30%;
+    padding-left: 1%
+}
+
+.playlist-selected .playlist--img,.playlist:hover .playlist--img {
+    padding: 0!important
+}
+
+.playlist-grid .playlist {
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 0 .1rem
+}
+
+.playlist--img {
+    width: 103.4%!important;
+    height: 87%!important;
+    margin-top: -.085rem
+}
+
+.playlist--title {
+    color: #575757!important;
+    font-family: Just Dance Regular!important;
+    font-size: 63%!important;
+    letter-spacing: .01em!important;
+    padding-left: 1%!important
+}
+
+.playlist-grid {
+    left: 14.5%!important;
+    width: 85.5%!important;
+    top: 1%
+}
+
+.item-selected {
+    margin-bottom: 14.3em!important;
+    transition: none!important
+}
+
+.item {
+    width: 100%!important;
+    margin-top: 3em!important
+}
+
+.grid-container .item-container .item {
+	transition: none;
+}
+
+.song__decoration {
+    width: 100%!important;
+    height: 122.08%!important;
+    overflow: visible!important;
+    transform: scale(.95);
+	transition: none;
+}
+
+.song__decoration:after {
+	content: '';
+	background: gray;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: .56em!important;
+	z-index: -1;
+}
+
+.item-selected .song__decoration::after {
+    content: '';
+    width: 100%;
+	height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+	left: 0;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: none;
+    animation: none;
+}
+
+.item-selected .song__decoration:before,.song__decoration:before {
+    content: "";
+    display: block!important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: solid var(--general1) .18em
+}
+
+.item-selected .song__decoration:before {
+    transform: scale(1.1)!important;
+    border-radius: .15rem!important;
+    opacity: 1!important;
+    transition: .15s all!important
+}
+
+.song__decoration:before {
+    transform: scale(1.2)!important;
+    border-radius: .8em!important;
+    opacity: 0
+}
+
+.song__cover {
+    width: 100%;
+    height: 100%!important;
+    padding: 0!important;
+    border-radius: .6em!important;
+    border: 0!important
+}
+
+.caption {
+    position: absolute!important;
+    left: 0;
+    padding: 0!important;
+    font-family: Just Dance Regular;
+    font-size: 59%!important;
+    font-weight: 100!important;
+    color: #737373;
+    letter-spacing: .0006em!important;
+    top: 129%
+}
+
+#crown-container {
+    position: absolute;
+    z-index: 20;
+    border: 0;
+    top: 1.38rem;
+    left: 3.35rem
+}
+
+#players .crown.leader::before,#players .crown.leader:after,#players .crown::before {
+    content: "";
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    top: -12px;
+    border: 0;
+    transform: rotate(20deg);
+    left: -11px;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/leader-update.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover
+}
+
+#players .crown.leader:after {
+    display: block!important;
+    z-index: -1;
+    opacity: 0;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/leader-crown_border.png);
+    animation: leaderBorder_scaleIn 1s ease!important
+}
+
+.hud.beat>#players.animate .crown,.hud.beat>#players.animate .crown.leader,html:not(.ipad) .hud.beat>#players .crown,html:not(.ipad) .hud.beat>#players .crown.leader {
+    animation: crownBeat09 1.2s both
+}
+
+#beat {
+    background: red;
+    border-bottom: solid 0#fff;
+    width: 22%!important;
+    height: 10%!important;
+    left: -23.6%;
+    opacity: 1!important;
+    top: 94.7%;
+    -webkit-mask: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fbeat_line.svg)top left/100%;
+}
+
+.particle-system {
+    opacity: 0
+}
+
+.hud.beat>#pictos>#beat {
+    animation: beatPicto
+}
+
+#pictos {
+    left: 81.1%;
+    top: 69.5%;
+    width: 40%!important;
+    animation: title-slideRight 2s ease
+}
+
+.picto {
+    left: -29%!important;
+    filter: drop-shadow(3px 2.5px 2px rgba(0,0,0,.5))
+}
+
+#pictos.multi-coach {
+    left: 70%;
+    width: 40%!important
+}
+
+.multi-coach .picto {
+    left: -36%!important
+}
+
+#afterdance .results .stars .star.animate {
+    -webkit-animation: fadeIn .5s ease-in-out
+}
+
+#afterdance .results .stars .star,#players .star,#racetrack .star[data-visible=true],.balloon__avatar--star,.score__stars .star {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star.png);
+}
+
+#racetrack .star {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star_unfilled.png);
+    width: .5rem;
+    height: .5rem;
+    transform: rotate(10deg);
+    left: 10.8%;
+    transition: opacity 1s;
+	opacity: 1;
+}
+
+/* #racetrack .star[data-visible="false"] {opacity: 0.69;} */
+
+#afterdance .results .player .score.superstar .star,#players .player.superstar .star,#racetrack.superstar .star[data-visible=true],.highscore-display.superstar .score__stars .star {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star_plus.png)
+}
+
+#afterdance .results .player .score.megastar .star,#players .player.megastar .star,#racetrack.megastar .star[data-visible=true],.highscore-display.megastar .score__stars .star {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star_plus_more.png)
+}
+
+html:not(.weak-platform) #racetrack .star[data-visible=true]::before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star.png)!important
+}
+
+html:not(.weak-platform) #racetrack .star[data-visible=true]::after {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star-outline.png)!important
+}
+
+html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::after,html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::before {
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 50%;
+    margin-top: -10%;
+    position: absolute;
+    width: 50%
+}
+
+html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::before {
+    animation: MoveBeat 3s steps(3,end) infinite,OpacityBeat .5s infinite,csBeatSelect 2s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png)!important;
+    background-size: 400%
+}
+
+html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::after {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png)!important;
+    background-size: 350%
+}
+
+html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::after,html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png)!important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 50%;
+    margin-top: -10%;
+    position: absolute;
+    width: 50%
+}
+
+html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::before {
+    animation: MoveBeat 3s steps(3,end) infinite,OpacityBeat .5s infinite,csBeatSelect 2s both infinite!important;
+    background-size: 400%
+}
+
+html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::after {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-size: 350%
+}
+
+#players .player-special .player-megastar,#players .player-special .player-superstar {
+    left: -4%;
+    top: 20%;
+    position: absolute
+}
+
+#racetrack-fill,#racetrack-fill-p1,#racetrack-fill-p2,#racetrack-fill-p3,#racetrack-fill-p4,#racetrack-fill-p5,#racetrack-fill-p6 {
+    border-radius: .02rem
+}
+
+#racetrack-fill-p2 {
+    left: 28% !important;
+}
+
+#racetrack-fill-p3 {
+    left: 55% !important;
+}
+
+#racetrack-fill-p4 {
+    left: 82% !important;
+}
+
+#lyrics::before,#racetrack {
+    display: none;
+    position: absolute
+}
+
+#racetrack {
+    width: 6.5%;
+    height: 55.2%;
+    opacity: 0;
+    z-index: 120;
+    top: 22.7%;
+    left: 22px;
+    animation: racetrackSlideInLeft 3s ease;
+}
+
+#racetrack.animate .star {
+    animation: racetrackStarFade 1.1s ease
+}
+
+#racetrack .progress-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    opacity: .25;
+    border-left: 2px #fff solid;
+    border-right: 2px #fff solid;
+    background: #000;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    -webkit-mask: linear-gradient(0deg,#000 80%,rgba(255,255,255,0) 100%)
+}
+
+#racetrack .progress-bar {
+    width: 57%;
+    height: 100%;
+    overflow: hidden;
+    overflow-x: visible !important;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+}
+
+#racetrack .progress-bar:before {
+    content: '';
+    width: 92%;
+    height: 100%;
+    border-bottom: 2px #fff solid;
+    position: absolute;
+    opacity: 0.25;
+    z-index: 6;
+    left: 0.015rem;
+}
+
+#racetrack .platform {
+    display: none;
+    width: .38rem;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    position: absolute;
+    z-index: 2;
+    bottom: -0.5%;
+    right: -.115rem;
+    opacity: .25;
+}
+
+#racetrack .progress-meters {
+    margin: 0 5%0 4%;
+    position: inherit;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 44px;
+}
+
+#racetrack-fill,.racetrack-fill-players {
+    position: inherit;
+    transition: all 1s
+}
+
+#lyrics {
+    width: 40%;
+    font-size: .166rem;
+    line-height: 1.3;
+    cursor: default;
+    font-family: "Just Dance New Regular";
+    position: absolute;
+    z-index: 10;
+    top: 88.4%;
+    left: 5%;
+}
+
+#lyrics::before {
+    content: "";
+    width: 70%;
+    height: 9vh;
+    left: -2%;
+    bottom: -.49rem;
+    background: linear-gradient(90deg,rgba(0,0,0,.5)0,transparent 100%);
+    border-radius: 10px;
+    opacity: .6
+}
+
+#lyrics .line {
+    color: #888483;
+    transform: translateY(1.3em) rotate(0deg)
+}
+
+#lyrics .line.previous {
+    transform: translateY(-13%) rotate(0deg);
+    transform-origin: 50% 100%;
+    opacity: 0;
+    transition: color .35s,opacity .35s,transform .35s
+}
+
+#lyrics .line.current {
+    color: #e1dfda;
+    opacity: 1;
+	transform: translateY(-13%);
+}
+
+#players .player .controller-coins {
+    width: 100%;
+    position: absolute;
+    bottom: -6%;
+    left: -7%
+}
+
+#players .player .controller-coins span {
+    font-size: .15rem;
+    font-family: Just Dance New Bold;
+    display: inline-block;
+    position: relative;
+    padding-right: .02rem;
+    text-shadow: 0 0 .005rem #000,0 .005rem .005rem rgba(0,0,0,.4)
+}
+
+#players .player .controller-coins span::before {
+    background: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/icons/coin.png);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: coinsCountBeat 5s ease infinite
+}
+
+#players .controller .crown,#players .crown {
+    width: .32rem;
+    height: .32rem;
+    z-index: 5;
+    top: 69%;
+    left: -15%;
+    border-radius: 50%
+}
+
+#players .crown {
+    content: "";
+    animation: crownFadeShake 1s ease
+}
+
+.state-dance .avatar-wrapper .avatar,.state-dance .dancercard .player-flag,.state-dance .player-exp.player-exp-normal,.state-dance .player-exp.player-exp-tablet {
+    display: none
+}
+
+.state-dance #admin-menu .avatar-wrapper .avatar {
+    display: block!important
+}
+
+#players .feedback-label {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/feedback-label-sprite.png);
+    top: 60%!important
+}
+
+#players .player[data-stars="0"] .feedback.feedback-good::after,#players .player[data-stars="0"] .feedback.feedback-good::before {
+    top: -.2rem!important
+}
+
+#players .feedlabel-yeah {
+    width: 120%;
+    left: -16%;
+    background-position: 0 97%;
+    overflow: visible
+}
+
+#players .feedback-yeah::after,#players .feedback-yeah::before {
+    animation: NewFeedbackScale02 1s linear infinite!important;
+    content: ""!important;
+    height: 2.6rem;
+    left: -.85rem;
+    overflow: visible!important;
+    position: absolute!important;
+    width: 2.6rem!important;
+    opacity: 0
+}
+
+#players .feedback-yeah::before {
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/gold/fx-1.png)no-repeat center/90%!important
+}
+
+#players .feedback-yeah::after {
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/gold/fx.png)no-repeat center/90%!important
+}
+
+#players .feedback-label.feedlabel-yeah::before {
+    animation: NewFeedbackScaleParticleYeah 1s linear!important;
+    background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fparticle-sparks.png)no-repeat center/100%;
+    content: "";
+    display: block;
+    height: 2rem;
+    left: -.19rem;
+    margin-top: 0;
+    position: absolute;
+    top: -.8rem;
+    width: 2rem;
+    z-index: -999999999!important;
+    opacity: 0
+}
+
+#players .feedlabel-perfect::after {
+    animation: MoveBeat 1.1s steps(3,end) infinite,OpacityBeat .6s steps(2,end) infinite,csBeatSelect 1s both infinite!important;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/sparcle1.png)no-repeat center/100%;
+    content: "";
+    height: 50%;
+    margin-top: -12%;
+    position: absolute;
+    width: 55%;
+    opacity: 0
+}
+
+#players .feedlabel-perfect::before {
+    animation: MoveBeat2 .8s steps(3,end) infinite,OpacityBeat .7s steps(2,end) infinite,csBeatSelect 1s both infinite!important;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/sparcle1.png)no-repeat center/90%;
+    content: "";
+    display: block;
+    height: 90%;
+    margin-top: -5%;
+    position: absolute;
+    width: 51%!important;
+    z-index: -999999999!important;
+    opacity: 0
+}
+
+#players .feedback-perfect::after,#players .feedback-perfect::before {
+    content: "";
+    display: block;
+    height: 1.32rem;
+    left: -38%;
+    margin-top: 1.45rem;
+    position: absolute;
+    top: -79%;
+    width: 1.32rem!important;
+    z-index: -999999999!important;
+    opacity: 0
+}
+
+#players .feedback-perfect::after {
+    animation: NewFeedbackScaleP1 .5s linear infinite!important;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/perfect-fx-yellow.png)no-repeat center/100%
+}
+
+#players .feedback-perfect::before {
+    animation: NewFeedbackScaleP2 .8s linear infinite!important;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/perfect-fx-green.png)no-repeat center/100%
+}
+
+#players .player[data-stars="1"] .feedback-perfect::after,#players .player[data-stars="1"] .feedback-perfect::before,#players .player[data-stars="2"] .feedback-perfect::after,#players .player[data-stars="2"] .feedback-perfect::before,#players .player[data-stars="3"] .feedback-perfect::after,#players .player[data-stars="3"] .feedback-perfect::before,#players .player[data-stars="4"] .feedback-perfect::after,#players .player[data-stars="4"] .feedback-perfect::before,#players .player[data-stars="5"] .feedback-perfect::after,#players .player[data-stars="5"] .feedback-perfect::before {
+    top: -60%
+}
+
+#players .player[data-stars="1"] .feedback-label,#players .player[data-stars="2"] .feedback-label,#players .player[data-stars="3"] .feedback-label,#players .player[data-stars="4"] .feedback-label,#players .player[data-stars="5"] .feedback-label {
+    top: 86%!important
+}
+
+#players .feedlabel-perfect,#players .feedlabel-super {
+    left: -6%;
+    background-position: 0 78%;
+    overflow: visible!important;
+    z-index: 999999999!important
+}
+
+#players .feedlabel-good {
+    background-position: 0 40%;
+    left: -5%;
+    overflow: visible;
+    z-index: 1000
+}
+
+#players .feedback-good::after,#players .feedback-good::before,#players .feedlabel-good::after,#players .feedlabel-good::before {
+    content: "";
+    display: block;
+    z-index: -999999999!important;
+    opacity: 0;
+    position: absolute;
+    overflow: visible!important
+}
+
+#players .feedback-good::after,#players .feedback-good::before {
+    left: -.4rem;
+    margin-top: .6rem;
+    height: 1.32rem;
+    width: 1.32rem!important
+}
+
+#players .feedback-good::after {
+    animation: NewFeedbackScaleGoodFL .6s linear infinite!important;
+    background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble1-feedb.png)no-repeat center/160%
+}
+
+#players .feedback-good::before {
+    animation: NewFeedbackScaleGoodFR .9s linear infinite!important;
+    background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble2-feedb.png)no-repeat center/140%
+}
+
+#players .feedlabel-good::after {
+    animation: NewFeedbackScaleGood .6s linear infinite!important;
+    background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble1-label.png)no-repeat center/120%;
+    height: 150%;
+    left: -2%;
+    margin-top: 0;
+    width: 110%!important
+}
+
+#players .feedlabel-good::before {
+    animation: NewFeedbackScaleGood .9s linear infinite!important;
+    background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble2-label.png)no-repeat center/100%;
+    height: 120%;
+    left: -3%;
+    margin-top: -2%;
+    width: 110%!important
+}
+
+#players .feedlabel-ok {
+    background-position: 0 60%;
+    background-size: 90%;
+    width: 90%;
+    left: 5%
+}
+
+#players .feedlabel-bad {
+    left: -4%;
+    background-position: 0 2%
+}
+
+#players .feedlabel-badgold {
+    left: -4%;
+    background-position: 0 21%
+}
+
+#players .feedback {
+    top: 0;
+    left: 1%;
+    height: 145%;
+    background-image: none;
+    overflow: visible;
+    background-position: 0 0!important
+}
+
+#players .feedback-yeah {
+    background: linear-gradient(180deg,rgb(254 199 0)0,rgba(255,234,0,0) 100%);
+    left: 13%;
+    width: 65%
+}
+
+#players .feedback-perfect {
+    background: linear-gradient(180deg,#00df00 0,rgba(0,223,0,0) 100%);
+    left: 17%;
+    width: 57%
+}
+
+#players .feedback-super {
+    background: linear-gradient(180deg,#42dd9a 0,rgba(105,230,15,0) 100%);
+    left: 17%;
+    width: 57%
+}
+
+#players .feedback-good {
+    background: linear-gradient(180deg,#0cf 0,rgba(0,204,255,0) 100%);
+    left: 25%;
+    width: 40%
+}
+
+#players .feedback-extra {
+    background: linear-gradient(180deg, ? 0, ? 100%);
+    left: 17%;
+    width: 57%
+}
+
+#players .feedback-ok {
+    background: linear-gradient(180deg,#f0f 0,rgba(255,0,255,0) 100%);
+    left: 31%;
+    width: 30%
+}
+
+#players .feedback-bad {
+    background: 0 0;
+    left: 30%;
+    width: 31%
+}
+
+.song-preview::before {
+    display: none!important
+}
+
+.state-songselection .song-cover--hi-res::before {
+    content: "";
+    top: -44.8%;
+    left: -2%;
+    width: 20%;
+    height: 20%;
+    opacity: 0
+}
+
+.song-cover--hi-res::before {
+    height: 0;
+    width: 0
+}
+
+.state-tutorial #just-dance-now {
+    background: #fff
+}
+
+.song-cover::before,.state-coachselection .song-cover::before,.state-tutorial .song-cover::before {
+    content: "";
+    color: #000;
+    position: fixed;
+    display: block;
+    background-position: center!important
+}
+
+.state-coachselection .song-cover,.state-tutorial .song-cover {
+    left: 100rem
+}
+
+#players::after,#players::before,.state-coachselection #preview .right-pane,.state-coachselection #preview .song-details,.state-coachselection #section-songlist,.state-coachselection .grid-container,.state-coachselection .grid-container .item-container .item,.state-coachselection .song-preview::before,.state-coachselection .video-preview,.state-tutorial .grid-container .item-container .item {
+    display: none!important
+}
+
+.state-coachselection .coverflow--container {
+    background: 0 0!important;
+    border: 0!important
+}
+
+.coach::before,.state-coachselection #players .player,.state-coachselection #room-info,.state-songselection #players::before {
+    display: none
+}
+
+.coach-selection {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    left: 0;
+    top: 0
+}
+
+.coach-selection__bgImg {
+    width: 100%;
+    height: 87%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    animation: bannerFadeIn 2s
+}
+
+.coach-selection__bgImg img {
+    width: 100%;
+    height: 100%
+}
+
+.coach-selection__bgImg img::after {
+    content: "";
+    background: gray;
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.coach-selection__title {
+    color: #fff;
+    text-shadow: 2px 2px 3px #969696;
+    top: 1.1rem
+}
+
+.state-coachselection .song-cover.song-cover--low-res {
+    z-index: 100;
+    opacity: 1;
+    left: -2.105rem;
+    transform: scale(.26);
+    top: -162.8%;
+    border: 0;
+    border-radius: .2rem;
+    background-size: cover;
+    background-repeat: round;
+    animation: songdetails-FadeIn 1s ease
+}
+
+.coach-selection__details {
+    background: #fff;
+    background-image: none;
+    color: #fff;
+    animation: songdetails-FadeIn 1s ease;
+    min-width: 2.6rem;
+    max-width: 3rem;
+    padding: .1rem .1rem .22rem .7rem;
+    overflow: hidden;
+    border-radius: 10px;
+    font-family: "Just Dance New Regular";
+    position: absolute;
+    top: 5.5%;
+    left: .28rem
+}
+
+.coach-selection__details .coach-selection__details-song {
+    font-family: "Just Dance New Bold";
+    font-size: .17rem;
+    padding: 0 0 .04rem .025rem;
+    color: #525252
+}
+
+.coach-selection__details .coach-selection__details-artist {
+    font-size: .135rem;
+    height: .15rem;
+    color: gray
+}
+
+html[lang=ru] .coach-selection__title {
+    font-size: 20%;
+    width: 90%;
+    left: 5%;
+    top: 20%
+}
+
+.coach__img {
+    width: auto;
+    height: 119%;
+    min-height: 1rem;
+    position: absolute;
+    top: -31%;
+    left: -.2rem;
+    animation: coachImgBeat 4s ease infinite
+}
+
+.coach-selection__item.coach[data-id="1"] .coach__img,.coach-selection__item.coach[data-id="3"] .coach__img {
+    animation: coachImgBeat1 7s ease infinite
+}
+
+.coach-selection__item.coach[data-id="2"] .coach__img,.coach-selection__item.coach[data-id="4"] .coach__img {
+    animation: coachImgBeat2 7s ease infinite
+}
+
+ul.coach-selection__list.coach-selection__list--2>[data-id="1"].coach-selection__item.coach {
+    left: -1rem
+}
+
+html.state-coachselection #preview,ul.coach-selection__list.coach-selection__list--2>[data-id="2"].coach-selection__item.coach {
+    left: 1rem
+}
+
+ul.coach-selection__list.coach-selection__list--3>[data-id="1"].coach-selection__item.coach {
+    left: -.8rem
+}
+
+ul.coach-selection__list.coach-selection__list--3>[data-id="3"].coach-selection__item.coach {
+    left: .8rem
+}
+
+ul.coach-selection__list.coach-selection__list--4>[data-id="1"].coach-selection__item.coach,ul.coach-selection__list.coach-selection__list--4>[data-id="2"].coach-selection__item.coach,ul.coach-selection__list.coach-selection__list--4>[data-id="3"].coach-selection__item.coach,ul.coach-selection__list.coach-selection__list--4>[data-id="4"].coach-selection__item.coach {
+    transform: scale(.8)
+}
+
+ul.coach-selection__list.coach-selection__list--4>[data-id="1"].coach-selection__item.coach {
+    left: -.4rem
+}
+
+ul.coach-selection__list.coach-selection__list--4>[data-id="2"].coach-selection__item.coach {
+    left: -.13rem
+}
+
+ul.coach-selection__list.coach-selection__list--4>[data-id="3"].coach-selection__item.coach {
+    left: .13rem
+}
+
+ul.coach-selection__list.coach-selection__list--4>[data-id="4"].coach-selection__item.coach {
+    left: .4rem
+}
+
+.coach-selection__list {
+    width: 100%;
+    height: 66%;
+    font-size: 50%;
+    text-align: center;
+    position: absolute;
+    top: 39%;
+    left: -2%
+}
+
+.coach__player-list {
+    width: 110%;
+    height: 31%;
+    display: block;
+    position: relative;
+    padding: .0234rem .1rem;
+    margin-bottom: .055rem;
+    background: #00a4ec;
+    color: #fff;
+    opacity: 1;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0;
+    top: -20%;
+    left: 20%;
+    z-index: 2;
+    font-family: Just Dance New Bold;
+    border: .02rem #00a4ec solid;
+    outline: .02rem #fff solid;
+    padding-right: 0
+}
+
+.coach__player-list::before {
+    display: none;
+    content: "";
+    width: .35rem;
+    height: 100%;
+    position: absolute;
+    background: #00a4ec;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0;
+    outline: .02rem #00a4ec solid;
+    background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fplayer_coachselection_icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.coach-selection__item .coach__histogram .coach__names-list .coach__player-list::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 56%;
+    left: 0;
+    font-size: 66%;
+    color: gray;
+    background: #fff;
+    padding: .035rem .1rem
+}
+
+.coach-selection__item[data-id="1"] .coach__histogram .coach__names-list .coach__player-list::after {
+    content: "Ready to Win"
+}
+
+.coach-selection__item[data-id="2"] .coach__histogram .coach__names-list .coach__player-list::after {
+    content: "The New Dancer"
+}
+
+.coach-selection__item[data-id="3"] .coach__histogram .coach__names-list .coach__player-list::after {
+    content: "The Just Dancer"
+}
+
+.coach-selection__item[data-id="4"] .coach__histogram .coach__names-list .coach__player-list::after {
+    content: "The Acrobat"
+}
+
+.coach__player-list.animate {
+    animation: animateShowCoach .6s,title-gradcolorMove 30s ease infinite
+}
+
+.coach__names-list {
+    bottom: .3rem;
+    overflow: visible
+}
+
+.coach-selection__button {
+    border-radius: 1rem;
+    color: transparent;
+    background: #06aef7;
+    box-shadow: 0 0 15px 0#06aef7;
+    padding: .04rem .45rem;
+    font-size: .22rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: .2rem;
+    right: 1rem;
+    z-index: 999999
+}
+
+.coach-selection__button::before {
+    display: block!important;
+    font-size: .18rem;
+    text-align: center;
+    line-height: .35rem;
+    width: 1.61rem;
+    height: .35rem;
+    color: #fff;
+    top: 0;
+    background: 0 0;
+    opacity: 1;
+    filter: none;
+    animation: none;
+    transform: none
+}
+
+html[lang=ru] .coach-selection__button::before {
+    content: "ТАНЦЕВАТЬ!"
+}
+
+html[lang=en] .coach-selection__button::before {
+    content: "DANCE!"
+}
+
+html[lang=fr] .coach-selection__button::before {
+    content: "DANSE!"
+}
+
+.coach-selection__back,.coach-selection__back::before {
+    width: .25rem;
+    height: .25rem;
+    cursor: pointer;
+    border-radius: 100rem;
+    position: absolute;
+    z-index: 5
+}
+
+.coach-selection__back {
+    transition: all .15s;
+    background-color: hsl(5deg 100% 59%);
+    background-size: 85%;
+    background-position: center;
+    background-position-x: 30%;
+    top: 91%;
+    left: 0.5rem;
+    right: 0;
+}
+
+.coach-selection__back:hover {
+    transform: scale(1)
+}
+
+.coach-selection__back::after {
+    width: 2rem;
+    color: #a9a9a9;
+    font-size: 14%;
+    position: absolute;
+    top: .07rem;
+    left: 2.3em
+}
+
+html[lang=ru] .coach-selection__back::after {
+    content: "Назад"
+}
+
+html[lang=en] .coach-selection__back::after {
+    content: "Back"
+}
+
+.coach-selection::before {
+    content: "";
+    width: .3rem;
+    height: .3rem;
+    opacity: 1;
+    background: 0 0;
+    position: absolute;
+    z-index: 0;
+    top: 5.25rem;
+    left: 4.975rem
+}
+
+.state-coachselection #players {
+    top: -2.3%!important
+}
+
+.coach-selection__list {
+    animation: coachSelectionDelay 2.1s!important
+}
+
+.coach-selection__back {
+    animation: fadeIn .3s!important
+}
+
+.coach-selection__button,.coach-selection__title,.state-coachselection #players[n-ghosts="0"]::after,.state-coachselection #players[n-ghosts="0"]::before,.state-coachselection #players[n-ghosts="1"]::after,.state-coachselection #players[n-ghosts="1"]::before,.state-coachselection #players[n-ghosts="2"]::after,.state-coachselection #players[n-ghosts="2"]::before,.state-coachselection #players[n-ghosts="3"]::after,.state-coachselection #players[n-ghosts="3"]::before {
+    animation: coachSelectionDelay 2.1s!important
+}
+
+.state-coachselection .song-preview::after {
+    display: none
+}
+
+.state-coachselection .coverflow--container,.state-loadingdance #preview .song-details,.state-tutorial #preview .song-details {
+    display: block!important
+}
+
+.state-tutorial .song__reward {
+    display: none!important
+}
+
+.state-coachselection .song-cover--hi-res::before {
+    top: -79%;
+    opacity: 0;
+    transition: opacity .3s;
+    left: -106%;
+    animation: albumcoachSlide 2s ease!important;
+    height: 3.6rem;
+    width: 3.6rem;
+    z-index: 1000;
+    background-image: url(https://jd-s3.akamaized.net/public/map/ZTestMapJD2022/ZTestMapJD2022_Cover_AlbumCoach.png/7aadb2476534ee4fdc1ed350b85ef502.png);
+	background-size: cover;
+}
+
+.modal::before {
+    background-color: #ccdffb;
+    opacity: .4
+}
+
+.modal,.modal--active,.modal--active .modal__wrapper,.modal.modal--active {
+    z-index: 100000
+}
+
+.modal,.modal--active .modal__wrapper {
+    transition: none
+}
+
+.modal__close {
+    color: #fff;
+    padding-right: 0;
+    padding-top: .7%;
+    font-size: 35%;
+    text-transform: lowercase;
+    position: absolute;
+    top: 4.6rem;
+    transform: translateY(20%);
+    right: 6.1rem;
+    transition: all .3s ease;
+    opacity: 0
+}
+
+.modal--active .modal__close {
+    animation: fadeIn 1s ease
+}
+
+.modal__close::after,.modal__close:hover::before {
+    position: absolute;
+    width: 2rem;
+    height: 70%;
+    left: 2.4rem;
+    top: 0;
+    border-radius: .05rem;
+    transition: all .2s
+}
+
+.modal__close:hover::before {
+    content: "";
+    border: .02rem var(--general1) solid;
+    z-index: 5
+}
+
+.modal__close,.modal__close::after {
+    font-family: Just Dance New Regular;
+    cursor: pointer
+}
+
+.modal__close::after {
+    text-align: center;
+    color: var(--general1);
+    font-size: 38%;
+    text-transform: none!important;
+    padding-top: .08rem;
+    background: #f8c8e7
+}
+
+html[lang=ru] .modal__close::after {
+    content: "Продолжить"
+}
+
+html[lang=en] .modal__close::after {
+    content: "Continue"
+}
+
+html[lang=fr] .modal__close::after {
+    content: "Continuer"
+}
+
+.modal__link {
+    display: none
+}
+
+.concept_ftue {
+    min-width: 0;
+    width: 64%;
+    height: 49%;
+    position: absolute;
+    top: 29%;
+    left: 19%;
+    border-bottom: 2px #c4c4c4 solid
+}
+
+.modal__wrapper {
+    transform: none
+}
+
+.modal--active .modal__close,.modal__container.modal__container--active {
+    transform: translateY(0);
+    opacity: 1
+}
+
+.modal__container {
+    transform: translateY(20%);
+    opacity: 0
+}
+
+.modal.modal--active .modal::before {
+    content: "";
+    background-color: #000;
+    background-size: cover;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.modal__container::after,.modal__container::before {
+    width: 70%;
+    position: absolute;
+    top: 17%;
+    left: 16%;
+    z-index: 0
+}
+
+.modal__container::before {
+    height: 70%;
+    background-image: none;
+    background-color: #fff;
+    border-radius: 15px;
+    outline: 3px #fff solid;
+    filter: drop-shadow(0 0 30px #e55d87);
+    border: 3px var(--general1) solid
+}
+
+.modal__container::after {
+    background-color: var(--general1);
+    height: 10%;
+    border-radius: 15px 15px 0 0
+}
+
+.concept {
+    width: 50%;
+    position: absolute;
+    top: .5rem;
+    left: 26%;
+    z-index: 1
+}
+
+.steps__number {
+    background: #fff;
+    color: var(--general1);
+    border: .03rem solid #f8c8e7;
+    width: .5rem;
+    height: .5rem;
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    font-size: .3rem!important;
+    line-height: .45rem;
+    position: absolute;
+    top: 5%
+}
+
+span.steps__connect {
+    color: gray;
+    font-size: 40%;
+    width: 105%
+}
+
+span.steps__image {
+    display: none
+}
+
+.concept__steps {
+    position: relative;
+    width: 98%;
+    margin-bottom: 7%
+}
+
+/*
+#afterdance .blue .color,.blue .dancercard .player-color,.blue .player-color,.player.blue .dancercard .player-exp.player-exp-normal {
+    background: #3784f9
+}
+
+#afterdance .red .color,.player.red .dancercard .player-exp.player-exp-normal,.red .dancercard .player-color,.red .player-color {
+    background: #ec2443
+}
+
+#afterdance .green .color,.green .dancercard .player-color,.green .player-color,.player.green .dancercard .player-exp.player-exp-normal {
+    background: #7de400
+}
+
+#afterdance .pink .color,.pink .dancercard .player-color,.pink .player-color,.player.pink .dancercard .player-exp.player-exp-normal {
+    background: #d820c9
+}
+
+#afterdance .purple .color,.player.purple .dancercard .player-exp.player-exp-normal,.purple .dancercard .player-color,.purple .player-color {
+    background: #8802c9
+}
+
+#afterdance .aqua .color,.aqua .dancercard .player-color,.aqua .player-color,.player.aqua .dancercard .player-exp.player-exp-normal {
+    background: #03ded6
+}
+*/
+
+#afterdance .blue .color,.blue .dancercard .player-color,.blue .player-color,.player.blue .dancercard .player-exp.player-exp-normal {
+    background: #5344f0
+}
+
+#afterdance .red .color,.player.red .dancercard .player-exp.player-exp-normal,.red .dancercard .player-color,.red .player-color {
+    background: #ec681f
+}
+
+#afterdance .green .color,.green .dancercard .player-color,.green .player-color,.player.green .dancercard .player-exp.player-exp-normal {
+    background: #65f81c
+}
+
+#afterdance .pink .color,.pink .dancercard .player-color,.pink .player-color,.player.pink .dancercard .player-exp.player-exp-normal {
+    background: #e9009c
+}
+
+#afterdance .purple .color,.player.purple .dancercard .player-exp.player-exp-normal,.purple .dancercard .player-color,.purple .player-color {
+    background: #7c00ab
+}
+
+#afterdance .aqua .color,.aqua .dancercard .player-color,.aqua .player-color,.player.aqua .dancercard .player-exp.player-exp-normal {
+    background: #27e4d0
+}
+
+#afterdance .blue .player-content .name,#afterdance .blue .score-text {
+    color: #3784f9
+}
+
+#afterdance .red .player-content .name,#afterdance .red .score-text {
+    color: #ec2443
+}
+
+#afterdance .green .player-content .name,#afterdance .green .score-text {
+    color: #7de400
+}
+
+#afterdance .pink .player-content .name,#afterdance .pink .score-text {
+    color: #d820c9
+}
+
+#afterdance .purple .player-content .name,#afterdance .purple .score-text {
+    color: #8802c9
+}
+
+#afterdance .aqua .player-content .name,#afterdance .aqua .score-text {
+    color: #03ded6
+}
+
+#afterdance .blue .avatarFlag .flag {
+    border: 3px solid #5252fa
+}
+
+#afterdance .red .avatarFlag .flag {
+    border: 3px solid #ff711f
+}
+
+#afterdance .green .avatarFlag .flag {
+    border: 3px solid #5bde16
+}
+
+#afterdance .pink .avatarFlag .flag {
+    border: 3px solid #f0a
+}
+
+#afterdance .purple .avatarFlag .flag {
+    border: 3px solid #8e0cbd
+}
+
+#afterdance .aqua .avatarFlag .flag {
+    border: 3px solid #19d2d8
+}
+
+.state-songselection .dancercard .player-name {
+    width: 90%;
+    height: .3rem;
+    text-align: end;
+    letter-spacing: -1px;
+    position: absolute;
+    left: -64%;
+    z-index: 2;
+    bottom: 24%;
+    font-size: .18rem;
+    color: gray;
+    text-shadow: none!important
+}
+
+html.state-songselection .dancercard .player-logo--vip {
+    display: block
+}
+
+.dancercard .player-logo--vip {
+    display: none;
+    background-image: none;
+    width: .9rem;
+    height: .9rem;
+    top: -.441rem;
+    left: 10%;
+    opacity: 1;
+    background-size: 90%;
+    z-index: -1
+}
+
+.dancercard .player-logo--vip:after,.dancercard .player-logo--vip:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform: scale(1.3)
+}
+
+.dancercard .player-logo--vip:before {
+    background-image: url(https://jd-s3.akamaized.net/public/portrait-borders/0120_galaxy/front.png/c960a555f1d7c25289906f567bffd8d8.png)
+}
+
+.dancercard .player-logo--vip:after {
+    background-image: url(https://jd-s3.akamaized.net/public/portrait-borders/0120_galaxy/back.png/fb8928118e1fb4b4d4bb0cf51f220a35.png)
+}
+
+#players .player:not(.ghost).visible {
+    animation: fadeIn .3s linear both
+}
+
+.state-songselection .dancercard .player-exp {
+    color: #fff;
+    height: .3rem;
+    border: 1px wheat;
+    width: .3rem;
+    display: flex;
+    position: absolute;
+    bottom: 116%;
+    right: 63%;
+    left: .432rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+    box-shadow: 0 0 20px var(--general1)
+}
+
+.state-songselection .dancercard .player-exp:after {
+    content: "";
+    width: .02rem;
+    height: 62%;
+    background: #3165f4;
+    position: absolute;
+    top: .312rem;
+    z-index: -10
+}
+
+.state-songselection .dancercard .player-flag {
+    width: .25rem;
+    height: .25rem;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: -.25rem
+}
+
+.dancercard .player-flag__inner {
+    width: 100%;
+    height: 100%
+}
+
+html:not(.ipad) .hud.beat>#players.animate .player-color,html:not(.ipad) .hud.beat>#players.animate .player-stars .star:not(.no-beat)::before {
+    animation: none
+}
+
+html.state-dance #players {
+    left: 6%;
+    top: -43px
+}
+
+.dancercard .player-name {
+    width: 90%;
+    height: .3rem;
+    text-align: center;
+    left: 1%;
+    bottom: -55%;
+    font-size: .18rem;
+    font-family: "Just Dance New Bold"
+}
+
+.dancercard .player-name em {
+    height: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    padding-left: 0
+}
+
+.dancercard .player-name,.state-dance .dancercard .player-name em {
+    text-shadow: 1px 1px 1px #2b2b2b
+}
+
+.dancercard .avatar-wrapper {
+    width: 55%;
+    position: absolute;
+    z-index: 1;
+    top: -100%;
+    left: 17%
+}
+
+.dancercard .player-flag {
+    width: .22rem;
+    height: .19rem
+}
+
+.dancercard .player-exp {
+    color: #fff;
+    height: .2rem;
+    border: 1px wheat;
+    width: .2rem;
+    display: inline-block;
+    position: absolute;
+    bottom: 116%;
+    right: 81%
+}
+
+.dancercard .player-exp span {
+    height: 10%;
+    line-height: 0;
+    letter-spacing: 0;
+    font-size: 53%
+}
+
+.player.aqua .dancercard .player-exp.player-exp-normal,.player.blue .dancercard .player-exp.player-exp-normal,.player.green .dancercard .player-exp.player-exp-normal,.player.pink .dancercard .player-exp.player-exp-normal,.player.purple .dancercard .player-exp.player-exp-normal,.player.red .dancercard .player-exp.player-exp-normal {
+    background-image: none;
+    border-radius: 50px;
+    border: 2px solid #fff
+}
+
+#players .star {
+    transform: rotate(10deg)
+}
+
+#players .player-stars {
+    bottom: -8%;
+    left: -29%
+}
+
+#players .star.star-1,#players .star.star-2,#players .star.star-3,#players .star.star-4,#players .star.star-5 {
+    width: .3rem;
+    height: .3rem;
+    margin: -.07rem
+}
+
+html:not(.weak-platform) #players.animate .star {
+    animation: playerStarReceiving 1.1s ease-in-out
+}
+
+html:not(.ipad) .hud.beat>#players.animate .player-stars .star:not(.no-beat) {
+    animation: player-star-beat .5s
+}
+
+html:not(.weak-platform) #players .player.megastar .star::after {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 50%;
+    margin-top: -10%;
+    position: absolute;
+    width: 50%
+}
+
+html:not(.weak-platform) #players .player.megastar .star::before {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png)!important;
+    background-size: 400%
+}
+
+html:not(.weak-platform) #players .player.megastar .star::before,html:not(.weak-platform) #players .player.superstar .star::after,html:not(.weak-platform) #players .player.superstar .star::before {
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 50%;
+    margin-top: -10%;
+    position: absolute;
+    width: 50%
+}
+
+html:not(.weak-platform) #players .player.superstar .star::before {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important
+}
+
+html:not(.weak-platform) #players .player.megastar .star::after {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png)!important;
+    background-size: 350%
+}
+
+html:not(.weak-platform) #players .player.superstar .star::before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png)!important;
+    background-size: 400%
+}
+
+html:not(.weak-platform) #players .player.superstar .star::after {
+    animation: MoveBeat 3s steps(3,end) infinite,OpacityBeat .2s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_2.png)!important;
+    background-size: 350%
+}
+
+.dancercard .player-master {
+    display: none;
+    height: .42rem;
+    position: absolute;
+    z-index: 1;
+    top: .29rem;
+    left: 1.02rem
+}
+
+.dancercard .player-master .player-master--icon {
+    width: .35rem;
+    height: .35rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.state-dance .dancercard .player-master {
+    opacity: 0
+}
+
+.dancercard .player-color {
+    overflow: hidden;
+    width: 80%;
+    height: 22%;
+    border-radius: 30px;
+    position: absolute;
+    top: 113%;
+    left: 6%
+}
+
+.banner {
+    backdrop-filter: blur(5px)
+}
+
+.banner .banner-content {
+    width: 8rem;
+    height: 4.5rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    border: 4px var(--aqua1) solid;
+    outline: 3px #fff solid;
+    border-radius: .1rem;
+    transform: scale(1) translate(-50%,-50%)
+}
+
+.banner .banner-img {
+    display: block;
+    width: 100%;
+    height: 73%;
+    overflow: hidden
+}
+
+.banner .banner-img img {
+    width: 100%;
+    height: 135%
+}
+
+.banner .banner-close {
+    width: .28rem;
+    height: .276rem;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/buttons/button_cross_aqua.svg);
+    background-size: cover;
+    position: absolute;
+    top: 92%;
+    right: 53%;
+    image-rendering: pixelated
+}
+
+.banner .banner-close::after {
+    width: .29rem;
+    height: .29rem;
+    color: gray;
+    font-size: 16%;
+    position: absolute;
+    top: .045rem;
+    right: -.38rem
+}
+
+.banner .banner-close:lang(ru)::after {
+    content: "Закрыть"
+}
+
+.banner .banner-close:lang(en)::after {
+    content: "Close"
+}
+
+.banner .banner-txt {
+    font-size: .17rem;
+    margin: 1%auto 0;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: gray;
+    border-bottom: 2px gray solid;
+    line-height: normal;
+    padding-bottom: .06rem
+}
+
+#afterdance {
+    width: inherit;
+    height: 100%;
+    margin: 0;
+    padding: .12rem .15rem .1rem;
+    position: relative;
+    background-image: none
+}
+
+.state-afterdance #afterdance {
+    background: #00acff;
+    background-image: none;
+    margin: 0;
+    height: 100%;
+    border: 0;
+    overflow: hidden;
+    top: 0
+}
+
+#afterdance::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 97%;
+    background-color: #fff;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 0;
+    top: 1.6%;
+    left: 29.1%;
+    animation: whiteBlockFade 2s ease
+}
+
+#afterdance.transition-in #crown-container,#afterdance.transition-in .coach,#afterdance.transition-in .player {
+    -webkit-transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+    transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+    -webkit-animation: fadeIn .5s linear both;
+    animation: fadeIn .5s linear both
+}
+
+#afterdance .flag,#afterdance .player-solo .player .score::before,.state-afterdance #players,.state-afterdance #room-info,.state-afterdance #settings {
+    display: none
+}
+
+#afterdance.transition-in .player:nth-child(1) .color {
+    animation: playerContentFade4color 2s ease
+}
+
+#afterdance.transition-in .player:nth-child(2) .color {
+    animation: playerContentFade3color 2s ease
+}
+
+#afterdance.transition-in .player:nth-child(3) .color {
+    animation: playerContentFade2color 2s ease
+}
+
+#afterdance.transition-in .player:nth-child(4) .color {
+    animation: playerContentFade1color 2s ease
+}
+
+#afterdance.transition-in .player:nth-child(1) .avatarFlag {
+    animation: playerContentFade4color 2.3s ease
+}
+
+#afterdance.transition-in .player:nth-child(2) .avatarFlag {
+    animation: playerContentFade3color 2.3s ease
+}
+
+#afterdance.transition-in .player:nth-child(3) .avatarFlag {
+    animation: playerContentFade2color 2.3s ease
+}
+
+#afterdance.transition-in .player:nth-child(4) .avatarFlag {
+    animation: playerContentFade1color 2.3s ease
+}
+
+#afterdance.transition-in .player:nth-child(1) .player-content .name {
+    animation: playerContentFade4name 3s ease
+}
+
+#afterdance.transition-in .player:nth-child(2) .player-content .name {
+    animation: playerContentFade3name 3s ease
+}
+
+#afterdance.transition-in .player:nth-child(3) .player-content .name {
+    animation: playerContentFade2name 3s ease
+}
+
+#afterdance.transition-in .player:nth-child(4) .player-content .name {
+    animation: playerContentFade1name 3s ease
+}
+
+#afterdance .player-content .score {
+    animation: fadeInScore 4s ease
+}
+
+#afterdance.transition-out .player:nth-child(1),#afterdance.transition-out .player:nth-child(2),#afterdance.transition-out .player:nth-child(3),#afterdance.transition-out .player:nth-child(4) {
+    animation: fadeOut .5s ease both
+}
+
+#afterdance .players {
+    left: -16%;
+    top: 13%
+}
+
+#afterdance .players,.scrollArea,.scrollContainer {
+    overflow: visible!important
+}
+
+#afterdance .players.player-solo .player .color {
+    width: .2rem;
+    height: .2rem;
+    background-image: none!important;
+    color: transparent;
+    border-radius: 100rem;
+    outline: 4px #fff solid;
+    box-shadow: 0 0 20px 5px #00acff;
+    top: .2rem;
+    position: absolute
+}
+
+#afterdance .player-solo .player .score .score-text {
+    font-family: Just Dance New Regular
+}
+
+#afterdance .results .player-solo .player .score::after {
+    top: .26rem
+}
+
+#afterdance .player-solo .player .name {
+    left: 1.2rem;
+    width: 85%;
+    position: absolute
+}
+
+#afterdance .player-solo .player .avatarFlag .avatar-wrapper {
+    width: .8rem;
+    height: .8rem;
+    left: 1.5rem;
+    top: -.2rem
+}
+
+#afterdance .player-solo .player .score .stars {
+    right: .6rem;
+    top: -.055rem;
+    transform: scale(.8)
+}
+
+#afterdance .results .players.player-solo .player .score.superstar::after {
+    animation: none
+}
+
+#afterdance .player .color {
+    background-image: url(https://jdnowweb-s.cdn.ubi.com/uat/SP1/20150325_1222/web/img/hud/racelineTrackShadow.png)!important;
+    background-size: 250% 250%!important
+}
+
+#afterdance .player:nth-child(2) .color {
+    width: .51rem;
+    height: .51rem;
+    margin-left: .02rem;
+    font-size: 35%;
+    line-height: .5rem!important
+}
+
+#afterdance .player:nth-child(3) .color {
+    width: .48rem;
+    height: .48rem;
+    margin-left: .03rem;
+    font-size: 30%;
+    line-height: .48rem!important
+}
+
+#afterdance .player:nth-child(4) .color {
+    width: .45rem;
+    height: .45rem;
+    margin-left: .04rem;
+    font-size: 25%;
+    line-height: .45rem!important
+}
+
+#afterdance .player:nth-child(1) .player-content {
+    margin-left: .01rem
+}
+
+#afterdance .player:nth-child(2) .avatarFlag,#afterdance .player:nth-child(2) .player-content {
+    margin-left: .02rem
+}
+
+#afterdance .player:nth-child(3) .avatarFlag,#afterdance .player:nth-child(3) .player-content {
+    margin-left: .03rem
+}
+
+#afterdance .player:nth-child(4) .avatarFlag,#afterdance .player:nth-child(4) .player-content {
+    margin-left: .04rem
+}
+
+#afterdance .img--afterDance .coach {
+    position: absolute;
+    top: 44%;
+    left: 9%;
+    border: 3px #fff solid;
+    width: 65.565%;
+    animation: afterDanceSongCoverSlide 3s ease
+}
+
+#afterdance .song-info {
+    margin: -.2rem -11px 0;
+    animation: afterDanceSongInfoSlide 2s ease;
+    color: #fff;
+    width: 90%;
+    height: 25%;
+    font-size: 24px
+}
+
+#afterdance .song-info .title {
+    height: .26rem;
+    font-family: Just Dance New Bold
+}
+
+#afterdance .song-info .artist {
+    color: #fff;
+    font-size: 70%;
+    margin-top: .02rem;
+    height: .2rem
+}
+
+#afterdance .results h2 {
+    font-family: "OpenSans SemiBold";
+    line-height: 1.3;
+    opacity: .9;
+    padding-left: .06rem;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+#afterdance .results h3 {
+    font-size: 100%
+}
+
+#afterdance .player-content .name {
+    text-shadow: none;
+    font-size: .25rem;
+    font-family: Just Dance New Bold;
+    padding-left: 0
+}
+
+.position {
+    animation: positionIn 1.5s ease
+}
+
+#afterdance .flag {
+    animation: afterdanceFlagFade 1.5s ease;
+    border: 2px solid #8b4513;
+    bottom: .12rem;
+    right: .2rem
+}
+
+#afterdance .avatarFlag .avatar-wrapper {
+    width: .68rem;
+    height: .68rem;
+    display: block;
+    margin: 0;
+    left: .2rem;
+    top: -.1rem
+}
+
+#afterdance.transition-in .player-solo .player .score {
+    transform: none;
+    top: 4%;
+    display: block
+}
+
+#afterdance .player-solo .player .score::before {
+    content: "";
+    width: 1.8rem;
+    height: 100%;
+    background: rgb(255 201 107);
+    border-radius: 12px;
+    position: absolute;
+    right: 0
+}
+
+#afterdance .player-content {
+    background: 0 0
+}
+
+#afterdance .player-content .score-text {
+    line-height: 1.9;
+    font-size: 74%
+}
+
+#afterdance .player-content .score .highScore,#afterdance .results .highScore {
+    font-size: .145rem;
+    width: auto;
+    color: #00acff;
+    white-space: nowrap;
+    font-family: "Just Dance New Bold"!important;
+    position: absolute;
+    z-index: 200
+}
+
+#afterdance .results .highScore {
+    display: none;
+    letter-spacing: -1px;
+    top: .41rem;
+    right: 1.32rem;
+    animation: newHSfade 4s ease;
+    text-transform: uppercase
+}
+
+#afterdance .player-content .score .highScore {
+    letter-spacing: 0;
+    top: -.1rem;
+    right: -.1rem
+}
+
+#afterdance .results {
+    height: 4rem;
+    margin: 1rem 0 0 4.2rem
+}
+
+.players.player-solo .color {
+    display: block
+}
+
+#afterdance .player::after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    left: 0;
+    top: 116%;
+    position: absolute;
+    margin-left: 26%;
+    background: #dcdcdc;
+    animation: afdPlayerBottomBorderFadeIn_1 2s ease
+}
+
+#crown-container .crown {
+    width: .4em;
+    height: .4em;
+    border: 0;
+    border-radius: 50%;
+    transform: rotate(10deg);
+    animation: crownBeatAF 1.8s both infinite,newHSfade 4s ease;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/leader-update.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain
+}
+
+#crown-container .crown,#crown-container.aqua .crown,#crown-container.blue .crown,#crown-container.green .crown,#crown-container.pink .crown,#crown-container.purple .crown,#crown-container.red .crown {
+    background-color: rgb(255 255 255/0%)
+}
+
+#afterdance .results .stars .star.animate {
+    animation: afterdanceStar .9s ease-in-out
+}
+
+#afterdance .results .stars .star.star-1.animate,#afterdance .results .stars .star.star-5.animate {
+    animation: starglow15 3s ease infinite
+}
+
+#afterdance .results .stars .star.star-4.animate {
+    animation: starglow4 3s ease infinite
+}
+
+#afterdance .results .stars .star.star-3.animate {
+    animation: starglow3 3s ease infinite
+}
+
+#afterdance .results .stars .star.star-2.animate {
+    animation: starglow2 3s ease infinite
+}
+
+#afterdance .results .stars .star {
+    transform: rotate(10deg)
+}
+
+#afterdance .results .player .score.megastar .star::after,#afterdance .results .player .score.megastar .star::before {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: 200%;
+    margin-top: -79%;
+    margin-left: -80%;
+    position: absolute;
+    width: 200%
+}
+
+#afterdance .results .player .score.megastar .star::before {
+    animation: MoveBeat 4s steps(3,end) infinite,OpacityBeat .5s infinite,csBeatSelect 2s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png)!important
+}
+
+#afterdance .results .player .score.megastar .star::after {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png)!important
+}
+
+#afterdance .results .player .score.superstar .star::after,#afterdance .results .player .score.superstar .star::before {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    height: 200%;
+    margin-top: -79%;
+    margin-left: -80%;
+    position: absolute;
+    width: 200%
+}
+
+#afterdance .results .player .score.superstar .star::before {
+    animation: MoveBeat 4s steps(3,end) infinite,OpacityBeat .5s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_2.png)!important
+}
+
+#afterdance .results .player .score.superstar .star::after {
+    animation: MoveBeat 2s steps(3,end) infinite,OpacityBeat .3s infinite,csBeatSelect 1s both infinite!important;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png)!important
+}
+
+.score.megastar::before,.score.superstar::before {
+    width: .8rem;
+    height: .2rem;
+    position: absolute;
+    top: .14rem;
+    left: -.28rem;
+    content: ""
+}
+
+#afterdance .results .player .score.megastar::before,#afterdance .results .player .score.superstar::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: titleShake1 1s ease infinite
+}
+
+#afterdance .results .player .score.superstar::before {
+    background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20201021_0950/web/img/hud/super_mega/text_superstar4.png)
+}
+
+#afterdance .results .player .score.megastar::before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/text_megastar2.png)
+}
+
+#afterdance .results .player .score.megastar::after,#afterdance .results .player .score.superstar .star #afterdance .results .player .score.superstar::after,#afterdance .results .player .score.superstar::after {
+    animation: titleShake1 .8s ease infinite
+}
+
+#afterdance::after {
+    animation: title-slideRightSe 2.5s ease;
+    transition: opacity 3s linear;
+    font-size: 30%;
+    line-height: 1.6;
+    text-align: left;
+    position: absolute;
+    display: block;
+    width: 35%;
+    left: 7.9rem;
+    height: 9%;
+    top: 7%;
+    color: #00acff;
+    border-radius: 15px 0 0 15px;
+    font-family: Just Dance New Bold
+}
+
+html[lang=ru] #afterdance::after {
+    content: "Поздравляем!"
+}
+
+html[lang=en] #afterdance::after {
+    content: "Congratulations!"
+}
+
+html[lang=fr] #afterdance::after {
+    content: "Toutes nos félicitations!"
+}
+
+.exit-btn--continue {
+    right: 4%;
+    height: 6.5%;
+    width: 16%;
+    color: #fff;
+    transition: all .2s;
+    background: #00acff;
+    line-height: 0;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-size: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.exit-btn--continue:focus {
+    transform: scale(1.1)
+}
+
+.exit-btn--continue::before {
+    display: none;
+    width: 0;
+    height: 0;
+    color: #fff
+}
+
+.exit-btn--continue::before,.exit-btn--continue:active::before,.exit-btn--continue:hover::before {
+    background-image: none;
+    transition: all .2s
+}
+
+.exit-btn--animate {
+    animation: fadeIn .5s ease-in-out
+}
+
+.exit-btn--play-again {
+    right: 4%;
+    height: 8%;
+    width: 13%;
+    color: #fff;
+    transition: all .2s;
+    line-height: .33rem;
+    transform: translate(34px,29px);
+    animation: newHSfade 5s ease!important;
+    left: .61rem
+}
+
+.exit-btn--play-again::hover {
+    color: #fff;
+    opacity: 1
+}
+
+.exit-btn--play-again::before {
+    display: none
+}
+
+.exit-btn--play-again::after {
+    content: "";
+    display: block;
+    width: .2rem;
+    height: .2rem;
+    background: #fff;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_restart_blue.svg);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    margin-top: -.27rem;
+    margin-left: -.05rem;
+    border-radius: 100px;
+    background-position: center
+}
+
+.exit-btn--play-again:active::before,.exit-btn--play-again:hover::before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/buttons/replay.png);
+    transition: all .2s
+}
+
+html.ftue .playlist-grid .playlist::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    cursor: not-allowed;
+    position: absolute;
+    z-index: 3;
+    top: 11%;
+    left: 31%;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/demo/lock-gray.svg);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+html.ftue .playlist-grid .playlist[name=FTUE] {
+    background: #f20dba
+}
+
+html.ftue .playlist-grid .playlist[name=FTUE] .playlist--title {
+    color: #ffff!important
+}
+
+html.ftue .song__decoration .song__cover {
+    opacity: 1
+}
+
+/* Doesn't respond to targeting */
+.song-preview::after {
+    content: "";
+    width: .19rem;
+    height: .19rem;
+    position: absolute;
+    left: 1.8rem;
+    top: 1.2rem;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_fav_normal.svg);
+    background-size: cover;
+    opacity: .5;
+    transition: all .2s;
+    z-index: 999999;
+    cursor: pointer
+}
+
+.song-preview:hover::after {
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_fav_selected.svg);
+    opacity: 1
+}
+
+#toast,html.state-dance #toast {
+    width: 30%;
+    box-shadow: none!important;
+    text-align: left;
+    font-family: OpenSans SemiBold;
+    font-size: 10%;
+    letter-spacing: -1px;
+    visibility: visible!important
+}
+
+#toast {
+    bottom: 72%;
+    left: 83%;
+    padding: 3% 2% 1% 10%;
+    min-height: 24%;
+    background: linear-gradient(180deg,#5252fa 0,#5252fa 24%,#fff 24%,#fff 100%);
+    color: #545454;
+    border-radius: 15px;
+    border: 4px rgb(82 82 250) solid;
+    outline: 2px rgb(250 250 250) solid;
+    opacity: 0;
+    transition: transform .5s ease,opacity .4s ease!important
+}
+
+#toast,#toast[style="transform: translate3d(-50%, 250%, 0px); opacity: 0; visibility: hidden; transition: transform 0.5s ease 0s, opacity ease, visibility ease;"],#toast[style="transform: translate3d(-50%, 250%, 0px); opacity: 0; visibility: hidden;"] {
+    transform: translate3d(60%,0,0)!important
+}
+
+#toast[style="transform: translate3d(-50%, 0%, 0px); opacity: 1; visibility: visible;"] {
+    transform: translate3d(-50%,0,0)!important
+}
+
+#toast::after,#toast::before {
+    bottom: 79%;
+    position: absolute;
+    z-index: 2
+}
+
+#toast::before {
+    content: "Уведомление";
+    left: -6%;
+    padding: 3% 2% 1% 10%;
+    width: 30%;
+    min-height: 24%;
+    text-align: left;
+    font-family: Just Dance New Bold;
+    font-size: 180%;
+    letter-spacing: 0;
+    color: #fff
+}
+
+#toast::after {
+    content: "";
+    width: 8.399%;
+    height: 19%;
+    left: 86%;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_notification.png);
+    background-size: cover
+}
+
+#toast .aqua,#toast .blue,#toast .green,#toast .pink,#toast .purple,#toast .red {
+    border: 0
+}
+
+.toast__image {
+    width: 35%;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.toast__image .avatar-wrapper {
+    animation: wraperBeat 2s ease;
+    animation-iteration-count: infinite
+}
+
+.toast__color,html.state-dance .toast__color {
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    position: absolute
+}
+
+.toast__color {
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    border: 0 solid #3784f9;
+    outline: 2px #5252fa solid
+}
+
+.pop-up__title::before,.toast__color::before,html.state-dance #toast::after,html.state-dance #toast::before {
+    display: none
+}
+
+.toast__content {
+    font-size: .13rem
+}
+
+.toast__color.aqua,.toast__color.blue,.toast__color.green,.toast__color.pink,.toast__color.purple,.toast__color.red {
+    border: 0 solid red
+}
+
+.pop-up__footer {
+    background: 0 0
+}
+
+html.state-dance #toast {
+    bottom: 2.5rem;
+    left: 77%;
+    padding: 0 2%0 0;
+    min-height: 10%;
+    background: linear-gradient(90deg,transparent 0,rgba(0,0,0,.5) 100%);
+    color: #fff;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    opacity: 1;
+    transform: translateX(-1.33rem)!important;
+    transition: none!important
+}
+
+html.state-dance #toast .avatar-wrapper .avatar {
+    display: block!important
+}
+
+html.state-dance #toast .toast__image .avatar-wrapper {
+    width: 85%;
+    left: 2.8rem;
+    top: .2rem
+}
+
+html.state-dance span.toast__content {
+    text-align: center
+}
+
+html.state-dance .toast__color {
+    width: 30%;
+    height: 100%;
+    background: #5252fa;
+    transform: skewX(10deg);
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    left: 3rem
+}
+
+.pop-up {
+    width: 6.5rem;
+    height: 3.2rem;
+    box-shadow: 0 0 30px 0#3784f9;
+    border: 3px #3784f9 solid
+}
+
+h1.pop-up__title,p.pop-up__content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-shadow: none
+}
+
+h1.pop-up__title {
+    padding-right: 0!important;
+    padding-left: 0!important;
+    background-color: #3784f9;
+    height: .6rem;
+    font-size: .23rem;
+    color: #fff;
+    z-index: 5;
+    justify-content: center
+}
+
+p.pop-up__content {
+    height: 2rem;
+    width: 90%;
+    left: .3rem;
+    border-bottom: 2px #c4c4c4 solid;
+    position: absolute;
+    font-size: .18rem
+}
+
+.pop-up--error p.pop-up__content {
+    text-align: initial
+}
+
+.pop-up button.pop-up__btn {
+    color: #488ef9;
+    text-transform: uppercase;
+    font-size: 25px;
+    pointer-events: auto;
+    font-family: "OpenSans SemiBold";
+    margin-left: 0
+}
+
+button.pop-up__btn.pop-up__btn--cancel,button.pop-up__btn.pop-up__btn--validate {
+    position: absolute;
+    background: rgb(72 142 249/.3);
+    width: 2rem;
+    height: .3rem;
+    border-radius: .05rem;
+    font-size: .13rem
+}
+
+button.pop-up__btn.pop-up__btn--cancel:hover::before,button.pop-up__btn.pop-up__btn--validate:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: .05rem;
+    border: 2px #3784f9 solid;
+    z-index: 5
+}
+
+button.pop-up__btn.pop-up__btn--validate {
+    right: .7rem;
+    top: 2.1rem;
+    padding: 0
+}
+
+button.pop-up__btn.pop-up__btn--cancel {
+    left: .7rem;
+    top: 2.1rem;
+    padding: 0
+}
+
+.pop-up--error .pop-up {
+    box-shadow: 0 0 30px 0#ee3131;
+    border: 3px #ee3131 solid
+}
+
+.pop-up--error .pop-up__title {
+    background-color: #ee3131
+}
+
+.pop-up--error .pop-up button.pop-up__btn {
+    color: #ee3131
+}
+
+.pop-up--error button.pop-up__btn.pop-up__btn--cancel,.pop-up--error button.pop-up__btn.pop-up__btn--validate {
+    background: rgb(238 49 49/.3)
+}
+
+.pop-up--error button.pop-up__btn.pop-up__btn--cancel:hover::before,.pop-up--error button.pop-up__btn.pop-up__btn--validate:hover::before {
+    border: 2px #ee3131 solid
+}
+
+.grid-container .item-container .title-container {
+    font-family: "OpenSans SemiBold";
+    letter-spacing: -1px;
+    font-size: inherit;
+    line-height: inherit;
+    color: #5a5a5a;
+    float: left;
+    padding: .05rem 0 0 .04rem;
+    position: absolute;
+    left: .04rem;
+    top: 1%;
+    width: 1.28rem
+}
+
+.init-spinner--splash::before {
+    animation: wraperBeatEven 1s ease;
+}
+
+/* I think we should change the splash "splash_JDNLogo.png" and move it to jdnow-s5 server */
+.main:before {
+	content: '';
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20220404_0847/web/img/home/landing/splash_JDNLogo.png);
+}
+
+.landing-splash__macOS .landing-splash__icon__macOS {
+    background: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20220404_0847/web/img/home/landing/splash_JDNLogo.png);
+}
+
+/* Unused style // Used when connecting the test script */
+.demo-notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 20rem;
+    z-index: 99;
+    background: #fff;
+    border: 3px #ee3131 solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+.demo-popup {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    background: #ee3131;
+    border-radius: 100px;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.demo-notification img {
+    width: 10rem;
+    height: 10rem;
+    image-rendering: pixelated;
+}
+
+/* DEBUG The hud concept for development */
+.debug.state-dance #just-dance-now {
+	background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22/vlcsnap-2022-03-26-16h47m28s977.png?v=1648302464494) !important;
+	background-size: cover !important;
+}
+
+/* All animations. There are a lot of unused animations, I think it is worth removing */
+
+@keyframes FadeTrIn1 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes FadeTrOut2 {
+    0%,80% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes DotFdMv1 {
+    0% {
+        left: -4%;
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        left: -10%;
+        opacity: 0
+    }
+}
+
+@keyframes DotFdMv2 {
+    0% {
+        left: -70%;
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        left: -60%;
+        opacity: 0
+    }
+}
+
+@keyframes StarsBKG2 {
+    to {
+        background-position: -100em -70%,center
+    }
+
+    0% {
+        background-position: -70%,center
+    }
+}
+
+@keyframes StarsBKG3 {
+    to {
+        background-position: -100em -70%,center
+    }
+
+    0% {
+        background-position: -70%,center
+    }
+}
+
+@keyframes TransitionRectangle1 {
+    0% {
+        top: 60%;
+        opacity: 0
+    }
+
+    10% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 0
+    }
+
+    70%,to {
+        opacity: 0;
+        top: 28%;
+        left: 29%
+    }
+}
+
+@keyframes TransitionRectangle2 {
+    0% {
+        top: 29%;
+        opacity: 0
+    }
+
+    10% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 0
+    }
+
+    70%,to {
+        opacity: 0;
+        top: 55%;
+        left: 22%
+    }
+}
+
+@keyframes TransitionRectangle3 {
+    0% {
+        top: 55%;
+        opacity: 0
+    }
+
+    10% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 0
+    }
+
+    70%,to {
+        opacity: 0;
+        top: 28%;
+        left: 55%
+    }
+}
+
+@keyframes TransitionRectangle4 {
+    0% {
+        top: 55%;
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    70% {
+        opacity: 0
+    }
+
+    90%,to {
+        opacity: 0;
+        top: 28%;
+        left: 59%
+    }
+}
+
+@keyframes TransitionRectangle5 {
+    0% {
+        top: 29%;
+        opacity: 0
+    }
+
+    10% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 0
+    }
+
+    70%,to {
+        opacity: 0;
+        top: 58%;
+        left: 55%
+    }
+}
+
+@keyframes CoverInKey {
+    0% {
+        left: 80%;
+        opacity: 0
+    }
+
+    20%,95% {
+        opacity: 1
+    }
+
+    30% {
+        left: 100%
+    }
+
+    to {
+        left: 100%;
+        opacity: 0
+    }
+}
+
+@keyframes Move {
+    0%,15%,90% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes previewTabFadeIn {
+    0% {
+        transform: scaleY(.3)
+    }
+
+    to {
+        transform: scaleY(1)
+    }
+}
+
+@keyframes leaderBorder_scaleIn {
+    0% {
+        transform: rotate(20deg) scale(1);
+        opacity: 1
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        transform: rotate(20deg) scale(1.7);
+        opacity: 0
+    }
+}
+
+@keyframes vipBorderScale {
+    0%,50%,51%,to {
+        border: 2px #f0f solid;
+        outline: 2px #f0f solid
+    }
+
+    25% {
+        border: 2px #f0f solid;
+        outline: 6px #f0f solid
+    }
+
+    75% {
+        border: 6px #f0f solid;
+        outline: 2px #f0f solid
+    }
+}
+
+@keyframes landing_flashTranslate {
+    0% {
+        transform: rotate(27deg) translate(33rem,0)
+    }
+
+    15%,50.999% {
+        transform: rotate(27deg) translate(33rem,-77rem)
+    }
+
+    51% {
+        transform: rotate(27deg) translate(22rem,0)
+    }
+
+    70%,to {
+        transform: rotate(27deg) translate(22rem,-77rem)
+    }
+}
+
+@keyframes landing_flashTranslate1 {
+    0% {
+        transform: rotate(27deg) translate(10rem,0)
+    }
+
+    20%,50.999% {
+        transform: rotate(27deg) translate(10rem,-77rem)
+    }
+
+    51% {
+        transform: rotate(27deg) translate(42rem,0)
+    }
+
+    70%,to {
+        transform: rotate(27deg) translate(42rem,-77rem)
+    }
+}
+
+@keyframes tutorialBlockFade {
+    0% {
+        transform: translate(0,5.02rem)
+    }
+
+    to {
+        transform: translate(0,4.42rem)
+    }
+}
+
+@keyframes afdStarFadeIn {
+    0% {
+        transform: scale(2) rotate(10deg);
+        opacity: 0
+    }
+
+    90% {
+        transform: scale(.9) rotate(10deg);
+        opacity: 1
+    }
+
+    to {
+        transform: scale(1) rotate(10deg);
+        opacity: 1
+    }
+}
+
+@keyframes afdScoreBackFadeIn {
+    0%,49% {
+        transform: scale(1);
+        opacity: 0
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: .5
+    }
+
+    to {
+        transform: scale(2);
+        opacity: 0
+    }
+}
+
+@keyframes itemSelectedBorderFade {
+    0% {
+        transform: scale(1.03)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes trainerIconLeft1 {
+    0% {
+        margin-left: 20%;
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        margin-left: -48%;
+        opacity: 0
+    }
+}
+
+@keyframes luckBlockFadeOut {
+    0%,95% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes luckBlockSlide {
+    0% {
+        left: 11.4rem
+    }
+
+    30%,to {
+        left: 7.4rem
+    }
+}
+
+@keyframes luckTitleSlide {
+    to {
+        opacity: 0;
+        left: -.05rem
+    }
+
+    90% {
+        opacity: 1
+    }
+
+    80% {
+        left: -.05rem;
+        opacity: 1
+    }
+
+    0% {
+        left: 2.95rem
+    }
+}
+
+@keyframes nextLineIn {
+    0%,20% {
+        opacity: 0;
+        transform: translateY(1.3em) rotate(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(1.3em)
+    }
+}
+
+@keyframes logoBeat {
+    0% {
+        opacity: 1
+    }
+
+    50%,to {
+        opacity: 0
+    }
+}
+
+@keyframes logoLevitation {
+    0%,to {
+        transform: translate(-50%,-50%)
+    }
+
+    50% {
+        transform: translate(-50%,-40%)
+    }
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10%);
+        transform: translateY(-10%);
+        visibility: visible
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes racetrackSlideInLeft {
+    0%,50% {
+        opacity: 1;
+        -webkit-transform: translateX(-300%);
+        transform: translateX(-300%);
+        visibility: visible
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        filter: brightness(100%)
+    }
+}
+
+@keyframes bounceTrainingArrow {
+    0%,to {
+        opacity: 1;
+        transform: translate3d(5px,0,0)
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate3d(0,0,0)
+    }
+}
+
+@keyframes mainBgElementsScaleP1 {
+    0%,to {
+        transform: scale(1) translate(0,-40px)
+    }
+
+    50% {
+        transform: scale(1.1) translate(0,0)
+    }
+}
+
+@keyframes mainBgElementsScaleP2 {
+    0%,to {
+        transform: scale(1.1) translate(0,40px)
+    }
+
+    50% {
+        transform: scale(1) translate(0,0)
+    }
+}
+
+@keyframes mosaicBG {
+    0%,to {
+        background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+        background-size: 20%;
+        filter: blur(3px)
+    }
+
+    25% {
+        background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+        background-size: 20%;
+        filter: blur(3px)
+    }
+
+    75% {
+        background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+        background-size: 20%;
+        filter: blur(3px)
+    }
+}
+
+@keyframes mosaicBG4 {
+    0%,to {
+        background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+        background-size: 100%;
+        filter: blur(3px)
+    }
+
+    25% {
+        background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+        background-size: 100%;
+        filter: blur(3px)
+    }
+
+    75% {
+        background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+        background-size: 100%;
+        filter: blur(3px)
+    }
+}
+
+@keyframes mosaicBG5 {
+    0%,to {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+        background-size: 100%;
+        filter: blur(3px)
+    }
+
+    25% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+        background-size: 100%;
+        filter: blur(3px)
+    }
+
+    75% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+        background-size: 100%;
+        filter: blur(3px)
+    }
+}
+
+@keyframes titleSlide {
+    0% {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        opacity: 0
+    }
+
+    to {
+        visibility: hidden;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes buttonFadeIn {
+    0%,50%,to {
+        opacity: 1
+    }
+
+    25%,75% {
+        opacity: 0
+    }
+}
+
+@keyframes buttonFadeIn1 {
+    0%,70% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes buttonFadeIn2 {
+    0%,20% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes rewardUnlockBeat {
+    0% {
+        transform: scale(.9)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+}
+
+@keyframes redBorderScaled {
+    50% {
+        transform: scale(.9)
+    }
+
+    0%,to {
+        transform: scale(1)
+    }
+}
+
+@keyframes lock-shake {
+    0%,to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
+    }
+
+    10% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg)
+    }
+
+    20%,40%,60% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg)
+    }
+
+    30%,50% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    70% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes plfadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(50%,0,0);
+        transform: translate3d(50%,0,0)
+    }
+
+    30% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes whiteBlockFade {
+    0%,30% {
+        width: 90%;
+        opacity: 0;
+        left: 9.1%
+    }
+
+    to {
+        width: 70%;
+        opacity: 1;
+        left: 29.1%
+    }
+}
+
+@keyframes tochek {
+    0% {
+        content: ""
+    }
+
+    25% {
+        content: "."
+    }
+
+    50% {
+        content: ".."
+    }
+
+    75%,to {
+        content: "..."
+    }
+}
+
+@keyframes landingLogoTada {
+    0%,50% {
+        opacity: 0;
+        transform: scale(.5)
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1.2)
+    }
+
+    90% {
+        opacity: 1;
+        transform: scale(.9)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes bannerFadeIn {
+    0%,20% {
+        opacity: 0
+    }
+
+    80% {
+        opacity: 1
+    }
+}
+
+@keyframes songdetails-FadeIn {
+    0%,50%,75% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes heightFadeIn {
+    0% {
+        height: 10%;
+        opacity: 0
+    }
+
+    29% {
+        opacity: 1
+    }
+
+    30% {
+        height: 10%;
+        opacity: 1
+    }
+
+    to {
+        height: 80%
+    }
+}
+
+@keyframes coachImgBeat1 {
+    0%,to {
+        transform: translate(0,5px)
+    }
+
+    50% {
+        transform: translate(0,-5px)
+    }
+}
+
+@keyframes coachImgBeat2 {
+    0%,to {
+        transform: translate(0,-5px)
+    }
+
+    50% {
+        transform: translate(0,5px)
+    }
+}
+
+@keyframes bootCoachFade {
+    0% {
+        opacity: 0;
+        transform: translate(-50%,.2rem)
+    }
+
+    50%,to {
+        opacity: 1;
+        transform: translate(-50%,.05rem)
+    }
+}
+
+@keyframes coachImgBeat1Back {
+    0%,50%,to {
+        opacity: 0
+    }
+
+    1% {
+        opacity: 1
+    }
+}
+
+@keyframes coachImgBeat2Back {
+    0%,50%,to {
+        opacity: 0
+    }
+
+    51% {
+        opacity: 1
+    }
+}
+
+@keyframes waitingSpin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes animateShowCoach {
+    0% {
+        opacity: 0;
+        transform: translateX(-3em)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes MoveBeat2 {
+    0% {
+        left: -30%;
+        top: 31%
+    }
+
+    10% {
+        left: 60%;
+        top: 76%
+    }
+
+    20% {
+        left: 16%;
+        top: 50%
+    }
+
+    30% {
+        left: 40%;
+        top: 38%
+    }
+
+    50% {
+        left: 6%;
+        top: 34%
+    }
+}
+
+@keyframes coachSelectionDelay {
+    0%,85% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes tadaPlay {
+    0%,to {
+        transform: scale3d(1,1,1)
+    }
+
+    40%,60% {
+        transform: scale3d(1.1,1.1,1.1)
+    }
+}
+
+@keyframes tadaPlay1 {
+    0% {
+        transform: rotate3d(0,0,1,0deg)
+    }
+
+    30%,to {
+        transform: rotate3d(0,0,1,360deg)
+    }
+}
+
+@keyframes crownFadeShake {
+    0% {
+        transform: scale3d(1,1,1) rotate3d(0,0,1,-20deg);
+        opacity: 0
+    }
+
+    10%,20% {
+        transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-23deg);
+        opacity: 1
+    }
+
+    30%,50%,70%,90% {
+        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-17deg)
+    }
+
+    40%,60%,80% {
+        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-23deg)
+    }
+
+    to {
+        transform: scale3d(1,1,1) rotate3d(0,0,1,-20deg)
+    }
+}
+
+@keyframes ttsFadeIn {
+    0%,50% {
+        transform: translate(0,66px);
+        opacity: 0
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1
+    }
+}
+
+@keyframes NewFeedbackScaleGood {
+    0% {
+        filter: brightness(160%);
+        opacity: 0;
+        transform: scale(.5);
+        -webkit-filter: brightness(160%);
+        -webkit-transform: scale(.5)
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(1.5);
+        -webkit-filter: brightness(100%);
+        -webkit-transform: scale(1.5)
+    }
+}
+
+@keyframes NewFeedbackScaleGoodFL {
+    0% {
+        filter: brightness(160%);
+        opacity: 0;
+        transform: scale(.5);
+        -webkit-filter: brightness(160%);
+        -webkit-transform: scale(.5);
+        left: -.4rem
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(1.5);
+        -webkit-filter: brightness(100%);
+        -webkit-transform: scale(1.5);
+        left: -.6rem
+    }
+}
+
+@keyframes NewFeedbackScaleGoodFR {
+    0% {
+        filter: brightness(160%);
+        opacity: 0;
+        transform: scale(.5);
+        -webkit-filter: brightness(160%);
+        -webkit-transform: scale(.5);
+        left: -.4rem
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(1.5);
+        -webkit-filter: brightness(100%);
+        -webkit-transform: scale(1.5);
+        left: -.2rem
+    }
+}
+
+@keyframes NewFeedbackScaleP {
+    0% {
+        filter: brightness(160%);
+        opacity: 1;
+        transform: scale(.5) rotate(0deg)
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(2) rotate(15deg)
+    }
+}
+
+@keyframes NewFeedbackScaleP1 {
+    0% {
+        filter: brightness(200%);
+        opacity: 1;
+        transform: scale(.5) rotate(0deg)
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(1.8) rotate(0deg)
+    }
+}
+
+@keyframes NewFeedbackScaleP2 {
+    0% {
+        filter: brightness(200%);
+        opacity: 1;
+        transform: scale(.5) rotate(0deg)
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(2) rotate(0deg)
+    }
+}
+
+@keyframes NewFeedbackScalePA {
+    0% {
+        filter: brightness(160%);
+        opacity: 1;
+        transform: scale(.5)
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(2.3)
+    }
+}
+
+@keyframes NewFeedbackScaleParticleYeah {
+    0% {
+        opacity: 1;
+        top: -.8rem;
+        transform: scale(.5)
+    }
+
+    50% {
+        opacity: 1;
+        top: -.8rem
+    }
+
+    to {
+        top: -.3rem;
+        opacity: 0;
+        transform: scale(2)
+    }
+}
+
+@keyframes NewFeedbackScale02 {
+    0% {
+        filter: brightness(160%);
+        opacity: 1;
+        transform: scale(.5);
+        -webkit-filter: brightness(160%);
+        -webkit-transform: scale(.5)
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    to {
+        filter: brightness(100%);
+        opacity: 0;
+        transform: scale(1.5);
+        -webkit-filter: brightness(100%);
+        -webkit-transform: scale(1.5)
+    }
+}
+
+@keyframes INTransitionBG {
+    0% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+}
+
+@keyframes profileSquaresAnim {
+    0%,to {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png)
+    }
+
+    25% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png)
+    }
+
+    50% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_1.png)
+    }
+
+    75% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png)
+    }
+}
+
+@keyframes squaresSlideShow {
+    0%,to {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png)
+    }
+
+    25% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png)
+    }
+
+    50% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png)
+    }
+
+    75% {
+        background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_1.png)
+    }
+}
+
+@keyframes csBeatSelect {
+    0%,to {
+        -webkit-filter: brightness(100%)
+    }
+}
+
+@keyframes OUTTransitionBG {
+    40% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes OUTTransitionBG1 {
+    0%,50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes square2IN {
+    0% {
+        background-position: 3.29rem 0;
+        opacity: 1
+    }
+
+    10% {
+        background-position: 2.87rem 0;
+        opacity: 1
+    }
+
+    20% {
+        background-position: 2.46rem 0;
+        opacity: 1
+    }
+
+    30% {
+        background-position: 2.05rem 0;
+        opacity: 1
+    }
+
+    40% {
+        background-position: 1.64rem 0;
+        opacity: 1
+    }
+
+    50% {
+        background-position: 1.22rem 0;
+        opacity: 1
+    }
+
+    60% {
+        background-position: .82rem 0;
+        opacity: 1
+    }
+
+    70% {
+        background-position: .406rem 0;
+        opacity: 1
+    }
+
+    80%,90%,to {
+        background-position: 0 0;
+        opacity: 1
+    }
+}
+
+@keyframes square2OUT {
+    0% {
+        background-position: -55px 0;
+        opacity: 1
+    }
+
+    10% {
+        background-position: -110px 0;
+        opacity: 1
+    }
+
+    20% {
+        background-position: -164px 0;
+        opacity: 1
+    }
+
+    30% {
+        background-position: -218px 0;
+        opacity: 1
+    }
+
+    40% {
+        background-position: -273px 0;
+        opacity: 1
+    }
+
+    50% {
+        background-position: -330px 0;
+        opacity: 1
+    }
+
+    60% {
+        background-position: -382px 0;
+        opacity: 1
+    }
+
+    70%,80%,90%,to {
+        background-position: -437px 0;
+        opacity: 1
+    }
+}
+
+@keyframes wraperBeatStatic {
+    0% {
+        transform: scale(.97) rotate(0deg)
+    }
+
+    50%,to {
+        transform: scale(1) rotate(0deg)
+    }
+}
+
+@keyframes wraperBeatOdd {
+    0% {
+        transform: scale(.97)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes wraperBeatEven {
+    0% {
+        transform: scale(.95)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes wraperBeat {
+    0%,25%,51%,75% {
+        transform: scale(1) rotate(0deg)
+    }
+
+    2%,52% {
+        transform: scale(.97) rotate(0deg)
+    }
+
+    26% {
+        transform: scale(.97) rotate(3deg)
+    }
+
+    50%,to {
+        transform: scale(1)
+    }
+
+    76% {
+        transform: scale(.97) rotate(-3deg)
+    }
+}
+
+@keyframes feedlabel {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-5px,0) scale3d(1,1,1)
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale3d(1.2,1.2,1)
+    }
+
+    36% {
+        opacity: 1;
+        transform: scale3d(1,1,1)
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0,5px,0) scale3d(.98,.98,1)
+    }
+}
+
+@keyframes playerStarReceiving {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(10deg)
+    }
+}
+
+@keyframes player-star-beat {
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(10deg)
+    }
+
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(10deg);
+        filter: brightness(1.3)
+    }
+}
+
+@keyframes racetrackStarFade {
+    0% {
+        filter: brightness(1);
+        transform: scale(.9) rotate(85deg)
+    }
+
+    65% {
+        filter: brightness(1);
+        transform: scale(1.5) rotate(10deg)
+    }
+
+    80% {
+        filter: brightness(2);
+        transform: scale(1) rotate(10deg)
+    }
+
+    to {
+        filter: brightness(1);
+        transform: scale(1) rotate(10deg)
+    }
+}
+
+@keyframes racetrack-star-beat {
+    0% {
+        transform: scale3d(1.1,1.1,1) rotate(10deg)
+    }
+
+    to {
+        transform: scale3d(1,1,1) rotate(10deg)
+    }
+}
+
+@keyframes beatPicto {
+    0%,to {
+        opacity: 1;
+        transform: scale3d(1,1,1)
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale3d(1.13,.93,1)
+    }
+}
+
+@keyframes flashOnSongItem {
+    0% {
+        transform: translateX(-1rem) rotate(0) skew(40deg,0);
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        transform: translateX(1rem) rotate(0) skew(40deg,0);
+        opacity: 0
+    }
+}
+
+@keyframes afterDanceSongInfoSlide {
+    0%,50% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes afterDanceSongCoverSlide {
+    0%,60% {
+        transform: translateX(-100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes newHSfade {
+    0%,90% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade1 {
+    0%,40% {
+        transform: translateX(-39px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade2 {
+    0%,60% {
+        transform: translateX(-39px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade3 {
+    0%,80% {
+        transform: translateX(-39px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade4 {
+    0%,85% {
+        transform: translateX(-39px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade1color {
+    0%,60% {
+        transform: translateX(1rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade2color {
+    0%,70% {
+        transform: translateX(1rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade3color {
+    0%,80% {
+        transform: translateX(1rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade4color {
+    0%,90% {
+        transform: translateX(1rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade1name {
+    0%,65% {
+        transform: translateX(-.7rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade2name {
+    0%,75% {
+        transform: translateX(-.7rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade3name {
+    0%,85% {
+        transform: translateX(-.7rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes playerContentFade4name {
+    0%,95% {
+        transform: translateX(-.7rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes OpacityBeat {
+    0%,to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes albumcoachSlide {
+    0% {
+        transform: translateX(3rem);
+        opacity: 0
+    }
+
+    40% {
+        transform: translateX(4rem);
+        opacity: 1
+    }
+
+    85% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(4rem)
+    }
+}
+
+@keyframes PlayerslideInDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes positionIn {
+    0%,80% {
+        transform: scale(.5);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes afterdanceFlagFade {
+    0%,80% {
+        transform: translateX(-100%);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes crownBeat09 {
+    0% {
+        transform: scale(.92) rotate(-20deg)
+    }
+
+    20% {
+        transform: scale(1) rotate(-20deg)
+    }
+}
+
+@keyframes crownBeat39 {
+    0% {
+        transform: scale(.9);
+        filter: brightness(1.3)
+    }
+
+    50% {
+        transform: scale(1);
+        filter: brightness(1)
+    }
+}
+
+@keyframes crownBeatAF {
+    0%,to {
+        transform: scale(.9) rotate(10deg)
+    }
+
+    50% {
+        transform: scale(1) rotate(10deg)
+    }
+}
+
+@keyframes rewardAfterBounce {
+    0%,to {
+        transform: scale(.9)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+}
+
+@keyframes spriteBeat {
+    0% {
+        filter: brightness(1.5);
+        transform: scale(.98) rotate(-25deg)
+    }
+
+    to {
+        filter: brightness(1);
+        transform: scale(1) rotate(-25deg)
+    }
+}
+
+@keyframes actionBeat {
+    0% {
+        filter: brightness(1.2)
+    }
+
+    to {
+        filter: brightness(1)
+    }
+}
+
+@keyframes fadeInScore {
+    0%,50% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes titleShake1 {
+    0% {
+        transform: translate(1px,0) rotate(0deg);
+        filter: brightness(1.1)
+    }
+
+    10% {
+        transform: translate(0,-1px) rotate(0deg);
+        filter: brightness(1)
+    }
+
+    20% {
+        transform: translate(-2px,1px) rotate(0deg);
+        filter: brightness(1.3)
+    }
+
+    30%,90% {
+        transform: translate(1px,1px) rotate(0deg);
+        filter: brightness(1)
+    }
+
+    40% {
+        transform: translate(2px,0) rotate(0deg);
+        filter: brightness(.9)
+    }
+
+    50% {
+        transform: translate(0,1px) rotate(0deg);
+        filter: brightness(1)
+    }
+
+    60% {
+        transform: translate(-2px,0) rotate(0deg);
+        filter: brightness(1.9)
+    }
+
+    70% {
+        transform: translate(1px,0) rotate(0deg);
+        filter: brightness(1)
+    }
+
+    80% {
+        transform: translate(0,0) rotate(0deg);
+        filter: brightness(.6)
+    }
+
+    to {
+        transform: translate(0,-1px) rotate(0deg);
+        filter: brightness(1.2)
+    }
+}
+
+@keyframes afterdanceStar {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(15deg)
+    }
+}
+
+@keyframes starglow {
+    0% {
+        filter: brightness(1.3)
+    }
+
+    50% {
+        filter: brightness(1)
+    }
+}
+
+@keyframes starglow15 {
+    0% {
+        filter: brightness(1.1);
+        transform: scale(1.15) rotate(10deg)
+    }
+
+    25% {
+        filter: brightness(1);
+        transform: scale(1) rotate(10deg)
+    }
+}
+
+@keyframes starglow4 {
+    25% {
+        filter: brightness(1.1);
+        transform: scale(1.15) rotate(10deg)
+    }
+
+    0%,24%,50%,to {
+        filter: brightness(1);
+        transform: scale(1) rotate(10deg)
+    }
+}
+
+@keyframes starglow3 {
+    50% {
+        filter: brightness(1.1);
+        transform: scale(1.15) rotate(10deg)
+    }
+
+    0%,49%,75%,to {
+        filter: brightness(1);
+        transform: scale(1) rotate(10deg)
+    }
+}
+
+@keyframes starglow2 {
+    75% {
+        filter: brightness(1.1);
+        transform: scale(1.15) rotate(10deg)
+    }
+
+    0%,74%,to {
+        filter: brightness(1);
+        transform: scale(1) rotate(10deg)
+    }
+}
+
+@keyframes coinsCountBeat {
+    0% {
+        filter: brightness(1.5)
+    }
+
+    25%,to {
+        filter: brightness(1)
+    }
+}
+
+@keyframes MoveBeat {
+    0% {
+        left: -10%;
+        top: 31%
+    }
+
+    10% {
+        left: 10%;
+        top: 46%
+    }
+
+    20% {
+        left: 16%;
+        top: 20%
+    }
+
+    30% {
+        left: 40%;
+        top: 38%
+    }
+
+    50% {
+        left: 6%;
+        top: 34%
+    }
+
+    80% {
+        left: 56%;
+        top: 23%
+    }
+
+    to {
+        left: 31%;
+        top: 38%
+    }
+}
+
+@keyframes flashOnButton1 {
+    0%,70% {
+        transform: skew(30deg,-20deg) translateX(-.7rem)
+    }
+
+    to {
+        transform: skew(30deg,-20deg) translateX(1.3rem)
+    }
+}
+
+@keyframes flashOnButtonV2 {
+    0%,70% {
+        transform: skew(40deg,0) translateX(-.76rem)
+    }
+
+    to {
+        transform: skew(40deg,0) translateX(1.5rem)
+    }
+}
+
+@keyframes flashOnButtonV3 {
+    0%,70% {
+        transform: skew(40deg,0) translateX(-1.1rem)
+    }
+
+    to {
+        transform: skew(40deg,0) translateX(1.1rem)
+    }
+}
+
+@keyframes racetrackBGBeat {
+    0% {
+        filter: brightness(2)
+    }
+
+    to {
+        filter: brightness(1)
+    }
+}
+
+@keyframes landingWaitFade {
+    0%,80% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes landingLoadElementsFade {
+    0%,80% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes title-slideRight {
+    0%,50% {
+        transform: translateX(100%);
+        visibility: visible;
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes title-slideRightSe {
+    0%,70% {
+        transform: translateX(100%);
+        visibility: visible;
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes title-gradcolorMove {
+    0%,to {
+        background-position: 0 4%
+    }
+
+    50% {
+        background-position: 100% 97%
+    }
+}
+
+@keyframes animateMaintenance {
+    0% {
+        transform: translateX(-1rem);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes animateSpriteMap {
+    0% {
+        visibility: visible;
+        background-position: left top
+    }
+
+    to {
+        visibility: visible;
+        background-position: left bottom
+    }
+}
+
+@keyframes transitionINsprite {
+    0% {
+        visibility: visible;
+        background-position: center top
+    }
+
+    to {
+        visibility: visible;
+        background-position: center bottom
+    }
+}
+
+@keyframes transitionOUTsprite {
+    0% {
+        visibility: visible;
+        background-position: center bottom
+    }
+
+    to {
+        visibility: visible;
+        background-position: center top
+    }
+}
+
+@keyframes animateRLSpriteMap {
+    0% {
+        visibility: visible;
+        background-position: left top
+    }
+
+    to {
+        visibility: visible;
+        background-position: right top
+    }
+}
+
+@keyframes progressbaranimation {
+    0% {
+        background-position: 0 0;
+        background-size: cover
+    }
+
+    20% {
+        background-position: -700px 0;
+        background-size: cover
+    }
+
+    21% {
+        background-size: 0
+    }
+
+    to {
+        background-position: 0 0;
+        background-size: 0
+    }
+}
+
+@keyframes goldmoveAmbientV3 {
+    0% {
+        opacity: 0;
+        transform: rotate(90deg) scale(2)
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(90deg) scale(1.3)
+    }
+}
+
+@keyframes goldmoveAmbientV8 {
+    0%,to {
+        opacity: 0;
+        transform: scale(2)
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5)
+    }
+}
+
+@keyframes goldmoveAmbientRevertV3 {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(2)
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(10deg) scale(1.1)
+    }
+}
+
+@keyframes goldmoveAmbientRevertV8 {
+    0% {
+        transform: scale(1.3) rotate(0deg)
+    }
+
+    to {
+        transform: scale(1.3) rotate(-360deg)
+    }
+}
+
+@keyframes goldmoveAmbientRevertV9 {
+    0% {
+        opacity: 0;
+        background-size: 180%
+    }
+
+    to {
+        opacity: .6;
+        background-size: 100%
+    }
+}
+
+@keyframes goldmoveAmbientRevertV10 {
+    0% {
+        opacity: 0;
+        background-size: 180%
+    }
+
+    to {
+        opacity: 1;
+        background-size: 140%
+    }
+}
+
+@keyframes goldmoveAmbientEndingV3 {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1)
+    }
+
+    30%,to {
+        opacity: 0;
+        transform: rotate(0deg) scale(2)
+    }
+}
+
+@keyframes goldmoveAmbientRevertEndingV3 {
+    0% {
+        opacity: 1;
+        transform: rotate(90deg) scale(1)
+    }
+
+    40% {
+        opacity: 0;
+        transform: rotate(78deg) scale(2.1)
+    }
+
+    30%,to {
+        transform: rotate(80deg) scale(2)
+    }
+}
+
+@keyframes goldmoveBorderEndingV3 {
+    0% {
+        opacity: .5
+    }
+
+    30%,to {
+        opacity: 0
+    }
+}
+
+@keyframes goldmoveVisible {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        transform: scale(1.75) rotate(-50deg);
+        opacity: 0
+    }
+}
+
+@keyframes modalActivate {
+    0% {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes afdPlayerBottomBorderFadeIn_1 {
+    0%,60% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

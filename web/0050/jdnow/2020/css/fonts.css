@@ -1,0 +1,51 @@
+/********** FONT IMPORT **********/
+
+/*** used in a modified version of the game ***/
+@font-face {
+  font-family: "Just Dance Helvetica";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//dl.dropbox.com/s/f859drrqu3xojcj/HelveticaNeueLTW1G-BdCn.woff?dl=0");
+}
+
+@font-face {
+  font-family: "Just Dance Helvetica Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//dl.dropbox.com/s/m64a6neaxoz1psl/HelveticaNeueLTW1G-Md.woff?dl=0");
+}
+
+/*** used in the clean version of the game ***/
+@font-face {
+  font-family: "Just Dance";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//jdnowweb-s.cdn.ubi.com/demo/dev/20200710_0728/web/fonts/Just_Dance_Bold.woff);
+}
+@font-face {
+  font-family: "Just Dance Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//jdnowweb-s.cdn.ubi.com/demo/dev/20200710_0728/web/fonts/JD_Regular.woff");
+}
+
+/*** used in the updated version of the game ***/
+@font-face {
+  font-family: "OpenSans Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("//jdnowweb-s.cdn.ubi.com/demo/dev/20200710_0728/web/fonts/OpenSans-Bold.woff);
+}
+
+@font-face {
+  font-family: "OpenSans SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//jdnowweb-s.cdn.ubi.com/demo/dev/20200710_0728/web/fonts/OpenSans-SemiBold.woff);
+}
+@font-face {
+  font-family: "OpenSans Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//jdnowweb-s.cdn.ubi.com/demo/dev/20200710_0728/web/fonts/OpenSans-Regular.woff");
+}

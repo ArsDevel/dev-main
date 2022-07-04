@@ -1,0 +1,3067 @@
+/*
+*  JUST DANCE NOW
+*  Version: 0.35
+*  Date stamp: 3 August 
+*  Realise date: August
+*/
+@font-face {
+  font-weight: normal;
+    font-style: normal;
+    font-family: "OpenSans Regular";
+    src: url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/fonts/OpenSans-Regular.woff") format("woff"), url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: normal;
+    font-style: normal;
+    font-family: "OpenSans Bold";
+    src: url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/fonts/OpenSans-Bold.woff") format("woff"), url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/fonts/OpenSans-BКold.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: normal;
+    font-style: normal;
+    font-family: "OpenSans SemiBold";
+    src: url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/fonts/OpenSans-SemiBold.woff") format("woff"), url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+/* [Location Names] */
+.state-songselection 
+.state-coachselection 
+.state-dance 
+.state-tutorial 
+.state-afterdance {
+  #root;
+}
+
+
+/* Home screen */
+/* Description: The basic version of the screen remains. Only small details change */
+/* maintenance clearfix */
+/* privaticy news */
+.site-message.show {
+  transform: translateY(-85%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.site-message {
+  width: 31%;
+  color: black;
+  padding: 8px 5px 10px;
+  background: white;
+  transform: translateY(0%);
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 34%;
+  border-radius: 15px;
+  border: 2px #6fa7fe solid;
+}
+
+.cookie-close .cookie-close-btn {
+  background: none;
+  border-radius: 15px;
+  border: 0;
+  cursor: pointer;
+  padding: 3px 6px 4px;
+  background: #346cd2;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: OpenSans Bold;
+}
+
+/* landing arrow */
+@keyframes bounceLandingArrow {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 5px, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+@keyframes bounceTrainingArrow {
+  0% {
+    opacity: 0;
+    transform: translate3d(5px, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+@keyframes bounceTrainingArrow1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(3px, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+/* general play [button] */
+.landing-circle {
+  border-radius: 50%;
+  background-color: #83a2fd;
+  width: 10rem;
+  height: 10rem;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: -.5rem;
+}
+
+.landing-button__play:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.landing-button__txt {
+  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #fff, 0 -10px 20px #ff0225, 0 -18px 40px #007eff;
+}
+
+.landing-text__subtitle {
+  font-family: "OpenSans SemiBold";
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Back to Top [btn] */
+.scrollUp-fixed {
+  display: none;
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid #FD9802;
+  opacity: 1;
+  transition: all 0.2s;
+  position: fixed;
+  z-index: 3;
+  bottom: 10%;
+  right: 2%;
+}
+
+.scrollUp-fixed .scrollUp-text {
+  display: none;
+  width: 400%;
+  font-family: OpenSans SemiBold;
+  text-align: center;
+  line-height: 1.15;
+  position: relative;
+  bottom: -.2rem;
+  right: 1.5rem;
+  transition: all .3s;
+  color: orange;
+}
+
+/* Devices title */
+.line--device__header .content__small {
+  padding: 0.6rem 4rem;
+  background: white;
+  color: #585df5;
+  border-radius: 10px;
+}
+
+/* How-It-Works [title] */
+.content__small {
+  display: inline-block;
+  padding: 0 4rem;
+  min-width: 70%;
+  max-width: 100%;
+  text-align: center;
+  color: #8861f0;
+}
+
+/* load */
+.init-spinner--splash::before {
+  content: '';
+  height: 100%;
+  width: 44vw;
+  position: absolute;
+  top: 0vh;
+  left: 27vw;
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/img/home/landing/splash_JDNLogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* trash */
+.landing-circle::before {
+  content: '';
+}
+
+/* bottom items */
+.img__esrb {
+  background-image: url(https://www.esrb.org/wp-content/themes/esrb/assets/images/seals/privacy-certified-global-seal.svg);
+}
+
+/* HOME SCREEN PreLoad */
+.landing-circle::before {
+  content: '';
+  height: 100%;
+  width: 44vw;
+  position: absolute;
+  top: 0vh;
+  left: 110vw;
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/img/home/landing/splash_JDNLogo.png), 
+                    url(https://jdnowweb-assets.cdn.ubi.com//playlist-images/demo/5a2a6437befdf6e64767cfff_720_stackImages_1595241092.png), 
+                    url(https://jdnowweb-assets.cdn.ubi.com//playlist-images/demo/5a2a6437befdf6e64767d004_720_stackImages_1595241160.png), 
+                    url(https://jdnowweb-assets.cdn.ubi.com//playlist-images/demo/5a2a6437befdf6e64767d008_720_stackImages_1595241358.png), 
+                    url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/img/icons/playlist-generic-coach.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Playlist & Song screen */
+/* Description: it is necessary to make the menu better and smoother */
+/* The General */
+.coverflow--container, #just-dance-now .tutorial::after {
+  box-shadow: none;
+  border-top: 2px #d0d0d0 solid;
+  border-left: 2px #d0d0d0 solid;
+  border-right: 2px #d0d0d0 solid;
+  padding: 0.2rem 0.15rem 0rem 0.25rem;
+}
+
+/* settings */
+.dialog #admin-menu, #admin-menu {
+  transition: none;
+  transition: none;
+}
+
+#admin-menu .content__title::after {
+  content: ':';
+}
+
+#admin-menu .go-back::before {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fadmin_btn_back.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #e32185;
+}
+
+#admin-menu .player--controller::before {
+  content: '';
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fico_profile_controller.svg);
+}
+
+button.player-btn.player-btn--kick::before {
+  content: '';
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FplayerKick.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 0.22rem;
+  height: 0.22rem;
+  top: 11%;
+  left: 92%;
+  opacity: 1;
+  z-index: 3;
+}
+
+#just-dance-now .danceroom__label::after {
+  content: ':';
+}
+
+#admin-menu .video-quality__dropdown::after {
+  content: '';
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  transition: all .3s;
+  transform: rotate(-90deg);
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdropdown.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 33%;
+  left: 3%;
+  width: 13%;
+  height: 42%;
+}
+
+#admin-menu .video-quality__dropdown:hover::after {
+  content: '';
+  transform: rotate(0deg);
+  transition: all .3s;
+}
+
+#admin-menu .languagePicker__value::after {
+  content: '';
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  transition: all .3s;
+  transform: rotate(-90deg);
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdropdown.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 33%;
+  left: 3%;
+  width: 17%;
+  height: 42%;
+}
+
+#admin-menu .languagePicker__value:hover::after {
+  content: '';
+  transform: rotate(0deg);
+  transition: all .3s;
+}
+
+#admin-menu .languagePicker__content.open .language__dropdown {
+  visibility: visible;
+  border: 2px solid #3784f9;
+  border-radius: 11px;
+  max-height: 1.22rem;
+}
+
+/* toast */
+.toast__image {
+  width: 35%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.toast__color::before {
+  content: '';
+  width: 100%;
+  height: 22%;
+  background: linear-gradient(-90deg, rgba(93, 27, 239, 1) 0%, rgba(72, 139, 252, 1) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#toast {
+  bottom: 72%;
+  left: 83%;
+  padding: 3% 2% 1% 10%;
+  width: 30%;
+  min-height: 24%;
+  background-color: #fff;
+  box-shadow: 0px 0px 40px 5px rgb(55 132 249);
+  color: #545454;
+  text-align: left;
+  font-family: OpenSans SemiBold;
+  font-size: 15%;
+  letter-spacing: -1px;
+  border-radius: 12px;
+}
+
+.toast__image .avatar-wrapper {
+  animation: wraperBeat 2s ease;
+  animation-iteration-count: infinite;
+}
+
+/* toast colors */
+.toast__color.blue {
+  border: 0.02rem solid #3784f9;
+}
+
+.toast__color.blue::before {
+  background-color: linear-gradient(45deg, rgba(93, 27, 239, 1) 0%, rgba(72, 139, 252, 1) 100%);
+}
+
+.toast__color.red {
+  border: 0.02rem solid #ec2443;
+}
+
+.toast__color.red::before {
+  background-color: linear-gradient(45deg, rgba(237, 33, 25, 1) 0%, rgba(255, 126, 22, 1) 100%);
+}
+
+.toast__color.green {
+  border: 0.02rem solid #7de400;
+}
+
+.toast__color.green::before {
+  background-color: linear-gradient(45deg, rgba(103, 190, 43, 1) 0%, rgba(101, 255, 11, 1) 100%);
+}
+
+.toast__color.purple {
+  border: 0.02rem solid #8802c9;
+}
+
+.toast__color.purple::before {
+  background-color: linear-gradient(45deg, rgba(131, 5, 179, 1) 0%, rgba(122, 57, 242, 1) 100%);
+}
+
+.toast__color.aqua {
+  border: 0.02rem solid #03ded6;
+}
+
+.toast__color.aqua::before {
+  background-color: linear-gradient(45deg, rgba(66, 184, 180, 1) 00%, rgba(80, 250, 181, 1) 100%);
+}
+
+.toast__color.pink {
+  border: 0.02rem solid #d820c9;
+}
+
+.toast__color.pink::before {
+  background-color: linear-gradient(45deg, rgba(204, 23, 224, 1) 0%, rgba(253, 3, 164, 1) 100%);
+}
+
+/* grid-img [coaches] */
+.section-grid-trainer .grid-img, .section-grid-trainer .grid-img--songlist {
+  animation: coachSlide 0.5s ease;
+}
+
+@keyframes coachSlide {
+  0% {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* trainer-grid [title] */
+.trainer-txt {
+  animation: titleSlide 0.5s ease;
+}
+
+@keyframes titleSlide {
+  0% {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    -webkit-transform: translateY(00%);
+    transform: translateY(00%);
+    opacity: 1;
+  }
+}
+
+/* ul tabs */
+#section-tabs::after {
+  content: '';
+  background: white;
+  height: 33%;
+  width: 0.7rem;
+  float: left;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  z-index: -2;
+  bottom: 1.485rem;
+  left: -15%;
+  border: 2px lightgray solid;
+}
+
+ul.tabs {
+  padding-top: 0.2rem;
+  color: #656464;
+  font-size: 0.13rem;
+}
+
+ul.tabs li.selected .tabs--text {
+  transition: all .3s;
+}
+
+ul.tabs li .tabs--text {
+  font-size: 85%;
+  transition: all .3s;
+}
+
+ul.tabs li, ul.tabs li .tabs--icon, .tabs--connect {
+  transition: all .1s;
+}
+
+ul.tabs li {
+  padding: 0.11245rem 0;
+  transform: scale(.8);
+  left: -2.5%;
+  transition: all .3s;
+}
+
+ul.tabs li.selected::before {
+  box-shadow: none;
+  transform: scale(1);
+  width: 135%;
+  border-radius: 0 10px 10px 0;
+  background: white;
+  border: 2px #b3b3b3 solid;
+  left: -27%;
+  animation: ulTabsSlide 0.3s ease;
+  transition: all .3s;
+}
+
+@keyframes ulTabsSlide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ulTabsIn {
+  0% {
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ul tab help */
+.tabs--connect {
+  background-image: url(https://i.imgur.com/q1uHNLS.png);
+  background-color: white;
+  width: 0.268rem;
+  height: 0.27rem;
+  border: 2px #868585 solid;
+  border-radius: 50px;
+}
+
+.tabs--connect:hover {
+  background-image: url(https://i.imgur.com/Qb1bkXd.png);
+  background-color: white;
+  width: 0.268rem;
+  height: 0.27rem;
+  border: 2px #ff1c87 solid;
+  border-radius: 50px;
+}
+
+/* playlist */
+.playlist-grid .playlist--img {
+  animation: fadeIn 0.3s ease;
+}
+
+.playlist-grid .playlist--title {
+  animation: coachSlide 0.3s ease;
+}
+
+.playlist-grid .playlist--description {
+  animation: titleSlide 0.5s ease;
+}
+
+.playlist-img-container .playlist--banner__selected {
+  animation: fadeIn 0.3s ease;
+}
+
+.playlist-img-container .playlist-title-details .playlist-action__button {
+  animation: selectBTN 0.7s ease;
+}
+
+.playlist-img-container .playlist-title-details .playlist--description {
+  animation: titleSlide 0.5s ease;
+}
+
+.playlist-grid .playlist {
+  color: #464545;
+  width: 95%;
+  height: 1.6rem;
+  margin: 0 0 0.18rem 0.1rem;
+  cursor: pointer;
+  font-family: "OpenSans Regular";
+  word-break: break-word;
+  border-radius: 14px;
+  transition: all .1s;
+}
+
+.playlist-grid .playlist:hover .playlist--img,.playlist-grid .playlist.playlist-selected .playlist--img {
+  transform: scale(0.98);
+  padding: 0%;
+  transition: all .1s;
+}
+
+/* back button */
+.song-grid--details .song-grid--close {
+  background-color: #f61c96;
+}
+
+.song-grid--details .song-grid--close::after {
+  content: 'Назад';
+  width: 2rem;
+  font-family: OpenSans SemiBold;
+  color: darkgray;
+  font-size: 70%;
+  position: absolute;
+  top: 2em;
+  left: -0.45em;
+}
+
+.song-grid--details .song-grid--close:hover {
+  transform: scale(1);
+}
+
+/* songs */
+
+/* play button */
+.song-action__button {
+  border-radius: 26px;
+  color: #fff;
+  background-image: linear-gradient(to right, #ffd95b, #f85a98);
+  padding: 0.02rem 0.4rem;
+  font-size: 0.22rem;
+  font-family: "OpenSans SemiBold" !important;
+  top: 3px;
+}
+
+/* the general */
+.song-preview {
+  top: 29.1%;
+}
+
+/* song cover online */
+.grid-container .item-container .song__cover {
+  height: 95%;
+  border-radius: 15px;
+}
+
+/* border */
+.grid-container .item-container .item.item-selected .song__cover {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #f61d96;
+  border-image: initial;
+}
+
+.grid-container .item-container .item:hover .song__cover, 
+.grid-container .item-container .item.item-selected .song__cover {
+  height: 94.71%;
+  width: 100%;
+  padding: 3%;
+}
+
+/* song cover generic */
+/* cover 1024 */
+.song-cover {
+  background-size: cover;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #b7b7b7;
+}
+
+.song-preview {
+  width: 3.93rem;
+}
+
+/* vp9 video preview */
+.video-preview--visible {
+  width: 3.93rem;
+  visibility: visible;
+  opacity: 1;
+  transition: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #b7b7b700;
+}
+
+/* song info */
+#preview .song-details {
+  padding: 0.04rem 0.1rem 0.0rem;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0px 0px 42px -5px rgba(255, 157, 0, 0.5);
+}
+
+.song-action--select {
+  animation: selectBTN 0.5s ease;
+}
+
+@keyframes selectBTN {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#preview .song-details {
+  animation: fadeIn 0.5s ease;
+}
+
+/* hi-score */
+.score__number {
+  font-family: OpenSans Bold;
+  font-size: 30px;
+  color: #ff8c00;
+  top: 0.4rem;
+}
+
+.score__owner span {
+  font-family: OpenSans SemiBold;
+  font-size: 25px;
+  padding-left: 0rem;
+}
+
+.score__owner {
+  overflow: inherit;
+  top: -0rem;
+}
+
+.score__stars {
+  width: .85rem;
+  text-align: center;
+  line-height: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0.402rem;
+  left: 95%;
+  opacity: 1;
+}
+
+.score__stars .star-1 {
+  animation: starglow 1s ease infinite;
+  transform: rotateZ(15deg);
+}
+
+.score__stars .star-2 {
+  animation: starglow 1s ease infinite;
+  animation-delay: 0.5s;
+  transform: rotateZ(15deg);
+}
+
+.score__stars .star-3 {
+  animation: starglow 1s ease infinite;
+  transform: rotateZ(15deg);
+}
+
+.score__stars .star-4 {
+  animation: starglow 1s ease infinite;
+  animation-delay: 0.5s;
+  transform: rotateZ(15deg);
+}
+
+.score__stars .star-5 {
+  animation: starglow 1s ease infinite;
+  transform: rotateZ(15deg);
+}
+
+span.highscore-loc {
+  top: 3.2rem;
+  font-size: 87%;
+}
+
+/* song reward */
+.song__reward {
+  top: 0.02rem;
+}
+
+.reward__wrapper .reward__img {
+  animation: wraperBeat 2s ease;
+  animation-iteration-count: infinite;
+}
+
+#preview .song-details.hidden, .reward__wrapper.hidden {
+  opacity: 1;
+  visibility: visible;
+}
+
+.reward__wrapper .reward__img {
+  opacity: 1;
+}
+
+.reward__wrapper .reward__content::before {
+  left: 26%;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Ficon_lock_1.svg);
+  background-size: cover;
+  animation: lock-shake 3s;
+  animation-iteration-count: infinite;
+}
+
+.reward__unlocked .reward__content::before {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fcheck.svg);
+  background-size: cover;
+}
+
+@keyframes lock-shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}
+
+/* PHONE CONNECT */
+.connect-phone-info {
+  font-size: 25%;
+  left: 8%;
+  top: 2%;
+  animation: none;
+  opacity: 0.5;
+  transition: all .2s;
+}
+
+.connect-phone-info:hover {
+  opacity: 0.9;
+  transition: all .2s;
+}
+
+.connect-phone-info--clickable .connect-phone-info__text::before {
+  content: "?";
+  display: none;
+}
+
+/* Sprites */
+/* star */
+.sprite--stars svg {
+  transform: scale(1.2, -1.2);
+  top: 12%;
+  left: 12%;
+}
+
+/* tape */
+.sprite--tape svg {
+  transform: scale(-1.4, 1.4);
+  top: 12%;
+  left: 12%;
+}
+
+/* MODAL */
+.modal__link::before {
+  content: '';
+  display: list-item;
+  background-color: black;
+  width: 0%;
+  position: absolute;
+  z-index: -1;
+  top: 16px;
+  font-size: 0.2rem;
+  left: 5%;
+}
+
+.modal__close {
+  transform: scale(1, 0.9);
+}
+
+/* BG */
+.modal__container::before {
+  width: 90%;
+  background-image: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.modal::before {
+  content: '';
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/img/background/second-screen-bg.jpg);
+  background-size: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.concept__title {
+  font-size: 100%;
+  content: 'Helo';
+  color: unset;
+  padding-top: 13%;
+  left: -11%;
+  width: 145%;
+  text-align: center;
+  font-family: "OpenSans SemiBold";
+  letter-spacing: -1px;
+}
+
+.concept__title::after {
+  content: '. Для этого необходимо выполнить три простых действия...';
+}
+
+.steps__number {
+  color: rgb(91 94 245);
+  width: 0.6rem;
+  height: 0.6rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 0.52rem;
+  position: absolute;
+  top: 5%;
+  font-size: 0.3rem !important;
+  font-family: "OpenSans SemiBold" !important;
+  background: rgb(255, 255, 255);
+  border-width: 0.028rem;
+  border-style: solid;
+  border-color: rgb(92 93 245);
+  border-image: initial;
+  border-radius: 30%;
+}
+
+.steps__connect {
+  display: inline-block;
+  width: 107%;
+  padding-left: 12%;
+  padding-top: 1%;
+  line-height: 0.25rem;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.concept__steps {
+  margin-bottom: 12%;
+}
+
+.concept__steps--2 {
+  margin-bottom: 12%;
+}
+
+.concept__steps--3 {
+  margin-bottom: 12%;
+}
+
+/* steps */
+.steps__image {
+  width: 20%;
+  background-size: contain;
+  position: absolute;
+  top: -2%;
+  right: 103%;
+  background-repeat: no-repeat;
+}
+
+.steps__image.steps__image--2 {
+  display: none;
+}
+
+.steps__image.steps__image--3 {
+  background-image: url(https://i.imgur.com/FxTSLW5.png);
+  width: 1.6rem;
+  height: 1.6rem;
+  right: 102%;
+  margin-top: -17%;
+}
+
+/* ['players'] */
+.state-songselection #players, .state-coachselection #players, .state-tutorial #players, .state-afterdance #players {
+  width: 80%;
+  height: 0.91rem;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 22%;
+}
+
+/* player connect title */
+#players.finding-dancers::after,#players.removing-dancers::after {
+  animation: plfadeInRight 2s ease;
+}
+
+@keyframes plfadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+  }
+
+  30% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+#players.finding-dancers::after {
+  content: 'Подключение соперников...';
+}
+
+#players.removing-dancers::after {
+  content: 'Удаление соперников...';
+}
+
+.dancercard .player-name em {
+  height: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  padding-left: 0%;
+}
+
+.dancercard .player-name {
+  width: 90%;
+  height: 0.18rem;
+  text-align: center;
+  text-shadow: -1px 1px 0 #7A7A7A;
+  font-size: 0.15rem;
+  font-family: "OpenSans SemiBold";
+  letter-spacing: -1px;
+  position: absolute;
+  left: 1%;
+  z-index: 2;
+  bottom: -28%;
+}
+
+.state-dance .dancercard .player-name em {
+  text-shadow: -1px 1px 0 #7A7A7A;
+}
+
+/* COACH SELECTION SCREEN */
+/* MAP BG */
+.coach-selection__bgImg {
+  width: 100%;
+  height: 87%;
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  border-radius: 10px 10px 0 0;
+}
+
+.coach-selection__bgImg img {
+  width: 100%;
+  height: 110%;
+}
+
+/* select title */
+.coach-selection__title {
+  font-family: "OpenSans SemiBold";
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+}
+
+/* song details */
+.coach-selection__details {
+  background: white;
+  background-image: none;
+  color: #fff;
+  animation: title-slideLeft 1s ease;
+}
+
+@keyframes title-slideLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.coach-selection__details .coach-selection__details-song {
+  font-size: 0.17rem;
+  padding: 0 0 0.04rem 0.025rem;
+  color: #525252;
+  font-family: OpenSans SemiBold;
+}
+
+.coach-selection__details .coach-selection__details-artist {
+  font-size: 0.135rem;
+  height: 0.15rem;
+  color: gray;
+}
+
+/* COACH LIST */
+.coach::before {
+  display: none;
+}
+
+.coach__img {
+  width: auto;
+  height: 119%;
+  min-height: 1rem;
+  position: absolute;
+  top: -31%;
+  left: -.2rem;
+}
+
+.coach-selection__list {
+  width: 100%;
+  height: 66%;
+  font-size: 50%;
+  text-align: center;
+  position: absolute;
+  top: 34%;
+  left: -2%;
+}
+
+.coach__player-list {
+  display: block;
+  position: relative;
+  padding: 0.05rem 0.1rem;
+  margin-bottom: 0.03rem;
+  background: #af51f8;
+  opacity: 1;
+  border-radius: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -1px;
+}
+
+.coach__names-list {
+  bottom: 0.1rem;
+}
+
+/* Buttons */
+.coach-selection__button {
+  border-radius: 26px;
+  color: #fff;
+  background-image: linear-gradient(to right, #ffd95b, #f85a98);
+  box-shadow: 0px 0px 27px -2px rgba(251, 184, 94, 1);
+  padding: 0.04rem 0.45rem;
+  font-size: 0.22rem;
+  font-family: "OpenSans SemiBold" !important;
+  overflow: hidden;
+  position: absolute;
+  bottom: .1rem;
+  right: 4.15rem;
+  z-index: 5;
+}
+
+.coach-selection__back {
+  width: 0.266rem;
+  height: 0.265rem;
+  cursor: pointer;
+  border-radius: 20%;
+  transition: all 0.15s;
+  background-color: #fa788a;
+  background-repeat: no-repeat;
+  background-position: -1px 0px;
+  background-size: cover;
+  position: absolute;
+  top: 90.7%;
+  right: 9.6rem;
+  z-index: 5;
+}
+
+.coach-selection__back:hover {
+  transform: scale(1);
+}
+
+.coach-selection__back::after {
+  content: 'Вернуться в фонотеку';
+  width: 2rem;
+  font-family: OpenSans SemiBold;
+  color: darkgray;
+  font-size: 14%;
+  position: absolute;
+  top: 0.5em;
+  left: 2em;
+}
+
+.coach-selection::before {
+  content: '';
+  width: 0.35rem;
+  height: 0.35rem;
+  opacity: 1;
+  background: none;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F91.svg) no-repeat center / cover;
+  position: absolute;
+  filter: none;
+  z-index: 0;
+  top: 4.0999rem;
+  left: 5.02rem;
+  animation: .8s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes waitingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/************* AlbumCoach Slide Screen *************/
+/* Last updated july 29 */
+.song-cover::before {
+  content: "";
+  position: fixed;
+  display: block;
+  top: -50%;
+  height: 200%;
+  left: 0%;
+  width: 200%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(0.6);
+  left: -5%;
+  z-index: 999999999999999999999999 !important;
+  opacity: 0;
+}
+
+.state-coachselection .song-cover::before {
+  left: 20%;
+  transform: scale(0.32);
+  top: 50%;
+}
+
+.state-coachselection .song-cover::before {
+  animation: StateAlbumFade 2.6s ease !important;
+  opacity: 0;
+  background-size: cover;
+}
+
+.state-coachselection .song-action__button, .state-coachselection .song-details__empty, .coach-selection__list, .state-coachselection #players.animate, .state-coachselection #preview .song-details, .coach-selection__title, .state-coachselection .song-cover.song-cover--hi-res::after, .state-coachselection .song-cover.song-cover--low-res, .coach-selection__button, .coach-selection__back {
+  animation: coachSelectionDelay 2.6s !important;
+}
+
+/**** KeyFrames ***/
+@keyframes StateAlbumFade {
+  0% {
+    opacity: 0;
+    top: -50%;
+    left: -0.9em;
+  }
+
+  40% {
+    left: 0.5em;
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+    left: 0.5em;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    top: -50%;
+    left: 0.5em;
+  }
+}
+
+@keyframes coachSelectionDelay {
+  0% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Players */
+/* Account */
+/* Flag */
+.dancercard .player-flag {
+  width: 0.22rem;
+  height: 0.19rem;
+}
+
+/* exp */
+.dancercard .player-exp {
+  color: #ffffff;
+  height: 0.2rem;
+  border: 1px wheat;
+  width: 0.2rem;
+  display: inline-block;
+  position: absolute;
+  bottom: 116%;
+  right: 81%;
+}
+
+.dancercard .player-exp.player-exp-tablet {
+  background-image: none;
+  background-color: green;
+  border-radius: 50px;
+  border: 2px solid #fff;
+}
+
+.dancercard .player-exp span {
+  line-height: 0.17rem;
+  letter-spacing: -1px;
+  font-size: 43%;
+}
+
+/* Master DJ */
+/*
+.blue .dancercard .player-master .player-master--icon {
+    background-image: url(https://i.imgur.com/xAKCYM4.png);
+}
+
+.red .dancercard .player-master .player-master--icon {
+    background-image: url(https://i.imgur.com/Dx4qKFz.png);
+}
+
+.green .dancercard .player-master .player-master--icon {
+    background-image: url(https://i.imgur.com/BAZDKTq.png);
+}
+
+.aqua .dancercard .player-master .player-master--icon {
+    background-image: url(https://i.imgur.com/HG5EXM3.png);
+}
+
+.pink .dancercard .player-master .player-master--icon {
+    background-image: url(https://i.imgur.com/qgUzMhM.png);
+}
+
+.purple .dancercard .player-master .player-master--icon {
+    background-image: url(https://i.imgur.com/ByhE0Je.png);
+}
+*/
+.purple .dancercard .player-master .player-master--icon, .pink .dancercard .player-master .player-master--icon, .aqua .dancercard .player-master .player-master--icon, .green .dancercard .player-master .player-master--icon, .red .dancercard .player-master .player-master--icon, .blue .dancercard .player-master .player-master--icon {
+  background-image: url(https://i.imgur.com/zs9CRBh.png);
+}
+
+.dancercard .player-master .player-master--icon {
+  width: 0.35rem;
+  height: 0.35rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.dancercard .player-master {
+  display: none;
+  height: 0.42rem;
+  position: absolute;
+  z-index: 1;
+  top: 0.29rem;
+  left: 1.02rem;
+}
+
+.state-dance .dancercard .player-master {
+  opacity: 0;
+}
+
+/* color */
+.dancercard .player-color {
+  overflow: hidden;
+  width: 80%;
+  height: 20%;
+  border-radius: 30px;
+  position: absolute;
+  top: 113%;
+  left: 6%;
+}
+
+/* coins */
+#players .player .controller-coins {
+  width: 100%;
+  position: absolute;
+  bottom: -1%;
+  left: -7%;
+}
+
+#players .player .controller-coins span {
+  font-size: 0.15rem;
+  font-family: OpenSans SemiBold;
+  display: inline-block;
+  position: relative;
+  padding-right: 0.02rem;
+  text-shadow: 0 0 0.005rem #000, 0 0.005rem 0.005rem rgba(0,0,0,0.4);
+}
+
+/* crown */
+#players .crown, #players .controller .crown {
+  width: 0.32rem;
+  height: 0.32rem;
+  z-index: 5;
+  top: 60%;
+  left: -15%;
+}
+
+#players .crown::before {
+  content: "";
+  animation: crownBeat01 1s infinite;
+  animation-iteration-count: infinite;
+}
+
+#players .crown {
+  content: "";
+  animation: crownFadeShake 1s ease;
+}
+
+@keyframes crownFadeShake {
+  0% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -20deg);
+    opacity: 0;
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -23deg);
+    opacity: 1;
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -17deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -23deg);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -20deg);
+  }
+}
+
+/*=== KeyFrames ===*/
+@keyframes flashOnButton1 {
+  0% {
+    transform: skew(30deg, -20deg) translateX(-0.5rem);
+  }
+
+  70% {
+    transform: skew(30deg, -20deg) translateX(-0.25rem);
+  }
+
+  100% {
+    transform: skew(30deg, -20deg) translateX(2rem);
+  }
+}
+
+@keyframes flashOnButton2 {
+  0% {
+    transform: skew(30deg, -20deg) translateX(-0.5rem);
+  }
+
+  70% {
+    transform: skew(30deg, -20deg) translateX(-0.85rem);
+  }
+
+  100% {
+    transform: skew(30deg, -20deg) translateX(2rem);
+  }
+}
+
+@keyframes crownBeat01 {
+  0% {
+    border: 2px solid #fff;
+  }
+
+  5% {
+    border: 5px solid #fff;
+  }
+
+  100% {
+    border: 2px solid #fff;
+  }
+}
+
+/* Dance */
+.state-dance #room-info {
+  width: 9%;
+}
+
+.state-dance .danceroom__caption {
+  color: white;
+}
+
+/************* Dance Transition Screen *************/
+#dance-transition.in::before {
+  animation: INTransitionBG 1.5s !important;
+  background-color: white !important;
+  background-size: 100% !important;
+  background-size: cover !important;
+  content: "";
+  height: 100% !important;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100% !important;
+  z-index: -1 !important;
+  opacity: 1 !important;
+}
+
+#dance-transition.out::before {
+  animation: OUTTransitionBG 1.5s !important;
+  background-color: white !important;
+  background-size: 100% !important;
+  background-size: cover !important;
+  content: "";
+  height: 100% !important;
+  left: 0 !important;
+  position: absolute;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: -1 !important;
+  opacity: 1 !important;
+}
+
+/*=== Keyframes ===*/
+@keyframes INTransitionBG {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes OUTTransitionBG {
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#dance-transition .dt-row {
+  background-image: none !important;
+  height: 100% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  opacity: 0;
+  transform: none !important;
+  width: 100% !important;
+}
+
+/* Logo Animation Start */
+@keyframes LogoIN {
+  0% {
+    opacity: 0;
+    transform: translatex(-2rem) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+}
+
+/* Logo Animation End */
+@keyframes LogoOUT {
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translatex(2rem) scale(1);
+  }
+}
+
+/*==== transition dt1 ====*/
+#dance-transition.in .dt1 {
+  animation: LogoIN 1.5s !important;
+  background: url(https://i.imgur.com/0LbxuSt.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 32% !important;
+  border-radius: 0.1rem !important;
+  height: 60% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 34% !important;
+  margin-top: 13% !important;
+  opacity: 1 !important;
+}
+
+#dance-transition.out .dt1 {
+  animation: LogoOUT 1.5s !important;
+  background: url(https://i.imgur.com/0LbxuSt.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 32% !important;
+  height: 60% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 34% !important;
+  margin-top: 13% !important;
+  opacity: 1 !important;
+}
+
+/*==== transition dt2 ====*/
+#dance-transition.in .dt2 {
+  animation: square2IN 1.5s !important;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_2.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 101% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  margin-top: -57% !important;
+  opacity: 1 !important;
+}
+
+#dance-transition.out .dt2 {
+  animation: square2OUT 1.5s !important;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_2.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 101% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  margin-top: -57% !important;
+  opacity: 1 !important;
+}
+
+/*==== Keyframes dt2 ====*/
+@keyframes square2IN {
+  0% {
+    opacity: 0;
+    transform: translatex(-0.4rem) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+}
+
+@keyframes square2OUT {
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translatex(0.4rem) scale(1);
+  }
+}
+
+/*=======================*/
+/*==== transition dt3 ====*/
+#dance-transition.in .dt3 {
+  animation: square3IN 1.5s !important;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_3.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 101% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  margin-top: -66% !important;
+  opacity: 0.8 !important;
+}
+
+#dance-transition.out .dt3 {
+  animation: square3OUT 1.5s !important;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_3.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 101% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  margin-top: -66% !important;
+  opacity: 0.8 !important;
+}
+
+/*==== Keyframes dt3 ====*/
+@keyframes square3IN {
+  0% {
+    opacity: 0;
+    transform: translatex(-0.2rem) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+}
+
+@keyframes square3OUT {
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translatex(0.2rem) scale(1);
+  }
+}
+
+/*=======================*/
+/*==== transition dt4 ====*/
+#dance-transition.in .dt4 {
+  animation: square4IN 1.5s !important;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_4.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 101% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  margin-top: -67% !important;
+  opacity: 0.5 !important;
+}
+
+#dance-transition.out .dt4 {
+  animation: square4OUT 1.5s !important;
+  background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_4.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  height: 101% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  margin-top: -67% !important;
+  opacity: 0.5 !important;
+}
+
+/*==== Keyframes dt4 ====*/
+@keyframes square4IN {
+  0% {
+    opacity: 0;
+    transform: translatex(-0.1rem) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+}
+
+@keyframes square4OUT {
+  50% {
+    opacity: 1;
+    transform: translatex(0rem) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translatex(0.1rem) scale(1);
+  }
+}
+
+/*=======================*/
+#dance-transition .dt5, #dance-transition .dt6, #dance-transition .dt7, #dance-transition .dt8 {
+  display: none !important;
+}
+
+#dance-transition.animate::before {
+  transition: none !important;
+}
+
+#dance-transition.animate .dt-row {
+  transition-property: opacity !important;
+}
+
+#dance-transition.animate .dt1, #dance-transition.animate .dt2, #dance-transition.animate .dt3, #dance-transition.animate .dt4 {
+  background-position: 0% 0 !important;
+}
+
+#dance-transition.animate.in::before, #dance-transition.animate.in .dt-row {
+  opacity: 1 !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+#dance-transition.animate.in .dt1, #dance-transition.animate.in .dt2, #dance-transition.animate.in .dt3, #dance-transition.animate.in .dt4 {
+  transition-duration: 0s !important;
+}
+
+#dance-transition.animate.out::before, #dance-transition.animate.out .dt-row {
+  transition-timing-function: linear !important;
+}
+
+#dance-transition.animate.out .dt1, #dance-transition.animate.out .dt2, #dance-transition.animate.out .dt3, #dance-transition.animate.out .dt4 {
+  transition-duration: 0s !important;
+}
+
+/* Tutorial */
+#just-dance-now .tutorial img {
+  animation: tutorialImgFade 0.6s ease;
+}
+
+@keyframes tutorialImgFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#just-dance-now .tutorial::before, #just-dance-now .tutorial::after {
+  animation: fadeIn 0.4s ease;
+}
+
+#just-dance-now .tutorial .tutorial__spinner {
+  font-size: 23%;
+  font-family: "OpenSans Bold";
+  top: 75%;
+  opacity: 1;
+  animation: fadeIn 1s ease;
+}
+
+#just-dance-now .tutorial p {
+  font-size: 17%;
+  top: 83%;
+  left: 0;
+  animation: titleSlide 0.6s ease;
+}
+
+#just-dance-now .tutorial p::after {
+  content: '.. Готовы к танцам?';
+}
+
+#just-dance-now .tutorial p::before {
+  content: '';
+  background: url(https://i.imgur.com/0LbxuSt.png), url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_2.png), url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_3.png), url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fdr.row_4.png);
+  opacity: 1;
+  height: 100%;
+  width: 44vw;
+  position: absolute;
+  top: 0vh;
+  left: -15vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* STATE DANCE */
+.state-dance #room-info {
+  display: none;
+}
+
+/*===== HUD =====*/
+#players {
+  width: 100%;
+  height: 0.965rem;
+  left: 7%;
+  top: -8px;
+}
+
+html.state-dance #players {
+  left: 6%;
+}
+
+#players::before {
+  width: 130%;
+  height: 106%;
+}
+
+.dancercard .avatar-wrapper {
+  width: 55%;
+  position: absolute;
+  z-index: 1;
+  top: -100%;
+  left: 19%;
+}
+
+/* Avatar wraper .state-dance */
+.state-dance .dancercard .avatar-wrapper {
+  animation: wraperBeat 2s ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wraperBeat {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  2% {
+    transform: scale(0.97) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  26% {
+    transform: scale(0.97) rotate(3deg);
+  }
+
+  50% {
+    transform: scale(1.0);
+  }
+
+  51% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  52% {
+    transform: scale(0.97) rotate(0deg);
+  }
+
+  75% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  76% {
+    transform: scale(0.97) rotate(-3deg);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+/* player color */
+.blue .player-color {
+  background-image: linear-gradient(to right, rgba(72, 139, 252, 1) 0%, rgba(93, 27, 239, 1) 100%);
+}
+
+.red .player-color {
+  background-image: linear-gradient(to right, rgba(255, 129, 43, 1) 0%, rgba(232, 22, 19, 1) 100%);
+}
+
+.pink .player-color {
+  background-image: linear-gradient(to right, rgba(255, 4, 163, 1) 0%, rgba(210, 34, 218, 1) 100%);
+}
+
+.aqua .player-color {
+  background-image: linear-gradient(to right, rgba(75, 218, 154, 1) 0%, rgba(59, 182, 188, 1) 100%);
+}
+
+.purple .player-color {
+  background-image: linear-gradient(to right, rgba(134, 0, 197, 1) 0%, rgba(92, 73, 199, 1) 100%);
+}
+
+.green .player-color {
+  background-image: linear-gradient(to right, rgba(96, 219, 14, 1) 0%, rgba(103, 174, 42, 1) 100%);
+}
+
+
+/*#players .feedback-label {
+  background-image: none;
+}*/
+
+/*=== YEAH ===*/
+#players .feedlabel-yeah {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F_yeah.svg);
+  background-position: 0 100%;
+  top: 100%;
+  left: -5%;
+  transform: rotate(-10deg);
+}
+
+/*=== PERFECT ===*/
+#players .feedlabel-perfect {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F_perfect.svg);
+  background-position: 0 80%;
+  top: 80%;
+  left: -3%;
+  transform: rotate(-10deg);
+}
+
+/*=== GOOD ===*/
+#players .feedlabel-good {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F_good.svg);
+  background-position: 0 40%;
+  top: 76%;
+  left: -4%;
+  transform: rotate(-10deg);
+}
+
+/*=== OK ===*/
+#players .feedlabel-ok {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F_ok.svg);
+  background-position: 0 60%;
+  top: 82%;
+  left: -4%;
+  transform: rotate(-10deg);
+}
+
+/*=== BAD ===*/
+#players .feedlabel-bad {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F_bad.svg);
+  top: 75%;
+  left: -4%;
+  transform: rotate(-10deg);
+}
+
+/*=== BADGOLD ===*/
+#players .feedlabel-badgold {
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F_badgold.svg);
+  top: 81%;
+  left: -4%;
+  transform: rotate(-10deg);
+}
+
+@keyframes feedlabel {
+  0% {
+    opacity: 0;
+    transform: scale3d(1.2, 1.2, 1) rotate(-10deg);
+  }
+
+  14% {
+    opacity: 1;
+    transform: scale3d(0.8, 0.8, 1) rotate(-10deg);
+  }
+
+  36% {
+    transform: scale3d(1, 1, 1) rotate(-10deg);
+  }
+
+  43% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(-10deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -5px, 0) scale3d(0.95, 0.95, 1) rotate(-10deg);
+  }
+}
+
+/* feedback colors */
+#players .feedback {
+  top: 0;
+  left: 1%;
+  height: 145%;
+  background-image: none;
+}
+
+#players .feedback-yeah {
+  background-position: 0 0;
+  background: linear-gradient(180deg, rgb(255 212 0) 0%, rgba(255,234,0,0) 100%);
+  left: 13%;
+  width: 65%;
+}
+
+#players .feedback-perfect {
+  background-position: 0 0;
+  background: linear-gradient(180deg, rgba(105,230,15,1) 0%, rgba(105,230,15,0) 100%);
+  left: 17%;
+  width: 57%;
+}
+
+#players .feedback-good {
+  background-position: 0 0;
+  background: rgb(0,204,255);
+  background: linear-gradient(180deg, rgba(0,204,255,1) 0%, rgba(0,204,255,0) 100%);
+  left: 21%;
+  width: 50%;
+}
+
+#players .feedback-ok {
+  background-position: 0 0;
+  background: linear-gradient(180deg, rgba(255,0,255,1) 0%, rgba(255,0,255,0) 100%);
+  left: 27%;
+  width: 38%;
+}
+
+#players .feedback-bad {
+  background-position: 0 0;
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,0,0,0) 100%);
+  left: 30%;
+  width: 31%;
+}
+
+/* player stars */
+#players .star {
+  transform: rotateZ(15deg);
+}
+
+#players .star.star-1, 
+#players .star.star-2, 
+#players .star.star-3, 
+#players .star.star-4, 
+#players .star.star-5 {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin: 0 -0.07rem;
+}
+
+#players .player-stars {
+  bottom: -6%;
+  left: -28%;
+}
+
+html:not(.weak-platform) #players.animate .star {
+  animation: playerStarReceiving 1.1s ease-in-out;
+}
+
+@keyframes playerStarReceiving {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+}
+
+/* player coins */
+#players .player .controller-coins {
+  width: 100%;
+  position: absolute;
+  bottom: -6%;
+  left: -7%;
+}
+
+#balloons {
+  left: 13%;
+}
+
+/* balloons */
+.balloon .balloon__image--left::before {
+  background: linear-gradient(45deg, rgba(66, 184, 180, 1) 00%, rgba(80, 250, 181, 1) 100%);
+  left: 0;
+  border-radius: 12px 0 0 12px;
+}
+
+.balloon__content {
+  width: 62%;
+  padding-left: 0%;
+  line-height: 1.12;
+}
+
+.balloon__image--right {
+  right: 0;
+  background: linear-gradient(45deg, rgba(66, 184, 180, 1) 00%, rgba(80, 250, 181, 1) 100%);
+  border-radius: 0 12px 12px 0;
+  width: 19%;
+}
+
+.balloon {
+  color: #545454;
+  font-family: OpenSans SemiBold;
+}
+
+/* racetrack */
+#racetrack-fill, .racetrack-fill-players {
+  transition: all 1s;
+}
+
+#racetrack {
+  display: none;
+  width: 7.5%;
+  height: 55.2%;
+  opacity: 0;
+  position: absolute;
+  z-index: 120;
+  top: 22.5%;
+  left: 9px;
+}
+
+#racetrack .star {
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(15deg);
+  left: 20%;
+}
+
+#racetrack .platform {
+  width: 100%;
+  height: 0%;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  position: absolute;
+  z-index: 2;
+  bottom: -.2%;
+  right: 0;
+}
+
+#racetrack .progress-meters {
+  margin: 0 7% 0 7%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* racetrack bg */
+#racetrack .progress-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -23%;
+  left: 0;
+  opacity: 0.5;
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fracetrack_bg.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  -webkit-mask: linear-gradient(0deg, rgba(0,0,0,1) 80%, rgba(255,255,255,0) 100%);
+}
+
+/*animation: racetrack-star-beat*/
+@keyframes racetrack-star-beat {
+  100% {
+    opacity: 1;
+    transform: scale(1.0) rotate(15deg);
+  }
+
+  5% {
+    opacity: 1;
+    transform: scale(1.1) rotate(15deg);
+  }
+
+  0% {
+    opacity: 1;
+    transform: scale(1.0) rotate(15deg);
+  }
+}
+
+#racetrack.animate .star {
+  animation: racetrackStarFade 1.1s ease-in-out;
+}
+
+@keyframes racetrackStarFade {
+  0% {
+    transform: scale(0.5) rotate(180deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1.3) rotate(15deg);
+    opacity: 1;
+  }
+
+  90% {
+    transform: scale(0.9) rotate(15deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(15deg);
+    opacity: 1;
+  }
+} 
+
+/* beat */
+.hud.beat > #pictos > #beat {
+  animation: BeatCoach;
+}
+
+#beat {
+  background: linear-gradient(153deg, rgba(11,255,129,1) 0%, rgba(17,202,217,1) 100%);
+  ; border-bottom: solid 0px white;
+  height: 10% !important;
+  left: -25%;
+  opacity: 1 !important;
+  top: 94%;
+  -webkit-mask: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fbeat_line.svg)top left/100%;
+  width: 23% !important;
+}
+
+.particle-system {
+  opacity: 0;
+}
+
+/** Pictos **/
+.picto shadow {
+  filter: drop-shadow(4px -2px 2px gray);
+  left: -1%;
+}
+
+#pictos {
+  left: 82.6%;
+  top: 69.3%;
+  width: 40% !important;
+  animation: title-slideRight 2s ease;
+}
+
+#pictos.multi-coach {
+  left: 71%;
+  width: 40% !important;
+}
+
+.picto {
+  left: -30% !important;
+}
+
+.multi-coach .picto {
+  left: -37.8% !important;
+}
+
+@keyframes BeatCoach {
+  100% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.15, 0.96);
+  }
+
+  0% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+}
+
+/* Lyrics */
+#lyrics {
+  width: 40%;
+  font-size: 0.18rem;
+  line-height: 1.25;
+  cursor: default;
+  font-family: 'OpenSans Regular';
+  position: absolute;
+  z-index: 10;
+  top: 88%;
+  left: 5%;
+}
+
+@keyframes nextLineIn {
+  0% {
+    transform: translate(-20%, 1em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0, 1em);
+  }
+}
+
+/* AfterDance */
+/* last update 28 July */
+
+/* elements fade */
+#afterdance.transition-in .player, #afterdance.transition-in .coach, #afterdance.transition-in #crown-container {
+  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  -webkit-animation: fadeIn .5s linear both;
+  animation: fadeIn .5s linear both;
+}
+/* position */
+#afterdance .player-content {
+  margin: 0.07rem 0 0 0.6rem;
+}
+
+#afterdance .players {
+  left: -16%;
+  top: 15%;
+}
+
+/* cover */
+#afterdance .img--afterDance {
+  display: none;
+}
+
+/* song info */
+#afterdance .song-info {
+  margin: -2.8rem -2.9rem 0;
+}
+
+#afterdance .song-info .title, #afterdance .song-info .artist {
+  height: 0.26rem;
+}
+
+#afterdance .song-info .artist {
+  color: #939498;
+  font-size: 70%;
+  margin-top: 0.02rem;
+  height: 0.2rem;
+}
+
+#afterdance .results h2 {
+  font-family: "OpenSans SemiBold";
+  line-height: 1.3;
+  opacity: 0.9;
+  padding-left: 0.06rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#afterdance .results h3 {
+  font-size: 100%;
+}
+
+/* PLAYERS */
+/* fade */
+#players .player:not(.ghost).visible {
+  animation: PlayerslideInDown 0.5s ease both;
+}
+
+@keyframes PlayerslideInDown {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 
+
+/* flags */
+#afterdance .flag {
+  border: 2px solid saddlebrown;
+  bottom: .12rem;
+  right: 5.7rem;
+}
+
+/* crown */
+#crown-container {
+  position: absolute;
+  z-index: 20;
+  top: 1.09rem;
+  left: 1.6rem;
+}
+
+/* score */
+#afterdance .player-content .score-text {
+  line-height: 1.9;
+  font-family: OpenSans SemiBold;
+  font-size: 74%;
+}
+
+/* mega_super star */
+#afterdance .results .player .score.superstar::after, 
+#afterdance .results .player .score.megastar::after {
+  animation: titleShake1 .8s ease infinite;
+}
+
+@keyframes titleShake1 {
+  0% {
+    transform: translate(1px, 0px) rotate(0deg);
+    filter: brightness(1.1);
+  }
+
+  10% {
+    transform: translate(0px, -1px) rotate(0deg);
+    filter: brightness(1);
+  }
+
+  20% {
+    transform: translate(-2px, 1px) rotate(0deg);
+    filter: brightness(1.3);
+  }
+
+  30% {
+    transform: translate(1px, 1x) rotate(0deg);
+    filter: brightness(1);
+  }
+
+  40% {
+    transform: translate(2px, -0px) rotate(0deg);
+    filter: brightness(0.9);
+  }
+
+  50% {
+    transform: translate(-0px, 1px) rotate(0deg);
+    filter: brightness(1);
+  }
+
+  60% {
+    transform: translate(-2px, 0px) rotate(0deg);
+    filter: brightness(1.9);
+  }
+
+  70% {
+    transform: translate(1px, 0px) rotate(0deg);
+    filter: brightness(1);
+  }
+
+  80% {
+    transform: translate(-0px, -0px) rotate(0deg);
+    filter: brightness(0.6);
+  }
+
+  90% {
+    transform: translate(1px, 1px) rotate(0deg);
+    filter: brightness(1);
+  }
+
+  100% {
+    transform: translate(0px, -1px) rotate(0deg);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes titleShake {
+  0%,42%,50%,62%,100% {
+    opacity: 1;
+  }
+
+  16%,20% {
+    opacity: 0.6;
+    transform: translate3d(3px, 1px, 0);
+    filter: brightness(1.1);
+  }
+
+  18%,22% {
+    opacity: 0.8;
+    transform: translate3d(-1px, 2px, 0);
+  }
+
+  24% {
+    opacity: 1;
+    transform: translate3d(2px, 3px, 0);
+  }
+
+  28% {
+    transform: translate3d(0px, 1px, 0);
+  }
+
+  32% {
+    opacity: 0.7;
+    transform: translate3d(2px, 1px, 0);
+  }
+
+  44% {
+    opacity: 1;
+    transform: translate3d(-1px, -3px, 0);
+  }
+
+  55%,66% {
+    opacity: 1;
+    transform: translate3d(3px, 1px, 0);
+  }
+
+  72%,76% {
+    opacity: 1;
+    transform: translate3d(3px, 1px, 0);
+  }
+
+  74%,78% {
+    opacity: 1;
+    transform: translate3d(-1px, -3px, 0);
+  }
+}
+
+.score.megastar::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.2rem;
+  position: absolute;
+  top: .14rem;
+  left: -.28rem;
+  content: '';
+}
+
+#afterdance .results .player .score.megastar::before {
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/img/hud/super_mega/text_megastar2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.score.superstar::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.2rem;
+  position: absolute;
+  top: .14rem;
+  left: -.28rem;
+  content: '';
+}
+
+#afterdance .results .player .score.superstar::before {
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/img/hud/super_mega/text_superstar4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* stars */
+#afterdance .results .stars .star.animate {
+  animation: afterdanceStar 0.9s ease-in-out, starglow 1s ease infinite;
+}
+
+#afterdance .results .stars .star {
+  transform: rotate(15deg);
+}
+
+@keyframes afterdanceStar {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes starglow {
+  0% {
+    filter: brightness(1.1);
+    transform: scale(1.15) rotate(10deg);
+  }
+
+  50% {
+    filter: brightness(1);
+    transform: scale(1) rotate(15deg);
+  }
+}
+
+/* colors */
+#afterdance .blue .color {
+  background-image: linear-gradient(45deg, rgba(93, 27, 239, 1) 0%, rgba(72, 139, 252, 1) 100%);
+}
+
+#afterdance .purple .color {
+  background-image: linear-gradient(45deg, rgba(131, 5, 179, 1) 0%, rgba(122, 57, 242, 1) 100%);
+}
+
+#afterdance .green .color {
+  background-image: linear-gradient(45deg, rgba(103, 190, 43, 1) 0%, rgba(101, 255, 11, 1) 100%);
+}
+
+#afterdance .aqua .color {
+  background-image: linear-gradient(45deg, rgba(66, 184, 180, 1) 00%, rgba(80, 250, 181, 1) 100%);
+}
+
+#afterdance .pink .color {
+  background-image: linear-gradient(45deg, rgba(204, 23, 224, 1) 0%, rgba(253, 3, 164, 1) 100%);
+}
+
+#afterdance .red .color {
+  background-image: linear-gradient(45deg, rgba(237, 33, 25, 1) 0%, rgba(255, 126, 22, 1) 100%);
+}
+
+/* title [Selebrate] */
+#afterdance::after {
+  content: "Поздравляем!";
+  animation: title-slideRight 2s ease, title-gradcolorMove 20s ease infinite;
+  transition: opacity 3s linear;
+  letter-spacing: 0px;
+  font-size: 30%;
+  line-height: 1.6;
+  text-align: center;
+  position: absolute;
+  display: block;
+  width: 28.5%;
+  left: 70%;
+  height: 10%;
+  top: 7%;
+  font-family: OpenSans SemiBold;
+  background-image: linear-gradient(49deg, rgb(211 106 251) 28%, rgb(108 163 254) 50%, rgb(230 110 254) 74%);
+  background-size: 300% 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+@keyframes title-slideRight {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(100%);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes title-gradcolorMove {
+  0% {
+    background-position: 0 4%;
+  }
+
+  50% {
+    background-position: 100% 97%;
+  }
+
+  100% {
+    background-position: 0 4%;
+  }
+}
+
+/* Buttons */
+.exit-btn:hover {
+  color: orange;
+}
+
+.exit-btn--continue {
+  right: 4%;
+  transition: all .2s;
+}
+
+.exit-btn--continue::before {
+  background-image: url(https://i.imgur.com/rmuWi2Z.png);
+  transition: all .2s;
+}
+
+.exit-btn--continue:hover::before,
+.exit-btn--continue:active::before {
+  background-image: url(https://i.imgur.com/s4SpvUE.png);
+  transition: all .2s;
+}
+
+.exit-btn--play-again {
+  left: 0.5rem;
+  transition: all .2s;
+}
+
+.exit-btn--play-again::before {
+  background-image: url(https://i.imgur.com/W90o7IL.png);
+  transition: all .2s;
+}
+
+.exit-btn--play-again:hover::before,.exit-btn--play-again:active::before {
+  background-image: url(https://i.imgur.com/7sGppLf.png);
+  transition: all .2s;
+}
+
+/*
+.hud::after {
+  content: "";
+  background: url(https://i.imgur.com/i8KqCje.png) no-repeat center / cover;
+  opacity: 1;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+*/
+
+/*
+.hud::after {
+    content: "";
+    background: url(https://i.imgur.com/zY7sdwR.jpg) no-repeat center / cover;
+    opacity: 1;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+*/
+
+/* test */
+.test-square {
+  border-radius: 20px;
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 233px;
+  height: 233px;
+  z-index: 2;
+}
+
+.map_square {
+  background-image: url("map-square.png");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 256px;
+  height: 256px;
+  z-index: 1;
+}
+
+/*=== FAQ ===*/
+.licenses h2 {
+  font-family: OpenSans Bold;
+  font-size: 5rem;
+  transition: all .3s;
+}
+
+.viewport-content h3 {
+  margin: 1.5rem 0 0;
+  font-family: OpenSans Bold;
+  font-size: 2.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.viewport-content h3:hover {
+  background: linear-gradient(to right, #37dbff, #1eb5d6);
+  color: #ffffff;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.viewport-content p {
+  font-family: OpenSans SemiBold;
+  padding: 0 1rem;
+  text-align: justify;
+  transition: all .3s;
+}
+
+/* faq button */
+.link--report {
+  transition: all .3s;
+  background-image: none;
+  border: 2px gray solid;
+  display: inline-block;
+  font-size: 1.35em;
+  color: gray;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.link--report:hover {
+  transition: all .3s;
+  background-image: linear-gradient(to right, #37dbff, #1eb5d6);
+  border: 2px #37dbff solid;
+  color: #fff;
+}
+
+/* Error link */
+.wrapper {
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/img/background/second-screen-bg.jpg);
+  background-size: 100%;
+}
+
+.main__title {
+  font-family: OpenSans Bold;
+  font-size: 3rem;
+}
+
+.main__text {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  padding-right: 7vw;
+  font-family: OpenSans SemiBold;
+}
+
+.main .main__text a {
+  color: #2edbf7;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.main .main__text a:hover {
+  transition: all .2s;
+}
+
+/* connection failed link */
+#just-dance-now.connection-lost .connectionLost-wrapper {
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200728_1033/web/img/background/second-screen-bg.jpg);
+  background-size: cover;
+}
+
+#just-dance-now.connection-lost .connectionLost-wrapper .connectionLost-container, #just-dance-now.connection-lost .connectionLost-wrapper p.connectionLost-text {
+  font-family: OpenSans SemiBold;
+}
+
+/* Covers Remade */
+.\37 Rings {
+  background-image: url(https://vignette.wikia.nocookie.net/justdance/images/5/54/7rings_score_card_cover.jpg/revision/latest?cb=20200717173513);
+}
+
+.GodIsAWomanALT {
+  background-image: url(https://vignette.wikia.nocookie.net/justdance/images/f/f8/Godisawomanalt_score_card_cover.jpg/revision/latest?cb=20200717175833);
+}
+
+.FancyTwice {
+  background-image: url(https://vignette.wikia.nocookie.net/justdance/images/a/a0/Fancytwice_score_card_cover.jpg/revision/latest?cb=20200717175430);
+}
+
+.StopMovin {
+  background-image: url(https://vignette.wikia.nocookie.net/justdance/images/6/6c/Stopmovin_score_card_cover.jpg/revision/latest?cb=20200717183800);
+}
+
+.song__infos {
+  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+}
+
+.song__reward {
+  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%);
+}
+
+/* maintenance clearfix */
+.maintenance {
+  background: #fff;
+  padding: 0.035rem;
+  cursor: pointer;
+  z-index: 9001;
+  top: 5.1rem;
+  left: 2.08%;
+  border-radius: 50%;
+  border: 2px #ff3600 solid;
+  opacity: 0;
+}
+
+.maintenance.expand {
+  width: 3.1rem;
+  height: 0.6rem;
+  top: 80%;
+  left: 37%;
+  border-radius: 15px;
+  padding: 0.06rem 0;
+  margin: 0 auto;
+  text-align: center;
+  animation: animateMaintenance 0.5s;
+  box-shadow: 1px 0px 39px 15px rgba(255, 54, 0, 0.2);
+}
+
+.maintenance__icon {
+  width: 0.17rem;
+  height: 0.16rem;
+  float: left;
+  margin-right: 0rem;
+  animation: spinner 2s linear infinite;
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fmaintenance.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.state-songselection .maintenance {
+  opacity: 1;
+}
+
+@keyframes animateMaintenance {
+  0% {
+    transform: translateX(-1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+.trainer-icon {
+  width: 0.9rem;
+  height: 0.8rem;
+  float: left;
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Ftrainer-icon-4.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bounceTrainingArrow 0.8s;
+  animation-iteration-count: infinite;
+  color: #7ba8fe;
+  margin-top: -0.1rem;
+}
+
+.trainer-icon::after {
+  content: '';
+  width: 0.9rem;
+  height: 0.8rem;
+  float: left;
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Ftrainer-icon-2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bounceTrainingArrow 0.9s;
+  animation-iteration-count: infinite;
+  color: #7ba8fe;
+  margin-top: -.8rem;
+}
+
+.trainer-icon::before {
+  content: '';
+  width: 0.9rem;
+  height: 0.8rem;
+  float: left;
+  background-image: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Ftrainer-icon-3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bounceTrainingArrow 1s;
+  animation-iteration-count: infinite;
+  color: #7ba8fe;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

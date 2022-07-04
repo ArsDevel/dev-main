@@ -1,0 +1,83 @@
+.song-cover--hi-res.EyeOfTheTiger::after {
+	content: 'JUST DANCE 1';
+}
+
+.song-cover--hi-res.TakeMeOut::after {
+	content: 'JUST DANCE 2';
+}
+
+.song-cover--hi-res.Satellite::after,
+.song-cover--hi-res.CrazyLittle::after,
+.song-cover--hi-res.DynamiteQUAT::after {
+	content: 'JUST DANCE 3';
+}
+
+.song-cover--hi-res.IstanbulQUAT::after,
+.song-cover--hi-res.JailHouse::after,
+.song-cover--hi-res.GangnamStyleDLC::after,
+.song-cover--hi-res.TheFinalCountdown::after {
+	content: 'JUST DANCE 4';
+}
+
+.song-cover--hi-res.ThatPower::after,
+.song-cover--hi-res.Starships::after,
+.song-cover--hi-res.LimaGolf1::after {
+	content: 'JUST DANCE 2014';
+}
+
+.song-cover--hi-res.Summer::after,
+.song-cover--hi-res.Happy::after,
+.song-cover--hi-res.WalkThisWay::after {
+	content: 'JUST DANCE 2015';
+}
+
+.song-cover--hi-res.ShutUp::after,
+.song-cover--hi-res.JuntoATi::after,
+.song-cover--hi-res.LetsGroove::after,
+.song-cover--hi-res.Animals::after,
+.song-cover--hi-res.IGotAFeeling::after {
+	content: 'JUST DANCE 2016';
+}
+
+.song-cover--hi-res.ILoveRock::after,
+.song-cover--hi-res.DontStopMe::after,
+.song-cover--hi-res.NaeNae::after {
+	content: 'JUST DANCE 2017';
+}
+
+.song-cover--hi-res.AnotherOne::after,
+.song-cover--hi-res.AnotherOneALT::after,
+.song-cover--hi-res.Diggy::after,
+.song-cover--hi-res.DaddyCool::after,
+.song-cover--hi-res.MakeItJingle::after {
+	content: 'JUST DANCE 2018';
+}
+
+.song-cover--hi-res.DDUDU::after,
+.song-cover--hi-res.LittleParty::after,
+.song-cover--hi-res.DameTu::after {
+	content: 'JUST DANCE 2019';
+}
+
+.song-cover--hi-res.DoCarnaval::after,
+.song-cover--hi-res.Swag::after,
+.song-cover--hi-res.SoyYoALT::after,
+.song-cover--hi-res.IAmTheBestALT::after,
+.song-cover--hi-res.IAmTheBest::after,
+.song-cover--hi-res.HighHopes::after,
+.song-cover--hi-res.GetBusy::after,
+.song-cover--hi-res.KillThisLove::after,
+.song-cover--hi-res.OldTownRoad::after,
+.song-cover--hi-res.ConCalma::after,
+.song-cover--hi-res.BabyShark::after,
+.song-cover--hi-res.SoyYo::after,
+.song-cover--hi-res.Bangarang::after,
+.song-cover--hi-res.BassaSababa::after,
+.song-cover--hi-res.\33 65::after,
+.song-cover--hi-res.IDontCare::after,
+.song-cover--hi-res.BadBoy::after,
+.song-cover--hi-res.Talk::after,
+.song-cover--hi-res.Sushii::after,
+.song-cover--hi-res.FitButYouKnow::after {
+	content: 'JUST DANCE 2020';
+}

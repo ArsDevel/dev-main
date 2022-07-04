@@ -1,0 +1,223 @@
+/* FeedBack & FeedLable */
+
+/* The General */
+#players .feedback {
+  overflow: visible !important;
+}
+
+/* Feedlable Top */
+#players[data-stars="1"] .feedback-label, 
+#players[data-stars="2"] .feedback-label, 
+#players[data-stars="3"] .feedback-label, 
+#players[data-stars="4"] .feedback-label, 
+#players[data-stars="5"] .feedback-label {
+  top: 30%!important;
+}
+
+/* feedlable image loader */
+.hud.beat #players .feedback-label {
+  animation: feedlabel 0.7s infinite !important;
+  background-image: url(//dl.dropbox.com/s/mqjgmscx0f8iayl/label.png?dl=0);
+  background-repeat: no-repeat;
+}
+
+/* animation update animation */
+.hud.beat #players.animate .feedback {
+  animation: NewFeedbackScale 1.1s cubic-bezier(0.39, 0.575, 0.565, 1) both
+    infinite !important;
+  -webkit-animation: NewFeedbackScale 1.1s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both infinite !important;
+}
+
+#players .feedback-label {
+  top: 30%;
+}
+
+/* feedback, feedlable BAD and BAD GOLD */
+#players .feedlabel-bad {
+  margin-top: -15%;
+  left: -2%;
+}
+
+.feedlabel-bad {
+  top: 40% !important;
+}
+
+#players .feedback-bad {
+  background: none;
+}
+
+#players .feedback-badgold {
+  background: none;
+}
+
+#players .feedlabel-badgold {
+  left: -2%;
+}
+
+/* feedback, feedlable OK */
+#players .feedback-ok {
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fok-feedlable.png)no-repeat top/50%95%;
+  left: 2.5% !important;
+  top: -8%;
+}
+
+#players .feedlabel-ok {
+  top: 40% !important;
+  left: 3.5%;
+}
+
+.feedlabel-ok {
+  margin-left: -8% !important;
+}
+
+/* feedback, feedlable GOOD */
+#players .feedlabel-good {
+  left: -3%;
+  top: 31%;
+  width: 100%;
+  overflow: visible !important;
+}
+
+#players .feedlabel-good::before {
+  animation: NewFeedbackScale03 0.9s linear infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fgood-booble-02.png)no-repeat center/100%;
+  content: "";
+  display: block;
+  height: 150%;
+  left: -2%;
+  margin-top: -10%;
+  position: absolute;
+  width: 110% !important;
+  z-index: -999999999 !important;
+  overflow: visible !important;
+}
+
+#players .feedlabel-good::after {
+  animation: NewFeedbackScale03 0.6s linear infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fgood-booble-01.png)no-repeat center/100%;
+  content: "";
+  display: block;
+  height: 150%;
+  left: -2%;
+  margin-top: 0%;
+  position: absolute;
+  width: 110% !important;
+  z-index: -999999999 !important;
+  overflow: visible !important;
+}
+
+#players .feedback-good::before {
+  -webkit-animation-name: NewFeedbackScale03 1s;
+  animation-name: NewFeedbackScale03 1s;
+  animation-fill-mode: both;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fgood-booble-00.png)no-repeat center/100%;
+  content: "";
+  height: 120%;
+  left: -10%;
+  position: absolute;
+  top: 15%;
+  width: 120%;
+  overflow: visible !important;
+}
+
+#players .feedback-good {
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fgood-feedlable.png)no-repeat top/60%95%;
+  left: 3%;
+  top: -9%;
+}
+
+/* feedback, feedlable PERFECT */
+#players .feedback-perfect::after {
+  animation: MoveBeat 1.1s
+    steps(3, end) infinite,
+      OpacityBeat 0.6s steps(2, end) infinite, csBeatSelect 1s both infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fperfect-particle-01.png)no-repeat center/100%;
+  content: "";
+  height: 50%;
+  margin-top: -12%;
+  position: absolute;
+  width: 55%;
+}
+
+#players .feedback-perfect {
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fperfect-feedlable.png)no-repeat top/55%70%;
+  height: 140%;
+  left: -21%;
+  top: -8%;
+  width: 140%;
+}
+
+#players .feedlabel-perfect::before {
+  animation: MoveBeat2 0.8s
+    steps(3, end) infinite,
+      OpacityBeat 0.7s steps(2, end) infinite, csBeatSelect 1s both infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fperfect-particle-00.png)no-repeat center/90%;
+  content: "";
+  display: block;
+  height: 90%;
+  margin-top: -5%;
+  position: absolute;
+  width: 51% !important;
+  z-index: -999999999 !important;
+}
+
+#players .feedlabel-perfect {
+  overflow: visible !important;
+  z-index: 999999999 !important;
+  left: -1%;
+}
+
+#players .feedlabel-perfect::after {
+  animation: NewFeedbackScale03 0.5s linear infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fperfect-fx.png)no-repeat center/100%;
+  content: "";
+  display: block;
+  height: 303%;
+  left: -38%;
+  margin-top: 0;
+  position: absolute;
+  top: -78%;
+  width: 180% !important;
+  z-index: -999999999 !important;
+}
+
+#players .feedback-perfect::before {
+  animation: NewFeedbackScale02 0.8s linear infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fperfect-sfx.png)no-repeat center/90%;
+  content: "";
+  height: 150%;
+  left: -25%;
+  position: absolute;
+  top: -25%;
+  width: 150%;
+}
+
+/* feedback, feedlable YEAH */
+#players .feedback-yeah {
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fyeah-feedlable.png)no-repeat top/100%75%;
+  height: 200%;
+  left: 2%;
+  top: -8%;
+  width: 90%;
+}
+
+#players .feedback-yeah::after {
+  animation: NewFeedbackScale02 1s linear infinite !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fyeah-fx.png)no-repeat center/90% !important;
+  content: "" !important;
+  height: 300% !important;
+  left: -100% !important;
+  overflow: visible !important;
+  position: absolute !important;
+  top: -100% !important;
+  width: 300% !important;
+}
+
+#players .feedlabel-yeah {
+  background-position: 0 98% !important;
+  background-size: 84% !important;
+  margin-left: -20% !important;
+  top: 50%;
+  width: 170% !important;
+}

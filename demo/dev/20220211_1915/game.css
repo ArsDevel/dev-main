@@ -1,0 +1,9245 @@
+/* flash test */
+
+section.landing {
+	overflow: hidden;
+}
+
+section.landing::before,
+section.landing::after {
+	content: '';
+	z-index: 1;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/HighlighterEffect-sharedassets1.png);
+    background-repeat: round;
+}
+
+section.landing::before {
+    width: 35px;
+    height: 250px;
+    transform: rotate(27deg) translate(33rem, 0rem);
+	animation: landing_flashTranslate 4s linear infinite;
+}
+
+section.landing::after {
+    width: 20px;
+    height: 200px;
+    transform: rotate(27deg) translate(10rem, 0rem);
+	animation: landing_flashTranslate1 3s linear infinite;
+}
+
+/**************/
+
+@keyframes landing_flashTranslate {
+	0% {
+		transform: rotate(27deg) translate(33rem, 0rem);
+	}
+
+	15%, 50.999% {
+		transform: rotate(27deg) translate(33rem, -77rem);
+	}
+	51% {
+		transform: rotate(27deg) translate(22rem, 0rem);
+	}
+
+	70%, 100% {
+		transform: rotate(27deg) translate(22rem, -77rem);
+	}
+}
+
+@keyframes landing_flashTranslate1 {
+	0% {
+		transform: rotate(27deg) translate(10rem, 0rem);
+	}
+
+	20%,50.999% {
+		transform: rotate(27deg) translate(10rem, -77rem);
+	}
+	51% {
+		transform: rotate(27deg) translate(42rem, 0rem);
+	}
+
+	70%,100% {
+		transform: rotate(27deg) translate(42rem, -77rem);
+	}
+}
+
+@keyframes tutorialBlockFade {
+	0% {
+		transform: translate(0, 5.02rem);
+	}
+
+	to {
+		transform: translate(0, 4.42rem);
+	}
+}
+
+@keyframes itemSelectedBorderFade {
+	0% {
+		transform: scale(1.03);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes trainerIconLeft1 {
+	0% {
+		margin-left: 20%;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		margin-left: -48%;
+		opacity: 0;
+	}
+}
+
+@keyframes luckBlockFadeOut {
+	0%,
+	95% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes luckBlockSlide {
+	0% {
+		left: 11.4rem;
+	}
+
+	30%,
+	to {
+		left: 7.4rem;
+	}
+}
+
+@keyframes luckTitleSlide {
+	to {
+		opacity: 0;
+		left: -.05rem;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	80% {
+		left: -.05rem;
+		opacity: 1;
+	}
+
+	0% {
+		left: 2.95rem;
+	}
+}
+
+@keyframes nextLineIn {
+	0%,
+	20% {
+		opacity: 0;
+		transform: translateY(1.3em) rotate(0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(1.3em);
+	}
+}
+
+@keyframes logoBeat {
+	0% {
+		opacity: 1;
+	}
+
+	50%,
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes logoLevitation {
+	0%,
+	to {
+		transform: translate(-50%, -50%);
+	}
+
+	50% {
+		transform: translate(-50%, -40%);
+	}
+}
+
+@keyframes slideInTop {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-10%);
+		transform: translateY(-10%);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes racetrackSlideInLeft {
+	0%,
+	50% {
+		opacity: 1;
+		-webkit-transform: translateX(-300%);
+		transform: translateX(-300%);
+		visibility: visible;
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		filter: brightness(100%);
+	}
+}
+
+@keyframes bounceTrainingArrow {
+	0%,
+	to {
+		opacity: 1;
+		transform: translate3d(5px, 0, 0);
+	}
+
+	50% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes mainBgElementsScaleP1 {
+	0%,
+	to {
+		transform: scale(1)  translate(0px, -40px);
+	}
+
+	50% {
+		transform: scale(1.1)  translate(0px, 0px);
+	}
+}
+
+@keyframes mainBgElementsScaleP2 {
+	0%,
+	to {
+		transform: scale(1.1) translate(0px, 40px);
+	}
+
+	50% {
+		transform: scale(1) translate(0px, 0px);
+	}
+}
+
+@keyframes mosaicBG {
+	0%,
+	to {
+		background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+		background-size: 20%;
+		filter: blur(3px);
+	}
+
+	25% {
+		background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+		background-size: 20%;
+		filter: blur(3px);
+	}
+
+	75% {
+		background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+		background-size: 20%;
+		filter: blur(3px);
+	}
+}
+
+@keyframes mosaicBG4 {
+	0%,
+	to {
+		background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+		background-size: 100%;
+		filter: blur(3px);
+	}
+
+	25% {
+		background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+		background-size: 100%;
+		filter: blur(3px);
+	}
+
+	75% {
+		background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+		background-size: 100%;
+		filter: blur(3px);
+	}
+}
+
+@keyframes mosaicBG5 {
+	0%,
+	to {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+		background-size: 100%;
+		filter: blur(3px);
+	}
+
+	25% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+		background-size: 100%;
+		filter: blur(3px);
+	}
+
+	75% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+		background-size: 100%;
+		filter: blur(3px);
+	}
+}
+
+@keyframes titleSlide {
+	0% {
+		-webkit-transform: translateY(50%);
+		transform: translateY(50%);
+		opacity: 0;
+	}
+
+	to {
+		visibility: hidden;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes buttonFadeIn {
+	0%,
+	50%,
+	to {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+@keyframes buttonFadeIn1 {
+	0%,
+	70% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes buttonFadeIn2 {
+	0%,
+	20% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes rewardUnlockBeat {
+	0% {
+		transform: scale(.9);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes lock-shake {
+	0%,
+	to {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		-webkit-transform: rotate(8deg);
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50% {
+		-webkit-transform: rotate(10deg);
+		transform: rotate(10deg);
+	}
+
+	70% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes plfadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0);
+	}
+
+	30% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes whiteBlockFade {
+	0%,
+	30% {
+		width: 90%;
+		opacity: 0;
+		left: 9.1%;
+	}
+
+	to {
+		width: 70%;
+		opacity: 1;
+		left: 29.1%;
+	}
+}
+
+@keyframes tochek {
+	0% {
+		content: "";
+	}
+
+	25% {
+		content: ".";
+	}
+
+	50% {
+		content: "..";
+	}
+
+	75%,
+	to {
+		content: "...";
+	}
+}
+
+@keyframes landingLogoTada {
+	0%,
+	50% {
+		opacity: 0;
+		transform: scale(.5);
+	}
+
+	80% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+
+	90% {
+		opacity: 1;
+		transform: scale(.9);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes bannerFadeIn {
+	0%,
+	20% {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: 1;
+	}
+}
+
+@keyframes songdetails-FadeIn {
+	0%,
+	50%,
+	75% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes heightFadeIn {
+	0% {
+		height: 10%;
+		opacity: 0;
+	}
+
+	29% {
+		opacity: 1;
+	}
+
+	30% {
+		height: 10%;
+		opacity: 1;
+	}
+
+	to {
+		height: 80%;
+	}
+}
+
+@keyframes coachImgBeat1 {
+	0%,
+	to {
+		transform: translate(0, 5px);
+	}
+
+	50% {
+		transform: translate(0, -5px);
+	}
+}
+
+@keyframes coachImgBeat2 {
+	0%,
+	to {
+		transform: translate(0, -5px);
+	}
+
+	50% {
+		transform: translate(0, 5px);
+	}
+}
+
+@keyframes bootCoachFade {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 0.20rem);
+	}
+
+	50%,
+	to {
+		opacity: 1;
+		transform: translate(-50%, 0.05rem);
+	}
+}
+
+@keyframes coachImgBeat1Back {
+	0%,
+	50%,
+	to {
+		opacity: 0;
+	}
+
+	1% {
+		opacity: 1;
+	}
+}
+
+@keyframes coachImgBeat2Back {
+	0%,
+	50%,
+	to {
+		opacity: 0;
+	}
+
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes waitingSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animateShowCoach {
+	0% {
+		opacity: 0;
+		transform: translateX(-3em);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes MoveBeat2 {
+	0% {
+		left: -30%;
+		top: 31%;
+	}
+
+	10% {
+		left: 60%;
+		top: 76%;
+	}
+
+	20% {
+		left: 16%;
+		top: 50%;
+	}
+
+	30% {
+		left: 40%;
+		top: 38%;
+	}
+
+	50% {
+		left: 6%;
+		top: 34%;
+	}
+}
+
+@keyframes coachSelectionDelay {
+	0%,
+	85% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes tadaPlay {
+	0%,
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+
+	40%,
+	60% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+}
+
+@keyframes tadaPlay1 {
+	0% {
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+
+	30%,
+	to {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+@keyframes crownFadeShake {
+	0% {
+		transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -20deg);
+		opacity: 0;
+	}
+
+	10%,
+	20% {
+		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -23deg);
+		opacity: 1;
+	}
+
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -17deg);
+	}
+
+	40%,
+	60%,
+	80% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -23deg);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -20deg);
+	}
+}
+
+@keyframes ttsFadeIn {
+	0%,
+	50% {
+		transform: translate(0, 66px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes NewFeedbackScaleGood {
+	0% {
+		filter: brightness(160%);
+		opacity: 0;
+		transform: scale(.5);
+		-webkit-filter: brightness(160%);
+		-webkit-transform: scale(.5);
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(1.5);
+		-webkit-filter: brightness(100%);
+		-webkit-transform: scale(1.5);
+	}
+}
+
+@keyframes NewFeedbackScaleGoodFL {
+	0% {
+		filter: brightness(160%);
+		opacity: 0;
+		transform: scale(.5);
+		-webkit-filter: brightness(160%);
+		-webkit-transform: scale(.5);
+		left: -0.4rem;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(1.5);
+		-webkit-filter: brightness(100%);
+		-webkit-transform: scale(1.5);
+		left: -0.6rem;
+	}
+}
+
+@keyframes NewFeedbackScaleGoodFR {
+	0% {
+		filter: brightness(160%);
+		opacity: 0;
+		transform: scale(.5);
+		-webkit-filter: brightness(160%);
+		-webkit-transform: scale(.5);
+		left: -0.4rem;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(1.5);
+		-webkit-filter: brightness(100%);
+		-webkit-transform: scale(1.5);
+		left: -0.2rem;
+	}
+}
+
+@keyframes NewFeedbackScaleP {
+	0% {
+		filter: brightness(160%);
+		opacity: 1;
+		transform: scale(.5) rotate(0deg);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(2) rotate(15deg);
+	}
+}
+
+@keyframes NewFeedbackScaleP1 {
+	0% {
+		filter: brightness(200%);
+		opacity: 1;
+		transform: scale(.5) rotate(0deg);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(1.8) rotate(0deg);
+	}
+}
+
+@keyframes NewFeedbackScaleP2 {
+	0% {
+		filter: brightness(200%);
+		opacity: 1;
+		transform: scale(.5) rotate(0deg);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(2) rotate(0deg);
+	}
+}
+
+@keyframes NewFeedbackScalePA {
+	0% {
+		filter: brightness(160%);
+		opacity: 1;
+		transform: scale(.5);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(2.3);
+	}
+}
+
+@keyframes NewFeedbackScaleParticleYeah {
+	0% {
+		opacity: 1;
+		top: -0.8rem;
+		transform: scale(.5);
+	}
+
+	50% {
+		opacity: 1;
+		top: -0.8rem;
+	}
+
+	to {
+		top: -0.3rem;
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+@keyframes NewFeedbackScale02 {
+	0% {
+		filter: brightness(160%);
+		opacity: 1;
+		transform: scale(.5);
+		-webkit-filter: brightness(160%);
+		-webkit-transform: scale(.5);
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	to {
+		filter: brightness(100%);
+		opacity: 0;
+		transform: scale(1.5);
+		-webkit-filter: brightness(100%);
+		-webkit-transform: scale(1.5);
+	}
+}
+
+@keyframes INTransitionBG {
+	0% {
+		opacity: 0;
+	}
+
+	60% {
+		opacity: 1;
+	}
+}
+
+@keyframes profileSquaresAnim {
+	0%,
+	to {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+	}
+
+	25% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+	}
+
+	50% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_1.png);
+	}
+
+	75% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+	}
+}
+
+@keyframes squaresSlideShow {
+	0%,
+	to {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_0.png);
+	}
+
+	25% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_right_big_1.png);
+	}
+
+	50% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_0.png);
+	}
+
+	75% {
+		background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/squares/mosaic_left_big_1.png);
+	}
+}
+
+@keyframes csBeatSelect {
+	0%,
+	to {
+		-webkit-filter: brightness(100%);
+	}
+}
+
+@keyframes OUTTransitionBG {
+	40% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes OUTTransitionBG1 {
+	0%,
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes square2IN {
+	0% {
+		background-position: 3.29rem 0;
+		opacity: 1;
+	}
+
+	10% {
+		background-position: 2.87rem 0;
+		opacity: 1;
+	}
+
+	20% {
+		background-position: 2.46rem 0;
+		opacity: 1;
+	}
+
+	30% {
+		background-position: 2.05rem 0;
+		opacity: 1;
+	}
+
+	40% {
+		background-position: 1.64rem 0;
+		opacity: 1;
+	}
+
+	50% {
+		background-position: 1.22rem 0;
+		opacity: 1;
+	}
+
+	60% {
+		background-position: .82rem 0;
+		opacity: 1;
+	}
+
+	70% {
+		background-position: .406rem 0;
+		opacity: 1;
+	}
+
+	80%,
+	90%,
+	to {
+		background-position: 0 0;
+		opacity: 1;
+	}
+}
+
+@keyframes square2OUT {
+	0% {
+		background-position: -55px 0;
+		opacity: 1;
+	}
+
+	10% {
+		background-position: -110px 0;
+		opacity: 1;
+	}
+
+	20% {
+		background-position: -164px 0;
+		opacity: 1;
+	}
+
+	30% {
+		background-position: -218px 0;
+		opacity: 1;
+	}
+
+	40% {
+		background-position: -273px 0;
+		opacity: 1;
+	}
+
+	50% {
+		background-position: -330px 0;
+		opacity: 1;
+	}
+
+	60% {
+		background-position: -382px 0;
+		opacity: 1;
+	}
+
+	70%,
+	80%,
+	90%,
+	to {
+		background-position: -437px 0;
+		opacity: 1;
+	}
+}
+
+@keyframes wraperBeatStatic {
+	0% {
+		transform: scale(.97) rotate(0deg);
+	}
+
+	50%,
+	to {
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+@keyframes wraperBeatOdd {
+	0% {
+		transform: scale(.97);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes wraperBeatEven {
+	0% {
+		transform: scale(.95);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes wraperBeat {
+	0%,
+	25%,
+	51%,
+	75% {
+		transform: scale(1) rotate(0deg);
+	}
+
+	2%,
+	52% {
+		transform: scale(.97) rotate(0deg);
+	}
+
+	26% {
+		transform: scale(.97) rotate(3deg);
+	}
+
+	50%,
+	to {
+		transform: scale(1);
+	}
+
+	76% {
+		transform: scale(.97) rotate(-3deg);
+	}
+}
+
+@keyframes feedlabel {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -5px, 0) scale3d(1, 1, 1);
+	}
+
+	20% {
+		opacity: 1;
+		transform: scale3d(1.2, 1.2, 1);
+	}
+
+	36% {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		transform: translate3d(0, 5px, 0) scale3d(.98, .98, 1);
+	}
+}
+
+@keyframes playerStarReceiving {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3, .3, .3);
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
+		transform: rotate(10deg);
+	}
+}
+
+@keyframes player-star-beat {
+	to {
+		opacity: 1;
+		transform: scale(1) rotate(10deg);
+	}
+
+	0% {
+		opacity: 1;
+		transform: scale(1) rotate(10deg);
+		filter: brightness(1.3);
+	}
+}
+
+@keyframes racetrackStarFade {
+	0% {
+		filter: brightness(1);
+		transform: scale(.9) rotate(85deg);
+	}
+
+	65% {
+		filter: brightness(1);
+		transform: scale(1.5) rotate(10deg);
+	}
+
+	80% {
+		filter: brightness(2);
+		transform: scale(1) rotate(10deg);
+	}
+
+	to {
+		filter: brightness(1);
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes racetrack-star-beat {
+	0% {
+		transform: scale3d(1.1, 1.1, 1) rotate(10deg);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1) rotate(10deg);
+	}
+}
+
+@keyframes beatPicto {
+	0%,
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+
+	20% {
+		opacity: 1;
+		transform: scale3d(1.13, 0.93, 1);
+	}
+}
+
+@keyframes flashOnSongItem {
+	0% {
+		transform: translateX(-1rem) rotate(0) skew(40deg, 0);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		transform: translateX(1rem) rotate(0) skew(40deg, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes afterDanceSongInfoSlide {
+	0%,
+	50% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes afterDanceSongCoverSlide {
+	0%,
+	60% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes newHSfade {
+	0%,
+	90% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade1 {
+	0%,
+	40% {
+		transform: translateX(-39px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade2 {
+	0%,
+	60% {
+		transform: translateX(-39px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade3 {
+	0%,
+	80% {
+		transform: translateX(-39px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade4 {
+	0%,
+	85% {
+		transform: translateX(-39px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade1color {
+	0%,
+	60% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade2color {
+	0%,
+	70% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade3color {
+	0%,
+	80% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade4color {
+	0%,
+	90% {
+		transform: translateX(1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade1name {
+	0%,
+	65% {
+		transform: translateX(-0.7rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade2name {
+	0%,
+	75% {
+		transform: translateX(-0.7rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade3name {
+	0%,
+	85% {
+		transform: translateX(-0.7rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes playerContentFade4name {
+	0%,
+	95% {
+		transform: translateX(-0.7rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes OpacityBeat {
+	0%,
+	to {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes albumcoachSlide {
+	0% {
+		transform: translateX(3rem);
+		opacity: 0;
+	}
+
+	40% {
+		transform: translateX(4rem);
+		opacity: 1;
+	}
+
+	85% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		transform: translateX(4rem);
+	}
+}
+
+@keyframes PlayerslideInDown {
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes positionIn {
+	0%,
+	80% {
+		transform: scale(.5);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes afterdanceFlagFade {
+	0%,
+	80% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes crownBeat09 {
+	0% {
+		transform: scale(.92) rotate(-20deg);
+	}
+
+	20% {
+		transform: scale(1) rotate(-20deg);
+	}
+}
+
+@keyframes crownBeat39 {
+	0% {
+		transform: scale(.9);
+		filter: brightness(1.3);
+	}
+
+	50% {
+		transform: scale(1);
+		filter: brightness(1);
+	}
+}
+
+@keyframes crownBeatAF {
+	0%,
+	100% {
+		transform: scale(.9) rotate(10deg);
+	}
+
+	50% {
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes rewardAfterBounce {
+	0%,
+	100% {
+		transform: scale(.9);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes spriteBeat {
+	0% {
+		filter: brightness(1.5);
+		transform: scale(.98) rotate(-25deg);
+	}
+
+	to {
+		filter: brightness(1);
+		transform: scale(1) rotate(-25deg);
+	}
+}
+
+@keyframes actionBeat {
+	0% {
+		filter: brightness(1.2);
+	}
+
+	to {
+		filter: brightness(1);
+	}
+}
+
+@keyframes fadeInScore {
+	0%,
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes titleShake1 {
+	0% {
+		transform: translate(1px, 0) rotate(0deg);
+		filter: brightness(1.1);
+	}
+
+	10% {
+		transform: translate(0, -1px) rotate(0deg);
+		filter: brightness(1);
+	}
+
+	20% {
+		transform: translate(-2px, 1px) rotate(0deg);
+		filter: brightness(1.3);
+	}
+
+	30% {
+		transform: translate(1px, 1px) rotate(0deg);
+		filter: brightness(1);
+	}
+
+	40% {
+		transform: translate(2px, 0) rotate(0deg);
+		filter: brightness(.9);
+	}
+
+	50% {
+		transform: translate(0, 1px) rotate(0deg);
+		filter: brightness(1);
+	}
+
+	60% {
+		transform: translate(-2px, 0) rotate(0deg);
+		filter: brightness(1.9);
+	}
+
+	70% {
+		transform: translate(1px, 0) rotate(0deg);
+		filter: brightness(1);
+	}
+
+	80% {
+		transform: translate(0, 0) rotate(0deg);
+		filter: brightness(.6);
+	}
+
+	90% {
+		transform: translate(1px, 1px) rotate(0deg);
+		filter: brightness(1);
+	}
+
+	to {
+		transform: translate(0, -1px) rotate(0deg);
+		filter: brightness(1.2);
+	}
+}
+
+@keyframes afterdanceStar {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(.3, .3, .3);
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
+		transform: rotate(15deg);
+	}
+}
+
+@keyframes starglow {
+	0% {
+		filter: brightness(1.3);
+		transform: scale(1) rotate(10deg);
+	}
+
+	50% {
+		filter: brightness(1);
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes starglow15 {
+	0% {
+		filter: brightness(1.1);
+		transform: scale(1.15) rotate(10deg);
+	}
+
+	25% {
+		filter: brightness(1);
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes starglow4 {
+	25% {
+		filter: brightness(1.1);
+		transform: scale(1.15) rotate(10deg);
+	}
+
+	0%,
+	24%,
+	50%,
+	to {
+		filter: brightness(1);
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes starglow3 {
+	50% {
+		filter: brightness(1.1);
+		transform: scale(1.15) rotate(10deg);
+	}
+
+	0%,
+	49%,
+	75%,
+	to {
+		filter: brightness(1);
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes starglow2 {
+	75% {
+		filter: brightness(1.1);
+		transform: scale(1.15) rotate(10deg);
+	}
+
+	0%,
+	74%,
+	to {
+		filter: brightness(1);
+		transform: scale(1) rotate(10deg);
+	}
+}
+
+@keyframes coinsCountBeat {
+	0% {
+		filter: brightness(1.5);
+	}
+
+	25%,
+	to {
+		filter: brightness(1);
+	}
+}
+
+@keyframes MoveBeat {
+	0% {
+		left: -10%;
+		top: 31%;
+	}
+
+	10% {
+		left: 10%;
+		top: 46%;
+	}
+
+	20% {
+		left: 16%;
+		top: 20%;
+	}
+
+	30% {
+		left: 40%;
+		top: 38%;
+	}
+
+	50% {
+		left: 6%;
+		top: 34%;
+	}
+
+	80% {
+		left: 56%;
+		top: 23%;
+	}
+
+	to {
+		left: 31%;
+		top: 38%;
+	}
+}
+
+@keyframes flashOnButton1 {
+	0% {
+		transform: skew(30deg, -20deg) translateX(-0.7rem);
+	}
+
+	70% {
+		transform: skew(30deg, -20deg) translateX(-0.7rem);
+	}
+
+	100% {
+		transform: skew(30deg, -20deg) translateX(1.3rem);
+	}
+}
+
+@keyframes flashOnButtonV2 {
+	0% {
+		transform: skew(40deg, 0) translateX(-0.76rem);
+	}
+
+	70% {
+		transform: skew(40deg, 0) translateX(-0.76rem);
+	}
+
+	100% {
+		transform: skew(40deg, 0) translateX(1.5rem);
+	}
+}
+
+@keyframes flashOnButtonV3 {
+	0% {
+		transform: skew(40deg, 0) translateX(-1.1rem);
+	}
+
+	70% {
+		transform: skew(40deg, 0) translateX(-1.1rem);
+	}
+
+	100% {
+		transform: skew(40deg, 0) translateX(1.1rem);
+	}
+}
+
+@keyframes racetrackBGBeat {
+	0% {
+		filter: brightness(2);
+	}
+
+	to {
+		filter: brightness(1);
+	}
+}
+
+@keyframes landingWaitFade {
+	0%,
+	80% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes landingLoadElementsFade {
+	0%,
+	80% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes title-slideRight {
+	0%,
+	50% {
+		transform: translateX(100%);
+		visibility: visible;
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes title-slideRightSe {
+	0%,
+	70% {
+		transform: translateX(100%);
+		visibility: visible;
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes title-gradcolorMove {
+	0%,
+	to {
+		background-position: 0 4%;
+	}
+
+	50% {
+		background-position: 100% 97%;
+	}
+}
+
+@keyframes animateMaintenance {
+	0% {
+		transform: translateX(-1rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animateSpriteMap {
+	0% {
+		visibility: visible;
+		background-position: left top;
+	}
+
+	to {
+		visibility: visible;
+		background-position: left bottom;
+	}
+}
+
+@keyframes transitionINsprite {
+	0% {
+		visibility: visible;
+		background-position: center top;
+	}
+
+	to {
+		visibility: visible;
+		background-position: center bottom;
+	}
+}
+
+@keyframes transitionOUTsprite {
+	0% {
+		visibility: visible;
+		background-position: center bottom;
+	}
+
+	to {
+		visibility: visible;
+		background-position: center top;
+	}
+}
+
+@keyframes animateRLSpriteMap {
+	0% {
+		visibility: visible;
+		background-position: left top;
+	}
+
+	to {
+		visibility: visible;
+		background-position: right top;
+	}
+}
+
+@keyframes progressbaranimation {
+	0% {
+		background-position: 0 0;
+		background-size: cover;
+	}
+
+	20% {
+		background-position: -700px 0;
+		background-size: cover;
+	}
+
+	21% {
+		background-size: 0;
+	}
+
+	to {
+		background-position: 0 0;
+		background-size: 0;
+	}
+}
+
+@keyframes goldmoveAmbientV3 {
+	0% {
+		opacity: 0;
+		transform: rotate(90deg) scale(2);
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(90deg) scale(1.3);
+	}
+}
+
+@keyframes goldmoveAmbientV8 {
+	0% {
+		opacity: 0;
+		transform: scale(2);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.5);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+@keyframes goldmoveAmbientRevertV3 {
+	0% {
+		opacity: 0;
+		transform: rotate(0deg) scale(2);
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(10deg) scale(1.1);
+	}
+}
+
+@keyframes goldmoveAmbientRevertV8 {
+	0% {
+		transform: scale(1.3) rotate(0deg);
+	}
+
+	100% {
+		transform: scale(1.3) rotate(-360deg);
+	}
+}
+
+@keyframes goldmoveAmbientRevertV9 {
+	0% {
+		opacity: 0;
+		background-size: 180%;
+	}
+
+	100% {
+		opacity: 0.6;
+		background-size: 100%;
+	}
+}
+
+@keyframes goldmoveAmbientRevertV10 {
+	0% {
+		opacity: 0;
+		background-size: 180%;
+	}
+
+	100% {
+		opacity: 1;
+		background-size: 140%;
+	}
+}
+
+@keyframes goldmoveAmbientEndingV3 {
+	0% {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+	30%,
+	100% {
+		opacity: 0;
+		transform: rotate(0deg) scale(2);
+	}
+}
+
+@keyframes goldmoveAmbientRevertEndingV3 {
+	0% {
+		opacity: 1;
+		transform: rotate(90deg) scale(1);
+	}
+
+	40% {
+		opacity: 0;
+		transform: rotate(78deg) scale(2.1);
+	}
+
+	30%,
+	100% {
+		transform: rotate(80deg) scale(2);
+	}
+}
+
+@keyframes goldmoveBorderEndingV3 {
+	0% {
+		opacity: 0.5;
+	}
+
+	30%,
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes goldmoveVisible {
+	0% {
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		transform: scale(1.75) rotate(-50deg);
+		opacity: 0;
+	}
+}
+
+@keyframes modalActivate {
+	0% {
+		-webkit-transform: translateY(50%);
+		transform: translateY(50%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@font-face {
+	font-family: "Just Dance New Bold";
+	font-weight: 400;
+	font-style: normal;
+	src: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Bold.woff);
+}
+
+@font-face {
+	font-family: "OpenSans Bold";
+	font-weight: 400;
+	font-style: normal;
+	src: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Bold.woff);
+}
+
+@font-face {
+	font-family: "Just Dance New Regular";
+	font-weight: 400;
+	font-style: normal;
+	src: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff);
+}
+
+@font-face {
+	font-family: "Just Dance Regular Test";
+	font-weight: normal;
+	font-style: normal;
+	src: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2FHelveticaRegular.woff?v=1636270827592);
+}
+
+@font-face {
+	font-family: "OpenSans SemiBold";
+	font-weight: 400;
+	font-style: normal;
+	src: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff);
+}
+
+@font-face {
+	font-family: "OpenSans Regular";
+	font-weight: 400;
+	font-style: normal;
+	src: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2FJD_New_Regular.woff);
+}
+
+:root {
+	--color1: #373a9f;
+	--accent1: #000538;
+	--general-2021: #f600a0;
+	--general1: #ff00a5;
+	--aqua1: #3abe63;
+	--gray1: #8e8d8d;
+	--gray2: #464646;
+	--gray3: #5a5a5a;
+}
+
+.inputWDFRoomNo,
+input.inputWDFRoomNo::after {
+	font-family: Just Dance New Regular;
+	right: 35.6rem !important;
+	top: 14rem !important;
+}
+
+.inputWDFRoomNo {
+	border: 2px solid purple !important;
+	z-index: 1;
+	overflow: visible;
+}
+
+input.inputWDFRoomNo::after {
+	content: "WORLD DANCE FLOOR";
+	font-size: 1rem;
+	color: #00f;
+	position: absolute;
+	height: 5rem;
+	width: 5rem;
+	border-radius: 22px;
+	outline: 0;
+}
+
+.section--full-height {
+	height: 100.2vh;
+}
+
+section.landing {
+	margin-bottom: 0;
+}
+
+.dr-landing__wrapper {
+	padding: 1rem;
+}
+
+.dr-landing__icon-wrapper,
+.dr-landing__label,
+.landing-patch {
+	display: none;
+}
+
+section.explore {
+	margin-bottom: 0;
+	padding-top: 5vh;
+	padding-bottom: 8vh;
+	background: #fff;
+	overflow: hidden;
+}
+
+.dr-landing .init-spinner__spinner {
+	margin-left: -6.5rem;
+	fill: #fff;
+}
+
+.dr-landing__caption {
+	font-size: 5.8rem;
+	width: auto;
+	height: 75%;
+	padding: 0 1rem;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.9;
+}
+
+.dr-landing__room-number {
+	color: #fff;
+}
+
+.dr-landing__room-number::before {
+	content: '№';
+	font-size: 1.8rem;
+	color: #fff;
+	font-family: Just Dance New Bold;
+	padding-right: .5rem;
+	opacity: 0.9;
+}
+
+.landing__content {
+	background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fspace_portals.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.landing__content::after,
+.landing__content::before {
+	display: block;
+	content: "";
+	height: 768px;
+	width: 1366px;
+	position: absolute;
+	background: red;
+	background-size: cover;
+	z-index: 2;
+}
+
+.landing__content::before {
+	background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Ftitle_screen_coaches_1.png);
+	background-size: 95%;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: mainBgElementsScaleP1 25s ease infinite;
+}
+
+.landing__content::after {
+	background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Ftitle_screen_coaches_2.png);
+	background-size: 95%;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: mainBgElementsScaleP2 30s ease infinite;
+}
+
+.landing-text::before {
+	content: "";
+	width: 25rem;
+	height: 25rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/landing/jd22_logo-updated.png);
+	background-size: 75%;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 15;
+	animation: logoBasicTransition 13s ease infinite;
+}
+
+@keyframes logoBasicTransition {
+	0%, 100%{transform: translate(-50%, -50%) scale(1);}
+	50%{transform: translate(-50%, -50%) scale(0.9);}
+}
+
+.landing-text::after {
+    content: "";
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/HighlighterEffect-sharedassets1.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    -webkit-mask: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fjd22_logo-updated_mask-border.png);
+    -webkit-mask-size: 75%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    z-index: 14;
+    animation: logoBasicTransition 13s ease infinite, logoRGBMaskBorder_slideFlash 10s ease infinite;
+}
+
+
+@keyframes logoRGBMaskBorder_slideFlash {
+	0%{background-position-x: -6rem; opacity: 0;}
+	30%, 70%{opacity: 1;}
+	100%{background-position-x: 23rem; opacity: 0;}
+}
+
+.landing-arrow {
+	display: none;
+}
+
+.main,
+.same-background {
+	background-color: var(--accent1);
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/background/mainSpace.png);
+}
+
+/*
+<div class="site-message cookie-notice show">
+    <div class="cookie-wrapper">
+        <div class="cookie-content">В целях повышения качества оказываемых услуг мы сохраняем информацию о ваших действиях на сайте. Продолжая навигацию по сайту, вы соглашаетесь с использованием cookies компанией Ubisoft и ее партнерами. Вы можете изменить настройки cookies в любое время, однако отключение данной функции ограничит функционал сайта. Ознакомьтесь с нашей Политикой конфиденциальности <a href="https://legal.ubi.com/privacypolicy/" target="_blank" id="cookie_legalLink">здесь</a>.</div>
+        <div class="cookie-close">
+            <button class="cookie-close-btn">OK</button>
+        </div>
+    </div>
+</div>
+*/
+
+.site-message {
+    width: 38rem;
+    height: 17rem;
+    color: #000;
+    padding: 8px 5px 10px;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 15px;
+    border: 2px #0056cc solid;
+    outline: 2px #fff solid;
+    box-shadow: 0 0 40px 5px #0056cc;
+    transition: all 0.3s ease;
+}
+
+.site-message.show {
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	visibility: visible;
+}
+
+.cookie-close .cookie-close-btn {
+    text-align: center;
+    cursor: pointer;
+    padding: 4px 30px;
+    color: #fff !important;
+    border: 2px #0056cc solid;
+    border-radius: 50px !important;
+    font-size: 15px;
+    font-weight: normal;
+    background: #0056cc !important;
+    font-family: Just Dance Regular Test !important;
+    transition: all 0.1s ease;
+}
+
+.cookie-close .cookie-close-btn:hover {
+	border: 2px #fff solid;
+	outline: 2px #0056cc solid;
+	opacity: 1;
+}
+
+.site-message a,
+.site-message a:visited {
+	color: #fff;
+}
+
+.cookie-close,
+.cookie-content {
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+}
+
+.cookie-content {
+	font-family: "Just Dance New Regular";
+	width: 62%;
+	left: 37%;
+	top: 11%;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	margin: 6px 0;
+	color: #fff;
+	user-select: none;
+}
+
+.cookie-wrapper::after {
+	content: "LAST NEWS";
+    font-family: 'Just Dance New Bold';
+    opacity: 1 !important;
+    color: #1966d0;
+    position: absolute;
+    font-size: 28px;
+    top: 4%;
+    left: 14rem;
+    width: 23rem;
+}
+.cookie-wrapper:lang(ru)::after {
+	content: "ПОСЛЕДНИЕ НОВОСТИ";
+}
+
+.cookie-content::after,
+.cookie-content::before {
+	font-family: "Just Dance New Regular";
+	opacity: 1 !important;
+	position: absolute;
+}
+
+.cookie-content::before {
+	content: 'Just Dance 2022!';
+	color: #92405f;
+	font-size: 20px;
+	top: 7%;
+	background-color: #0056cc;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.cookie-content::after {
+	content: "No, you're not dreaming, you read that right – Just Dance 2022 is launching on November 4, 2021! This year, Just Dance 2022 offers players even more ways to dance. 40 new songs and universes! For one week only, dance along to the “Best of Just Dance 2021” Playlist, as the perfect warm up for Just Dance 2022! Have fun dancing to your favorite songs!";
+	color: gray;
+	font-size: 14px;
+	top: 20%;
+	left: 0;
+	width: 99%;
+}
+
+.cookie-content:lang(ru)::after {
+	content: 'Нет, нет, это не сон, все верно — Just Dance 2022 станет доступна 4 ноября 2021 года! Уже в этом году Just Dance 2022 подарит игрокам еще больше свободы в танце. 40 новых песен и вселенных! Совершенствуйте танцевальные навыки под самые топовые композиции и завирусившиеся интернет-хиты!';
+}
+
+.cookie-wrapper::before {
+	content: "";
+	width: 34%;
+	height: 93%;
+	position: absolute;
+	top: 50%;
+	left: 1.5%;
+	transform: translate(0, -50%);
+	background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fjustdance2022-banner.jpg);
+	background-size: 130%;
+	background-position: center;
+	border-radius: 0.4rem;
+}
+
+.cookie-close {
+    margin: 0 1rem;
+    top: 86%;
+    right: 0.08rem;
+}
+
+.main-header {
+	background: #fff;
+	height: 0;
+}
+
+.landing__video,
+.logo__inner {
+	display: none;
+}
+
+@media screen and (min-width: 1000px) {
+	.landing__content,
+	.landing__content::after,
+	.landing__content::before {
+		height: calc(100% - 0rem);
+		width: calc(100% - 0rem);
+	}
+}
+
+.side-nav {
+	z-index: 20;
+	right: .1rem;
+}
+
+.side-nav::after {
+	content: "";
+	width: 6rem;
+	height: 120%;
+	top: -8%;
+	left: -76%;
+	z-index: -1;
+	border-radius: 12px;
+}
+
+.side-nav .dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: var(--color1);
+	border-radius: 40%;
+	text-indent: -9999px;
+	border: 2px solid var(--color1);
+}
+
+.side-nav .label,
+.side-nav::after {
+	position: absolute;
+	background: #fff;
+	border: 2px var(--color1) solid;
+}
+
+.side-nav .label {
+	opacity: 0;
+	font-size: 14px;
+	color: var(--color1);
+	white-space: nowrap;
+	text-decoration: none;
+	transition-timing-function: ease;
+	-webkit-transform: none;
+	transform: none;
+	transition-duration: 135ms;
+	font-family: "OpenSans Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	top: 5px;
+	right: 19px;
+	z-index: -60;
+	border-radius: 20px 0 0 20px;
+	padding-right: 18px;
+	padding-left: 24px;
+}
+
+.landing-button {
+	top: 38.4vh;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+html[lang=ru] .landing-button::before {
+    content: "Нажмите здесь, чтобы начать";
+}
+
+html[lang=en] .landing-button::before {
+	content: "Click here, to start";
+}
+
+.landing-button::before {
+	color: #fff;
+	font-size: 1.2rem;
+	font-family: "Just Dance Regular Test";
+	animation: ttsFadeIn 2s ease;
+	animation-delay: 2.7s;
+	z-index: 2;
+	text-shadow: 1px 2px 2px #00000096;
+	opacity: 0.9;
+}
+
+.landing-circle {
+	display: none;
+}
+
+.landing-button__play {
+	animation: none;
+	display: none;
+	position: absolute;
+	width: 100vh;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.landing-button__play::before {
+	display: none;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/landingMain_button.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	animation: tadaPlay1 5s ease infinite;
+	z-index: 4;
+	top: -9px;
+	left: 0;
+}
+
+.landing-button__play:hover {
+	transform: scale(1.05);
+	transition: all .3s;
+}
+
+.landing-button__txt {
+	text-shadow: none;
+}
+
+.landing-button__txt,
+.landing-text__title {
+	display: none;
+}
+
+.landing-text__subtitle {
+	display: none;
+	font-family: "OpenSans SemiBold";
+	color: #fff;
+	opacity: .8;
+}
+
+.landing-circle {
+	border-radius: 50%;
+	background-color: #83a2fd;
+	width: 10rem;
+	height: 10rem;
+	opacity: 0;
+	transition: all .3s;
+	position: absolute;
+	top: -.5rem;
+}
+
+.landing-circle::before {
+	content: "";
+}
+
+button.landing-button.launch-game.visible {
+	z-index: 12;
+}
+
+.video-display__poster {
+	border-radius: 15px;
+	border: 4px var(--color1) solid;
+	padding: 5px;
+}
+
+.video-display {
+	position: relative;
+	height: 18.1rem !important;
+}
+
+.video-display::before {
+	display: none;
+	border-radius: 15px;
+	transform: scale(.97);
+}
+
+section.explore h2 {
+	color: var(--color1);
+	letter-spacing: -1px;
+	line-height: 1.1;
+	font-size: 1.5rem;
+}
+
+.video-display__play-button {
+	height: 3rem;
+	width: 3rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0.5;
+	transition: transform 0.3s ease;
+	transform: translate(-50%, -50%);
+}
+
+.video-display:hover .video-display__play-button {
+	-webkit-transform: translate(-50%, -50%) scale(1.1);
+	-ms-transform: translate(-50%, -50%) scale(1.1);
+	transform: translate(-50%, -50%) scale(1.1);
+	opacity: 1;
+}
+
+.video-display span {
+	display: none;
+}
+
+.scrollUp-fixed {
+	display: none;
+	background-color: var(--aqua1);
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	opacity: 1;
+	transition: all .2s;
+	position: fixed;
+	z-index: 3;
+	bottom: 5%;
+	left: 3%;
+}
+
+.scrollUp-fixed svg {
+	width: 150%;
+	height: 150%;
+	margin: -3% 0 0 -22%;
+}
+
+.scrollUp-fixed .cls-1 {
+	fill-rule: evenodd;
+	fill: #fff;
+}
+
+.scrollUp-fixed .scrollUp-text {
+	display: none;
+	width: 5rem;
+	font-family: OpenSans SemiBold;
+	text-align: center;
+	line-height: 1.15;
+	position: relative;
+	bottom: -.2rem;
+	right: 1.8rem;
+	color: var(--aqua1);
+	font-weight: bold;
+}
+
+.article--xs-image {
+	animation: fadeIn 2s ease infinite;
+}
+
+.screenshot {
+	padding: 0.8%;
+}
+
+.screenshots__images {
+	box-shadow: 0px 0px 50px var(--color1);
+}
+
+.screenshot.screenshot--0 .screenshots__images {
+	box-shadow: 0px 0px 50px #3bc48b;
+}
+
+.screenshot.screenshot--1 .screenshots__images {
+	box-shadow: 0px 0px 50px #1f77e4;
+}
+
+.screenshot.screenshot--2 .screenshots__images {
+	box-shadow: 0px 0px 50px #00061c;
+}
+
+.screenshot.screenshot--3 .screenshots__images {
+	box-shadow: 0px 0px 50px #008ced;
+}
+
+.screenshot.screenshot--4 .screenshots__images {
+	box-shadow: 0px 0px 50px #ffef26;
+}
+
+.screenshot.screenshot--5 .screenshots__images {
+	box-shadow: 0px 0px 50px #fd72e8;
+}
+
+.screenshot.screenshot--6 .screenshots__images {
+	box-shadow: 0px 0px 50px #7934ff;
+}
+
+.screenshot.screenshot--7 .screenshots__images {
+	box-shadow: 0px 0px 50px #83209b;
+}
+
+.screenshot__title {
+	color: var(--color1);
+	opacity: 1;
+	padding-bottom: 1%;
+}
+
+.header--catalog .article--med-size {
+	color: #fff;
+}
+
+.header--catalog .article__content-margin {
+	color: #acaeff;
+}
+
+.screenshots::before {
+	background-image: none;
+	background-color: #fff;
+	top: -3.4rem;
+	height: 171%;
+	opacity: 1;
+	z-index: 0;
+}
+
+.screen__icon-wrapper,
+section.features article.feature::after {
+	display: none;
+}
+
+article.article.article-right.footer--catalog {
+	margin: -2rem auto 0;
+}
+
+.article--med-features h2,
+.article--med-features p {
+	width: 105%;
+	color: var(--color1);
+}
+
+.article.article--med-size.article--xs-image .article__image {
+	border: 7px #fff solid;
+	box-shadow: 2px 2px 5px rgb(0 0 0/30%);
+}
+
+section.features article.feature::before {
+	content: '';
+	background: #fff;
+	width: 200rem;
+	border-radius: 0;
+	position: absolute;
+	z-index: 1;
+	top: -13rem;
+	left: -9rem;
+}
+
+.polaroid::before {
+	background: #7501ad;
+	background: linear-gradient(to bottom, #7501ad 0%, #c146fd 50%, #7501ad 51%, #e6b1ff 100%);
+}
+
+.polaroid::after {
+	background: #ffb401;
+	background: linear-gradient(to bottom, #ffb401 0%, #c38a00 47%, #ffb401 100%);
+}
+
+.article.article--center.never-dance-alone__image .polaroid__wrapper {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/landing/updated_polaroid.png);
+	background-size: 113%;
+	background-position: center;
+	margin-top: -1%;
+}
+
+.article.article--center.never-dance-alone__image img.article__image {
+	opacity: 0;
+}
+
+.never-dance-alone__header::before {
+    background-image: linear-gradient(90deg, #100e6400 0%, #0064bd 55%);
+}
+
+.how-it-works__content-header::before {
+	background-image: linear-gradient(to right, #712a9a, #4d1c9d);
+}
+
+.ecran__img,
+.phone__img,
+.screen__img {
+	-webkit-mask-size: contain;
+	background: #353898;
+}
+
+.phone__img {
+	-webkit-mask-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/home/landing/icons/SmartPhone.png);
+	-webkit-mask-repeat: no-repeat;
+}
+
+.ecran__img,
+.screen__img {
+	-webkit-mask-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/home/landing/icons/NumberLocated.png);
+}
+
+.screen__img {
+	-webkit-mask-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/home/landing/icons/DancersScreen.png);
+}
+
+.content__small {
+	display: inline-block;
+	padding: 0 4rem;
+	min-width: 70%;
+	max-width: 100%;
+	text-align: center;
+	color: #373a9e;
+}
+
+.step-list__item {
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 13px;
+	margin-bottom: 1.5rem;
+}
+
+h3.article__title.article-right.main-color-2 {
+	color: #383ba1;
+}
+
+p.step-list__item-label {
+	margin-bottom: 0;
+}
+
+.never-dance-alone__header::before {
+	width: 82rem;
+	height: 100%;
+	right: -10rem;
+	top: 2rem;
+}
+
+@media screen and (max-width: 1700px) {
+	.never-dance-alone__header h3 {
+		padding-top: 28%;
+	}
+}
+
+.how-it-works__content-header::before {
+	display: none;
+}
+
+.how-it-works__content-header {
+	background-image: linear-gradient(180deg, #e2e1e1, #fff);
+	margin-right: 0;
+	padding: 2rem;
+	width: 45%;
+	border-radius: 0;
+}
+
+@media screen and (max-width: 1700px) {
+	.how-it-works__content-header {
+		height: 144%;
+		top: -14rem;
+	}
+}
+
+.how-it-works__content-header h3 {
+	width: 82%;
+	text-align: left;
+	bottom: 21rem;
+	left: 4rem;
+}
+
+.line__download::before {
+    content: '';
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/landing/download_line_before.png);
+	background-size: cover;
+    background-color: #fff;
+    width: 112%;
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    left: -6%;
+}
+
+.download-txt {
+	text-transform: uppercase;
+	background: linear-gradient(90deg, rgb(49 144 200) 0, rgb(238 87 172) 50%, rgb(252 247 89) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.line--device__header .content__small {
+	padding: .6rem 4rem;
+	background: #fff;
+	color: var(--color1);
+	border-radius: 100px;
+}
+
+.dropdown {
+	display: inline-block;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	font-family: OpenSans SemiBold;
+}
+
+.menu__dropdown {
+	width: 100%;
+}
+
+.device__list,
+.footer .menu.menu__relatedLinks a {
+	text-decoration: none;
+	color: #fff !important;
+	opacity: 1;
+}
+
+.init-spinner--splash::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbg_transition_just_dance_coaches.png);
+	background-size: cover;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+.init-spinner--splash::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbg_transition_just_dance.png);
+	background-size: cover;
+    top: 0%;
+    left: 0%;
+	z-index: 0;
+}
+
+.init-spinner--splash .init-spinner__spinner {
+	top: auto;
+	bottom: 7%;
+	opacity: 1;
+	fill: #fff;
+	z-index: 2;
+}
+
+#just-dance-now .tutorial img,
+#just-dance-now .tutorial::before,
+.connect-phone-info,
+.state-dance .connect-phone-info,
+.state-tutorial #players,
+.state-tutorial #room-info {
+	display: none;
+}
+
+.connect-phone-info:hover {
+	opacity: .9;
+	transition: all .2s;
+}
+
+.connect-phone-info__text {
+	content: "";
+	position: relative;
+	width: 82%;
+	text-align: inherit;
+	left: 12%;
+}
+
+.connect-phone-info--clickable .connect-phone-info__text::before {
+	content: "?";
+	display: none;
+}
+
+.state-tutorial #just-dance-now {
+	background: #55cff0;
+}
+
+#just-dance-now .tutorial {
+	width: 100%;
+	height: 118%;
+	color: #8d8d8b;
+	overflow: hidden;
+	padding-top: 0;
+	top: 0;
+	position: relative;
+	background-image: none;
+	background-position: center 1rem;
+}
+
+.tutorial__spinner::before {
+    content: "";
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fboot-sprite-coaches-fixed.png);
+    animation: animateRLSpriteMap 14s 0s 0 steps(14, end), bootCoachFade 1s ease infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 50%;
+    top: 0.4rem;
+    transform: translate(-50%, 0%);
+    opacity: 1;
+}
+
+.tutorial__spinner {
+	width: 104%;
+}
+
+#just-dance-12,
+#just-dance-now .tutorial::after {
+	content: "";
+	width: 100%;
+	height: 20%;
+	background: #fff;
+	left: 0;
+	border-radius: 0;
+}
+
+#just-dance-12 {
+	top: 4.42rem;
+}
+
+#just-dance-now .tutorial::after {
+	animation: tutorialBlockFade 1s ease;
+	transform: translate(0, 4.42rem);
+}
+
+#just-dance-now .tutorial::before {
+	animation: fadeIn .4s ease;
+}
+
+#just-dance-now .tutorial .tutorial__spinner {
+	font-size: 23%;
+	top: .7rem;
+	opacity: 1;
+	animation: fadeIn 1s ease;
+	color: #fff;
+}
+
+#just-dance-now .tutorial .tutorial__spinner .spinner {
+	fill: #fff;
+}
+
+#just-dance-now .tutorial p {
+	font-size: 17%;
+	top: 4.8rem;
+	left: 0;
+	animation: titleSlide .6s ease;
+}
+
+#coverflow,
+#just-dance-now .tutorial,
+.tutorial__spinner::before {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#coverflow {
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding-top: 1.1rem;
+	background-image: none;
+	background-color: #e6e6e6;
+	background-position: center .9rem;
+	position: relative;
+	z-index: 200;
+}
+
+.state-songselection #coverflow {
+	background: #fff;
+	padding-left: .1rem;
+}
+
+.state-coachselection #coverflow {
+	background: #f0f0f0;
+}
+
+#players::before {
+	content: "";
+	background: linear-gradient(165deg, #dd51fb 0, #6aaafe 100%);
+}
+
+.state-coachselection #players {
+	margin-top: -7%;
+	left: 13.4% !important;
+	transform: scale(.7);
+}
+
+.coverflow--container {
+	height: 117%;
+	top: -17%;
+	box-shadow: none;
+	padding: .2rem .15rem 0 .25rem;
+	border-radius: .1rem .1rem 0 0;
+	background: none;
+	transition: opacity 5s;
+	left: 1%;
+}
+
+.banner {
+	backdrop-filter: blur(5px);
+}
+
+.banner .banner-content {
+	width: 8rem;
+	height: 4.5rem;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	border: 4px var(--aqua1) solid;
+	border-radius: .1rem;
+	transform: scale(1) translate(-50%, -50%);
+}
+
+.banner .banner-img {
+	display: block;
+    width: 100%;
+    height: 73%;
+    overflow: hidden;
+}
+
+.banner .banner-img img {
+    width: 100%;
+    height: 135%;
+}
+
+.banner .banner-close {
+    width: 0.28rem;
+    height: .276rem;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/buttons/button_cross_aqua.svg);
+    background-size: cover;
+    position: absolute;
+    top: 90%;
+    right: 53%;
+    image-rendering: pixelated;
+}
+
+.banner .banner-close::after {
+	width: .29rem;
+	height: .29rem;
+	color: gray;
+	font-size: 16%;
+	position: absolute;
+	top: .045rem;
+	right: -.38rem;
+}
+
+.banner .banner-close:lang(ru)::after {
+	content: "Закрыть";
+}
+
+.banner .banner-close:lang(en)::after {
+	content: "Close";
+}
+
+.banner .banner-txt {
+    font-size: .17rem;
+    margin: 1% auto 0;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: gray;
+    border-bottom: 2px gray solid;
+    line-height: normal;
+    padding-bottom: 0.06rem;
+}
+
+#settings {
+	width: 11%;
+	pointer-events: auto;
+	position: absolute;
+	top: .4%;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	align-content: stretch;
+	transform: translate(.8rem, 0);
+	transition: all .3s;
+}
+
+#settings:hover {
+	transform: translate(0, 0);
+}
+
+.dialog #settings {
+	transform: translate(0, 0) !important;
+	opacity: 1 !important;
+}
+
+#settings::after {
+    content: '';
+    width: 26.93%;
+    height: 86.85%;
+    position: absolute;
+    background: #005fec;
+    -webkit-mask-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/icons/close_normal.png);
+    -webkit-mask-size: cover;
+    left: 0;
+    opacity: 0.5;
+}
+
+.state-songselection #settings::before {
+	content: "";
+	position: absolute;
+	box-shadow: none;
+	transform: scale(1);
+	width: 79%;
+	height: 111%;
+	border-radius: 0 0 0 .1rem;
+	background: #dbedf5;
+	left: 30%;
+	top: -4%;
+	transition: all .3s;
+}
+
+#admin-menu,
+.player-btn.player-btn--kick svg,
+.toggle::after,
+.toggle::before,
+.toggles::before {
+	display: none;
+}
+
+.state-dance #settings {
+	opacity: 0;
+}
+
+#settings:hover {
+	opacity: 1;
+	transition: all .3s;
+}
+
+.toggle-settings--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/icon_options_blue.svg);
+	background-size: 70%;
+}
+
+.dialog .toggle-settings .toggle-settings--icon, .toggle-settings:hover .toggle-settings--icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/icon_options_selected.svg);
+}
+
+.toggle-fullscreen .icon {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/toggle_fullScreen_blue.png);
+}
+
+.maintenance {
+    background: #ffae3c;
+    width: .27rem;
+    height: .27rem;
+    padding: 0;
+    cursor: pointer;
+    z-index: 9001;
+    top: .13rem;
+    left: 0.95rem;
+    border-radius: 1rem;
+    border: none;
+    transition: none !important;
+}
+
+.maintenance.expand {
+	width: 3.8rem;
+	height: .6rem;
+	top: 80%;
+	left: 32%;
+	border-radius: 15px;
+	padding: .06rem 0;
+	margin: 0 auto;
+	text-align: center;
+	animation: animateMaintenance .5s;
+	box-shadow: 1px 0 39px 15px rgba(255, 54, 0, .2);
+	transition: none !important;
+	border: #ff3600 3px solid;
+	background: #fff;
+}
+
+.maintenance__icon {
+    width: .27rem;
+    height: .27rem;
+    float: left;
+    margin-right: 0;
+    animation: spinner 3s linear infinite;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/maintenance-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 73%;
+}
+
+.expand .maintenance__icon {
+	width: 11%;
+	text-align: center;
+	float: none;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/maintenance.svg);
+	background-size: 0.3rem;
+	display: inline-block;
+	position: relative;
+	vertical-align: 0px;
+}
+
+.maintenance__icon,
+.timer .timer_value {
+	transition: opacity .3s;
+}
+
+.maintenance__ticker {
+	position: absolute;
+	width: 1rem;
+	top: 0.04rem;
+	padding-left: 0.05rem;
+}
+
+.state-songselection .maintenance {
+	opacity: 1;
+}
+
+.pop-up button,
+.pop-up h1 {
+	color: #3784f9;
+	font-size: 120%;
+}
+
+.pop-up--hidden_mac {
+	opacity: 1;
+	display: flex;
+	transition: opacity 200ms;
+}
+
+html.ftue .playlist-grid {
+	overflow: visible;
+}
+
+html.ftue .playlist-grid .playlist::after,
+html.ftue .playlist-grid .playlist::before {
+	display: block;
+}
+
+html.ftue .playlist-grid .playlist[name="FTUE"] {
+	display: block;
+	opacity: 1;
+}
+
+html.ftue .playlist-grid .playlist[name="FTUE"]:hover::after {
+    content: '';
+    display: block !important;
+    width: 93.7%;
+    height: 100%;
+    top: 0px;
+    left: 21px;
+    position: absolute;
+    border: 3px #ce1ac0 solid;
+    border-radius: 14px;
+    background: transparent !important;
+    transform: scale3d(1.1, 1.1, 1);
+    cursor: auto;
+    animation: playlistFTUE_banner 1s ease infinite;
+	transition: all 0.3s ease;
+}
+
+@keyframes playlistFTUE_banner {
+	0%, 100% {transform: scale3d(1.1, 1.1, 1);border-radius: 14px;}
+	50% {transform: scale3d(1.09, 1.07, 1);border-radius: 12px;}
+}
+
+html.ftue .playlist-grid .playlist--img {
+	opacity: 0.5;
+}
+
+html.ftue .playlist-grid .playlist::before {
+	content: '';
+	width: 1rem;
+	height: 1rem;
+	cursor: not-allowed;
+	position: absolute;
+	z-index: 3;
+	top: 0.35rem;
+	left: 0.9rem;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/demo/lock-gray.svg) !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+html.ftue .playlist-grid .playlist::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	cursor: not-allowed;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: #ffffff70;
+}
+
+#admin-menu {
+	outline: 2px solid #fff;
+	border: 2px solid var(--general1);
+	border-radius: 9px;
+	z-index: 9;
+}
+
+#admin-menu .player--controller {
+	color: #3784f9;
+	background-color: #FFF;
+	border: 2px #3784f9 solid;
+}
+
+.state-songselection #admin-menu {
+	top: .75rem;
+	left: -5.5rem;
+	animation: fadeIn .5s ease;
+	position: absolute;
+}
+
+.dialog #admin-menu {
+	display: flex;
+}
+
+.state-songselection #admin-menu .menu__head {
+	height: .4rem;
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px 8px 0 0;
+	background: var(--general1);
+}
+
+.state-songselection .dialog #admin-menu .menu__head::after {
+	border: 0;
+}
+
+.state-songselection #admin-menu .menu__head::after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	border-right: 0;
+	background: var(--general1);
+	z-index: 1;
+}
+
+.state-songselection #admin-menu .menu__head::before {
+	font-size: .22rem;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: .37rem;
+	z-index: 5;
+}
+
+html[lang=ru].state-songselection #admin-menu .menu__head::before {
+	content: "Настройки";
+}
+
+html[lang=en].state-songselection #admin-menu .menu__head::before {
+	content: "Settings";
+}
+
+#admin-menu,
+#room-info,
+.dialog #admin-menu {
+	transition: none;
+}
+
+#admin-menu .content__title::after {
+	content: ":";
+}
+
+#admin-menu .go-back::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/buttons/admin_btn_back_circle.svg);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center;
+	color: var(--general1);
+}
+
+#admin-menu .player--controller::before {
+	content: "";
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/phone_icon.png);
+	width: .33rem;
+	height: .33rem;
+	position: absolute;
+	top: -33%;
+	left: 0;
+	transform: rotate(-15deg);
+}
+
+h2.players__title::after {
+	content: "";
+	animation: tochek 2s linear infinite;
+}
+
+button.player-btn.player-btn--kick::before {
+	content: "";
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/buttons/playerKick.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: .22rem;
+	height: .22rem;
+	top: 7%;
+	left: 91.68%;
+	opacity: 1;
+	z-index: 1;
+}
+
+#admin-menu .languagePicker__content .languagePicker__value,
+#admin-menu .language__item:first-of-type,
+#admin-menu .language__item:focus,
+#admin-menu .language__item:hover,
+#admin-menu .video-quality__item:first-of-type,
+#admin-menu .video-quality__item:focus,
+#admin-menu .video-quality__item:hover {
+	background-color: #fff;
+	color: #3784f9;
+}
+
+#admin-menu .languagePicker__content .languagePicker__value {
+	display: initial;
+}
+
+#admin-menu .languagePicker__value::after,
+#admin-menu .video-quality__dropdown::after {
+	content: '';
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/arrow_blue.svg);
+	background-size: 70%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: .05rem;
+	left: .09rem;
+}
+
+#admin-menu .languagePicker__value:hover::after {
+	content: "";
+	transform: rotate(0deg);
+	transition: all .3s;
+}
+
+#admin-menu .languagePicker__content.open .language__dropdown {
+	border: 2px solid #3784f9;
+	border-radius: 6px;
+	max-height: 1.22rem;
+	z-index: 2;
+	top: -6%;
+}
+
+#admin-menu .language__dropdown::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+#admin-menu .language__dropdown::-webkit-scrollbar-thumb {
+    background-color: #7fb2ff;
+    border-radius: 1rem;
+    border: 0rem solid white;
+}
+
+#admin-menu .language__dropdown::-webkit-scrollbar-track {
+    background: #e8f1ff;
+    border-radius: 1rem;
+}
+
+.dialog .hud:before {
+	background-color: #ccdffb;
+	opacity: 0.4;
+	z-index: 0;
+}
+
+.state-songselection .danceroom__qr-code-wrapper,
+.state-songselection .room-info__patch {
+	display: none;
+}
+
+.state-songselection #room-info {
+	background: 0 0;
+	width: auto;
+	z-index: 0;
+	top: -.66rem;
+	left: 6.63rem;
+}
+
+.state-songselection .danceroom__caption {
+	width: auto;
+}
+
+#just-dance-now .danceroom__label {
+	display: none;
+}
+
+.state-songselection .danceroom__number {
+	text-shadow: none;
+	font-family: Just Dance New Regular;
+	font-size: 25% !important;
+	background: 0 0;
+	width: 1.1rem;
+	height: 45%;
+	color: #005feb;
+	overflow: visible;
+	position: absolute;
+	top: 72.6%;
+	left: -.756rem;
+	padding-right: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.state-songselection .danceroom__number::before {
+    content: "";
+    width: 23.81%;
+    height: 55.1%;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/room_icon_normal.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.05rem;
+}
+
+.state-songselection .danceroom__number::after {
+	content: "";
+	position: absolute;
+	box-shadow: none;
+	transform: scale(1);
+	width: 1.1rem;
+	height: 93%;
+	border-radius: .08rem;
+	background: #dbedf5;
+	z-index: -1;
+}
+
+.account__name {
+	border-radius: 30px;
+}
+
+.account::before {
+	animation: crownBeat39 1.2s ease infinite;
+}
+
+.account::after,
+.account__name::after {
+	content: "";
+	display: block;
+	width: .26rem;
+	height: .28rem;
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .5s infinite, csBeatSelect 2s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 120%;
+	position: absolute;
+	z-index: 1;
+	transform: translateY(-10px);
+	left: -.015rem;
+}
+
+.account__name::after {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png) !important;
+}
+
+header.main-header .logo {
+    display: inline-block;
+    cursor: pointer;
+    color: #78007C;
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+header.main-header .logo::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Ftitle_screen_coaches_back.png?v=1636271554122);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	image-rendering: pixelated;
+    z-index: 1;
+	opacity:  0.5;
+    animation: landingSpace_transform 25s ease infinite;
+}
+
+header.main-header .logo::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fspace_big_one.png);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	image-rendering: pixelated;
+    z-index: 0;
+	opacity:  0.5;
+    animation: landingSpace_transform 22s ease infinite, landingSpaceFlash_opacity 1s ease infinite;
+}
+
+@keyframes landingSpace_transform {
+	0%, 100%{transform: scale(1); opacity: 1;}
+	50%{transform: scale(1.08); opacity: 1;}
+}
+
+@keyframes landingSpaceFlash_opacity {
+	0%, 100%{opacity: 0.3}
+	25%{opacity: 0.2}
+	50%{opacity: 0.3}
+	75%{opacity: 0.4}
+}
+
+.dr-landing {
+	position: ABSOLUTE;
+	text-align: start;
+	z-index: 10;
+}
+
+.dr-landing::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.dr-landing .init-spinner {
+    top: -0.6rem;
+}
+
+.dr-landing__wrapper.dr-landing--hidden {
+	opacity: 0;
+}
+
+.dr-landing__wrapper {
+	transition: opacity 0.3s ease;
+	opacity: 1;
+}
+
+.state-dance #room-info {
+	width: 40%;
+	display: none;
+}
+
+.state-dance .danceroom__caption {
+	color: #fff;
+}
+
+#toast {
+	bottom: 72%;
+	left: 83%;
+	padding: 3% 2% 1% 10%;
+	width: 30%;
+	min-height: 24%;
+	background: linear-gradient(180deg, #5252fa 0, #5252fa 24%, #fff 24%, #fff 100%);
+	box-shadow: none !important;
+	color: #545454;
+	text-align: left;
+	font-family: OpenSans SemiBold;
+	font-size: 10%;
+	letter-spacing: -1px;
+	border-radius: 15px;
+	border: 4px rgb(82 82 250) solid;
+	outline: 2px rgb(250 250 250) solid;
+	visibility: visible !important;
+	opacity: 0;
+	transform: translate3d(60%, 0, 0) !important;
+	transition: transform 0.6s ease, opacity 0.5s ease !important;
+}
+
+#toast[style="transform: translate3d(-50%, 250%, 0px); opacity: 0; visibility: hidden; transition: transform 0.5s ease 0s, opacity ease, visibility ease;"],
+#toast[style="transform: translate3d(-50%, 250%, 0px); opacity: 0; visibility: hidden;"]{
+	transform: translate3d(60%, 0, 0) !important;
+}
+
+#toast[style="transform: translate3d(-50%, 0%, 0px); opacity: 1; visibility: visible;"] {
+	transform: translate3d(-50%, 0, 0) !important;
+}
+
+#toast::after,
+#toast::before {
+	bottom: 79%;
+	position: absolute;
+	z-index: 2;
+}
+
+#toast::before {
+	content: "Уведомление";
+	left: -6%;
+	padding: 3% 2% 1% 10%;
+	width: 30%;
+	min-height: 24%;
+	text-align: left;
+	font-family: Just Dance New Bold;
+	font-size: 180%;
+	letter-spacing: 0;
+	color: #fff;
+}
+
+#toast::after {
+	content: "";
+	width: 8.399%;
+	height: 19%;
+	left: 86%;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_notification.png);
+	background-size: cover;
+}
+
+#toast .aqua,
+#toast .blue,
+#toast .green,
+#toast .pink,
+#toast .purple,
+#toast .red {
+	border: 0;
+}
+
+.toast__image {
+	width: 35%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.toast__image .avatar-wrapper {
+	animation: wraperBeat 2s ease;
+	animation-iteration-count: infinite;
+}
+
+#section-tabs,
+.toast__color {
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.toast__color {
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 0 solid #3784f9;
+    outline: 2px #5252fa solid;
+}
+
+#section-tabs::after,
+.pop-up__title::before,
+.toast__color::before {
+	display: none;
+}
+
+.toast__content {
+	font-size: .13rem;
+}
+
+.toast__color.aqua,
+.toast__color.blue,
+.toast__color.green,
+.toast__color.pink,
+.toast__color.purple,
+.toast__color.red {
+	border: 0 solid red;
+}
+
+/* PUP-UP IN THE DANCE */
+/*
+	Note: The toast looks right, but all that's left is to animate it
+*/
+
+html.state-dance #toast {
+    bottom: 2.5rem;
+    left: 77%;
+    padding: 0;
+    padding-right: 2%;
+    width: 30%;
+    min-height: 10%;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 100%);
+    box-shadow: none !important;
+    color: #fff;
+    text-align: left;
+    font-family: OpenSans SemiBold;
+    font-size: 10%;
+    letter-spacing: -1px;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    visibility: visible !important;
+    opacity: 1;
+    transform: translateX(-1.33rem) !important;
+    transition: none !important;
+}
+
+html.state-dance #toast .avatar-wrapper .avatar {
+	display: block !important;
+}
+
+html.state-dance #toast .toast__image .avatar-wrapper {
+    width: 85%;
+    left: 2.8rem;
+    top: 0.2rem;
+}
+
+html.state-dance span.toast__content {
+    text-align: center;
+}
+
+html.state-dance #toast::before,
+html.state-dance #toast::after {
+	display: none;
+}
+
+html.state-dance .toast__color {
+    width: 30%;
+    height: 100%;
+    background: #5252fa;
+    transform: skewX(10deg);
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 3rem;
+}
+
+.pop-up {
+    width: 6.5rem;
+    height: 3.2rem;
+    box-shadow: 0 0 30px 0 #3784f9;
+    border: 3px #3784f9 solid;
+}
+
+h1.pop-up__title {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	background-color: #3784f9;
+	height: .6rem;
+	box-shadow: none;
+	font-size: 0.23rem;
+	text-align: center;
+	color: #fff;
+	z-index: 5;
+}
+
+h1.pop-up__title,
+ul.tabs,
+ul.tabs li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+p.pop-up__content {
+    height: 2rem;
+    width: 90%;
+    left: .3rem;
+    border-bottom: 2px #c4c4c4 solid;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    box-shadow: none;
+    font-size: 0.18rem;
+}
+
+.pop-up--error p.pop-up__content {
+	text-align: initial;
+}
+
+.pop-up button.pop-up__btn {
+	color: #488ef9;
+	text-transform: uppercase;
+	font-size: 25px;
+	pointer-events: auto;
+	font-family: "OpenSans SemiBold";
+	margin-left: 0;
+}
+
+button.pop-up__btn.pop-up__btn--cancel, button.pop-up__btn.pop-up__btn--validate {
+    position: absolute;
+    top: 2.55rem;
+    background: rgb(72 142 249/.3);
+    width: 2rem;
+    height: .3rem;
+    border-radius: .05rem;
+	font-size: 0.13rem;
+}
+
+button.pop-up__btn.pop-up__btn--cancel:hover::before,
+button.pop-up__btn.pop-up__btn--validate:hover::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	border-radius: .05rem;
+	border: 2px #3784f9 solid;
+	z-index: 5;
+}
+
+button.pop-up__btn.pop-up__btn--validate {
+    right: 0.7rem;
+    top: 2.1rem;
+    padding: 0;
+}
+
+button.pop-up__btn.pop-up__btn--cancel {
+	left: 0.7rem;
+	top: 2.1rem;
+	padding: 0;
+}
+
+/* ERROR PUP-UP */
+.pop-up--error .pop-up {
+    box-shadow: 0 0 30px 0 #ee3131;
+    border: 3px #ee3131 solid;
+}
+
+.pop-up--error .pop-up__title {
+    background-color: #ee3131;
+}
+
+.pop-up--error .pop-up button.pop-up__btn {
+    color: #ee3131;
+}
+
+.pop-up--error button.pop-up__btn.pop-up__btn--cancel,.pop-up--error button.pop-up__btn.pop-up__btn--validate {
+    background: rgb(238 49 49/.3);
+}
+
+.pop-up--error button.pop-up__btn.pop-up__btn--cancel:hover::before,
+.pop-up--error button.pop-up__btn.pop-up__btn--validate:hover::before {
+	border: 2px #ee3131 solid;
+}
+
+/*************************/
+
+.grid-container .item-container .item.item-selected img.song__cover,
+.grid-container .item-container .item.item-selected:hover img.song__cover,
+.pop-up__footer {
+	background: 0 0;
+}
+
+.section-grid-trainer {
+	top: .7rem;
+	left: 6rem;
+}
+
+.section-grid-trainer .grid-img {
+	width: 2.7rem;
+	margin-left: 22%;
+	background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fcoach-grid-playlist-cc.png);
+}
+
+.grid-img,
+.grid-img--songlist {
+	animation: fadeIn .5s ease;
+}
+
+.section-grid-trainer .grid-img--songlist {
+	width: 2.15rem;
+	background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fcoach-grid-songlist-cc.png);
+	transform: scaleX(-1);
+}
+
+.trainer-txt {
+	color: #ff0035;
+	text-align: center;
+	margin-left: -0.3rem;
+}
+
+#section-songlist .trainer-txt {
+	color: #ff9d00;
+	margin-left: -0.3rem;
+}
+
+.trainer-icon {
+	width: .9rem;
+	height: .8rem;
+	float: left;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: contain;
+	animation: none;
+	margin-left: -0.2rem;
+}
+
+.item-selected .song__decoration::after,
+.trainer-icon::after {
+	content: "";
+	opacity: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.item .song__decoration::after {
+	display: none;
+}
+
+.trainer-icon::after {
+	width: .9rem;
+	height: .8rem;
+	float: left;
+	animation: trainerIconLeft1 .8s;
+	animation-delay: .15s;
+	animation-iteration-count: infinite;
+	margin-top: -.1rem;
+}
+
+#section-playlist .trainer-icon::after {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/trainer-icon-4.svg);
+}
+
+#section-songlist .trainer-icon::after {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/trainer-icon-5.svg);
+}
+
+#section-tabs {
+	height: .7rem;
+	width: 87%;
+	float: inherit;
+	border-radius: 0;
+	font-family: "OpenSans Regular";
+	z-index: 1;
+}
+
+ul.tabs,
+ul.tabs li {
+	flex-direction: row;
+}
+
+ul.tabs {
+	flex-wrap: nowrap;
+	padding-top: 0;
+	color: #656464;
+	font-size: .13rem;
+	background: 0 0;
+	width: 100%;
+	border-top: none;
+	border-bottom: none;
+	transition: none;
+}
+
+html.ftue ul.tabs::after {
+    content: '';
+    width: 1.3rem;
+    height: 0.5rem;
+    background: #ffffff;
+    opacity: 0.6;
+    position: absolute;
+    top: -0.04rem;
+    left: 4.5rem;
+}
+
+ul.tabs li {
+	width: 1.375rem;
+	height: .513rem;
+	transform: scale(.8);
+	left: 0;
+	padding: 0;
+	margin: 0;
+	text-align: start;
+	transition: none;
+	overflow: hidden;
+}
+
+ul.tabs li .tabs--text {
+	font-size: 105%;
+	transition: all .3s;
+}
+
+ul.tabs li .tabs--icon {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 90%;
+	height: .3rem !important;
+	width: .3rem;
+	margin: 0;
+	margin-right: .1rem;
+	transform: translate(0, 0) !important;
+}
+
+ul.tabs li[section-id=playlist] {
+	transform: scale(.8) translate(.13rem, 0);
+}
+
+ul.tabs li.selected::before {
+	box-shadow: none;
+	transform: scale(1);
+	width: 100%;
+	height: 100%;
+	border-radius: .1rem;
+	background: #fff;
+	left: 0;
+	top: 1%;
+	transition: all .3s;
+}
+
+ul.tabs li.selected::after,
+ul.tabs li::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: .1rem;
+	left: 0;
+	transition: all .3s;
+}
+
+ul.tabs li.selected::after {
+	background-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/background/Flashlight.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: 1%;
+	left: 0;
+	animation: flashOnButtonV3 2.5s ease-in-out infinite;
+	opacity: 0.5;
+}
+
+ul.tabs li::before {
+	box-shadow: none;
+	transform: scale(1);
+	top: 1%;
+	background: #dbedf5;
+}
+
+ul.tabs li[section-id=playlist] .tabs--icon {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/playlist_icon_normal.png);
+}
+
+ul.tabs li[section-id=playlist].selected .tabs--icon {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/playlist_icon_selected.png);
+}
+
+ul.tabs li[section-id=songlist] .tabs--icon {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/songs_icon_normal.png);
+}
+
+ul.tabs li[section-id=songlist].selected .tabs--icon {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/songs_icon_selected.png);
+}
+
+ul.tabs li[section-id=playlist].selected::before {
+	background: #13b627;
+}
+
+ul.tabs li[section-id=songlist].selected::before {
+	background: #e32185;
+}
+
+ul.tabs li .selected[section-id=playlist] .tabs--title {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/playlist_normal.png);
+}
+
+.tabs--text,
+ul.tabs li.selected .tabs--text {
+	color: #fff;
+	transform: scale(1.15);
+}
+
+.tabs--text {
+	color: #005feb;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	margin-top: 0 !important;
+}
+
+.tabs--connect,
+.tabs--connect::before {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tabs--connect {
+	content: '=> Insert text <=';
+	background-color: #fc4435;
+	width: .27rem;
+	height: .27rem;
+	border: none;
+	border-radius: 1rem;
+	left: 0.15rem;
+	top: .13rem;
+	flex-direction: column;
+}
+
+.tabs--connect::before {
+	content: "?";
+	font-size: 21%;
+	position: absolute;
+	width: .27rem;
+	height: .27rem;
+	background-image: none;
+	flex-direction: row;
+}
+
+.tabs--connect,
+.tabs--connect:hover {
+	background-image: none;
+}
+
+.playlist-grid {
+	color: #4271c5;
+	font-size: 18%;
+	height: 100%;
+	width: 113%;
+	padding-bottom: .2rem;
+	overflow-y: auto;
+	position: absolute;
+	left: -0.3rem;
+	right: -17px;
+}
+
+.playlist-grid .playlist {
+	color: #464545;
+	width: 95%;
+	height: 1.6rem;
+	margin: 0 0 .18rem .1rem;
+	cursor: pointer;
+	word-break: break-word;
+	border-radius: 14px;
+	transition: all .1s;
+}
+
+.playlist-img-container {
+	height: 100%;
+	width: 47%;
+	top: .5rem;
+	padding-left: .68rem;
+}
+
+#section-playlist {
+	animation: fadeIn .3s ease;
+}
+
+.playlist-grid .playlist--title {
+    color: var(--gray2); /* Deffault text */
+    font-family: 'Just Dance New Bold';
+}
+
+.playlist[name=FTUE] {
+	color: #fff !important;
+	background: #fe2bed;
+	border-radius: 7px !important;
+}
+
+.playlist[name=FTUE] span.playlist--title,
+.playlist[name=FTUE] span.playlist--description {
+	color: #fff !important;
+}
+
+.playlist-img-container .playlist--banner__selected {
+	animation: fadeIn .3s ease;
+	overflow: hidden;
+	border-radius: .1rem;
+}
+
+.playlist-img-container .playlist--banner__selected img {
+    width: 4.156rem;
+    height: 2.34rem;
+    transform: translateY(-.135rem) translateX(-.02rem);
+}
+
+html.ftue .playlist-img-container .playlist-title-details .playlist-action__button {
+	display: none;
+}
+
+.playlist-img-container .playlist-title-details .playlist-action__button {
+	animation: buttonFadeIn .7s ease;
+}
+
+html.ftue .playlist-img-container .playlist-title-details .playlist--description {
+	padding: 0;
+}
+
+.playlist-img-container .playlist-title-details .playlist--description {
+	font-size: .16rem;
+	line-height: .22rem;
+	color: var(--gray2);
+	margin: .1rem 0 0;
+	padding: .4rem 0 0;
+	width: 95%;
+	text-align: center;
+	animation: titleSlide .5s ease;
+}
+
+.playlist-grid .playlist--img {
+	transition: all .1s;
+}
+
+.playlist-grid .playlist.playlist-selected .playlist--img {
+	transform: scale(.98);
+	padding: 0;
+	transition: all .1s;
+}
+
+.playlist-grid .playlist:hover .playlist--img {
+	transform: scale(0.95);
+	padding: 0;
+	transition: all .1s;
+}
+
+.songGrid .song-grid--details {
+	height: .62rem;
+	top: .02rem;
+}
+
+.song-grid--details .song-grid--titleDetails .song-grid--title {
+    color: var(--gray3);
+    padding-left: 0.25rem;
+}
+
+.playlist-container .song-grid--details .song-grid--titleDetails .song-grid--title::before {
+    content: '';
+    width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+	left: 0rem;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/before-playlist.svg);
+    background-size: cover;
+}
+
+.songlist-container .song-grid--details .song-grid--titleDetails .song-grid--title::before {
+    content: '';
+    width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+	left: 0rem;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/before-songlist.svg);
+    background-size: 120%;
+	background-position: center;
+	border-radius: 5px;
+}
+
+.song-grid--details .song-grid--titleDetails .song-grid--description {
+	padding: .03rem 0 .05rem;
+}
+
+.song-grid--details .song-grid--titleDetails {
+	width: 103.32%;
+	height: 100%;
+	color: var(--gray1);
+	border-bottom: .015rem solid #cecccc;
+}
+
+.song-grid--details .song-grid--titleDetails .song-grid--duration {
+	padding-left: 0;
+}
+
+.songGrid .song--details {
+	height: 87.04%;
+}
+
+.grid-container .item-container .song__cover {
+    height: 104.18%;
+    border-radius: .09rem;
+    z-index: 0;
+    transition: none;
+    transform: scale(0.9);
+}
+
+.grid-container .item-container .item:hover .song__cover {
+	height: 104.18% !important;
+}
+
+img.song__cover {
+	outline: 0;
+	background: gray;
+}
+
+.grid-container .item-container .item {
+	width: 2rem;
+	height: 1rem;
+}
+
+.grid-container .item-container .item.item-selected .song__cover {
+	border-width: 0;
+	border-style: solid;
+	border-radius: .1rem;
+	height: 104.18%;
+	width: 100%;
+	padding: 3%;
+	transform: scale(0.955);
+}
+
+.item-selected .song__decoration::before {
+	content: '';
+	position: absolute;
+	border-width: 3px;
+	border-style: solid;
+	border-color: var(--general1);
+	border-image: initial;
+	border-radius: 0.11rem;
+	height: 104.18%;
+	width: 100%;
+	transform: scale(1);
+	animation: itemSelectedBorderFade 0.2s ease;
+}
+
+html.ftue .item-selected .song__decoration::before {
+	content: '';
+	border-width: 0;
+	border-image: initial;
+	transform: scale(1);
+	animation: none;
+}
+
+.grid-container .item-container .item.item-selected:hover .song__cover {
+	height: 104.18%;
+	width: 100%;
+	padding: 3%;
+}
+
+.grid-container .item-container .item:hover .song__cover {
+	height: 95%;
+	width: 100%;
+	padding: 0;
+}
+
+.grid-container .item-container .item:hover::after {
+	opacity: .5;
+}
+
+.title-container .caption {
+	-webkit-mask: linear-gradient(90deg, #fff 90%, transparent 100%);
+	text-overflow: clip;
+	padding: 0;
+}
+
+.title-container .caption.title {
+    font-size: 80%;
+    font-family: 'Just Dance New Bold' !important;
+}
+
+.title-container .caption.artist {
+	font-size: 60%;
+}
+
+.grid-container .item-container .song__decoration {
+	border-radius: 0;
+	overflow: visible;
+	z-index: 1;
+}
+
+html.ftue .item .song__decoration::before {
+	content: '';
+	width: 1rem;
+	position: absolute;
+	background: #00000073;
+	background-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/icons/icon_lock.svg);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	height: 104.18%;
+	border-radius: .09rem;
+	transform: scale(0.9);
+	left: 0;
+}
+
+/* List of available songs */
+html.ftue .item.BreakFreeDLC .song__decoration::before,
+html.ftue .item.Gentleman .song__decoration::before,
+html.ftue .item.GoodFeeling .song__decoration::before,
+html.ftue .item.Happy .song__decoration::before,
+html.ftue .item.JustDance .song__decoration::before,
+html.ftue .item.GoodFeeling .song__decoration::before,
+html.ftue .item.MovesLikeDLC .song__decoration::before,
+html.ftue .item.MrSaxobeat .song__decoration::before,
+html.ftue .item.Rasputin .song__decoration::before,
+html.ftue .item.Summer .song__decoration::before {
+	display: block;
+	background: none;
+	border-width: 3px;
+	transform: scale(1);
+	border-radius: 0.11rem;
+}
+
+#preview {
+	top: .79rem;
+	right: .3rem;
+	padding-left: .4rem;
+}
+
+html.state-coachselection #preview {
+	left: 1rem;
+}
+
+.state-songselection #preview::after {
+	content: "";
+	width: 4.17rem;
+	height: 4.3rem;
+	position: absolute;
+	background: none;
+	top: 4%;
+	opacity: 1;
+	z-index: -1;
+	left: .44rem;
+	border-radius: .1rem;
+	border: .024rem var(--general1) solid;
+	animation: heightFadeIn .5s ease;
+}
+
+.highscore-display,
+.song__reward,
+.state-songselection .song-preview {
+	animation: buttonFadeIn2 2s ease;
+	transition: none;
+}
+
+.song-preview {
+    top: 29.1%;
+    left: -0.055rem;
+    width: 3.92rem;
+}
+
+.song__infos {
+	-webkit-mask: linear-gradient(90deg, #000 95%, transparent 100%);
+}
+
+#preview .song-details h2 {
+	line-height: .27rem;
+}
+
+#preview .song-details h3 {
+	color: #ffceee;
+}
+
+.playlist-img-container .playlist-title-details .playlist-action__button,
+.song-action__button {
+	color: #ffffff00;
+	background: var(--general1);
+	padding: .02rem .4rem;
+	font-size: .22rem;
+	transition: all .2s;
+}
+
+.song-action__button {
+	border-radius: 1rem;
+	top: 3px;
+	text-align: center;
+}
+
+.song-action__button::after,
+.song-action__button::before {
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: none;
+	background-image: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/background/Flashlight.png);
+	background-size: 100%;
+	opacity: 1;
+	filter: blur(10px);
+	position: absolute;
+	z-index: 0;
+	top: 0rem;
+	left: 0;
+}
+
+.song-action__button::after,
+.playlist-img-container .playlist-title-details .playlist-action__button::after {
+	-webkit-transform: skew(0, 0) translateX(-0.25rem);
+	-ms-transform: skew(0, 0) translateX(-0.25rem);
+	transform: skew(0, 0) translateX(-0.25rem);
+	-webkit-animation: flashOnButtonV2 2.5s ease-in-out infinite;
+	animation: flashOnButtonV2 2.5s ease-in-out infinite;
+}
+
+.coach-selection__button::after {
+	display: none;
+}
+
+.playlist-img-container .playlist-title-details .playlist-action__button {
+	height: .32rem;
+	border-radius: 5rem;
+	background-image: none;
+	top: -2px;
+	left: 31%;
+}
+
+.playlist-img-container .playlist-title-details .playlist-action__button::before,
+.song-action__button::before {
+	font-size: .17rem;
+	text-align: center;
+	line-height: .33rem;
+	width: 1.51rem;
+	height: .32rem;
+	color: #fff;
+	top: 0;
+	background: 0 0;
+	opacity: 1;
+	filter: none;
+	animation: none;
+	transform: none;
+}
+
+.playlist-img-container .playlist-title-details .playlist-action__button::before {
+	font-size: .18rem;
+	line-height: .34rem;
+	width: 1.43rem;
+}
+
+html[lang=ru] .playlist-img-container .playlist-title-details .playlist-action__button::before,
+html[lang=ru] .song-action__button::before {
+	content: "ТАНЦЕВАТЬ!";
+}
+
+html[lang=en] .playlist-img-container .playlist-title-details .playlist-action__button::before,
+html[lang=en] .song-action__button::before {
+	content: "DANCE!";
+}
+
+html[lang=fr] .playlist-img-container .playlist-title-details .playlist-action__button::before,
+html[lang=fr] .song-action__button::before {
+	content: "DANSE!";
+}
+
+.pre-beat.odd .song-action__button {
+	animation: actionBeat .5s;
+}
+
+.song-action__button:focus {
+	transform: scale(0.9);
+	transition: all .1s;
+}
+
+.playlist-action__button {
+	width: 34%;
+}
+
+#section-playlist,
+.coverflow--container,
+.song-grid,
+.songlist-grid {
+	overflow: visible;
+}
+
+.song-grid--details .song-grid--close {
+    width: .27rem;
+    height: .27rem;
+    background-color: #00bad9;
+    background-position: -0.5px 1px;
+	background-size: 95%;
+    border-radius: 2rem;
+    top: -.38rem;
+    left: 0.1rem;
+    animation: fadeIn .3s ease;
+    z-index: 2;
+	transition: none;
+}
+
+.song-grid--details .song-grid--close:hover {
+	transform: none;
+}
+
+.song-cover {
+    width: 100.1%;
+    background-size: cover;
+    border-width: .02rem;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: .1rem;
+}
+
+.video-preview,
+.video-preview--visible {
+	width: 3.93rem;
+	visibility: visible;
+	opacity: 1;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #b7b7b700;
+	left: 0;
+}
+
+.video-preview {
+	border-radius: .1rem;
+	overflow: visible;
+}
+
+.video-preview--visible {
+	transition: visibility 0s 0s, opacity 0s !important;
+}
+
+.video-preview__video {
+	border-radius: .079rem;
+}
+
+#preview .song-details {
+	background: var(--general1);
+	padding: .04rem .1rem 0;
+	border-radius: .1rem .1rem 0 0;
+	animation: fadeIn .2s ease;
+	overflow: visible;
+	width: 119%;
+}
+
+.song-action {
+    height: 0.354rem;
+    width: 1.51rem;
+}
+
+.song-action--select {
+	animation: buttonFadeIn1 .5s ease;
+}
+
+html.ftue .song-action--select {
+	display: none;
+}
+
+#preview .song-details::before {
+	content: "";
+	width: 4.2rem;
+	height: .6rem;
+	background-size: 75%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.song-preview::after,
+.song-preview:hover::after {
+	content: "";
+	z-index: 3;
+	background-size: cover !important;
+	cursor: pointer;
+}
+
+.song-preview::after {
+	width: .19rem;
+	height: .19rem;
+	position: absolute;
+	left: 3%;
+	top: 87%;
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_fav_normal.svg);
+	opacity: .5;
+	transition: all .2s;
+}
+
+.song-preview:hover::after {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_fav_selected.svg);
+	opacity: 1;
+}
+
+.state-coachselection .song-preview::after {
+	display: none;
+}
+
+.grid-container .item-container .item::after {
+    color: #a0a0a0;
+    font-size: 0.11rem;
+    line-height: .2rem;
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 1.034rem;
+    top: 0.6rem;
+    background: 0 0;
+	transition: 0.2s ease;
+}
+
+.grid-container .item-container .item:hover::after {
+	opacity: 1;
+}
+
+.grid-container .item-container .item.item-selected::after {
+    opacity: 0;
+}
+
+.song-cover--hi-res::after {
+	color: #a0a0a0;
+	font-size: 14%;
+	line-height: .2rem;
+	padding-left: .1rem;
+	padding-right: .1rem;
+	padding-top: .055rem;
+	height: .25rem;
+	width: 35%;
+	position: absolute;
+	left: 0;
+	top: 2.2rem;
+	background: 0 0;
+}
+
+.highscore-display {
+    font-size: 25%;
+    line-height: 1.1;
+    color: #3e3e40;
+    height: .9rem;
+    width: 1.9rem;
+    position: absolute;
+    z-index: 1;
+    top: .46rem;
+    left: .1rem;
+    background: 0 0;
+    border-radius: 0;
+    border-right: .016rem var(--general1) solid;
+}
+
+.highscore-display:before {
+    content: '';
+    width: 133%;
+    height: 116%;
+    position: absolute;
+    background: #fff;
+    top: -0.13rem;
+    left: -0.2rem;
+    z-index: -2;
+}
+
+.pre-beat.even .highscore-display::after {
+	animation: wraperBeatEven .3s linear;
+}
+
+.highscore-display.megastar::after,
+.highscore-display.superstar::after {
+	content: "SUPERSTAR";
+	font-size: 60%;
+	font-family: Just Dance New Regular;
+	line-height: 1.1;
+	color: #00c2f1;
+	height: 16%;
+	width: 46%;
+	position: absolute;
+	z-index: 1;
+	top: .7rem;
+	left: .667rem;
+	background-size: cover;
+}
+
+.highscore-display.megastar::after {
+	content: "MEGASTAR";
+	color: #ff00a8;
+	left: .705rem;
+}
+
+.highscore-display.megastar .score__stars .star::before {
+	animation: MoveBeat 4s steps(3, end) infinite, OpacityBeat .5s infinite, csBeatSelect 2s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png) !important;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: "";
+	display: block;
+	height: 200%;
+	margin-top: -79%;
+	margin-left: -80%;
+	position: absolute;
+	width: 200%;
+}
+
+.highscore-display.megastar .score__stars .star::after,
+.highscore-display.superstar .score__stars .star::after,
+.highscore-display.superstar .score__stars .star::before {
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .3s infinite, csBeatSelect 1s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png) !important;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: "";
+	display: block;
+	height: 200%;
+	margin-top: -79%;
+	margin-left: -80%;
+	position: absolute;
+	width: 200%;
+}
+
+.highscore-display.superstar .score__stars .star::after,
+.highscore-display.superstar .score__stars .star::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png) !important;
+}
+
+.highscore-display.superstar .score__stars .star::after {
+	animation: MoveBeat 3s steps(3, end) infinite, OpacityBeat .2s infinite, csBeatSelect 1s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_2.png) !important;
+}
+
+.score__number {
+	font-size: .17rem;
+	color: gray;
+	top: .55rem;
+	position: absolute;
+}
+
+.score__owner span {
+	font-size: 25px;
+	padding-left: 0;
+}
+
+.score__owner {
+	overflow: inherit;
+	top: -.1rem;
+}
+
+.score__stars {
+    width: .85rem;
+    text-align: center;
+    line-height: 0;
+    position: absolute;
+    z-index: 2;
+    top: 57%;
+    left: 37%;
+    opacity: 1;
+}
+
+.score__stars .star {
+	transform: rotate(10deg);
+}
+
+.pre-beat.even .score__stars .star-2,
+.pre-beat.even .score__stars .star-4,
+.pre-beat.odd .score__stars .star-1,
+.pre-beat.odd .score__stars .star-3,
+.pre-beat.odd .score__stars .star-5 {
+	animation: starglow 1s ease infinite;
+}
+
+span.highscore-loc:before {
+	content: 'Local';
+}
+
+span.highscore-loc {
+    top: .15rem;
+    font-size: 87%;
+    position: absolute;
+    color: #f1254d;
+    opacity: 1;
+    z-index: 1;
+}
+
+span.owner-name {
+    position: absolute;
+    color: gray;
+    top: .4rem;
+    left: 0;
+    font-size: .18rem;
+}
+
+.reward__wrapper {
+	overflow: visible;
+}
+
+.reward__content {
+	transition: opacity .15s ease-out;
+	transform: translateX(0) !important;
+	overflow: visible;
+}
+
+.song__reward {
+    top: 3.36rem;
+    width: .8rem;
+    height: .8rem;
+    margin-top: -.02rem;
+    position: absolute;
+    right: .55rem;
+    overflow: visible;
+    border: 2px var(--general1) solid;
+    border-radius: 0.07rem;
+}
+
+.song__reward::before {
+    color: var(--general1);
+    font-size: 13%;
+    height: 18%;
+    width: auto;
+    position: absolute;
+    top: -9%;
+    text-align: center;
+    overflow: visible;
+    background: #fff;
+    padding: 0 0.03rem;
+}
+
+.song__reward:lang(ru)::before {
+	content: "Награда";
+	left: 12%;
+}
+
+.song__reward:lang(en)::before {
+	content: "Reward";
+	left: 16%;
+}
+
+.song__reward::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/min_particles_reward.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: rewardAfterBounce 1.8s both infinite;
+	z-index: -1;
+}
+
+.reward__wrapper .reward__img {
+	opacity: 1;
+}
+
+.pre-beat.odd .reward__wrapper .reward__img {
+	animation: wraperBeatOdd .3s linear;
+}
+
+.pre-beat.even .reward__wrapper .reward__img {
+	animation: none;
+}
+
+.reward__wrapper.reward__unlocked .reward__content::after {
+	display: none;	
+}
+
+#preview .song-details.hidden,
+.reward__wrapper.hidden {
+	opacity: 1;
+	visibility: visible;
+}
+
+.reward__wrapper .reward__content::before {
+	left: 26%;
+	opacity: .9;
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/icon_lock_1.svg);
+	background-size: cover;
+	animation: lock-shake 3s;
+	animation-iteration-count: infinite;
+}
+
+.pre-beat .reward__unlocked .reward__content::before {
+	background-position: center;
+	content: '';
+	animation: rewardUnlockBeat 1s ease;
+	opacity: 1;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/icon_avatar_unlock.svg);
+	background-repeat: no-repeat;
+	background-size: 80%;
+	top: 49%;
+	left: 58%;
+}
+
+.song__difficulty {
+	background: none !important;
+	width: .35rem;
+	height: .16rem;
+	padding: 0 !important;
+	opacity: .8;
+	position: absolute;
+	bottom: .055rem;
+	right: 0;
+	transition: all .3s;
+	border: .02rem #fff solid;
+	border-radius: .1rem;
+}
+
+.song-preview .song__difficulty::after {
+	left: 6% !important;
+}
+
+.song__difficulty[data-difficulty="1"] {
+	background: #f61c97;
+	transition: all .3s;
+}
+
+.song__difficulty[data-difficulty="2"] {
+	background: #f75657;
+	transition: all .3s;
+}
+
+.song__difficulty[data-difficulty="3"] {
+	background: #f67e2a;
+	transition: all .3s;
+}
+
+.song__difficulty[data-difficulty="4"] {
+	background: red;
+	transition: all .3s;
+}
+
+.grid-container .item-container .item.item-selected .song__difficulty {
+	display: flex;
+	opacity: 0;
+}
+
+.song__decoration .song__difficulty {
+    display: flex;
+    left: 1.03rem;
+    top: .45rem;
+    border: none;
+    justify-content: flex-start;
+    align-items: center;
+    width: .45rem;
+    flex-direction: row;
+	transition: opacity 0.3s ease;
+}
+
+.song__decoration .song__difficulty::before,
+.song__decoration .song__difficulty::after {
+	font-size: 0.115rem;
+	color: #d31151;
+}
+
+.song__decoration .song__difficulty::after {
+	padding-left: 0.03rem;
+}
+
+.song__decoration .song__difficulty::before {
+	content: 'Difficulty: ';
+}
+
+.song__decoration .song__difficulty[data-difficulty="1"]::after {
+	content: 'Easy';
+}
+
+.song__decoration .song__difficulty[data-difficulty="2"]::after {
+	content: 'Normal';
+}
+
+.song__decoration .song__difficulty[data-difficulty="3"]::after {
+	content: 'Hard';
+}
+
+.song__decoration .song__difficulty[data-difficulty="4"]::after {
+	content: 'Extreme';
+}
+
+.song__decoration .song__difficulty--level {
+	display: none;
+	background: #8080806b;
+}
+
+.song__decoration .song__difficulty[data-difficulty="1"] .level-1,
+.song__decoration .song__difficulty[data-difficulty="2"] .level-1,
+.song__decoration .song__difficulty[data-difficulty="2"] .level-2,
+.song__decoration .song__difficulty[data-difficulty="3"] .level-1,
+.song__decoration .song__difficulty[data-difficulty="3"] .level-2,
+.song__decoration .song__difficulty[data-difficulty="3"] .level-3,
+.song__decoration .song__difficulty[data-difficulty="4"] .level-1,
+.song__decoration .song__difficulty[data-difficulty="4"] .level-2,
+.song__decoration .song__difficulty[data-difficulty="4"] .level-3,
+.song__decoration .song__difficulty[data-difficulty="4"] .level-4 {
+	background: gray;
+	margin-right: 0;
+	top: 0;
+}
+
+.song__decoration .song__difficulty .song__difficulty--level {
+	margin-right: 0;
+	top: 0;
+}
+
+.song-preview .song__difficulty {
+	border-radius: .06rem;
+	z-index: 1;
+	top: -.53rem;
+	width: .7rem;
+	height: .4rem;
+	text-align: center;
+}
+
+.song-preview .song__difficulty .song__difficulty--level {
+	margin-bottom: -.05rem;
+	border-radius: .012rem;
+	transition: all .3s;
+	margin-right: -.22rem;
+	height: 42%;
+	width: .045rem;
+	top: -.68rem;
+	left: -.1rem;
+}
+
+.song-preview .song__difficulty .song__difficulty--level {
+	background: #ffffff50;
+}
+
+.song__difficulty[data-difficulty="1"] .level-1,
+.song__difficulty[data-difficulty="2"] .level-1,
+.song__difficulty[data-difficulty="2"] .level-2,
+.song__difficulty[data-difficulty="3"] .level-1,
+.song__difficulty[data-difficulty="3"] .level-2,
+.song__difficulty[data-difficulty="3"] .level-3,
+.song__difficulty[data-difficulty="4"] .level-1,
+.song__difficulty[data-difficulty="4"] .level-2,
+.song__difficulty[data-difficulty="4"] .level-3,
+.song__difficulty[data-difficulty="4"] .level-4 {
+	background: #fff;
+}
+
+.info-panel {
+	display: block !important;
+}
+
+.sprite {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    position: relative;
+    top: 1rem;
+    right: 1.05rem;
+}
+
+.sprites-container:before {
+    content: 'Stats [UAT]';
+    font-size: 0.14rem;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: var(--general1);
+    border-radius: 0.07rem 0.07rem 0 0;
+    top: 0.2rem;
+    left: -1.14rem;
+    padding-top: 0.07rem;
+    padding-left: 0.1rem;
+}
+
+.sprites-container:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 69%;
+    border: 2px var(--general1) solid;
+    border-radius: 0.07rem;
+    top: 0.2rem;
+    left: -1.14rem;
+}
+
+.sprite.sprite--tape {
+	top: 35%;
+}
+
+.sprite.sprite--stars {
+	top: 60%;
+}
+
+.sprite.sprite--tape .sprite-description:before,
+.sprite.sprite--tape .sprite-description:after,
+.sprite.sprite--stars .sprite-description:before,
+.sprite.sprite--stars .sprite-description:after {
+    content: '';
+    width: 0.3rem;
+    height: 0.3rem;
+    background: transparent;
+	background-size: 100%;
+	background-position: center;
+    border-radius: 0.05rem;
+    border: 0;
+    position: absolute;
+    top: -0.07rem;
+    left: 0;
+}
+
+.sprite.sprite--tape .sprite-description:before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/stat_played.svg);
+}
+
+.sprite.sprite--tape .sprite-description:after {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/stat_played_bg.svg);
+	animation: rewardAfterBounce 2s ease infinite;
+}
+
+.sprite.sprite--stars .sprite-description:before {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/stat_stars.svg);
+}
+
+.sprite.sprite--stars .sprite-description:after {
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/stat_stars_bg.svg);
+	animation: rewardAfterBounce 2s ease infinite;
+}
+
+.sprite.sprite--stars:after {
+    content: '';
+    width: 100%;
+    height: 0;
+    border-bottom: 2px var(--general1) solid;
+    position: absolute;
+    top: -0.03rem;
+    left: -0.09rem;
+	opacity: 0.5;
+}
+
+.pre-beat.even .sprite__svg-container {
+	animation: spriteBeat .5s;
+}
+
+.sprite-description {
+    width: 100%;
+    font-family: "Just Dance New Regular";
+    font-size: 15%;
+    text-align: left;
+    overflow: visible;
+    background: var(--general1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    bottom: -0.23rem;
+    left: 0;
+    padding-left: 0.35rem;
+    opacity: 1 !important;
+	text-transform: lowercase;
+}
+
+.sprite-val {
+    font-size: 100%;
+    padding-left: 0;
+    padding-right: 0;
+	text-transform: uppercase;
+}
+
+.sprite__svg-container {
+	display: none;
+	transform: rotate(-25deg);
+}
+
+.state-coachselection .coverflow--container,
+.state-loadingdance #preview .song-details,
+.state-tutorial #preview .song-details {
+	display: block !important;
+}
+
+.song-preview::before,
+.state-tutorial .song__reward {
+	display: none !important;
+}
+
+.state-coachselection .song-cover--hi-res::before {
+	background-size: cover !important;
+	top: -23%;
+	opacity: 0;
+	transition: all .3s;
+	left: -61%;
+	animation: albumcoachSlide 2s ease !important;
+	height: 3.6rem;
+	width: 3.6rem;
+	z-index: 1000;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/placeholder-coach.png);
+}
+
+.state-songselection .song-cover--hi-res::before {
+	content: "";
+	top: -44.8%;
+	left: -2%;
+	width: 20%;
+	height: 20%;
+	opacity: 0;
+}
+
+.song-cover--hi-res::before {
+	height: 0;
+	width: 0;
+}
+
+.song-cover::before,
+.state-coachselection .song-cover::before,
+.state-tutorial .song-cover::before {
+	content: "";
+	color: #000;
+	position: fixed;
+	display: block;
+	background-position: center !important;
+}
+
+.state-coachselection .song-cover,
+.state-tutorial .song-cover {
+	left: 100rem;
+}
+
+#players::after,
+#players::before,
+.state-coachselection #preview .right-pane,
+.state-coachselection #preview .song-details,
+.state-coachselection #section-songlist,
+.state-coachselection .grid-container,
+.state-coachselection .song-preview::before,
+.state-coachselection .video-preview {
+	display: none !important;
+}
+
+.state-coachselection .coverflow--container {
+	background: 0 0 !important;
+	border: 0 !important;
+}
+
+.coach::before,
+.state-coachselection #players .player,
+.state-coachselection #room-info,
+.state-songselection #players::before {
+	display: none;
+}
+
+.coach-selection {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+	left: 0;
+	top: 0;
+}
+
+.coach-selection__bgImg {
+	width: 100%;
+	height: 87%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	border-radius: 0;
+	animation: bannerFadeIn 2s;
+}
+
+.coach-selection__bgImg img {
+	width: 100%;
+	height: 100%;
+}
+
+.coach-selection__bgImg img::after {
+	content: "";
+	background: gray;
+	width: 100%;
+	height: 110%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.coach-selection__title {
+	color: #fff;
+	text-shadow: 2px 2px 3px #969696;
+	top: 1.1rem;
+}
+
+.state-coachselection .song-cover.song-cover--low-res {
+    z-index: 100;
+    opacity: 1;
+    left: -2.15rem;
+    width: 56.489%;
+    transform: scale(.26);
+    top: -106.54%;
+    border: 0;
+    border-radius: 0.2rem;
+    background-size: cover;
+	background-repeat: round;
+    animation: songdetails-FadeIn 2.6s ease;
+}
+
+.coach-selection__details {
+	background: #fff;
+	background-image: none;
+	color: #fff;
+	animation: songdetails-FadeIn 2.5s ease;
+	min-width: 2.6rem;
+	max-width: 3rem;
+	padding: .1rem .1rem .22rem .7rem;
+	overflow: hidden;
+	border-radius: 10px;
+	font-family: "Just Dance New Regular";
+	position: absolute;
+	top: 5.5%;
+	left: .28rem;
+}
+
+.coach-selection__details .coach-selection__details-song {
+	font-size: .17rem;
+	padding: 0 0 .04rem .025rem;
+	color: #525252;
+}
+
+.coach-selection__details .coach-selection__details-artist {
+	font-size: .135rem;
+	height: .15rem;
+	color: gray;
+}
+
+html[lang=ru] .coach-selection__title {
+	font-size: 20%;
+	width: 90%;
+	left: 5%;
+	top: 20%;
+}
+
+.coach__img {
+	width: auto;
+	height: 119%;
+	min-height: 1rem;
+	position: absolute;
+	top: -31%;
+	left: -.2rem;
+	animation: coachImgBeat 4s ease infinite;
+}
+
+.coach-selection__item.coach[data-id="1"] .coach__img,
+.coach-selection__item.coach[data-id="3"] .coach__img {
+	animation: coachImgBeat1 7s ease infinite;
+}
+
+.coach-selection__item.coach[data-id="2"] .coach__img,
+.coach-selection__item.coach[data-id="4"] .coach__img {
+	animation: coachImgBeat2 7s ease infinite;
+}
+
+ul.coach-selection__list.coach-selection__list--2 > [data-id="1"].coach-selection__item.coach {
+	left: -1rem;
+}
+
+ul.coach-selection__list.coach-selection__list--2 > [data-id="2"].coach-selection__item.coach {
+	left: 1rem;
+}
+
+ul.coach-selection__list.coach-selection__list--3 > [data-id="1"].coach-selection__item.coach {
+	left: -.8rem;
+}
+
+ul.coach-selection__list.coach-selection__list--3 > [data-id="3"].coach-selection__item.coach {
+	left: .8rem;
+}
+
+ul.coach-selection__list.coach-selection__list--4 > [data-id="1"].coach-selection__item.coach,
+ul.coach-selection__list.coach-selection__list--4 > [data-id="2"].coach-selection__item.coach,
+ul.coach-selection__list.coach-selection__list--4 > [data-id="3"].coach-selection__item.coach,
+ul.coach-selection__list.coach-selection__list--4 > [data-id="4"].coach-selection__item.coach {
+	transform: scale(0.8);
+}
+
+ul.coach-selection__list.coach-selection__list--4 > [data-id="1"].coach-selection__item.coach {
+	left: -0.4rem;
+}
+
+ul.coach-selection__list.coach-selection__list--4 > [data-id="2"].coach-selection__item.coach {
+	left: -0.13rem;
+}
+
+ul.coach-selection__list.coach-selection__list--4 > [data-id="3"].coach-selection__item.coach {
+	left: 0.13rem;
+}
+
+ul.coach-selection__list.coach-selection__list--4 > [data-id="4"].coach-selection__item.coach {
+	left: 0.4rem;
+}
+
+
+.coach-selection__list {
+	width: 100%;
+	height: 66%;
+	font-size: 50%;
+	text-align: center;
+	position: absolute;
+	top: 39%;
+	left: -2%;
+}
+
+.coach__player-list {
+    width: 110%;
+    height: 31%;
+    display: block;
+    position: relative;
+    padding: .0234rem .1rem;
+    margin-bottom: 0.055rem;
+    background: #00a4ec;
+    color: #fff;
+    opacity: 1;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0;
+    top: -20%;
+    left: 20%;
+    z-index: 2;
+    font-family: Just Dance New Bold;
+    border: .02rem #00a4ec solid;
+    outline: .02rem #fff solid;
+    padding-right: 0;
+}
+
+.coach__player-list::before {
+	display: none;
+    content: "";
+    width: 0.35rem;
+    height: 100%;
+    position: absolute;
+    background: #00a4ec;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0;
+	outline: .02rem #00a4ec solid;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fplayer_coachselection_icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.coach-selection__item .coach__histogram .coach__names-list .coach__player-list::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 56%;
+    left: 0;
+    font-size: 66%;
+    color: gray;
+    background: #fff;
+	padding: .035rem .1rem;
+}
+
+.coach-selection__item[data-id="1"] .coach__histogram .coach__names-list .coach__player-list::after {
+	content: "Ready to Win";
+}
+
+.coach-selection__item[data-id="2"] .coach__histogram .coach__names-list .coach__player-list::after {
+	content: "The New Dancer";
+}
+
+.coach-selection__item[data-id="3"] .coach__histogram .coach__names-list .coach__player-list::after {
+	content: "The Just Dancer";
+}
+
+.coach-selection__item[data-id="4"] .coach__histogram .coach__names-list .coach__player-list::after {
+	content: "The Acrobat";
+}
+
+.coach__player-list.animate {
+	animation: animateShowCoach .6s, title-gradcolorMove 30s ease infinite;
+}
+
+.coach__names-list {
+	bottom: .3rem;
+	overflow: visible;
+}
+
+.coach-selection__button {
+	border-radius: 1rem;
+	color: transparent;
+	background: #06aef7;
+	box-shadow: 0 0 15px 0 #06aef7;
+	padding: .04rem .45rem;
+	font-size: .22rem;
+	overflow: hidden;
+	position: absolute;
+	bottom: .2rem;
+	right: 1rem;
+	z-index: 999999;
+}
+
+.coach-selection__button::before {
+	font-size: .18rem;
+	text-align: center;
+	line-height: .35rem;
+	width: 1.61rem;
+	height: .35rem;
+	color: #fff;
+	top: 0;
+	background: 0 0;
+	opacity: 1;
+	filter: none;
+	animation: none;
+	transform: none;
+}
+
+html[lang=ru] .coach-selection__button::before {
+	content: "ТАНЦЕВАТЬ!";
+}
+
+html[lang=en] .coach-selection__button::before {
+	content: "DANCE!";
+}
+
+html[lang=fr] .coach-selection__button::before {
+	content: "DANSE!";
+}
+
+.coach-selection__back, .coach-selection__back::before {
+    width: .266rem;
+    height: .265rem;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 5;
+}
+
+.coach-selection__back {
+	transition: all .15s;
+	background-image: none;
+	background-color: hsl(5deg 100% 59%);
+	top: 91%;
+	right: 9.6rem;
+}
+
+.coach-selection__back::before {
+    content: 'Esc';
+    font-family: 'Just Dance New Bold';
+    font-size: .12rem;
+    text-align: center;
+    top: 0;
+    right: 0;
+    padding-top: 0.075rem;
+    text-transform: uppercase;
+}
+
+.coach-selection__back:hover {
+	transform: scale(1);
+}
+
+.coach-selection::before {
+	content: "";
+	width: .3rem;
+	height: .3rem;
+	opacity: 1;
+	background: 0 0;
+	background: url(edited) no-repeat center/cover;
+	position: absolute;
+	z-index: 0;
+	top: 5.25rem;
+	left: 4.975rem;
+}
+
+#players {
+	width: 100%;
+	height: .965rem;
+	left: 7%;
+	top: -8px;
+}
+
+.state-coachselection #players {
+	top: -2.3% !important;
+}
+
+.state-songselection #players .player:nth-of-type(1) {
+	left: 80%;
+	top: 39%;
+}
+
+.state-songselection #players .player:nth-of-type(2) {
+    left: 57%;
+    top: 45.8%;
+    transform: scale(0.8);
+}
+
+.state-songselection #players .player:nth-of-type(3),
+.state-songselection #players .player:nth-of-type(4),
+.state-songselection #players .player:nth-of-type(5),
+.state-songselection #players .player:nth-of-type(6) {
+	display: none;
+}
+
+.state-songselection .dancercard .player-color {
+	overflow: visible;
+	width: .6rem;
+	height: .6rem;
+	border-radius: 0 .1rem .1rem 0;
+	position: absolute;
+	top: -49%;
+	left: 36%;
+}
+
+.state-songselection .dancercard .player-color::before {
+    content: "";
+    width: 1.7rem;
+    height: .6rem;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: -1.25rem;
+    border-width: 3px;
+    border-style: solid;
+    background: #fff;
+    z-index: -1;
+}
+
+.player.blue .player-color::before,
+.player.blue .player-flag__image,
+.player.blue .player-exp.player-exp-normal {
+	border-color: #3784f9 !important;
+}
+
+.player.red .player-color::before,
+.player.red .player-flag__image,
+.player.red .player-exp.player-exp-normal {
+	border-color: #ec2443 !important;
+}
+
+.player.green .player-color::before,
+.player.green .player-flag__image,
+.player.green .player-exp.player-exp-normal {
+	border-color: #7de400 !important;
+}
+
+.player.purple .player-color::before,
+.player.purple .player-flag__image,
+.player.purple .player-exp.player-exp-normal {
+	border-color: #8802c9 !important;
+}
+
+.player.aqua .player-color::before,
+.player.aqua .player-flag__image,
+.player.aqua .player-exp.player-exp-normal {
+	border-color: #03ded6 !important;
+}
+
+.player.pink .player-color::before,
+.player.pink .player-flag__image,
+.player.pink .player-exp.player-exp-normal {
+	border-color: #d820c9 !important;
+}
+
+.state-songselection .dancercard .player-flag__image {
+	border-width: 0.02rem;
+	border-style: solid;
+}
+
+.state-songselection .player-exp.player-exp-normal {
+	border-width: 0.02rem !important;
+	border-style: solid !important;
+	background: #fff !important;
+}
+
+.player.blue .player-exp.player-exp-normal {
+	color: #3784f9 !important;
+}
+
+.player.red .player-exp.player-exp-normal {
+	color: #ec2443 !important;
+}
+
+.player.green .player-exp.player-exp-normal {
+	color: #7de400 !important;
+}
+
+.player.purple .player-exp.player-exp-normal {
+	color: #8802c9 !important;
+}
+
+.player.aqua .player-exp.player-exp-normal {
+	color: #03ded6 !important;
+}
+
+.player.pink .player-exp.player-exp-normal {
+	color: #d820c9 !important;
+}
+
+.state-songselection .dancercard .avatar-wrapper {
+	width: 55%;
+	position: absolute;
+	z-index: 1;
+	top: -65%;
+	left: 32%;
+}
+
+.state-songselection .dancercard .player-name {
+	width: 90%;
+	height: .3rem;
+	text-align: end;
+	letter-spacing: -1px;
+	position: absolute;
+	left: -64%;
+	z-index: 2;
+	bottom: 24%;
+	font-size: .18rem;
+	color: gray;
+	text-shadow: none !important;
+}
+
+.state-songselection #players .player .controller-coins {
+	text-align: end;
+	bottom: 28%;
+	left: -85%;
+	color: gray;
+	text-shadow: none !important;
+}
+
+.state-songselection #players .player .controller-coins span {
+	text-shadow: none !important;
+}
+
+.state-songselection #players .player .controller-coins::before {
+	font-size: .15rem;
+	color: gray;
+	text-shadow: none !important;
+}
+
+html[lang=ru].state-songselection #players .player .controller-coins::before {
+	content: "Баланс: ";
+}
+
+html[lang=en].state-songselection #players .player .controller-coins::before {
+	content: "Balance: ";
+}
+
+html[lang=fr].state-songselection #players .player .controller-coins::before {
+	content: "Équilibre: ";
+}
+
+html[lang=ja].state-songselection #players .player .controller-coins::before {
+	content: "残高: ";
+}
+
+html[lang=ko].state-songselection #players .player .controller-coins::before {
+	content: "밸런스: ";
+}
+
+html.state-songselection .dancercard .player-logo--vip {
+	display: block;
+}
+
+.dancercard .player-logo--vip {
+	display: none;
+    background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/_uat/hud/CrownColor.png);
+    width: 20%;
+    height: 80%;
+	top: .13rem;
+	left: 12%;
+    opacity: 1;
+	background-size: 90%;
+}
+
+.dancercard .player-logo--vip::before {
+	content: 'VIP Pass';
+    color: #f26f00;
+    text-align: right;
+    font-size: 0.15rem;
+    width: 1rem;
+    position: absolute;
+    top: 0.07rem;
+    right: 0.25rem;
+}
+
+html[lang=ru] .dancercard .player-logo--vip::before {
+	content: 'VIP-пропуск';
+	font-size: 0.14rem;
+}
+
+.state-songselection .dancercard .player-exp {
+	color: #fff;
+	height: .2rem;
+	border: 1px wheat;
+	width: .2rem;
+	display: inline-block;
+	position: absolute;
+	bottom: 116%;
+	right: 74%;
+}
+
+.state-songselection .dancercard .player-flag {
+	width: .19rem;
+	height: .19rem;
+	overflow: hidden;
+	position: absolute;
+	z-index: 0;
+	top: -.25rem;
+	right: 93%;
+}
+
+.dancercard .player-flag__inner {
+	width: 100%;
+	height: 100%;
+}
+
+html:not(.ipad) .hud.beat > #players.animate .player-color,
+html:not(.ipad) .hud.beat > #players.animate .player-stars .star:not(.no-beat)::before {
+	animation: none;
+}
+
+html.state-dance #players {
+	left: 6%;
+	top: -43px;
+}
+
+.state-dance #swipe {
+	overflow: visible !important;
+	margin: 0 auto;
+	top: 2rem;
+	padding-top: 0;
+	left: 11.4rem;
+	width: 35%;
+	height: 30%;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 21%;
+	line-height: 0;
+	opacity: 1;
+	position: absolute;
+	z-index: 205;
+	border-bottom: 2px #ffffff66 solid;
+	animation: luckBlockSlide 3.5s ease, luckBlockFadeOut 3.5s;
+	animation-delay: 5s;
+}
+
+.state-dance #swipe::before {
+	content: 'GOOD\0aLUCK!';
+	white-space: pre;
+	font-family: 'Just Dance';
+	line-height: .6rem;
+	font-size: .8rem;
+	position: absolute;
+	left: 2.95rem;
+	top: .5rem;
+	transform: skewX(10deg);
+	animation: luckTitleSlide 2s;
+	animation-delay: 6s;
+}
+
+.state-dance #swipe::after {
+	content: '';
+	width: 40%;
+	height: 100%;
+	background: linear-gradient(0deg, #ffffff70 0, transparent 100%);
+	position: absolute;
+	left: -.15rem;
+	top: .015rem;
+	transform: skewX(10deg);
+	opacity: 1;
+	border-bottom: 2px #fff solid;
+}
+
+.state-dance .hud.beat #swipe::after {
+	animation: fadeOut .4s;
+}
+
+#players[n-ghosts="5"] .player {
+	transform: scale(0.9) !important;
+	top: 0.15rem;
+}
+
+#players[n-ghosts="5"] .player:nth-of-type(1) {
+	left: 0;
+}
+
+#players[n-ghosts="5"] .player:nth-of-type(2) {
+	left: 15%;
+}
+
+#players[n-ghosts="5"] .player:nth-of-type(3) {
+	left: 30%;
+}
+
+#players[n-ghosts="5"] .player:nth-of-type(4) {
+	left: 45%;
+}
+
+#players[n-ghosts="5"] .player:nth-of-type(5) {
+	left: 60%;
+}
+
+#players[n-ghosts="5"] .player:nth-of-type(6) {
+	left: 75%;
+}
+
+html.state-dance #players[n-ghosts="5"] {
+	left: 6.5%;
+}
+
+.state-afterdance #players {
+	top: 0;
+	left: 22%;
+}
+
+.dancercard .player-name,
+.state-afterdance #players,
+.state-coachselection #players {
+	width: 80%;
+	height: .91rem;
+	position: absolute;
+	z-index: 2;
+}
+
+.state-songselection #players,
+.state-tutorial #players {
+	width: 80%;
+	height: .91rem;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 22%;
+}
+
+#players.finding-dancers::after,
+#players.removing-dancers::after,
+.aqua .dancercard .player-master .player-master--icon,
+.blue .dancercard .player-master .player-master--icon,
+.green .dancercard .player-master .player-master--icon,
+.pink .dancercard .player-master .player-master--icon,
+.purple .dancercard .player-master .player-master--icon,
+.red .dancercard .player-master .player-master--icon {
+	display: none;
+}
+
+#players .player.ghost.visible {
+	animation: fadeIn .3s ease;
+}
+
+.state-coachselection #players[n-ghosts="0"]::after {
+	background: gray;
+}
+
+.state-coachselection #players::after {
+	transform: scale(1.3);
+}
+
+.state-coachselection #players[n-ghosts="0"]::before,
+.state-coachselection #players[n-ghosts="1"]::before,
+.state-coachselection #players[n-ghosts="2"]::before,
+.state-coachselection #players[n-ghosts="3"]::before {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/ico_coopmodeON.png) no-repeat 94% 50%/11%;
+	border-radius: .1rem;
+	border: solid .03rem rgb(255 101 59);
+	content: "";
+	display: block;
+	height: 44%;
+	left: 94.1% !important;
+	position: absolute;
+	top: 8.54rem;
+	width: 26%;
+	-webkit-mask: none;
+	transform: scale(1.3);
+}
+
+.state-coachselection #players[n-ghosts="1"]::before,
+.state-coachselection #players[n-ghosts="2"]::before,
+.state-coachselection #players[n-ghosts="3"]::before {
+	z-index: -100;
+}
+
+.state-coachselection #players[n-ghosts="0"]::before {
+	border: solid .03rem #bababa;
+}
+
+.dancercard .player-name {
+	width: 90%;
+	height: .3rem;
+	text-align: center;
+	left: 1%;
+	bottom: -55%;
+	font-size: .18rem;
+}
+
+.dancercard .player-name em {
+	height: 100%;
+	white-space: nowrap;
+	display: inline-block;
+	position: relative;
+	max-width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	padding-left: 0;
+}
+
+.dancercard .player-name,
+.state-dance .dancercard .player-name em {
+	text-shadow: 1px 1px 1px #2b2b2b;
+}
+
+.dancercard .avatar-wrapper {
+	width: 55%;
+	position: absolute;
+	z-index: 1;
+	top: -100%;
+	left: 19%;
+}
+
+.dancercard .player-flag {
+	width: .22rem;
+	height: .19rem;
+}
+
+.dancercard .player-exp {
+	color: #fff;
+	height: .2rem;
+	border: 1px wheat;
+	width: .2rem;
+	display: inline-block;
+	position: absolute;
+	bottom: 116%;
+	right: 81%;
+}
+
+.dancercard .player-exp span {
+	line-height: .17rem;
+	letter-spacing: -1px;
+	font-size: 43%;
+}
+
+.player.aqua .dancercard .player-exp.player-exp-normal,
+.player.blue .dancercard .player-exp.player-exp-normal,
+.player.green .dancercard .player-exp.player-exp-normal,
+.player.pink .dancercard .player-exp.player-exp-normal,
+.player.purple .dancercard .player-exp.player-exp-normal,
+.player.red .dancercard .player-exp.player-exp-normal {
+	background-image: none;
+	border-radius: 50px;
+	border: 2px solid #fff;
+}
+
+#players .star {
+	transform: rotate(10deg);
+}
+
+#players .player-stars {
+	bottom: -8%;
+	left: -29%;
+}
+
+#players .star.star-1,
+#players .star.star-2,
+#players .star.star-3,
+#players .star.star-4,
+#players .star.star-5 {
+	width: .3rem;
+	height: .3rem;
+	margin: 0 -.07rem;
+}
+
+html:not(.weak-platform) #players.animate .star {
+	animation: playerStarReceiving 1.1s ease-in-out;
+}
+
+html:not(.ipad) .hud.beat > #players.animate .player-stars .star:not(.no-beat) {
+	animation: player-star-beat .5s;
+}
+
+html:not(.weak-platform) #players .player.megastar .star::after,
+html:not(.weak-platform) #players .player.megastar .star::before,
+html:not(.weak-platform) #players .player.superstar .star::after,
+html:not(.weak-platform) #players .player.superstar .star::before {
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .3s infinite, csBeatSelect 1s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png) !important;
+	background-repeat: no-repeat;
+	background-size: 400%;
+	content: "";
+	display: block;
+	height: 50%;
+	margin-top: -10%;
+	position: absolute;
+	width: 50%;
+}
+
+html:not(.weak-platform) #players .player.megastar .star::after,
+html:not(.weak-platform) #players .player.superstar .star::after,
+html:not(.weak-platform) #players .player.superstar .star::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png) !important;
+	background-size: 350%;
+}
+
+html:not(.weak-platform) #players .player.superstar .star::after,
+html:not(.weak-platform) #players .player.superstar .star::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png) !important;
+	background-size: 400%;
+}
+
+html:not(.weak-platform) #players .player.superstar .star::after {
+	animation: MoveBeat 3s steps(3, end) infinite, OpacityBeat .2s infinite, csBeatSelect 1s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_2.png) !important;
+	background-size: 350%;
+}
+
+.dancercard .player-master {
+	display: none;
+	height: .42rem;
+	position: absolute;
+	z-index: 1;
+	top: .29rem;
+	left: 1.02rem;
+}
+
+.dancercard .player-master .player-master--icon {
+	width: .35rem;
+	height: .35rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.state-dance .dancercard .player-master {
+	opacity: 0;
+}
+
+.dancercard .player-color {
+	overflow: hidden;
+	width: 80%;
+	height: 22%;
+	border-radius: 30px;
+	position: absolute;
+	top: 113%;
+	left: 6%;
+}
+
+#crown-container {
+	position: absolute;
+	z-index: 20;
+	border: 0;
+	top: 1.38rem;
+	left: 3.35rem;
+}
+
+#players .crown.leader::before,
+#players .crown::before {
+	content: '';
+	width: 120%;
+	height: 120%;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 0;
+	top: -12px;
+	border: 0;
+	transform: rotate(20deg);
+	left: -11px;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/leader-update.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: cover;
+}
+
+#players .crown.leader:after {
+	display: block !important;
+	content: '';
+	width: 120%;
+	height: 120%;
+	border-radius: 50%;
+	position: absolute;
+	z-index: -1;
+	top: -12px;
+	border: 0;
+	transform: rotate(20deg);
+	left: -11px;
+	opacity: 0;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/leader-crown_border.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: cover;
+	animation: leaderBorder_scaleIn 1s ease !important;
+}
+
+@keyframes leaderBorder_scaleIn {
+	0% {
+		transform: rotate(20deg) scale(1); opacity: 1;
+	}
+	50%{opacity: 1;}
+	to {
+		transform: rotate(20deg) scale(1.7); opacity: 0;
+	}
+}
+
+.hud.beat > #players.animate .crown,
+.hud.beat > #players.animate .crown.leader,
+html:not(.ipad) .hud.beat > #players .crown,
+html:not(.ipad) .hud.beat > #players .crown.leader {
+	animation: crownBeat09 1.2s both;
+}
+
+#players .player .controller-coins {
+	width: 100%;
+	position: absolute;
+	bottom: -6%;
+	left: -7%;
+}
+
+#players .player .controller-coins span {
+	font-size: .15rem;
+	font-family: Just Dance New Bold;
+	display: inline-block;
+	position: relative;
+	padding-right: .02rem;
+	text-shadow: 0 0 .005rem #000, 0 .005rem .005rem rgba(0, 0, 0, .4);
+}
+
+#players .player .controller-coins span::before {
+	background: url(https://jdnowweb-s.cdn.ubi.com/prod/main/20210426_0836/web/img/icons/coin.png);
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: coinsCountBeat 5s ease infinite;
+}
+
+#players .controller .crown,
+#players .crown {
+	width: .32rem;
+	height: .32rem;
+	z-index: 5;
+	top: 69%;
+	left: -15%;
+	border-radius: 50%;
+}
+
+#players .crown {
+	content: "";
+	animation: crownFadeShake 1s ease;
+}
+
+.state-dance .avatar-wrapper .avatar,
+.state-dance .dancercard .player-flag,
+.state-dance .player-exp.player-exp-normal,
+.state-dance .player-exp.player-exp-tablet {
+	display: none;
+}
+
+.state-dance #admin-menu .avatar-wrapper .avatar {
+	display: block !important;
+}
+
+#players .feedback-label {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/feedback-label-sprite.png);
+	top: 60% !important;
+}
+
+#players .player[data-stars="0"] .feedback.feedback-good::before,
+#players .player[data-stars="0"] .feedback.feedback-good::after {
+	top: -0.2rem !important;
+}
+
+#players .feedlabel-yeah {
+	width: 120%;
+	left: -16%;
+	background-position: 0 97%;
+	overflow: visible;
+}
+
+#players .feedback-yeah::after,
+#players .feedback-yeah::before {
+	animation: NewFeedbackScale02 1s linear infinite !important;
+	content: "" !important;
+	height: 2.6rem;
+	left: -0.85rem;
+	overflow: visible !important;
+	position: absolute !important;
+	width: 2.6rem !important;
+	opacity: 0;
+}
+
+#players .feedback-yeah::before {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/gold/fx-1.png) no-repeat center/90% !important;
+}
+
+#players .feedback-yeah::after {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/gold/fx.png) no-repeat center/90% !important;
+}
+
+#players .feedback-label.feedlabel-yeah::before {
+	animation: NewFeedbackScaleParticleYeah 1s linear !important;
+	background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fparticle-sparks.png) no-repeat center/100%;
+	content: "";
+	display: block;
+	height: 2rem;
+	left: -0.19rem;
+	margin-top: 0;
+	position: absolute;
+	top: -0.8rem;
+	width: 2rem;
+	z-index: -999999999 !important;
+	opacity: 0;
+}
+
+#players .feedlabel-perfect::after {
+	animation: MoveBeat 1.1s steps(3, end) infinite, OpacityBeat .6s steps(2, end) infinite, csBeatSelect 1s both infinite !important;
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/sparcle1.png) no-repeat center/100%;
+	content: "";
+	height: 50%;
+	margin-top: -12%;
+	position: absolute;
+	width: 55%;
+	opacity: 0;
+}
+
+#players .feedlabel-perfect::before {
+	animation: MoveBeat2 .8s steps(3, end) infinite, OpacityBeat .7s steps(2, end) infinite, csBeatSelect 1s both infinite !important;
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/sparcle1.png) no-repeat center/90%;
+	content: "";
+	display: block;
+	height: 90%;
+	margin-top: -5%;
+	position: absolute;
+	width: 51% !important;
+	z-index: -999999999 !important;
+	opacity: 0;
+}
+
+#players .feedback-perfect::after,
+#players .feedback-perfect::before {
+	content: "";
+	display: block;
+	height: 1.32rem;
+	left: -38%;
+	margin-top: 1.45rem;
+	position: absolute;
+	top: -79%;
+	width: 1.32rem !important;
+	z-index: -999999999 !important;
+	opacity: 0;
+}
+
+#players .feedback-perfect::after {
+	animation: NewFeedbackScaleP1 .5s linear infinite !important;
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/perfect-fx-yellow.png) no-repeat center/100%;
+}
+
+#players .feedback-perfect::before {
+	animation: NewFeedbackScaleP2 .8s linear infinite !important;
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/feedback/perfect/perfect-fx-green.png) no-repeat center/100%;
+}
+
+#players .player[data-stars="1"] .feedback-perfect::after,
+#players .player[data-stars="1"] .feedback-perfect::before,
+#players .player[data-stars="2"] .feedback-perfect::after,
+#players .player[data-stars="2"] .feedback-perfect::before,
+#players .player[data-stars="3"] .feedback-perfect::after,
+#players .player[data-stars="3"] .feedback-perfect::before,
+#players .player[data-stars="4"] .feedback-perfect::after,
+#players .player[data-stars="4"] .feedback-perfect::before,
+#players .player[data-stars="5"] .feedback-perfect::after,
+#players .player[data-stars="5"] .feedback-perfect::before {
+	top: -60%;
+}
+
+#players .player[data-stars="1"] .feedback-label,
+#players .player[data-stars="2"] .feedback-label,
+#players .player[data-stars="3"] .feedback-label,
+#players .player[data-stars="4"] .feedback-label,
+#players .player[data-stars="5"] .feedback-label {
+	top: 86% !important;
+}
+
+#players .feedlabel-perfect,
+#players .feedlabel-super {
+	left: -6%;
+	background-position: 0 78%;
+	overflow: visible !important;
+	z-index: 999999999 !important;
+}
+
+#players .feedlabel-good {
+	background-position: 0 40%;
+	left: -5%;
+	overflow: visible;
+	z-index: 1000;
+}
+
+#players .feedlabel-good::after,
+#players .feedlabel-good::before,
+#players .feedback-good::after,
+#players .feedback-good::before {
+	content: '';
+	display: block;
+	z-index: -999999999 !important;
+	opacity: 0;
+	position: absolute;
+	overflow: visible !important;
+}
+
+#players .feedback-good::after {
+	animation: NewFeedbackScaleGoodFL .6s linear infinite !important;
+	background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble1-feedb.png) no-repeat center/160%;
+	left: -0.4rem;
+	margin-top: 0.6rem;
+	height: 1.32rem;
+	width: 1.32rem !important;
+}
+
+#players .feedback-good::before {
+	animation: NewFeedbackScaleGoodFR .9s linear infinite !important;
+	background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble2-feedb.png) no-repeat center/140%;
+	left: -0.4rem;
+	margin-top: 0.6rem;
+	height: 1.32rem;
+	width: 1.32rem !important;
+}
+
+#players .feedlabel-good::after {
+	animation: NewFeedbackScaleGood .6s linear infinite !important;
+	background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble1-label.png) no-repeat center/120%;
+	height: 150%;
+	left: -2%;
+	margin-top: 0;
+	width: 110% !important;
+}
+
+#players .feedlabel-good::before {
+	animation: NewFeedbackScaleGood .9s linear infinite !important;
+	background: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbooble2-label.png) no-repeat center/100%;
+	height: 120%;
+	left: -3%;
+	margin-top: -2%;
+	width: 110% !important;
+}
+
+#players .feedlabel-ok {
+	background-position: 0 60%;
+	background-size: 90%;
+	width: 90%;
+	left: 5%;
+}
+
+#players .feedlabel-bad {
+	left: -4%;
+	background-position: 0 2%;
+}
+
+#players .feedlabel-badgold {
+	left: -4%;
+	background-position: 0 21%;
+}
+
+#players .feedback {
+	top: 0;
+	left: 1%;
+	height: 145%;
+	background-image: none;
+	overflow: visible;
+	background-position: 0 0 !important;
+}
+
+#players .feedback-yeah {
+	background: linear-gradient(180deg, rgb(254 199 0) 0, rgba(255, 234, 0, 0) 100%);
+	left: 13%;
+	width: 65%;
+}
+
+#players .feedback-perfect {
+	background: linear-gradient(180deg, #00df00 0, rgba(0, 223, 0, 0) 100%);
+	left: 17%;
+	width: 57%;
+}
+
+#players .feedback-super {
+	background: linear-gradient(180deg, #42dd9a 0, rgba(105, 230, 15, 0) 100%);
+	left: 17%;
+	width: 57%;
+}
+
+#players .feedback-good {
+	background: linear-gradient(180deg, #0cf 0, rgba(0, 204, 255, 0) 100%);
+	left: 25%;
+	width: 40%;
+}
+
+#players .feedback-extra {
+	background: linear-gradient(180deg, ? 0, ? 100%);
+	left: 17%;
+	width: 57%;
+}
+
+#players .feedback-ok {
+	background: linear-gradient(180deg, #f0f 0, rgba(255, 0, 255, 0) 100%);
+	left: 31%;
+	width: 30%;
+}
+
+#players .feedback-bad {
+	background: none;
+	left: 30%;
+	width: 31%;
+}
+
+#afterdance .results .stars .star,
+#racetrack .star[data-visible=true],
+.balloon__avatar--star,
+.score__stars .star,
+#players .star {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star.png);
+}
+
+#racetrack .star {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star_unfilled.png);
+	width: .5rem;
+	height: .5rem;
+	transform: rotate(10deg);
+	left: 16%;
+	transition: opacity 1s;
+}
+
+#afterdance .results .player .score.superstar .star,
+#players .player.superstar .star,
+#racetrack.superstar .star[data-visible=true],
+.highscore-display.superstar .score__stars .star {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star_plus.png);
+}
+
+#afterdance .results .player .score.megastar .star,
+#players .player.megastar .star,
+#racetrack.megastar .star[data-visible=true],
+.highscore-display.megastar .score__stars .star {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star_plus_more.png);
+}
+
+html:not(.weak-platform) #racetrack .star[data-visible=true]::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star.png) !important;
+}
+
+html:not(.weak-platform) #racetrack .star[data-visible=true]::after {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/star-outline.png) !important;
+}
+
+html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::after,
+html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::before {
+	animation: MoveBeat 3s steps(3, end) infinite, OpacityBeat .5s infinite, csBeatSelect 2s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png) !important;
+	background-repeat: no-repeat;
+	background-size: 400%;
+	content: "";
+	display: block;
+	height: 50%;
+	margin-top: -10%;
+	position: absolute;
+	width: 50%;
+}
+
+html:not(.weak-platform) #racetrack.megastar .star[data-visible=true]::after {
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .3s infinite, csBeatSelect 1s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png) !important;
+	background-size: 350%;
+}
+
+html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::after,
+html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::before {
+	animation: MoveBeat 3s steps(3, end) infinite, OpacityBeat .5s infinite, csBeatSelect 2s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png) !important;
+	background-repeat: no-repeat;
+	background-size: 400%;
+	content: "";
+	display: block;
+	height: 50%;
+	margin-top: -10%;
+	position: absolute;
+	width: 50%;
+}
+
+html:not(.weak-platform) #racetrack.superstar .star[data-visible=true]::after {
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .3s infinite, csBeatSelect 1s both infinite !important;
+	background-size: 350%;
+}
+
+#players .player-special .player-megastar,
+#players .player-special .player-superstar {
+	left: -4%;
+	top: 20%;
+	position: absolute;
+}
+
+#racetrack-fill,
+#racetrack-fill-p1,
+#racetrack-fill-p2,
+#racetrack-fill-p3,
+#racetrack-fill-p4,
+#racetrack-fill-p5,
+#racetrack-fill-p6 {
+	background-image: url(https://jdnowweb-s.cdn.ubi.com/uat/SP1/20150325_1222/web/img/hud/racelineTrackShadow.png);
+	background-size: 100% 100%;
+	border-radius: 0.02rem;
+}
+
+#lyrics::before,
+#racetrack {
+	display: none;
+	position: absolute;
+}
+
+#racetrack {
+	width: 7.5%;
+	height: 55.2%;
+	opacity: 0;
+	z-index: 120;
+	top: 22.5%;
+	left: 9px;
+	animation: racetrackSlideInLeft 3s ease;
+}
+
+#racetrack.animate .star {
+	animation: racetrackStarFade 1.1s ease;
+}
+
+#racetrack .progress-background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -23%;
+	left: 0;
+	opacity: .35;
+	border-left: 2px #fff solid;
+	border-right: 2px #fff solid;
+	background: #000;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100%;
+	-webkit-mask: linear-gradient(0deg, #000 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+#racetrack .progress-bar {
+	width: 55%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	right: -15px;
+}
+
+#racetrack .platform {
+	display: none;
+	width: 0.42rem;
+	height: .01rem;
+	background: white;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+	position: absolute;
+	z-index: 2;
+	bottom: -.2%;
+	right: -.11rem;
+	opacity: .35;
+}
+
+#racetrack .progress-meters {
+	margin: 0 5% 0 4%;
+	position: inherit;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#racetrack-fill,
+.racetrack-fill-players {
+	position: inherit;
+	transition: all 1s;
+}
+
+#beat {
+	background: #0263ff;
+	border-bottom: solid 0px white;
+	width: 22% !important;
+	height: 10% !important;
+	left: -25%;
+	opacity: 1 !important;
+	top: 94.7%;
+	-webkit-mask: url("https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fbeat_line.svg")top left/100%;
+}
+
+.particle-system {
+	opacity: 0;
+}
+
+.hud.beat > #pictos > #beat {
+	animation: beatPicto;
+}
+
+#pictos {
+	left: 81.65%;
+	top: 69.5%;
+	width: 40% !important;
+	animation: title-slideRight 2s ease;
+}
+
+.picto {
+	left: -30% !important;
+	filter: drop-shadow(3px 2.5px 2px rgba(0, 0, 0, .5));
+}
+
+#pictos.multi-coach {
+	left: 70%;
+	width: 40% !important;
+}
+
+.multi-coach .picto {
+	left: -38% !important;
+}
+
+#lyrics {
+	width: 40%;
+	font-size: .166rem;
+	line-height: 1.3;
+	cursor: default;
+	font-family: "Just Dance New Regular";
+	position: absolute;
+	z-index: 10;
+	top: 88%;
+	left: 5%;
+}
+
+#lyrics::before {
+	content: "";
+	width: 70%;
+	height: 9vh;
+	left: -2%;
+	bottom: -.49rem;
+	background: linear-gradient(90deg, rgba(0, 0, 0, .5) 0, transparent 100%);
+	border-radius: 10px;
+	opacity: .6;
+}
+
+#lyrics .line {
+	color: #888483;
+	transform: translateY(1.3em) rotate(0deg);
+}
+
+#lyrics .line.previous {
+	transform: translateY(0) rotate(0deg);
+	transform-origin: 50% 100%;
+	opacity: 0;
+	transition: color .35s, opacity .35s, transform .35s;
+}
+
+#lyrics .line.current {
+	color: #e1dfda;
+	opacity: 1;
+}
+
+#dance-transition.in::before,
+#dance-transition.out::before {
+	background-color: #fff !important;
+	background-size: cover !important;
+	content: "";
+	height: 100% !important;
+	position: absolute;
+	width: 100% !important;
+	z-index: -1 !important;
+	opacity: 1 !important;
+}
+
+#dance-transition.in::before {
+	animation: INTransitionBG 1s !important;
+	left: 0;
+	top: 0;
+}
+
+#dance-transition.out::before {
+	left: 0 !important;
+	top: 0 !important;
+}
+
+#dance-transition.out {
+	animation: OUTTransitionBG1 1s;
+	opacity: 0;
+}
+
+#dance-transition .dt-row {
+	background-image: none !important;
+	height: 100% !important;
+	margin-bottom: 9.7% !important;
+	margin-left: 0 !important;
+	opacity: 0;
+	width: 100%;
+}
+
+#dance-transition.in .dt1, #dance-transition.out .dt1 {
+    width: 100%;
+	height: 100% !important;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Ftransition_base_sky.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 45% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+    transform: rotate(0) !important;
+}
+
+@keyframes danceTransitionElement1n2_scaleIn {
+	0%{
+		opacity: 0; transform: rotate(0) scale3d(0.5, 1, 1);
+	}
+	100% {
+		opacity: 1; transform: rotate(0) scale3d(1, 1, 1);
+	}
+}
+
+@keyframes danceTransitionElement1n2_scaleOut {
+	100%{
+		opacity: 0; transform: rotate(0) scale3d(0.5, 1, 1);
+	}
+	0%, 50% {
+		opacity: 1; transform: rotate(0) scale3d(1, 1, 1);
+	}
+}
+
+#dance-transition.in .dt2, #dance-transition.out .dt2 {
+	display: block;
+    width: 100%;
+	height: 100% !important;
+	position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fmosaic_stars_bgfx.png) !important;
+    background-repeat: repeat !important;
+    background-size: 45% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+    transform: rotate(0) !important;
+	top: 0;
+	left: 0;
+	animation: transitionBasicStarfield_translate 25s linear infinite;
+}
+
+#dance-transition.in .dt3, #dance-transition.out .dt3 {
+	display: block;
+    width: 100%;
+	height: 100% !important;
+	position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fmosaic_stars_bgfx2.png) !important;
+    background-repeat: repeat !important;
+    background-size: 45% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+    transform: rotate(0) !important;
+	top: 0;
+	left: 0;
+	animation: transitionBasicStarfield_translate 35s linear infinite;
+}
+
+@keyframes transitionBasicStarfield_translate {
+	0% {
+		transform: rotate(0) translateX(4rem);
+	}
+	100% {
+		transform: rotate(0) translateX(-4rem);
+	}
+}
+
+#dance-transition.in .dt4, #dance-transition.out .dt4 {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Ftransition_dots_sky-light.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 40% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: 1rem !important;
+    margin-top: -0.5rem !important;
+    opacity: 1 !important;
+    transform: rotate(0) !important;
+    top: 0;
+    left: 0;
+    animation: transitionBasicDots_1_translate 5s ease infinite;
+    z-index: -1;
+}
+
+@keyframes transitionBasicDots_1_translate {
+	0%, 100% {
+		transform: rotate(0) translate(10px, 10px)
+	}
+	50% {
+		transform: rotate(0) translate(-10px, 30px)
+	}
+}
+
+#dance-transition.in .dt5, #dance-transition.out .dt5 {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Ftransition_dots_sky-bg2.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 40% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: -1rem !important;
+    margin-top: 0rem !important;
+    opacity: 1 !important;
+    transform: rotate(0) !important;
+    top: 0;
+    left: 0;
+    animation: transitionBasicDots_2_translate 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes transitionBasicDots_2_translate {
+	0%, 100% {
+		transform: rotate(0) translate(10px, 10px)
+	}
+	50% {
+		transform: rotate(0) translate(-15px, 33px)
+	}
+}
+
+#dance-transition.in .dt6, #dance-transition.out .dt6 {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fline_pink.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 10% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: -1rem !important;
+    margin-top: 0rem !important;
+    opacity: 1 !important;
+    transform: rotate(0);
+    top: 0;
+    left: 0;
+    animation: transitionBasicLines_1_translate 3s linear infinite;
+	animation-delay: 0.2s !important;
+    z-index: 1;
+}
+
+@keyframes transitionBasicLines_1_translate {
+	0%, 21%, 100% {
+		transform: rotate(0) translate(-109px, 88px);
+		opacity: 0;
+			
+	}
+	5%, 15% {
+		opacity: 1;
+	}
+	20% {
+		transform: rotate(0) translate(18px, -88px);
+		opacity: 0;
+	}
+}
+
+#dance-transition.in .dt7, #dance-transition.out .dt7 {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fline_blue.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 10% !important;
+    background-position: center;
+    margin-bottom: 0 !important;
+    margin-left: -1rem !important;
+    margin-top: 0rem !important;
+    opacity: 1 !important;
+    transform: rotate(0);
+    top: 0;
+    left: 0;
+    animation: transitionBasicLines_2_translate 2.8s linear infinite;
+    z-index: 1;
+}
+
+@keyframes transitionBasicLines_2_translate {
+	0%, 21%, 100% {
+		transform: rotate(0) translate(253px, 59px);
+		opacity: 0;
+			
+	}
+	5%, 15% {
+		opacity: 1;
+	}
+	20% {
+		transform: rotate(0) translate(336px, -59px);
+		opacity: 0;
+	}
+}
+
+#dance-transition.in .dt8, #dance-transition.out .dt8 {
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fline_green.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 14% !important;
+    background-position: center;
+    margin-bottom: 26px !important;
+    margin-left: -2.5rem !important;
+    margin-top: 0rem !important;
+    opacity: 1 !important;
+    transform: rotate(0);
+    top: 0;
+    left: 0;
+    animation: transitionBasicLines_3_translate 2.5s linear infinite;
+	animation-delay: 0.1s !important;
+    z-index: 1;
+}
+
+@keyframes transitionBasicLines_3_translate {
+	0%, 21%, 100% {
+		transform: rotate(0) translate(253px, 59px);
+		opacity: 0;
+			
+	}
+	5%, 15% {
+		opacity: 1;
+	}
+	20% {
+		transform: rotate(0) translate(336px, -59px);
+		opacity: 0;
+	}
+}
+
+#dance-transition.in::after, #dance-transition.out::after {
+	content: '';
+    display: block;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    background-image: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fline_yellowe2.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 14% !important;
+    background-position: center;
+    margin-bottom: 26px !important;
+    margin-left: -1.9rem !important;
+    margin-top: 0rem !important;
+    opacity: 1 !important;
+    transform: rotate(0);
+    top: 0;
+    left: 0;
+    animation: transitionBasicLines_3_translate 2.4s linear infinite;
+	animation-delay: 0.14s !important;
+    z-index: 1;
+}
+
+#dance-transition.animate::before {
+	transition: none !important;
+}
+
+#dance-transition.animate .dt-row {
+	transition-property: opacity !important;
+}
+
+#dance-transition.animate.in .dt-row,
+#dance-transition.animate.in::before {
+	opacity: 1 !important;
+	transition-timing-function: ease-in-out !important;
+}
+
+#dance-transition.animate.in .dt1,
+#dance-transition.animate.in .dt2,
+#dance-transition.animate.in .dt3,
+#dance-transition.animate.in .dt4 {
+	transition-duration: 0s !important;
+}
+
+#dance-transition.animate.out .dt-row,
+#dance-transition.animate.out::before {
+	transition-timing-function: linear !important;
+}
+
+#dance-transition.animate.out .dt1,
+#dance-transition.animate.out .dt2,
+#dance-transition.animate.out .dt3,
+#dance-transition.animate.out .dt4 {
+	transition-duration: 0s !important;
+}
+
+.modal::before {
+	background-color: #ccdffb;
+	opacity: .4;
+}
+
+.modal,
+.modal--active,
+.modal--active .modal__wrapper,
+.modal.modal--active {
+	z-index: 100000;
+}
+
+.modal,
+.modal--active .modal__wrapper {
+	transition: none;
+}
+
+.modal__close {
+	color: #fff;
+	font-family: Just Dance New Regular;
+	padding-right: 0;
+	padding-top: .7%;
+	font-size: 35%;
+	cursor: pointer;
+	text-transform: lowercase;
+	position: absolute;
+	top: 4.6rem;
+	transform: translateY(20%);
+	right: 6.1rem;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+
+.modal--active .modal__close {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.modal--active .modal__close {
+	animation: fadeIn 1s ease;
+}
+
+.modal__close::after,
+.modal__close:hover::before {
+	position: absolute;
+	width: 2rem;
+	height: 70%;
+	left: 2.4rem;
+	top: 0;
+	border-radius: .05rem;
+	transition: all .2s;
+}
+
+.modal__close:hover::before {
+	content: "";
+	border: .02rem var(--general1) solid;
+	z-index: 5;
+}
+
+.modal__close::after {
+	text-align: center;
+	color: var(--general1);
+	font-family: Just Dance New Regular;
+	font-size: 38%;
+	cursor: pointer;
+	text-transform: none !important;
+	padding-top: .08rem;
+	background: #f8c8e7;
+}
+
+html[lang=ru] .modal__close::after {
+	content: "Продолжить";
+}
+
+html[lang=en] .modal__close::after {
+	content: "Continue";
+}
+
+html[lang=fr] .modal__close::after {
+	content: "Continuer";
+}
+
+.modal__link {
+	display: none;
+}
+
+.concept_ftue {
+	min-width: 0;
+	width: 64%;
+	height: 49%;
+	position: absolute;
+	top: 29%;
+	left: 19%;
+	border-bottom: 2px #c4c4c4 solid;
+}
+
+.modal__wrapper {
+	transform: none;
+}
+
+.modal__container.modal__container--active {
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+.modal__container {
+	transform: translateY(20%);
+	opacity: 0;
+}
+
+.modal.modal--active .modal::before {
+	content: "";
+	background-color: #000;
+	background-size: cover;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.modal__container::after,
+.modal__container::before {
+	width: 70%;
+	position: absolute;
+	top: 17%;
+	left: 16%;
+	z-index: 0;
+}
+
+.modal__container::before {
+	height: 70%;
+	background-image: none;
+	background-color: #fff;
+	border-radius: 15px;
+	outline: 3px #fff solid;
+	filter: drop-shadow(0 0 30px #e55d87);
+	border: 3px var(--general1) solid;
+}
+
+.modal__container::after {
+	background-color: var(--general1);
+	height: 10%;
+	border-radius: 15px 15px 0 0;
+}
+
+.concept {
+	width: 50%;
+	position: absolute;
+	top: .5rem;
+	left: 26%;
+	z-index: 1;
+}
+
+.steps__number {
+	background: #fff;
+	color: var(--general1);
+	border: .03rem solid #f8c8e7;
+	width: .5rem;
+	height: .5rem;
+	display: inline-block;
+	border-radius: 100%;
+	text-align: center;
+	font-size: .3rem !important;
+	line-height: .45rem;
+	position: absolute;
+	top: 5%;
+}
+
+span.steps__connect {
+	color: gray;
+	font-size: 40%;
+	width: 105%;
+}
+
+span.steps__image {
+	display: none;
+}
+
+.concept__steps {
+	position: relative;
+	width: 98%;
+	margin-bottom: 7%;
+}
+
+.coach-selection__list {
+	animation: coachSelectionDelay 2.1s !important;
+}
+
+.coach-selection__back {
+	animation: fadeIn .3s !important;
+}
+
+.coach-selection__button,
+.coach-selection__title,
+.state-coachselection #players[n-ghosts="0"]::after,
+.state-coachselection #players[n-ghosts="0"]::before,
+.state-coachselection #players[n-ghosts="1"]::after,
+.state-coachselection #players[n-ghosts="1"]::before,
+.state-coachselection #players[n-ghosts="2"]::after,
+.state-coachselection #players[n-ghosts="2"]::before,
+.state-coachselection #players[n-ghosts="3"]::after,
+.state-coachselection #players[n-ghosts="3"]::before {
+	animation: coachSelectionDelay 2.1s !important;
+}
+
+#afterdance {
+	width: inherit;
+	height: 100%;
+	margin: 0;
+	padding: .12rem .15rem .1rem;
+	position: relative;
+	background-image: none;
+}
+
+.state-afterdance #afterdance {
+	background: #00acff;
+	background-image: none;
+	margin: 0;
+	height: 100%;
+	border: 0;
+	overflow: hidden;
+	top: 0;
+}
+
+#afterdance::before {
+	content: "";
+	display: block;
+	width: 70%;
+	height: 97%;
+	background-color: #fff;
+	border-radius: 12px;
+	position: absolute;
+	z-index: 0;
+	top: 1.6%;
+	left: 29.1%;
+	animation: whiteBlockFade 2s ease;
+}
+
+#afterdance.transition-in #crown-container,
+#afterdance.transition-in .coach,
+#afterdance.transition-in .player {
+	-webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	-webkit-animation: fadeIn .5s linear both;
+	animation: fadeIn .5s linear both;
+}
+
+#afterdance .flag,
+.state-afterdance #players,
+.state-afterdance #room-info,
+.state-afterdance #settings {
+	display: none;
+}
+
+/*
+#afterdance.transition-in .player:nth-child(1) {
+    animation: playerContentFade1 3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(2) {
+    animation: playerContentFade2 3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(3) {
+    animation: playerContentFade3 3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(4) {
+    animation: playerContentFade4 3.5s ease;
+}
+*/
+/*	PLAYER POSITION FADE */
+#afterdance.transition-in .player:nth-child(1) .color {
+	animation: playerContentFade4color 2s ease;
+}
+
+#afterdance.transition-in .player:nth-child(2) .color {
+	animation: playerContentFade3color 2s ease;
+}
+
+#afterdance.transition-in .player:nth-child(3) .color {
+	animation: playerContentFade2color 2s ease;
+}
+
+#afterdance.transition-in .player:nth-child(4) .color {
+	animation: playerContentFade1color 2s ease;
+}
+
+/*	PLAYER AVATAR FADE */
+#afterdance.transition-in .player:nth-child(1) .avatarFlag {
+	animation: playerContentFade4color 2.3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(2) .avatarFlag {
+	animation: playerContentFade3color 2.3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(3) .avatarFlag {
+	animation: playerContentFade2color 2.3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(4) .avatarFlag {
+	animation: playerContentFade1color 2.3s ease;
+}
+
+/*	PLAYER NAME FADE */
+#afterdance.transition-in .player:nth-child(1) .player-content .name {
+	animation: playerContentFade4name 3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(2) .player-content .name {
+	animation: playerContentFade3name 3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(3) .player-content .name {
+	animation: playerContentFade2name 3s ease;
+}
+
+#afterdance.transition-in .player:nth-child(4) .player-content .name {
+	animation: playerContentFade1name 3s ease;
+}
+
+#afterdance .player-content .score {
+	animation: fadeInScore 4s ease;
+}
+
+#afterdance.transition-out .player:nth-child(1),
+#afterdance.transition-out .player:nth-child(2),
+#afterdance.transition-out .player:nth-child(3),
+#afterdance.transition-out .player:nth-child(4) {
+	animation: fadeOut .5s ease both;
+}
+
+#afterdance .players {
+	left: -16%;
+	top: 13%;
+}
+
+#afterdance .players,
+.scrollArea,
+.scrollContainer {
+	overflow: visible !important;
+}
+
+#afterdance .player .color {
+	background-image: url(https://jdnowweb-s.cdn.ubi.com/uat/SP1/20150325_1222/web/img/hud/racelineTrackShadow.png) !important;
+	background-size: 250% 250% !important;
+}
+
+#afterdance .player:nth-child(2) .color {
+	width: .51rem;
+	height: .51rem;
+	margin-left: .02rem;
+	font-size: 35%;
+	line-height: .5rem !important;
+}
+
+#afterdance .player:nth-child(3) .color {
+	width: .48rem;
+	height: .48rem;
+	margin-left: .03rem;
+	font-size: 30%;
+	line-height: .48rem !important;
+}
+
+#afterdance .player:nth-child(4) .color {
+	width: .45rem;
+	height: .45rem;
+	margin-left: .04rem;
+	font-size: 25%;
+	line-height: .45rem !important;
+}
+
+#afterdance .player:nth-child(1) .player-content {
+	margin-left: .01rem;
+}
+
+#afterdance .player:nth-child(2) .avatarFlag,
+#afterdance .player:nth-child(2) .player-content {
+	margin-left: .02rem;
+}
+
+#afterdance .player:nth-child(3) .avatarFlag,
+#afterdance .player:nth-child(3) .player-content {
+	margin-left: .03rem;
+}
+
+#afterdance .player:nth-child(4) .avatarFlag,
+#afterdance .player:nth-child(4) .player-content {
+	margin-left: .04rem;
+}
+
+#afterdance .img--afterDance .coach {
+	position: absolute;
+	top: 44%;
+	left: 9%;
+	border: 3px #fff solid;
+	width: 65.565%;
+	animation: afterDanceSongCoverSlide 3s ease;
+}
+
+#afterdance .song-info {
+	margin: -.2rem -11px 0;
+	animation: afterDanceSongInfoSlide 2s ease;
+	color: #fff;
+	width: 90%;
+	height: 25%;
+	font-size: 24px;
+}
+
+#afterdance .song-info .title {
+	height: .26rem;
+}
+
+#afterdance .song-info .artist {
+	color: #fff;
+	font-size: 70%;
+	margin-top: .02rem;
+	height: .2rem;
+}
+
+#afterdance .results h2 {
+	font-family: "OpenSans SemiBold";
+	line-height: 1.3;
+	opacity: .9;
+	padding-left: .06rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#afterdance .results h3 {
+	font-size: 100%;
+}
+
+#afterdance .player-content .name {
+	text-shadow: none;
+	font-size: .25rem;
+}
+
+#players .player:not(.ghost).visible {
+	animation: PlayerslideInDown .5s ease;
+}
+
+.position {
+	animation: positionIn 1.5s ease;
+}
+
+#afterdance .flag {
+	animation: afterdanceFlagFade 1.5s ease;
+	border: 2px solid #8b4513;
+	bottom: .12rem;
+	right: .2rem;
+}
+
+#afterdance .avatarFlag .avatar-wrapper {
+	width: .68rem;
+	height: .68rem;
+	display: block;
+	margin: 0;
+	left: 0.2rem;
+	top: -0.1rem;
+}
+
+#afterdance.transition-in .player-solo .player .score {
+	transform: none;
+	top: 4%;
+	display: block;
+}
+
+#afterdance.transition-in .player-solo .player .score .stars {
+	right: .25rem;
+	display: block;
+}
+
+#afterdance .player-solo .player .score::before {
+	content: "";
+	width: 1.8rem;
+	height: 100%;
+	background: rgb(255 201 107);
+	border-radius: 12px;
+	position: absolute;
+	right: 0;
+}
+
+#afterdance .player-content {
+	background: transparent;
+}
+
+#afterdance .player-content .score-text {
+	line-height: 1.9;
+	font-size: 74%;
+}
+
+#afterdance .player-content .score .highScore,
+#afterdance .results .highScore {
+	font-size: .145rem;
+	width: auto;
+	color: #00acff;
+	white-space: nowrap;
+	font-family: "Just Dance New Bold" !important;
+	position: absolute;
+	z-index: 200;
+}
+
+#afterdance .results .highScore {
+	display: none;
+	letter-spacing: -1px;
+	top: .41rem;
+	right: 1.32rem;
+	animation: newHSfade 4s ease;
+	text-transform: uppercase;
+}
+
+#afterdance .player-content .score .highScore {
+	letter-spacing: 0;
+	top: -.1rem;
+	right: -.1rem;
+}
+
+#afterdance .results {
+	height: 4rem;
+	margin: 1rem 0 0 4.2rem;
+}
+
+/* AF result SOLO */
+.players.player-solo .color {
+	display: block;
+}
+
+#afterdance .player::after {
+	content: "";
+	width: 70%;
+	height: 2px;
+	left: 0;
+	top: 116%;
+	position: absolute;
+	margin-left: 26%;
+	background: #dcdcdc;
+}
+
+#crown-container .crown {
+	width: .4em;
+	height: .4em;
+	border: 0;
+	border-radius: 50%;
+	transform: rotate(10deg);
+	animation: crownBeatAF 1.8s both infinite, newHSfade 4s ease;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/leader-update.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+}
+
+#crown-container .crown,
+#crown-container.aqua .crown,
+#crown-container.blue .crown,
+#crown-container.green .crown,
+#crown-container.pink .crown,
+#crown-container.purple .crown,
+#crown-container.red .crown {
+	background-color: rgb(255 255 255/0%);
+}
+
+#afterdance .results .stars .star.animate {
+	animation: afterdanceStar .9s ease-in-out;
+}
+
+#afterdance .results .stars .star.star-1.animate,
+#afterdance .results .stars .star.star-5.animate {
+	animation: starglow15 3s ease infinite;
+}
+
+#afterdance .results .stars .star.star-4.animate {
+	animation: starglow4 3s ease infinite;
+}
+
+#afterdance .results .stars .star.star-3.animate {
+	animation: starglow3 3s ease infinite;
+}
+
+#afterdance .results .stars .star.star-2.animate {
+	animation: starglow2 3s ease infinite;
+}
+
+#afterdance .results .stars .star {
+	transform: rotate(10deg);
+}
+
+#afterdance .results .player .score.megastar .star::after,
+#afterdance .results .player .score.megastar .star::before {
+	animation: MoveBeat 4s steps(3, end) infinite, OpacityBeat .5s infinite, csBeatSelect 2s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_1.png) !important;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: "";
+	display: block;
+	height: 200%;
+	margin-top: -79%;
+	margin-left: -80%;
+	position: absolute;
+	width: 200%;
+}
+
+#afterdance .results .player .score.megastar .star::after {
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .3s infinite, csBeatSelect 1s both infinite !important;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_purprle_2.png) !important;
+}
+
+#afterdance .results .player .score.superstar .star::after,
+#afterdance .results .player .score.superstar .star::before {
+	animation: MoveBeat 4s steps(3, end) infinite, OpacityBeat .5s infinite, csBeatSelect 1s both infinite !important;
+	background: #0ff;
+	-webkit-mask-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_2.png) !important;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 100%;
+	content: "";
+	height: 200%;
+	margin-top: -79%;
+	margin-left: -80%;
+	position: absolute;
+	width: 200%;
+}
+
+#afterdance .results .player .score.superstar .star::after {
+	animation: MoveBeat 2s steps(3, end) infinite, OpacityBeat .3s infinite, csBeatSelect 1s both infinite !important;
+	-webkit-mask-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/particles/particle_blue_1.png) !important;
+}
+
+.score.megastar::before,
+.score.superstar::before {
+	width: .8rem;
+	height: .2rem;
+	position: absolute;
+	top: .14rem;
+	left: -.28rem;
+	content: "";
+}
+
+#afterdance .results .player .score.megastar::before,
+#afterdance .results .player .score.superstar::before {
+	background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20201021_0950/web/img/hud/super_mega/text_superstar4.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	animation: titleShake1 1s ease infinite;
+}
+
+#afterdance .results .player .score.megastar::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/text_megastar2.png);
+}
+
+#afterdance .results .player .score.megastar::after,
+#afterdance .results .player .score.superstar .star #afterdance .results .player .score.superstar::after,
+#afterdance .results .player .score.superstar::after {
+	animation: titleShake1 .8s ease infinite;
+}
+
+#afterdance::after {
+	animation: title-slideRightSe 2.5s ease;
+	transition: opacity 3s linear;
+	font-size: 30%;
+	line-height: 1.6;
+	text-align: left;
+	position: absolute;
+	display: block;
+	width: 35%;
+	left: 6.1rem;
+	height: 9%;
+	top: 7%;
+	color: #00acff;
+	border-radius: 15px 0 0 15px;
+}
+
+html[lang=ru] #afterdance::after {
+	content: "Поздравляем!";
+}
+
+html[lang=en] #afterdance::after {
+	content: "Congratulations!";
+}
+
+html[lang=fr] #afterdance::after {
+	content: "Toutes nos félicitations!";
+}
+
+.exit-btn--continue {
+	right: 4%;
+	height: 6.5%;
+	width: 16%;
+	color: #fff;
+	transition: all .2s;
+	background: #00acff;
+	line-height: 0;
+	border-radius: 100px;
+	text-transform: uppercase;
+	font-size: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.exit-btn--continue:focus {
+	transform: scale(1.1);
+}
+
+.exit-btn--continue::before {
+	display: none;
+	width: 0;
+	height: 0;
+	color: #fff;
+}
+
+.exit-btn--continue::before,
+.exit-btn--continue:active::before,
+.exit-btn--continue:hover::before {
+	background-image: none;
+	transition: all .2s;
+}
+
+.exit-btn--animate {
+	animation: fadeIn .5s ease-in-out;
+}
+
+.exit-btn--play-again {
+	right: 4%;
+	height: 8%;
+	width: 13%;
+	color: #fff;
+	transition: all .2s;
+	line-height: .33rem;
+	transform: translate(34px, 29px);
+	animation: newHSfade 5s ease !important;
+	left: .61rem;
+}
+
+.exit-btn--play-again::hover {
+	color: #fff;
+	opacity: 1;
+}
+
+.exit-btn--play-again::before {
+	display: none;
+}
+
+.exit-btn--play-again::after {
+	content: "";
+	display: block;
+	width: 0.2rem;
+	height: 0.2rem;
+	background: #fff;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/ico_restart_blue.svg);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	margin-top: -.27rem;
+	margin-left: -.05rem;
+	border-radius: 100px;
+	background-position: center;
+}
+
+.exit-btn--play-again:active::before,
+.exit-btn--play-again:hover::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/buttons/replay.png);
+	transition: all .2s;
+}
+
+header.header .logo,
+header.header.header--faq .logo {
+    padding-top: 18.8%;
+    width: 100%;
+    height: 0;
+    background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/tos/logo-credits_updated.png) no-repeat 0 0;
+    background-size: 100%;
+    text-indent: -9999px;
+    margin-bottom: 0;
+}
+
+.viewport-content {
+	transition: all .3s;
+}
+
+.viewport-content .qr-code {
+	width: 12em;
+	height: 12em;
+	border: 5px rgb(67 104 200) solid;
+	border-radius: 15px;
+	padding: 0;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.licenses h2 {
+	font-family: OpenSans Bold;
+	font-size: 5rem;
+	transition: all .3s;
+}
+
+.viewport-content h3 {
+	background: 0 0;
+	margin: 1.5rem 0 0;
+	font-size: 2.5rem;
+	padding: 1rem;
+}
+
+.viewport-content h3,
+.viewport-content h4 {
+	font-family: OpenSans Bold;
+	cursor: pointer;
+	transition: background .3s, color .3s;
+}
+
+.viewport-content h3:hover,
+.viewport-content h4:hover {
+	background: var(--aqua1);
+	color: #fff;
+	transition: background .3s, color .15s;
+}
+
+.viewport-content h4 {
+	margin: 1rem 0 0;
+	padding: 0 0 0 2rem;
+}
+
+.viewport-content h4:hover {
+	transition: background .3s, color .3s;
+}
+
+.viewport-content p {
+	font-family: OpenSans SemiBold;
+	padding: 0 1rem;
+	text-align: justify;
+	transition: all .3s;
+}
+
+.primary__faq[data-objipadapp=true] .viewport-content .nested-content,
+.primary__faq[data-objipadapp=true] .viewport-content p,
+.viewport-content h3.expanded + p {
+	animation: slideInTop .3s ease;
+}
+
+.link--report {
+	transition: all .3s;
+	background-image: none;
+	border: 2px gray solid;
+	display: inline-block;
+	font-size: 1.35em;
+	color: gray;
+	text-decoration: none;
+	position: relative;
+	white-space: nowrap;
+	padding: .5rem 2.5rem;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.link--report:hover {
+	transition: all .3s;
+	background: var(--aqua1);
+	border: 2px transparent solid;
+	color: #fff;
+	box-shadow: 0 0 40px 3px rgba(58, 190, 99, .7);
+}
+
+#afterdance .blue .color,
+.blue .dancercard .player-color,
+.blue .player-color,
+.player.blue .dancercard .player-exp.player-exp-normal,
+.toast__color.blue::before {
+	background: #3784f9;
+}
+
+#afterdance .red .color,
+.player.red .dancercard .player-exp.player-exp-normal,
+.red .dancercard .player-color,
+.red .player-color,
+.toast__color.red::before {
+	background: #ec2443;
+}
+
+#afterdance .green .color,
+.green .dancercard .player-color,
+.green .player-color,
+.player.green .dancercard .player-exp.player-exp-normal,
+.toast__color.green::before {
+	background: #7de400;
+}
+
+#afterdance .pink .color,
+.pink .dancercard .player-color,
+.pink .player-color,
+.player.pink .dancercard .player-exp.player-exp-normal,
+.toast__color.pink::before {
+	background: #d820c9;
+}
+
+#afterdance .purple .color,
+.player.purple .dancercard .player-exp.player-exp-normal,
+.purple .dancercard .player-color,
+.purple .player-color,
+.toast__color.purple::before {
+	background: #8802c9;
+}
+
+#afterdance .aqua .color,
+.aqua .dancercard .player-color,
+.aqua .player-color,
+.player.aqua .dancercard .player-exp.player-exp-normal,
+.toast__color.aqua::before {
+	background: #03ded6;
+}
+
+#afterdance .blue .player-content .name,
+#afterdance .blue .score-text {
+	color: #3784f9;
+}
+
+#afterdance .red .player-content .name,
+#afterdance .red .score-text {
+	color: #ec2443;
+}
+
+#afterdance .green .player-content .name,
+#afterdance .green .score-text {
+	color: #7de400;
+}
+
+#afterdance .pink .player-content .name,
+#afterdance .pink .score-text {
+	color: #d820c9;
+}
+
+#afterdance .purple .player-content .name,
+#afterdance .purple .score-text {
+	color: #8802c9;
+}
+
+#afterdance .aqua .player-content .name,
+#afterdance .aqua .score-text {
+	color: #03ded6;
+}
+
+#afterdance .blue .avatarFlag .flag {
+	border: 3px solid #5252fa;
+}
+
+#afterdance .red .avatarFlag .flag {
+	border: 3px solid #ff711f;
+}
+
+#afterdance .green .avatarFlag .flag {
+	border: 3px solid #5bde16;
+}
+
+#afterdance .pink .avatarFlag .flag {
+	border: 3px solid #f0a;
+}
+
+#afterdance .purple .avatarFlag .flag {
+	border: 3px solid #8e0cbd;
+}
+
+#afterdance .aqua .avatarFlag .flag {
+	border: 3px solid #19d2d8;
+}
+
+/** PRELOADER COVERFLOW => DANCE **/
+#just-dance-now .tutorial p::before {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/transition/mask_space_z0.png), url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/transition/mask_space_z1.png), url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/transition/bg_starfield_more.png), url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-1-color.png), url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-2-color.png);
+	opacity: 1;
+	left: -100vw;
+}
+
+#just-dance-now .coach-selection__title::before,
+#just-dance-now .tutorial p::before,
+section.explore::before {
+	content: "";
+	height: 100%;
+	width: 44vw;
+	position: absolute;
+	top: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/** PRELOADER COACHSELECTION => TUTORIAL **/
+#just-dance-now .coach-selection__title::before {
+	background-image: none;
+	opacity: 1;
+	left: -100vw;
+}
+
+section.explore::before {
+	left: 120vw;
+	background-image: url(https://cdn.glitch.com/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fcoach-grid-songlist-cc.png), url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbg_transition_just_dance_coaches.png), url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fbg_transition_just_dance.png);
+}
+
+.footer .copyright {
+	display: block;
+	font-size: 14px;
+	color: #fff;
+	width: 70%;
+	margin: 0 auto;
+	mix-blend-mode: overlay;
+}
+
+.test-square {
+	border-radius: 20px;
+	background-color: red;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	width: 233px;
+	height: 233px;
+	z-index: 2;
+}
+
+.map_square {
+	background-image: url(/);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 256px;
+	height: 256px;
+	z-index: 1;
+}
+
+._e47235-empty {
+	content: ""; /* for :before or :after */
+	z-index: -1;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 30%;
+	margin-left: 3.5em;
+	width: 3em;
+	height: 3em;
+	transform: rotate(10deg);
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/globeSpriteWhite.png)0 0/cover no-repeat;
+	will-change: background-position;
+	animation: animateSpriteMap .9s 0s 0 steps(29, end), fadeAnimateSpriteMap 5s ease;
+	animation-iteration-count: infinite;
+}
+
+.coach-selection__back::after {
+	width: 2rem;
+	color: #a9a9a9;
+	font-size: 14%;
+	position: absolute;
+	top: .53em;
+	left: 2.3em;
+}
+
+html[lang=ru] .coach-selection__back::after {
+	content: "Назад";
+}
+
+html[lang=en] .coach-selection__back::after {
+	content: "Back";
+}
+
+.state-dance .hud.beat > #players .player .dancercard .avatar-wrapper {
+	animation: wraperBeatStatic .5s both;
+}
+
+html:not(.ipad) .hud.beat > #racetrack .progress-bar .progress-background {
+	animation: racetrackBGBeat 1.2s both;
+}
+
+.state-coachselection #players[n-ghosts="1"]::after,
+.state-coachselection #players[n-ghosts="2"]::after {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: Just Dance New Regular !important;
+	z-index: -100;
+}
+
+.state-coachselection #players[n-ghosts="0"]::after,
+.state-coachselection #players[n-ghosts="1"]::after,
+.state-coachselection #players[n-ghosts="2"]::after {
+	text-transform: uppercase;
+	background: linear-gradient(145deg, #ff9100 0, #ff3c61 100%);
+	display: block;
+	transform: none;
+	font-size: .18rem;
+	left: 92.4%;
+	width: 28%;
+	position: absolute;
+	text-align: left;
+	top: 8.655rem;
+	transition: all .4s;
+}
+
+.state-coachselection #players[n-ghosts="0"]::after,
+.state-coachselection #players[n-ghosts="3"]::after {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	z-index: -100;
+	font-family: Just Dance New Regular !important;
+}
+
+.state-coachselection #players[n-ghosts="3"]::after {
+	text-transform: uppercase;
+	background: linear-gradient(145deg, #ff9100 0, #ff3c61 100%);
+	display: block;
+	transform: none;
+	font-size: .18rem;
+	left: 92.4%;
+	width: 28%;
+	position: absolute;
+	text-align: left;
+	top: 8.655rem;
+	transition: all .4s;
+}
+
+.state-coachselection #players[n-ghosts="0"]::after {
+	background: #a9a9a9;
+}
+
+html[lang=ru] .state-coachselection #players[n-ghosts="1"]::after,
+html[lang=ru] .state-coachselection #players[n-ghosts="2"]::after,
+html[lang=ru] .state-coachselection #players[n-ghosts="3"]::after {
+	content: "КОМАНДА ВКЛ.";
+}
+
+html[lang=ru] .state-coachselection #players[n-ghosts="0"]::after {
+	content: "КОМАНДА ВЫКЛ.";
+}
+
+html[lang=en] .state-coachselection #players[n-ghosts="1"]::after,
+html[lang=en] .state-coachselection #players[n-ghosts="2"]::after,
+html[lang=en] .state-coachselection #players[n-ghosts="3"]::after {
+	content: "CO-OP MODE ON";
+}
+
+html[lang=en] .state-coachselection #players[n-ghosts="0"]::after {
+	content: "CO-OP MODE OFF";
+}
+
+.state-coachselection #players[n-ghosts="0"]::before {
+	background: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/ico_cp.png) no-repeat 94% 50%/11% !important;
+	transition: all .4s;
+	z-index: -100;
+	font-family: Just Dance New Regular !important;
+}
+
+.fullscreen-spinner .spinner {
+	fill: #ff007a;
+	filter: drop-shadow(0 0 3px rgba(100, 0, 0, .9));
+}
+
+.grid-container .item-container {
+	width: 100%;
+	height: 100%;
+}
+
+.song--details {
+	width: 56%;
+	height: 82%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	z-index: 2;
+}
+
+html[lang=en] .songlist-container .song-grid--titleDetails::before {
+	content: "Songlist";
+	left: 85.5%;
+}
+
+html[lang=en] .songlist-container .song-grid--titleDetails::after {
+	content: "Sorted By:";
+	left: 48.5%;
+}
+
+html[lang=en] .playlist-container .song-grid--titleDetails::before {
+	content: "Playlist";
+	left: 86.5%;
+}
+
+html[lang=en] .playlist-container .song-grid--titleDetails::after {
+	content: "Sorted By:";
+	left: 49.5%;
+}
+
+html[lang=ru] .songlist-container .song-grid--titleDetails::before {
+	content: "Список песен";
+	left: 80.2%;
+}
+
+html[lang=ru] .songlist-container .song-grid--titleDetails::after {
+	content: "Сортировать по:";
+	left: 42%;
+}
+
+html[lang=ru] .playlist-container .song-grid--titleDetails::before {
+	content: "Плейлист";
+	left: 4rem;
+}
+
+html[lang=ru] .playlist-container .song-grid--titleDetails::after {
+	content: "Сортировать по:";
+	left: 2.3rem;
+}
+
+.song-grid--titleDetails::after {
+	position: absolute;
+	top: 74%;
+	font-size: .132rem;
+	left: 43%;
+	color: var(--gray1);
+	text-align: end;
+	width: 36%;
+	letter-spacing: 0;
+}
+
+.song-grid--titleDetails::before {
+	position: absolute;
+	top: 74%;
+	font-size: .132rem;
+	left: 80%;
+	color: var(--general1);
+	letter-spacing: 0;
+}
+
+#goldmove,
+#goldmove .layer {
+	position: absolute;
+	width: 100%;
+}
+
+#goldmove {
+	-webkit-transform: translateY(-22%) scale(1, .6);
+	-ms-transform: translateY(-22%) scale(1, .6);
+	transform: translateY(-22%) scale(1, .6);
+	z-index: 300;
+	top: 0;
+	left: 0;
+}
+
+#goldmove .layer {
+	height: 100%;
+	background-size: cover;
+}
+
+#goldmove .layer.layer-1 {
+	background-image: none;
+	background-repeat: round;
+	overflow: visible;
+	animation: ZZZ 1s linear infinite;
+}
+
+#goldmove[style="display: block;opacity: 1;"] .layer.layer-1::before,
+#goldmove[style="display:block;opacity:1;"] .layer.layer-1::before,
+#goldmove[style="display:block; opacity:1;"] .layer.layer-1::before,
+#goldmove[style="display: block; opacity: 1;"] .layer.layer-1::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-1-color.png);
+	background-size: 140%;
+	background-position: center;
+	opacity: 1;
+	overflow: visible;
+	animation: goldmoveAmbientRevertV10 2s ease, goldmoveAmbientRevertV8 35s linear infinite;
+}
+
+#goldmove .layer.layer-1[style="animation: 0s ease 0s 1 normal none running none;opacity: 0;transform: scale(1) rotate(0deg);"]::before {
+	animation: none;
+}
+
+#goldmove .layer.layer-1[style="animation: 0s ease 0s 1 normal none running none;opacity: 0;transform: scale(1) rotate(0deg);"]::after {
+	animation: none;
+}
+
+#goldmove[style="display: block;opacity: 1;"] .layer.layer-1::after,
+#goldmove[style="display:block;opacity:1;"] .layer.layer-1::after,
+#goldmove[style="display:block;opacity:1;"] .layer.layer-1::after,
+#goldmove[style="display: block;opacity: 1;"] .layer.layer-1::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-1-color.png);
+	background-size: 100%;
+	background-position: center;
+	opacity: 0.6;
+	overflow: visible;
+	animation: goldmoveAmbientRevertV9 2s ease, goldmoveAmbientRevertV8 20s linear infinite;
+	animation-delay: 0s;
+}
+
+#goldmove .layer.layer-2 {
+	opacity: 0;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-2-color.png);
+	background-repeat: round;
+	animation: ZZZ 10s linear infinite;
+}
+
+#goldmove .layer.layer-3[style="transition:opacity 3s ease 0s,transform ease;opacity:0;transform:scale(1);"],
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease; opacity: 0; transform: scale(1.6);"],
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease;opacity: 1;transform: scale(1);"],
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease;opacity: 1;transform: scale(1.6);"] {
+	opacity: 1;
+	background-image: none !important;
+}
+
+#goldmove .layer.layer-3[style="transition:opacity 3s ease 0s,transform ease;opacity:0;transform:scale(1);"]::before,
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease; opacity: 0; transform: scale(1.6);"]::before,
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease;opacity: 1;transform: scale(1);"]::before,
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease;opacity: 1;transform: scale(1.6);"]::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-1-color.png);
+	background-repeat: round;
+	background-size: 100%;
+	background-position: center;
+	opacity: 0;
+	animation: goldmoveAmbientEndingV3 3s linear infinite;
+}
+
+#goldmove .layer.layer-3[style="transition:opacity 3s ease 0s,transform ease;opacity:0;transform:scale(1);"]::after,
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease; opacity: 0; transform: scale(1.6);"]::after,
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease;opacity: 1;transform: scale(1);"]::after,
+#goldmove .layer.layer-3[style="transition: opacity 3s ease 0s, transform ease;opacity: 1;transform: scale(1.6);"]::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/hud/goldMoveV3/gm_layer-1-color.png);
+	background-repeat: round;
+	background-size: 110%;
+	background-position: center;
+	opacity: 0;
+	animation: goldmoveAmbientRevertEndingV3 4s linear infinite;
+}
+
+.grid-container .item-container .title-container {
+	padding: .11rem 0 0 .04rem;
+	height: 87%;
+}
+
+html.updating #just-dance-now #tizen-menu,
+html.updating #just-dance-now .fullscreen-spinner,
+html.updating #just-dance-now .hud,
+html.updating #just-dance-now .notifications,
+html.updating #just-dance-now .resume-video,
+html.updating #just-dance-now .transitions,
+html.updating #just-dance-now .views {
+	display: none;
+}
+
+html.updating #just-dance-now {
+	display: flex !important;
+	background: #fff;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+html.updating #just-dance-now::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 6px #c9c9c9 solid;
+    border-top: 6px gray solid;
+    border-radius: 100px;
+    animation: spin 0.7s linear infinite;
+}
+
+html.updating #just-dance-now::after {
+	content: 'Updating game data. Please wait...';
+	color: #8c8c8c;
+	font-size: .2rem;
+	padding-top: .1rem;
+	animation: updatingTitleFading 1s ease infinite;
+}
+
+@keyframes updatingTitleFading {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5
+	}
+}
+
+html.chromecast ul.tabs li.selected::after,
+html.chromecast .song-action__button::after,
+html.chromecast .playlist-action__button::after,
+html.chromecast .song-grid--titleDetails::before,
+html.chromecast .song-grid--titleDetails::after,
+html.chromecast .highscore-display.megastar .score__stars .star::before,
+html.chromecast .highscore-display.megastar .score__stars .star::after,
+html.chromecast .highscore-display.superstar .score__stars .star::before,
+html.chromecast .highscore-display.superstar .score__stars .star::after,
+html.chromecast .song-preview::after,
+html.chromecast .song__reward::after,
+html.chromecast .song__decoration::after,
+html.chromecast .sprite-description:after,
+html.chromecast .sprite-description:after {
+	display: none !important
+}
+
+html.chromecast .coach__img,
+html.chromecast #preview::after,
+html.chromecast .highscore-display,
+html.chromecast .song__reward,
+html.chromecast .song-preview,
+html.chromecast #section-playlist,
+html.chromecast .playlist-action__button,
+html.chromecast .playlist--description,
+html.chromecast .playlist--banner__selected,
+html.chromecast .trainer-icon::after,
+html.chromecast .grid-img,
+html.chromecast .grid-img--songlist,
+html.chromecast .reward__img,
+.reward__wrapper .reward__content::before {
+	animation: none !important;
+}
+
+html.chromecast .tabs--text,
+html.chromecast .tabs--icon,
+html.chromecast ul.tabs li::before,
+html.chromecast ul.tabs li {
+	transition: none !important;
+}
+
+/* PLAYLITS */
+#section-playlist .section-grid-trainer {
+	display: none !important;
+}
+
+html.ftue .playlist-grid .playlist.FAVORITES {
+	display: none;
+}
+
+.playlist-grid .playlist-grid-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.playlist-grid .playlist {
+	color: #464545;
+	width: 50%;
+	height: 1.6rem;
+	margin: 0 0 0.18rem 0rem;
+	cursor: pointer;
+	word-break: break-word;
+	border-radius: 0;
+	transition: all .1s;
+}
+
+.playlist-grid .playlist:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	border: 2px #005feb solid;
+	transition: opacity 0.2s ease;
+	opacity: 0;
+}
+
+.playlist-grid .playlist:hover:after {
+	opacity: 1;
+}
+
+.playlist-grid .playlist:nth-child(even)::before {
+    content: '';
+    background: #e9e9e9;
+    width: 0.012rem;
+    height: 1.4rem;
+    position: absolute;
+    left: 5.13rem;
+    top: 0.1rem;
+}
+
+html.ftue .playlist-grid .playlist:nth-child(even)::before {
+	background: transparent;
+}
+
+img.playlist--img,
+html.ftue img.playlist--img:hover{
+	transform: scale(0.9) !important;
+}
+
+.playlist-grid .playlist {
+	transform: scale(0.95) !important;
+}
+
+img.playlist--img:hover {
+	transform: scale(0.95) !important;
+}
+
+.footer__ubi-logo {
+	padding-right: 0;
+}
+
+.footer__ubi-logo .img__esrb {
+	display: none !important;
+}
+
+.footer--catalog .article__title {
+	padding-top: 5rem;
+}
+
+.footer__inner {
+	padding: 5px 0 0 0;
+}
+
+.fullscreen-spinner::before,
+.fullscreen-spinner::after {
+	content: '';
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-size: cover;
+	background-position: center;
+}
+
+.fullscreen-spinner::before {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/waiting_circle.png);
+	opacity: 0.5;
+}
+
+.fullscreen-spinner::after {
+	background-image: url(https://jdnowweb-s5-cdn-global.glitch.me/prod/main/20210606_2109/web/img/icons/waiting_spinner.png);
+	animation: spin_FullScreen 0.7s linear 0s normal none infinite;
+}
+
+@keyframes spin_FullScreen {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+.fullscreen-spinner .spinner {display: none;}
+
+#afterdance .color,
+#afterdance .player-content .name,
+#afterdance .player-content .score-text,
+#afterdance .song-info .title,
+#afterdance::after,
+#just-dance-now .tutorial .tutorial__spinner,
+#preview .song-details h2,
+.coach-selection__details .coach-selection__details-song,
+.concept__title,
+.dancercard .player-exp.player-exp-normal,
+.dancercard .player-name,
+.pop-up button,
+.pop-up h1,
+.song-grid--details .song-grid--titleDetails .song-grid--title,
+.song-preview::after,
+.sprite-val,
+.steps__number,
+.timer,
+.score__owner .owner-name,
+span.highscore-loc {
+	font-family: Just Dance New Bold !important;
+	letter-spacing: 0;
+}
+
+#admin-menu,
+#admin-menu h2,
+#admin-menu h3,
+#afterdance .song-info .artist,
+#just-dance-now .danceroom__label,
+#just-dance-now .modal .concept p,
+#just-dance-now .modal span,
+#just-dance-now .tutorial p,
+#preview .song-details h3,
+.account__name,
+.coach-selection__back::after,
+.coach-selection__details .coach-selection__details-artist,
+.coach-selection__title,
+.coach__player-list::after,
+.connect-phone-info__text,
+.download-txt,
+.exit-btn--continue,
+.exit-btn--play-again,
+.grid-container .item-container .title-container,
+.jdf-loaded body,
+.jdf-loaded button,
+.main .main__text a,
+.main__text,
+.maintenance,
+.playlist-grid .playlist,
+.playlist-img-container .playlist-title-details .playlist--description,
+.pop-up__content,
+.pop-up__footer,
+.score__number,
+.song-action__button,
+.song-grid--details .song-grid--close::after,
+.song-grid--details .song-grid--titleDetails .song-grid--description,
+.song-grid--details .song-grid--titleDetails .song-grid--duration,
+.song-preview .song__difficulty::after,
+.steps__connect,
+.tabs--connect::before,
+.title-container .caption,
+.toast__content,
+.trainer-grid,
+ul.tabs {
+	font-family: Just Dance New Regular !important;
+	letter-spacing: 0;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: .7rem;
+	border-radius: 50px;
+}
+
+html.state-songselection ::-webkit-scrollbar {
+	width: .07rem;
+	height: .7rem;
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+	background: #e9e9e9;
+	border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #b1b1b1;
+	border-radius: 1rem;
+}
+
+/* js created */
+.sorted-type--detailds {
+    position: relative;
+    right: 0;
+    top: -0.13rem;
+    font-size: .132rem;
+    text-align: end;
+}
+
+.sorted-type--detailds::before {
+	content: "Сортировка по:";
+}
+
+.playlist-container .sorted-type--detailds::after {
+	content: "Плейлист";
+	padding-left: 10px;
+	color: var(--general1);
+}
+
+.songlist-container .sorted-type--detailds::after {
+	content: "Список песен";
+	padding-left: 10px;
+	color: var(--general1);
+}
+/* Lading */
+#tizen-menu {
+    display: none;
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fico_waiting-l1.png?v=1636445094804);
+	background-size: cover;
+    opacity: 1;
+	border-radius: 100px;
+	animation: spin 2s linear infinite;
+	z-index: 9999;
+}
+
+#tizen-menu::before {
+	content: '';
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fico_waiting-lb.png);
+	background-size: cover;
+    opacity: 1;
+	animation: spin 1s linear infinite;
+	animation-direction: reverse;
+	z-index: 9999;
+}
+
+#tizen-menu::after {
+	content: '';
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(https://cdn.glitch.me/f26684d4-ff22-4dd2-bd53-2df25cdc2a22%2Fico_waiting-lrg.png);
+	background-size: cover;
+    opacity: 1;
+	animation: spin 4s linear infinite;
+	z-index: 9999;
+}
+
+
+.load-spinner-1 {
+    width: 0.35rem;
+    height: 0.35rem;
+    background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fico_waiting-4.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.4rem;
+    z-index: 1;
+    animation: waitSpinner linear 2s infinite;
+}
+
+.load-spinner-2 {
+    width: 0.35rem;
+    height: 0.35rem;
+    background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fico_waiting-5.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.4rem;
+    z-index: 1;
+    animation: waitSpinnerInv linear 1.5s infinite;
+}
+
+.load-spinner-3 {
+    width: 0.35rem;
+    height: 0.35rem;
+    background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fico_waiting-3.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.4rem;
+    z-index: 1;
+    animation: waitSpinner linear 1.7s infinite;
+}
+
+.load-spinner-4 {
+    width: 0.35rem;
+    height: 0.35rem;
+    background: url(https://cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fico_waiting-2.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.4rem;
+    z-index: 1;
+    animation: waitSpinner linear 1s infinite;
+}
+
+@keyframes waitSpinner {
+  0% {
+    transform: rotate(0deg)
+  }
+  
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes waitSpinnerInv {
+  0% {
+    transform: rotate(0deg)
+  }
+  
+  100% {
+    transform: rotate(-360deg)
+  }
+}
+
+.debug--button {
+    position: absolute;
+    z-index: 9999;
+    color: #fff;
+    background: #f0f;
+    cursor: pointer;
+    border: 2px #0f0 solid;
+    border-radius: 100px;
+    width: auto;
+    height: auto;
+    font-size: 0.15rem;
+    padding: 0 0.1rem;
+    right: 180px;
+    top: 10px;
+}

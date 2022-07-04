@@ -1,0 +1,190 @@
+/************* Admin Menu Screen *************/
+
+.dialog .toggle-settings,
+.toggle-settings:hover,
+.toggle-settings:focus {
+  fill: white;
+}
+.dialog #admin-menu {
+  opacity: 1;
+  transform: scaleX(1) !important;
+  transition: width 2s linear, opacity 0.5s ease 0 !important;
+}
+#admin-menu .menu__head {
+  display: none;
+}
+#admin-menu {
+  height: 39em;
+  opacity: 1 !important;
+  top: 0;
+  transition: transform 0.2s ease-out 0s, opacity 0.1s ease 0 !important;
+  width: 322%;
+}
+#admin-menu:after {
+  animation: DEGRADEAFTERDANCE 10s both infinite;
+  background-image: none,
+    linear-gradient(
+      49deg,
+      rgba(193, 190, 255, 1) 0%,
+      rgba(145, 138, 252, 1) 50%,
+      rgba(193, 190, 255, 1) 100%
+    );
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+  background-size: 16%, 200%;
+  box-shadow: 0 0 25px -5px rgba(149, 142, 252, 1);
+  content: "";
+  display: block;
+  height: 9.5%;
+  left: 0.6%;
+  position: absolute;
+  top: 10.8%;
+  width: 12.2%;
+}
+#admin-menu .player-btn svg {
+  opacity: 0;
+}
+#admin-menu .player-btn {
+  fill: #9990;
+  margin-left: 0;
+  margin-top: 1%;
+}
+#admin-menu .player.player--controller {
+  animation: DEGRADEPLAYERCOLOR 15s ease infinite;
+  background-image: linear-gradient(
+    50deg,
+    rgba(133, 17, 189, 1) 0%,
+    rgba(248, 148, 205, 1) 50%,
+    rgba(248, 148, 93, 1) 100%
+  );
+  background-size: 50em;
+  border: 1.2px solid rgba(119, 125, 252, 1);
+  border-radius: 12px;
+  box-shadow: 0 0 25px -5px rgba(149, 142, 252, 1);
+  color: white;
+  margin-top: 1% !important;
+  padding: 0;
+}
+#admin-menu .menu__body {
+  animation: DEGRADEAFTERDANCE 20s ease infinite;
+  background-image: url(//dl.dropbox.com/s/xshs1aul4ppf8hl/aft_BKG.png?dl=0);
+  background-repeat: no-repeat, repeat;
+  background-size: 100% 100%, 200%;
+  height: 98.5% !important;
+  left: 8.5em;
+  position: absolute !important;
+  width: 59.88em;
+}
+#admin-menu .menu__legal {
+  background-color: transparent;
+  overflow: visible;
+}
+#admin-menu .menu-section {
+  margin-bottom: 11em;
+  width: 100%;
+}
+ul.language__dropdown {
+  right: 15em !important;
+  top: 5em !important;
+}
+ul.video-quality__dropdown {
+  height: 50em;
+  right: 34em !important;
+  top: 5em !important;
+}
+#admin-menu .video-quality__dropdown::after,
+#admin-menu .language__dropdown::after,
+#admin-menu .content__title {
+  display: none;
+}
+#admin-menu .video-quality__item,
+#admin-menu .language__item {
+  background-color: transparent;
+  font-family: JDMDCondensed;
+  padding: 0;
+}
+#admin-menu .video-quality__item:first-of-type,
+#admin-menu .video-quality__item:hover,
+#admin-menu .video-quality__item:focus,
+#admin-menu .language__item:first-of-type,
+#admin-menu .language__item:hover,
+#admin-menu .language__item:focus,
+#admin-menu .languagePicker__content .languagePicker__value {
+  background-color: transparent;
+  color: #a48bfd;
+  font-family: JDMediumCondensed;
+  padding: 0;
+}
+#admin-menu .languagePicker__content .languagePicker__value,
+#admin-menu .languagePicker__content {
+  right: 25%;
+  top: 13.1%;
+}
+#admin-menu .languagePicker__value::after {
+  border-top: 0.09rem solid rgb(164, 139, 253);
+}
+.language__dropdown::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+#admin-menu .video-quality__dropdown,
+#admin-menu .language__dropdown,
+#admin-menu .languagePicker__content {
+  border: 2.5px solid #8f84ef;
+  border-radius: 11px;
+  flex: none;
+  max-height: 1.2rem;
+  min-width: 18%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+}
+#admin-menu .menu-section__content {
+  margin-left: -2.5em;
+  text-align: center !important;
+}
+#admin-menu .menu-section__title {
+  border-bottom: 0;
+  color: rgba(117, 123, 248, 1);
+  font-family: JDMediumCondensed;
+  font-size: 0.2rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+#admin-menu .player:hover {
+  transform: scale(1.06);
+}
+#admin-menu .player__name {
+  color: white;
+  font-family: JDMediumCondensed;
+  font-size: 22px;
+  margin-top: -2%;
+}
+#admin-menu .player {
+  align-items: end !important;
+  animation: DEGRADEPLAYERCOLOR 15s ease infinite;
+  background-image: linear-gradient(
+    50deg,
+    rgba(113, 123, 252, 1) 0%,
+    rgba(213, 155, 254, 1) 50%,
+    rgba(113, 123, 252, 1) 100%
+  );
+  background-size: 50em;
+  border: 1.2px solid rgba(119, 125, 252, 1);
+  border-radius: 12px;
+  box-shadow: 0 0 25px -5px #958efc;
+  display: inline-block;
+  height: 2rem;
+  margin-left: 5% !important;
+  margin-top: 1%;
+  position: relative !important;
+  transition: all 0.2s ease-in-out;
+  width: 22%;
+}
+#admin-menu .player--controller::before {
+  background-image: url(//dl.dropbox.com/s/uhlyvkh7ev1hkjc/QueenRoom.png?dl=0);
+  left: 42%;
+  top: 5%;
+}

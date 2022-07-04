@@ -1,0 +1,25 @@
+svg#_x31__copie_2_1_,
+.character {
+	display: none;
+}
+
+.wrapper {
+	background: white;
+	background-image: none;
+}
+
+.main {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    color: #c4c4c4;
+    top: 5%;
+}
+
+h1.main__title {
+	font-family: Just Dance New Bold;
+}
+
+.main__text {
+    padding-right: 0;
+}

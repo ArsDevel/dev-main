@@ -1,0 +1,171 @@
+/************* Song Selection Screen *************/
+
+/* 500 coins Banner settings */
+ .banner .banner-img img{
+     max-width: 100%;
+     max-height: 100%;
+     background-image:white;
+}
+ .banner .banner-txt{
+     font-size: 0.40rem;
+}
+ .empty-test {
+}
+ .state-songselection #just-dance-now::after {
+     content: "";
+     top: 92.7%!important;
+}
+
+
+ .song-action__price {
+     color: rgba(252, 138, 199, 1);
+     font-family: "JDMDCondensed"!important;
+     font-size: 25%;
+     font-weight: 700;
+     left: 20%;
+     position: absolute;
+     top: 20%;
+}
+ .song-action__price-tag {
+     opacity: 0;
+}
+ p.song-action__label {
+     font-family: "JDMDCondensed"!important;
+     font-size: 20%;
+     right: 40%;
+     top: 15.5%;
+     word-spacing: -1.5px;
+     z-index: 999;
+}
+ .exit-btn--continue {
+     font-family: "JDMDCondensed"!important;
+}
+ .pre-beat .song-action__button:not(.transitioning) {
+     animation: none;
+}
+ .song-action {
+     bottom: -.125rem;
+     right: -3.8rem;
+     top: 86%;
+     transition: width 200ms;
+}
+ .song-action__button {
+     animation: DEGRADEBUTTON02 ease 6s infinite!important;
+     background: url(//i.imgur.com/UrQ2lqy.png) 15% 15%/12%, linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-repeat: no-repeat, repeat;
+     background-size: 15%, 200%;
+     border-radius: 50px;
+     height: 42%;
+     right: -2%;
+     top: 3%;
+     width: 197%;
+}
+ .song-action__label {
+     display: block!important;
+}
+
+/* Song Details */
+/* Artist Name */
+ #preview .song-details h3 {
+     font-family: JDMDCondensed;
+     font-size: 15%;
+     margin-top: 0.5%!important;
+     opacity: .7;
+     padding-left: 0;
+     width: 142;
+     word-spacing: -1.5px;
+}
+/* Song Name */
+ #preview .song-details h2 {
+     font-family: JDMediumCondensed;
+     font-size: 21%;
+     font-weight: 100;
+     height: 47%;
+     letter-spacing: .2px;
+     margin-top: 2%!important;
+     width: 100%;
+     word-spacing: 2px;
+}
+ .state-songselection #preview .song-details h2 {
+     width: 158%;
+}
+/* General */
+ #preview .song-details {
+     animation: DegradeSong ease 20s infinite!important;
+     background-image: linear-gradient(40deg, rgba(255, 32, 145, 1) 35%, rgba(255, 113, 186, 1) 50%, rgba(255, 32, 145, 1) 75%);
+     background-size: 200%;
+     border-radius: 10px;
+     bottom: 75%!important;
+     box-shadow: 0 0 35px -5px rgba(235, 52, 149, 0.6);
+     max-height: 23.6%!important;
+     overflow: visible;
+     right: 47.3%!important;
+     width: 60%;
+}
+
+/* Song Cover 1024 */
+ .state-songselection .song-cover {
+     height: 182%;
+     left: -75.2%;
+     opacity: 1;
+     top: -16.4%;
+     transition: none;
+     -webkit-mask: url(//dl.dropbox.com/s/ai05t0s6tu759m5/VideoSong-MaskingBanner.png?dl=0) no-repeat 20% 25%/ 100%;
+     width: 175%;
+}
+
+/* Video Preview */
+ .video-preview {
+     border: none;
+}
+ .video-preview--visible {
+     height: 104%;
+     opacity: 1!important;
+     transition: visibility 5s 5s, opacity 5s, width 3s;
+     -webkit-mask: url(//dl.dropbox.com/s/ai05t0s6tu759m5/VideoSong-MaskingBanner.png?dl=0) no-repeat 20% 80%/ 100%;
+     width: 175%;
+}
+ .video-preview__video {
+     height: 100%;
+     margin-left: 0;
+     margin-right: 0;
+     width: 100%;
+}
+ .video-preview--visible {
+     opacity: 1;
+     transition: visibility 1s 0s, opacity 2s;
+}
+ .song-cover {
+     border: 0;
+}
+ .song-preview.transitioning {
+     transform: none!important;
+     transform-origin: 100%!important;
+     transition: opacity .15s ease 0s, height ease!important;
+     -webkit-transform: none!important;
+     -will-change: opacity!important;
+}
+ .song-preview {
+     bottom: -1%;
+     left: 133.5%;
+     transform: none!important;
+     transform-origin: 100%!important;
+     transition: opacity .15s ease 0s, height ease!important;
+     -webkit-transform: none!important;
+     -will-change: opacity!important;
+}
+ #preview {
+     margin-top: 0;
+     top: 42%;
+}
+ .state-songselection #admin-menu .player--controller {
+     opacity: 1 !important;
+}
+ .song--focused .song__decoration::after {
+     -ms-transform: scale(1.25, 1.25);
+     transform: scale(1.25, 1.25);
+     -webkit-transform: scale(1.25, 1.25);
+}
+ .song {
+     transition: none;
+}

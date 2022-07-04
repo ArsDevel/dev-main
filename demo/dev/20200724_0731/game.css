@@ -1,0 +1,807 @@
+/* JUST DANCE NOW
+*  Version: 0.13
+/* Date stamp: 24 July */
+
+@font-face {
+  font-weight:normal;font-style:normal;font-family:"OpenSans Regular";src:url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/fonts/OpenSans-Regular.woff") format("woff"),url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight:normal;font-style:normal;font-family:"OpenSans Bold";src:url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/fonts/OpenSans-Bold.woff") format("woff"),url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight:normal;font-style:normal;font-family:"OpenSans SemiBold";src:url("https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/fonts/OpenSans-SemiBold.woff") format("woff"),url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+/* IMPORT FILES */
+@import url("https://dev-s13-justdance.glitch.me/songs/v1/coaches.css"); /* map URL */
+
+/* [Location Names] */
+.state-songselection
+ .state-coachselection
+ .state-dance
+ .state-tutorial
+ .state-afterdance 
+/* Home screen */
+/* Description: The basic version of the screen remains. Only small details change */
+
+/* general play [button] */
+.landing-circle {
+  border-radius: 50%;
+  background-color: #83a2fd;
+  width: 10rem;
+  height: 10rem;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: -.5rem;
+}
+
+.landing-button__play:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+/* Back to Top [btn] */
+.scrollUp-fixed {
+  display: none;
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid #FD9802;
+  opacity: 1;
+  transition: all 0.2ms;
+  position: fixed;
+  z-index: 3;
+  bottom: 10%;
+  right: 2%;
+}
+
+.scrollUp-fixed .scrollUp-text {
+  display: none;
+  width: 400%;
+  font-family: OpenSans SemiBold;
+  text-align: center;
+  line-height: 1.15;
+  position: relative;
+  bottom: -.2rem;
+  right: 1.5rem;
+  transition: all .3s;
+  color: orange;
+}
+
+/* Devices title */
+.line--device__header .content__small {
+  padding: 0.6rem 4rem;
+  background: white;
+  color: #585df5;
+  border-radius: 10px;
+}
+
+/* How-It-Works [title] */
+.content__small {
+  display: inline-block;
+  padding: 0 4rem;
+  min-width: 70%;
+  max-width: 100%;
+  text-align: center;
+  color: #8861f0;
+}
+
+/* load */
+.init-spinner--splash::before {
+  content: '';
+  height: 100%;
+  width: 44vw;
+  position: absolute;
+  top: 0vh;
+  left: 27vw;
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/img/home/landing/splash_JDNLogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* trash */
+.landing-circle::before {
+  content: '';
+}
+
+/* HOME SCREEN PreLoad */
+.landing-circle::before {
+  height: 100%;
+  width: 44vw;
+  position: absolute;
+  top: 0vh;
+  left: 110vw;
+  background-image: url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/img/home/landing/splash_JDNLogo.png), url(https://jdnowweb-assets.cdn.ubi.com//playlist-images/demo/5a2a6437befdf6e64767cfff_720_stackImages_1595241092.png), url(https://jdnowweb-assets.cdn.ubi.com//playlist-images/demo/5a2a6437befdf6e64767d004_720_stackImages_1595241160.png), url(https://jdnowweb-assets.cdn.ubi.com//playlist-images/demo/5a2a6437befdf6e64767d008_720_stackImages_1595241358.png), url(https://jdnowweb-s.cdn.ubi.com/demo/dev/20200722_1337/web/img/icons/playlist-generic-coach.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+/* Playlist & Song screen */
+/* Description: it is necessary to make the menu better and smoother */
+
+/* ul tabs */
+ul.tabs li .tabs--text {
+  font-size: 85%;
+}
+
+ul.tabs li, ul.tabs li .tabs--icon, .tabs--connect {
+  transition: all .1s;
+}
+
+/* playlist */
+.playlist-grid .playlist {
+  color: #464545;
+  width: 95%;
+  height: 1.6rem;
+  margin: 0 0 0.18rem 0.1rem;
+  cursor: pointer;
+  font-family: "OpenSans Regular";
+  word-break: break-word;
+  border-radius: 14px;
+  transition: all .1s;
+}
+
+.playlist-grid .playlist:hover .playlist--img,.playlist-grid .playlist.playlist-selected .playlist--img {
+  transform: scale(0.98);
+  padding: 0%;
+  transition: all .1s;
+}
+
+/* songs */
+
+/* play butto */
+.song-action__button {
+  border-radius: 26px;
+  color: #fff;
+  background-image: linear-gradient(to right, #ffd95b, #f85a98);
+  padding: 0.02rem 0.4rem;
+  font-size: 0.22rem;
+  font-family: "OpenSans SemiBold" !important;
+  top: 3px;
+}
+/* the general */
+.song-preview {
+  top: 29.1%;
+}
+
+/* song cover online */
+.grid-container .item-container .song__cover {
+  height: 95%;
+  border-radius: 15px;
+}
+/* border */
+.grid-container .item-container .item.item-selected .song__cover {
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(0 67 255);
+  border-image: initial;
+}
+
+/* song cover generic */
+
+/* cover 1024 */
+.song-cover {
+  border: 0px solid #fff;
+  background-size: cover;
+  width: 525px;
+}
+
+/* vp9 video preview */
+.video-preview--visible {
+  width: 3.95rem;
+  visibility: visible;
+  opacity: 1;
+  transition: none;
+}
+
+/* song info */
+#preview .song-details {
+  padding: 0.04rem 0.1rem 0.0rem;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0px 0px 42px -5px rgba(255, 157, 0, 0.5);
+}
+
+/* PHONE CONNECT */
+.connect-phone-info {
+  font-size: 25%;
+  left: 8%;
+  top: 2%;
+  animation: none;
+  opacity: 0.5;
+  transition: all .2s;
+}
+
+.connect-phone-info:hover {
+  font-size: 27%;
+  left: 8%;
+  top: 2%;
+  animation: none;
+  opacity: 0.9;
+  transition: all .2s;
+}
+
+.connect-phone-info--clickable .connect-phone-info__text::before {
+  content: "?";
+  display: none;
+}
+
+/* MODAL */
+/* BG */
+.modal__container::before {
+  width: 90%;
+  background-image: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.modal::before {
+  content: '';
+  background-image: linear-gradient(to bottom right, #f585ec, #1b87bf);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* steps */
+.steps__image.steps__image--2 {
+  top: -20%;
+  right: 3%;
+}
+
+/* COACH SELECTION SCREEN */
+
+/* MAP BG */
+.coach-selection__bgImg {
+  width: 100%;
+  height: 87%;
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  border-radius: 10px;
+}
+
+.coach-selection__bgImg img {
+  width: 100%;
+  height: 110%;
+}
+
+/* select title */
+.coach-selection__title {
+  font-family: "OpenSans SemiBold";
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+}
+
+/* song details */
+.coach-selection__details {
+  background: white;
+  background-image: none;
+  color: #fff;
+}
+
+.coach-selection__details .coach-selection__details-song {
+  font-size: 0.17rem;
+  padding: 0 0 0.04rem 0.025rem;
+  color: #525252;
+  font-family: OpenSans SemiBold;
+}
+
+.coach-selection__details .coach-selection__details-artist {
+  font-size: 0.135rem;
+  height: 0.15rem;
+  color: gray;
+}
+
+/* COACH LIST */
+.coach::before {
+  display: none;
+}
+
+.coach__img {
+  width: auto;
+  height: 119%;
+  min-height: 1rem;
+  position: absolute;
+  top: -31%;
+  left: -.2rem;
+}
+
+.coach-selection__list {
+  width: 100%;
+  height: 66%;
+  font-size: 50%;
+  text-align: center;
+  position: absolute;
+  top: 34%;
+  left: -2%;
+}
+
+.coach__player-list {
+  display: block;
+  position: relative;
+  padding: 0.05rem 0.1rem;
+  margin-bottom: 0.03rem;
+  background: #af51f8;
+  opacity: 1;
+  border-radius: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* Buttons */
+.coach-selection__button {
+  border-radius: 26px;
+  color: #fff;
+  background-image: linear-gradient(to right, #ffd95b, #f85a98);
+  padding: 0.04rem 0.45rem;
+  font-size: 0.22rem;
+  font-family: "OpenSans SemiBold" !important;
+  overflow: hidden;
+  position: absolute;
+  bottom: .1rem;
+  right: .1rem;
+}
+
+.coach-selection__back {
+  width: 0.265rem;
+  height: 0.265rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.15s;
+  background-color: #f95e97;
+  background-repeat: no-repeat;
+  background-position: -1px 0px;
+  background-size: cover;
+  position: absolute;
+  top: 90.7%;
+  right: 19%;
+}
+
+/************* AlbumCoach Slide Screen *************/
+/* Last updated may 24 */
+
+.state-coachselection .song-cover--hi-res::before {
+  background-size: cover !important;
+  transform: scale(0.38);
+  top: -44.8%;
+  opacity: 1;
+  transition: all 0.3s;
+  left: -2%;
+  animation: albumcoachSlide 2.5s ease !important;
+  height: 210%;
+}
+
+.state-songselection .song-cover--hi-res::before {
+  background-size: cover !important;
+  top: -44.8%;
+  left: -2%;
+  animation: albumcoachSlide 2.5s ease;
+  height: 210%;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.state-coachselection .song-cover::before {
+  content: "";
+  /* albumcoach image */
+  color: black;
+  position: fixed;
+  display: block;
+  left: 0%;
+  width: 100%;
+  background-position: center !important;
+}
+
+.state-coachselection .song-action__button,
+.state-coachselection .song-details__empty,
+.coach-selection__list,
+.state-coachselection #players.animate,
+.state-coachselection #preview .song-details,
+.coach-selection__title,
+.state-coachselection .song-cover.song-cover--hi-res::after,
+.state-coachselection .song-cover.song-cover--low-res {
+  animation: coachSelectionDelay 2.6s !important;
+}
+
+/**** KeyFrames ***/
+@keyframes albumcoachSlide {
+  0% {
+    left: -5%;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    left: 0%;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes coachSelectionDelay {
+  0% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Players */
+/* Account */
+.controller .dancercard .player-master {
+  opacity: 0;
+}
+/* color */
+.dancercard .player-color {
+  overflow: hidden;
+  width: 80%;
+  height: 20%;
+  border-radius: 30px;
+  position: absolute;
+  top: 113%;
+  left: 6%;
+}
+
+#players .player .controller-coins {
+  width: 100%;
+  position: absolute;
+  bottom: -1%;
+  left: -7%;
+}
+
+#players .player .controller-coins span {
+  font-size: 0.15rem;
+  font-family: OpenSans SemiBold;
+  display: inline-block;
+  position: relative;
+  padding-right: 0.02rem;
+  text-shadow: 0 0 0.005rem #000, 0 0.005rem 0.005rem rgba(0,0,0,0.4);
+}
+/* crown */
+#players .crown {
+  width: 0.32rem;
+  height: 0.32rem;
+  z-index: 5;
+  top: 60%;
+  left: -15%;
+}
+
+#players .crown::before {
+  content: "";
+  animation: crownBeat01 1s;
+  animation-iteration-count: infinite;
+}
+
+.dancercard .player-exp {
+  color: #ffffff;
+  height: 0.22rem;
+  border: 1px wheat;
+  width: 0.22rem;
+  display: inline-block;
+  position: absolute;
+  bottom: 110%;
+  right: 81%;
+}
+/*=== KeyFrames ===*/
+@keyframes flashOnButton1 {
+  0% {
+    transform: skew(30deg, -20deg) translateX(-0.2rem);
+  }
+
+  70% {
+    transform: skew(30deg, -20deg) translateX(-0.25rem);
+  }
+
+  100% {
+    transform: skew(30deg, -20deg) translateX(1.5rem);
+  }
+}
+
+@keyframes flashOnButton2 {
+  0% {
+    transform: skew(30deg, -20deg) translateX(-0.8rem);
+  }
+
+  70% {
+    transform: skew(30deg, -20deg) translateX(-0.85rem);
+  }
+
+  100% {
+    transform: skew(30deg, -20deg) translateX(1.5rem);
+  }
+}
+
+@keyframes crownBeat01 {
+  0% {
+    border: 2px solid #fff;
+  }
+
+  5% {
+    border: 5px solid #fff;
+  }
+
+  100% {
+    border: 2px solid #fff;
+  }
+}
+
+/* Dance */
+.state-dance #room-info {
+  width: 9%;
+}
+
+.state-dance .danceroom__caption {
+  color: white;
+}
+/************* Dance Transition Screen *************/
+#dance-transition.in::before {
+  animation: INTransitionBG 2.5s !important;
+  background-color: white !important;
+  background-size: 100% !important;
+  background-size: cover !important;
+  content: "";
+  height: 100% !important;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100% !important;
+  z-index: -1 !important;
+}
+
+#dance-transition.out::before {
+  animation: OUTTransitionBG 1.5s !important;
+  background-color: white !important;
+  background-size: 100% !important;
+  background-size: cover !important;
+  content: "";
+  height: 100% !important;
+  left: 0 !important;
+  position: absolute;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: -1 !important;
+}
+
+#dance-transition.in::before {
+  opacity: 1 !important;
+}
+
+#dance-transition.out::before {
+  opacity: 1 !important;
+}
+
+#dance-transition .dt-row {
+  background-image: none !important;
+  height: 100% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 0% !important;
+  opacity: 0;
+  transform: none !important;
+  width: 100% !important;
+}
+/* Logo Animation Start */
+@keyframes LogoIN {
+  0% {
+    opacity: 0;
+    transform: translatex(-2.05rem) scale(0.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Logo Animation End */
+@keyframes LogoOUT {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#dance-transition.in .dt1 {
+  animation: LogoIN 0.7s !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fnew-logo2020.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 32% !important;
+  border-radius: 0.1rem !important;
+  height: 60% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 34% !important;
+  margin-top: 13% !important;
+  opacity: 0 !important;
+}
+
+#dance-transition.out .dt1 {
+  animation: LogoOUT 1.5s !important;
+  background: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2Fnew-logo2020.png) !important;
+  background-position: 0% 0 !important;
+  background-repeat: no-repeat !important;
+  background-size: 32% !important;
+  border-radius: 0.1rem !important;
+  height: 60% !important;
+  margin-bottom: 9.7% !important;
+  margin-left: 34% !important;
+  margin-top: 13% !important;
+  opacity: 0 !important;
+}
+
+#dance-transition .dt2,
+#dance-transition .dt3,
+#dance-transition .dt4,
+#dance-transition .dt5,
+#dance-transition .dt6,
+#dance-transition .dt7,
+#dance-transition .dt8 {
+  display: none !important;
+}
+
+#dance-transition.animate::before {
+  transition: none !important;
+}
+
+#dance-transition.animate .dt-row {
+  transition-property: opacity !important;
+}
+
+#dance-transition.animate .dt1 {
+  background-position: 0% 0 !important;
+}
+
+#dance-transition.animate.in::before,
+#dance-transition.animate.in .dt-row {
+  opacity: 1 !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+#dance-transition.animate.in .dt1 {
+  transition-duration: 0s !important;
+}
+
+#dance-transition.animate.out::before,
+#dance-transition.animate.out .dt-row {
+  opacity: 1 !important;
+  transition-timing-function: ease-in !important;
+}
+
+#dance-transition.animate.out .dt1 {
+  transition-duration: 0s !important;
+}
+
+
+/*===== HUD =====*/
+#players .feedlabel-yeah {
+  background-position: 0 100%;
+  top: 66%;
+  left: 4%;
+}
+
+#players .feedlabel-perfect {
+  background-position: 0 80%;
+  top: 66%;
+  left: -3%;
+}
+
+#players .feedlabel-good {
+  background-position: 0 40%;
+  top: 66%;
+  left: -5%;
+}
+
+#players .feedlabel-ok {
+  background-position: 0 60%;
+  top: 72%;
+  left: -3%;
+}
+
+#players .feedback {
+  top: 0;
+  left: 1%;
+}
+
+/* racetrack */
+#racetrack-fill, .racetrack-fill-players {
+  transition: all 1s;
+}
+
+/* beat */
+html:not(.ipad) .hud.beat > #pictos > #beat {
+  animation-name: BeatCoach !important;
+  -webkit-animation-name: BeatCoach !important;
+}
+
+#beat {
+  background: orange;
+  border-bottom: solid 0px white;
+  height: 10% !important;
+  left: -28%;
+  opacity: 1 !important;
+  top: 94%;
+  -webkit-mask: url(//cdn.glitch.com/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d%2F%23beat.png)top left/cover;
+  width: 23% !important;
+  transition: all 1s;
+}
+
+.particle-system {
+  opacity: 0;
+}
+
+/** Pictos **/
+.picto shadow {
+  filter: drop-shadow(4px -2px 2px gray);
+  left: -1%;
+}
+
+#pictos {
+  left: 78.5%;
+  width: 40% !important;
+}
+
+#pictos.multi-coach {
+  left: 70%;
+  width: 40% !important;
+}
+
+.picto {
+  left: -32% !important;
+}
+
+.multi-coach .picto {
+  left: -37.8% !important;
+}
+
+@keyframes BeatCoach {
+  100% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.1, 0.96);
+  }
+
+  0% {
+    opacity: 1;
+    transform: scale(1.0, 1.0);
+  }
+}
+
+/* Lyrics */
+#lyrics {
+  width: 40%;
+  font-size: 0.18rem;
+  line-height: 1.25;
+  cursor: default;
+  font-family: 'OpenSans Regular';
+  position: absolute;
+  z-index: 10;
+  top: 88%;
+  left: 4%;
+}

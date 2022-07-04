@@ -1,0 +1,41 @@
+/************* Connection Lost Screen *************/
+#just-dance-now.connection-lost .connectionLost-wrapper {
+  background-color: #ff9600;
+  background-image: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  margin-right: 17px;
+  position: absolute;
+  top: 0;
+  width: calc(100vw + 17px);
+  z-index: 999999999;
+}
+#just-dance-now.connection-lost .connectionLost-wrapper .main {
+  background-color: transparent;
+  background-image: none;
+  color: gray;
+  height: 100%;
+  padding-left: 40vw;
+  padding-right: 5vw;
+  padding-top: 15vh;
+  position: relative;
+}
+#just-dance-now.connection-lost .connectionLost-wrapper .main::before {
+  background-color: white;
+  content: "";
+  display: block !important;
+  height: 101%;
+  left: 0;
+  -ms-transform: skewX(12deg);
+  -ms-transform-origin: bottom left;
+  position: absolute;
+  top: 0;
+  transform: skewX(12deg);
+  transform-origin: bottom left;
+  -webkit-transform: skewX(12deg);
+  -webkit-transform-origin: bottom left;
+  width: 115%;
+  z-index: -99999;
+}

@@ -1,0 +1,16 @@
+/**** Path and Stoke ****/
+/**** disabled in the game menu! ****/
+.sprite--tape .color-mid {
+  stroke: rgba(249, 182, 217, 1);
+}
+.sprite {
+  color: rgba(123, 124, 122, 1);
+}
+.sprite--tape .color-light {
+  stroke: rgba(235, 85, 166, 1) !important;
+}
+path,
+.sprite--stars svg,
+.sprite--tape .color-dark {
+  stroke: rgba(241, 76, 162, 1) !important;
+}

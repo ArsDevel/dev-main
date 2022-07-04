@@ -1,0 +1,178 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	font-family: 'Teko';
+	background-image: url(https://cdn.glitch.global/f4aecb13-da5d-40b0-b9b3-6693d12e2e1d/2761366.webp);
+	background-size: cover;
+	background-repeat: round;
+}
+
+.main-menu {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-row {
+	cursor: pointer;
+	font-size: 2rem;
+	color: #ffffff;
+}
+
+.songlist {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: space-evenly;
+	position: relative;
+}
+
+.songlist:before {
+	content: '';
+	background: black;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.song {
+	margin: 1%;
+	background: #3a3a3a;
+	width: 10%;
+	cursor: pointer;
+}
+
+.song:hover {
+	outline: 3px #c1c1c1 solid;
+}
+
+img.song__cover {
+	height: 100%;
+	width: 100%;
+}
+
+.title-container {
+	padding-left: 3%;
+}
+
+.caption.title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 91%;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+.caption.title,
+.caption.artist {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 91%;
+	width: 100%;
+	color: white;
+}
+
+.caption.artist {
+	opacity: 0.8;
+}
+
+.img-container {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background: #cdcdcd;
+	border-radius: 10px;
+	margin: 1%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.img-container:hover {
+	outline: gray 2px solid;
+}
+
+.img-container span {
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+.infos {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.description-container {
+	position: absolute;
+	background: #2e2e2e;
+	color: #fff;
+	width: 50%;
+	height: 50%;
+	padding: 0.5%;
+}
+
+.left-pane {
+	float: left;
+}
+
+.avatar-wrapper {
+	float: left;
+	position: absolute;
+	top: 44%;
+	width: 13%;
+}
+
+.song-infos {
+	padding-top: 13%;
+}
+
+.song-infos .name {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.song-infos .artist {
+	font-size: 2rem;
+	line-height: 0%;
+}
+
+.close {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 2rem;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px #fff solid;
+	cursor: pointer;
+}
+
+.credits {
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+}

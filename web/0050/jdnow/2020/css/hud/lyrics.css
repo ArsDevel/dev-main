@@ -1,0 +1,28 @@
+/******* Lyrics *******/
+#lyrics {
+  display: !important;
+}
+
+#lyrics {
+  font-family: JDMDCondensed;
+  font-size: 14.7%;
+  font-weight: lighter;
+  left: 5%;
+  top: 89.5%;
+}
+
+#lyrics .line.current,
+#lyrics .line.previous {
+  margin-top: -1% !important;
+}
+
+#lyrics .line {
+  margin-top: 0.8% !important;
+}
+
+#lyrics.previous {
+  opacity: 0;
+  transform: perspective(0px) translateY(-0.2em) rotateX(0deg);
+  transform-origin: 100% 100%;
+  transition: color 0.35s, opacity 0.35s, transform 0.35s;
+}

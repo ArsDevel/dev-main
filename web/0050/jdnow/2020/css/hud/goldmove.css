@@ -1,0 +1,19 @@
+/* Gold Move */
+
+/* First */
+#goldmove .layer.layer-1 {
+  background-image: url(//i.imgur.com/6C45q1V.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  opacity: 1;
+  animation: goldmoveAmbient 16s linear infinite;
+}
+
+/***** 2 layer is not visible *****/
+
+/* Last */
+#goldmove .layer.layer-3 {
+  background-image: url(//i.imgur.com/qFgos9t.png) !important;
+  opacity: 1;
+}

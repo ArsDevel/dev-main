@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<title></title>
+	<style>
+	#container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		font-family: system-ui;
+		justify-content: center;
+	}
+	
+	.img-container {
+		position: relative;
+		background: #cdcdcd;
+		border-radius: 10px;
+		margin: 1%;
+		z-index: 1;
+		cursor: pointer;
+	}
+	
+	.img-container:hover {
+		outline: gray 2px solid;
+	}
+	
+	.img-container span {
+		position: absolute;
+		right: 5px;
+		top: 0;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="time"></div>
+	<div id="container" type="text" value=""></div>
+	<div class="img-container"></div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="/_getServer/avatarList.js"></script>
+</body>
+
+</html>

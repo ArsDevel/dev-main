@@ -1,0 +1,734 @@
+/************* Coach Selection Screen *************/
+
+/* Coach Animation */
+.coach__img {
+  animation: coachselectAnimation 10s both infinite,
+    coachWhBeat 3s both infinite;
+}
+/*Coach Animation 1 and 3
+.coach-selection__item[data-id="1"], .coach-selection__item[data-id="3"]{
+    animation: coachselectAnimation13 10s both infinite,
+    coachWhBeat 3s both infinite;
+}
+Coach Animation 2 and 4
+.coach-selection__item[data-id="2"], .coach-selection__item[data-id="4"]{
+    animation: coachselectAnimation24 10s both infinite,
+    coachWhBeat 3s both infinite;
+}*/
+/* Coach Select (*Player*)*/
+.coach__histogram {
+  left: -15px;
+}
+#preview .coach-selection {
+  width: 102%;
+}
+.state-coachselection #just-dance-now {
+  background: url(//i.imgur.com/ZupE6fo.png),
+    url(
+        //jdnow-api-contentapistoragest-demo.justdancenow.com/map_bkg/HoldingOut_map_bkg.jpg
+      )no-repeat 50%/100%;
+  background-blend-mode: luminosity;
+  background-repeat: no-repeat, repeat;
+  background-size: 100%, 100%;
+  background-size: cover;
+}
+ul.coach-selection__list.coach-selection__list--1
+  .coach-selection__item[data-id="1"] {
+  bottom: 97%;
+  height: 2.9rem;
+  right: 85%;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach-selection__list--2::after {
+  animation: BeatSelectBack 4s both infinite;
+  background: url(//dl.dropbox.com/s/2db7ur69lcopvo8/blue-select.png?dl=0),
+    url(//dl.dropbox.com/s/6ith504k60k1bhv/red-select.png?dl=0),
+      url(//dl.dropbox.com/s/bz6fjjqy2c5h31o/aqua-select.png?dl=0),
+        url(//dl.dropbox.com/s/cwja1dd5g7b62xw/pink-select.png?dl=0),
+          url(//dl.dropbox.com/s/vvabxq35viywijz/green-select.png?dl=0),
+            url(//dl.dropbox.com/s/dmtafgd65691tit/purple-select.png?dl=0);
+  background-position: 0% 0%, 15% 0%, 30% 0%, 70% 0%, 85% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 12.5% 99%;
+  content: "";
+  display: block;
+  height: 283%;
+  left: -22.4%;
+  position: absolute;
+  top: -113%;
+  width: 127%;
+}
+.blue .player-color::after {
+  background-image: linear-gradient(
+    to right,
+    rgba(72, 139, 252, 1) 0%,
+    rgba(93, 27, 239, 1) 100%
+  ) !important;
+}
+.red .player-color::after {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 129, 43, 1) 0%,
+    rgba(232, 22, 19, 1) 100%
+  );
+}
+.pink .player-color::after {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 4, 163, 1) 0%,
+    rgba(210, 34, 218, 1) 100%
+  );
+}
+.aqua .player-color::after {
+  background-image: linear-gradient(
+    to right,
+    rgba(75, 218, 154, 1) 0%,
+    rgba(59, 182, 188, 1) 100%
+  );
+}
+.purple .player-color::after {
+  background-image: linear-gradient(
+    to right,
+    rgba(134, 0, 197, 1) 0%,
+    rgba(92, 73, 199, 1) 100%
+  );
+}
+.green .player-color::after {
+  background-image: linear-gradient(
+    to right,
+    rgba(96, 219, 14, 1) 0%,
+    rgba(103, 174, 42, 1) 100%
+  );
+}
+.coach__player-list.blue::before {
+  background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0),
+    linear-gradient(
+      to right,
+      rgba(72, 139, 252, 1) 0%,
+      rgba(93, 27, 239, 1) 55%
+    ) !important;
+}
+.coach__player-list.red::before {
+  background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0),
+    linear-gradient(
+      to right,
+      rgba(255, 129, 43, 1) 0%,
+      rgba(232, 22, 19, 1) 55%
+    );
+}
+.coach__player-list.pink::before {
+  background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0),
+    linear-gradient(
+      to right,
+      rgba(255, 4, 163, 1) 0%,
+      rgba(210, 34, 218, 1) 55%
+    );
+}
+.coach__player-list.aqua::before {
+  background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0),
+    linear-gradient(
+      to right,
+      rgba(75, 218, 154, 1) 0%,
+      rgba(59, 182, 188, 1) 55%
+    );
+}
+.coach__player-list.purple:before {
+  background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0),
+    linear-gradient(to right, rgba(134, 0, 197, 1) 0%, rgba(92, 73, 199, 1) 55%);
+}
+.coach__player-list.green::before {
+  background-image: url(//dl.dropbox.com/s/srz7c4v9jo54l6g/nameplayer.png?dl=0),
+    linear-gradient(
+      to right,
+      rgba(96, 219, 14, 1) 0%,
+      rgba(103, 174, 42, 1) 55%
+    );
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.blue::before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(72, 139, 252, 1) 100%
+  ) !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.red::before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 129, 43, 1) 100%
+  );
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.pink::before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 4, 163, 1) 100%
+  );
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.aqua::before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(75, 218, 154, 1) 100%
+  );
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.purple:before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(134, 0, 197, 1) 100%
+  );
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.green::before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(96, 219, 14, 1) 100%
+  );
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.red::before,
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.purple::before,
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.pink::before,
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.green::before,
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.aqua::before,
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.blue::before {
+  background-color: transparent;
+}
+.state-coachselection #players[n-ghosts="1"]::after,
+.state-coachselection #players[n-ghosts="2"]::after,
+.state-coachselection #players[n-ghosts="0"]::after,
+.state-coachselection #players[n-ghosts="3"]::after {
+  text-transform: uppercase;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 145, 0, 1) 0%,
+    rgba(255, 60, 97, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "КОМАНДА ВКЛ.";
+  display: block;
+  animation: none;
+  transform: none;
+  font-family: JDMediumCondensed;
+  font-size: 17px;
+  left: 51%;
+  position: absolute;
+  text-align: left;
+  top: 633.5%;
+}
+.state-coachselection #players[n-ghosts="0"]::after {
+  content: "КОМАНДА ВЫКЛ." !important;
+  color: gray;
+}
+.state-coachselection #players[n-ghosts="0"]::before {
+  background: url(//dl.dropbox.com/s/c584lmxbqoro07x/ico_cp.png?dl=0)no-repeat 5% 50%/11% !important;
+}
+.state-coachselection #players[n-ghosts="0"]::before,
+.state-coachselection #players[n-ghosts="1"]::before,
+.state-coachselection #players[n-ghosts="2"]::before,
+.state-coachselection #players[n-ghosts="3"]::before {
+  background: url(//dl.dropbox.com/s/sztaq2cyzcsi8wg/ico_coopmodeON.png?dl=0)no-repeat 5% 50%/11%;
+  border: solid 2.2px rgba(186, 186, 186, 1);
+  border-radius: 10px;
+  border-right: none;
+  content: "";
+  display: block;
+  height: 37%;
+  left: 44.9%;
+  position: absolute;
+  top: 619.5%;
+  -webkit-mask: url(//dl.dropbox.com/s/g2kpe033z5dj1fg/Mask_square.png?dl=0)no-repeat 0%/94%;
+  width: 30%;
+  z-index: -99999999999999999;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list::before {
+  animation: BeatSelectScreen 4s linear infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 0px;
+  height: 75.2%;
+  left: -5%;
+  opacity: 1;
+  overflow: visible;
+  top: -5%;
+  transform: none;
+  width: 100%;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__names-list {
+  bottom: 3em;
+  font-family: JDMediumCondensed;
+  height: 15em;
+  left: 1.57rem;
+  overflow: visible;
+  width: 191%;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__names-list
+  .player__name {
+  animation: none !important;
+  color: rgba(76, 76, 76, 1);
+  display: block !important;
+  font-family: JDMediumCondensed;
+  font-size: 140%;
+  font-weight: bold;
+  left: 0;
+  margin: 0;
+  margin-top: 270%;
+  max-width: 100%;
+  overflow: visible;
+  position: absolute;
+  text-shadow: none;
+  top: 10%;
+  transition: none !important;
+  width: 50% !important;
+}
+.state-coachselection #preview .song-details h2 span,
+.state-coachselection #preview .song-details h3 span {
+  transform: none !important;
+}
+.state-coachselection .song-detail {
+  max-width: 85%;
+}
+.state-coachselection .song-cover.song-cover--hi-res {
+  animation: Beat01 3s both infinite !important;
+  background-size: 0;
+  border-radius: 11px;
+  height: 216%;
+  left: -219%;
+  top: -2.4em;
+  width: 458%;
+  z-index: -99999999 !important;
+}
+.coach-selection__item {
+  margin-left: 1.5rem;
+  margin-right: 1.05rem;
+  position: relative;
+}
+.coach-selection__title {
+  color: white;
+  font-family: JDMDCondensed;
+  right: 35%;
+  text-align: center;
+  text-shadow: 2px 1px 0px rgba(105, 105, 105, 0.86);
+  top: -90%;
+}
+.coach-selection__list[class="coach-selection__list coach-selection__list--2"]
+  .coach__names-list,
+.coach-selection__list[class="coach-selection__list coach-selection__list--3"]
+  .coach__names-list,
+.coach-selection__list[class="coach-selection__list coach-selection__list--4"]
+  .coach__names-list {
+  bottom: -2em;
+  left: 42%;
+  margin-left: 12.5em;
+}
+.coach-selection__list[class="coach-selection__list coach-selection__list--4"]
+  .coach-selection__item {
+  width: 25rem;
+}
+.coach-selection__list[class="coach-selection__list coach-selection__list--4"]
+  .coach-selection__item
+  .coach__img {
+  height: 90%;
+  left: 0.4em;
+  top: 0.5em;
+}
+.coach__player-list.purple {
+  margin-left: 30%;
+  top: 0%;
+}
+.coach__player-list.aqua {
+  margin-left: 30%;
+  top: 25%;
+}
+.coach__player-list.pink {
+  margin-left: 31%;
+  top: -25%;
+}
+.coach__player-list.green {
+  margin-left: 30%;
+  top: 0%;
+}
+.coach__player-list.red {
+  margin-left: 30%;
+  top: 25%;
+}
+.coach__player-list.blue {
+  margin-left: 30%;
+  top: 50%;
+}
+.coach__player-list::before {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 111% 42%, 100%;
+  border-radius: 10px;
+  height: 90%;
+  opacity: 1;
+  transform: none;
+  width: 1.4rem;
+}
+.coach__names-list .player__name {
+  font-size: 140%;
+  left: 4%;
+  overflow: visible;
+  text-shadow: none;
+  top: 10%;
+}
+.coach__player-list {
+  display: block;
+  height: 23%;
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding: 0;
+  position: absolute;
+}
+.coach__names-list {
+  bottom: 3em;
+  font-family: JDMediumCondensed;
+  height: 15em;
+  left: 1.57rem;
+  overflow: visible;
+  width: 175%;
+}
+.coach-selection__item[data-id="4"],
+.coach-selection__item[data-id="2"],
+.coach-selection__item[data-id="3"],
+.coach-selection__item[data-id="1"] {
+  bottom: 87%;
+  height: 3rem;
+  right: 58%;
+}
+.state-coachselection .song-action p.song-action__label {
+  font-size: 17%;
+  right: 20%;
+  top: 12%;
+}
+.state-songselection #players[n-real-players="1"] {
+  background: none;
+  height: 20% !important;
+  left: 25.5% !important;
+  top: 0 !important;
+  width: 67% !important;
+}
+
+/* Starr Button */
+.state-coachselection .song-action {
+  bottom: -0.125rem;
+  left: 230%;
+  top: 114%;
+  transition: width 200ms;
+}
+.state-coachselection .song-action__button {
+  animation: DEGRADEBUTTON02 1s ease infinite;
+  background: url(//i.imgur.com/UrQ2lqy.png)no-repeat 5%/cover,
+    linear-gradient(
+      40deg,
+      rgba(43, 227, 162, 1) 35%,
+      rgba(33, 205, 208, 1) 50%,
+      rgba(36, 208, 188, 1) 75%
+    );
+  background-repeat: no-repeat, repeat;
+  background-size: 15%, 600%;
+  border-radius: 50px;
+  height: 35%;
+  width: 166%;
+  box-shadow: 0px 0px 57px -2px rgba(0, 255, 244, 0.51);
+}
+
+/* Song Cover Small */
+.state-coachselection .song-cover {
+  border: none;
+  border-radius: 5px;
+  bottom: 177%;
+  height: 25%;
+  opacity: 1;
+  right: 286.5%;
+  width: 25%;
+  z-index: 999999999;
+}
+
+/* Song Info Coach Selection */
+.state-coachselection #preview .song-details h2,
+.state-coachselection #preview .song-details h3 {
+  color: rgba(94, 92, 95, 1) !important;
+}
+.state-coachselection .song__infos {
+  color: grey;
+  font-size: 80%;
+  left: 20%;
+  top: 10%;
+}
+.state-coachselection .song-cover.song-cover--low-res {
+  background-size: cover;
+  border-radius: 10px;
+}
+.state-coachselection .song-cover.song-cover--hi-res::after {
+  background: #fff !important;
+  border-radius: 8px 8px 8px 8px;
+  content: "";
+  display: block;
+  height: 14%;
+  left: 1.1%;
+  position: absolute;
+  top: 1.5%;
+  width: 28%;
+}
+.state-coachselection #players {
+  opacity: 1;
+  top: -2em;
+}
+.state-coachselection #preview .song-details {
+  background: none !important;
+  box-shadow: none;
+  right: 70% !important;
+  top: -170%;
+  -webkit-mask: none !important;
+  width: 48%;
+  z-index: 1;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list {
+  margin: 0 !important;
+  top: 70.5% !important;
+  -webkit-mask: none;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list {
+  margin: 0 !important;
+  top: -25.5% !important;
+  -webkit-mask: url(//dl.dropbox.com/s/0ajeqzrhffsor8p/name.png?dl=0)0% 0% /86% 80% no-repeat;
+}
+.coach-selection__list--2 {
+  left: -25%;
+}
+.coach-selection__list--3 {
+  left: -20%;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.purple {
+  left: 244.5% !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.pink {
+  left: 157.4% !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.green {
+  left: 201% !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.red {
+  left: 70.7% !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.blue {
+  left: 27% !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.aqua {
+  left: 114% !important;
+}
+.coach-selection__item[data-id="1"]::after {
+  animation: Beat01 3s both infinite;
+  background: url(//dl.dropbox.com/s/2db7ur69lcopvo8/blue-select.png?dl=0),
+    url(//dl.dropbox.com/s/6ith504k60k1bhv/red-select.png?dl=0),
+      url(//dl.dropbox.com/s/bz6fjjqy2c5h31o/aqua-select.png?dl=0),
+        url(//dl.dropbox.com/s/cwja1dd5g7b62xw/pink-select.png?dl=0),
+          url(//dl.dropbox.com/s/vvabxq35viywijz/green-select.png?dl=0),
+            url(//dl.dropbox.com/s/dmtafgd65691tit/purple-select.png?dl=0);
+  background-position: 0% 0%, 20% 0%, 40% 0%, 60% 0%, 80% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 16.5% 99%;
+  content: "";
+  display: block;
+  height: 122%;
+  left: 172%;
+  position: absolute;
+  top: -5.5%;
+  width: 497%;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.purple {
+  left: 240.5% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.pink {
+  left: 154% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.green {
+  left: 197% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.red {
+  left: 66% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.blue {
+  left: 3em !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="1"]
+  .coach__player-list.aqua {
+  left: 108% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="2"]
+  .coach__player-list.purple {
+  left: 240.5% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="2"]
+  .coach__player-list.pink {
+  left: 154% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="2"]
+  .coach__player-list.green {
+  left: 197% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="2"]
+  .coach__player-list.red {
+  left: 66% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="2"]
+  .coach__player-list.blue {
+  left: 23% !important;
+}
+.coach-selection__list--2
+  .coach-selection__item[data-id="2"]
+  .coach__player-list.aqua {
+  left: 108% !important;
+}
+.coach-selection__list--1
+  .coach-selection__item[data-id="1"]
+  .coach__player-list {
+  display: block !important;
+  height: 203% !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  position: absolute !important;
+  text-align: center !important;
+  width: 45% !important;
+}
+
+
+/************* AlbumCoach Slide Screen *************/
+/* Last updated may 24 */
+
+.state-coachselection .song-cover--hi-res::before {
+  background-size: cover !important;
+  transform: scale(0.38);
+  top: -44.8%;
+  opacity: 0;
+  transform: all 0.3s;
+  left: -2%;
+  animation: albumcoachSlide 2.5s ease !important;
+  height: 210%;
+}
+.state-songselection .song-cover--hi-res::before {
+  background-size: cover !important;
+  top: -44.8%;
+  left: -2%;
+  animation: albumcoachSlide 2.5s ease;
+  height: 210%;
+  transform: all 0.3s;
+  opacity: 1;
+}
+.state-coachselection .song-cover::before {
+  content: "";
+  /* albumcoach image */
+  color: black;
+  position: fixed;
+  display: block;
+  left: 0%;
+  width: 100%;
+  background-position: center !important;
+}
+.state-coachselection .song-action__button,
+.state-coachselection .song-details__empty,
+.coach-selection__list,
+.state-coachselection #players.animate,
+.state-coachselection #preview .song-details,
+.coach-selection__title,
+.state-coachselection .song-cover.song-cover--hi-res::after,
+.state-coachselection .song-cover.song-cover--low-res {
+  animation: coachSelectionDelay 2.6s !important;
+}
+
+/**** KeyFrames ***/
+ @keyframes albumcoachSlide  {
+     0% {
+         left: -5%;
+    }
+     30% {
+         opacity:1; 
+    }
+     50% {
+         left: 0%;
+    }
+     85% {
+         opacity:1; 
+    }
+     100% {
+         opacity:0; 
+    }
+}
+@keyframes coachSelectionDelay {
+     0% {
+         opacity:0 
+    }
+     85% {
+         opacity:0 
+    }
+     100% {
+         opacity:1 
+    }
+}
